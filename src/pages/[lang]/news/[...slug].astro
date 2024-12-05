@@ -1,0 +1,76 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import FormattedDate from "@/components/FormattedDate.astro";
+import Layout from "@/layouts/Layout.astro";
+import { Card } from "@/components/ui/card";
+
+// export async function getStaticPaths() {
+//   const posts = await getCollection("blog");
+//   return posts.map((post) => ({
+//     params: { slug: post.slug },
+//     props: post,
+//   }));
+// }
+// type Props = CollectionEntry<"blog">;
+
+// const post = Astro.props;
+// const { Content } = await post.render();
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+
+  const paths = posts.map((post) => {
+    const [lang, ...slug] = post.slug.split("/");
+    return { params: { lang, slug: slug.join("/") || undefined }, props: post };
+  });
+
+  return paths;
+}
+type Props = CollectionEntry<"blog">;
+const { lang, slug } = Astro.params;
+const post = Astro.props;
+
+const { Content } = await post.render();
+---
+
+<Layout title="Artticle Details - Welcome">
+  <article class="container py-12 space-y-8">
+    <Card className="w-full aspect-[21/9] bg-gray-200">
+      {
+        post.data.heroImage && (
+          <img
+            src={post.data.heroImage}
+            width="full"
+            height=""
+            alt={post.data.title}
+            style={{ objectFit: "cover" }}
+            class="w-full"
+          />
+        )
+      }
+    </Card>
+
+    <div class="max-w-5xl mx-auto space-y-6">
+      <h1 class="text-4xl font-bold text-[#004282]">{post.data.title}</h1>
+
+      <div class="flex items-center gap-2 text-gray-600">
+        <!-- <span>{article.author}</span> -->
+        <!-- <span>•</span> -->
+        <span>
+          <FormattedDate date={post.data.pubDate} />
+          {
+            post.data.updatedDate && (
+              <div class="last-updated-on">
+                Last updated on <FormattedDate date={post.data.updatedDate} />
+              </div>
+            )
+          }</span
+        >
+      </div>
+
+      <div class="prose max-w-none">
+        <Content />
+      </div>
+    </div>
+  </article>
+</Layout>
