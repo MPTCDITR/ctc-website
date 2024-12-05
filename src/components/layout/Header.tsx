@@ -5,9 +5,10 @@ import { LanguageSwitcher } from "./LanguageSwitcher";
 
 interface HeaderProps {
   translations: Record<string, string>;
+  lang?: string;
 }
 
-export function Header({ translations }: HeaderProps) {
+export function Header({ translations, lang }: HeaderProps) {
   const t = (key: string) => translations[key] || key;
 
   return (
@@ -20,31 +21,31 @@ export function Header({ translations }: HeaderProps) {
 
         <nav className="hidden md:flex gap-6">
           <a
-            href="/"
+            href={`/${lang}`}
             className="font-medium transition-colors hover:text-primary nav-link"
           >
             {t("nav.home")}
           </a>
           <a
-            href="/about"
+            href={`/${lang}/about/`}
             className="font-medium transition-colors hover:text-primary nav-link"
           >
             {t("nav.about")}
           </a>
           <a
-            href="/blog"
+            href={`/${lang}/blog/`}
             className="font-medium transition-colors hover:text-primary nav-link"
           >
             {t("nav.blog")}
           </a>
           <a
-            href="/news"
+            href={`/${lang}/news/`}
             className="font-medium transition-colors hover:text-primary nav-link"
           >
             {t("nav.news")}
           </a>
           <a
-            href="/contact"
+            href={`/${lang}/contact/`}
             className="font-medium transition-colors hover:text-primary nav-link"
           >
             {t("nav.contact")}
@@ -53,7 +54,7 @@ export function Header({ translations }: HeaderProps) {
 
         <div className="flex items-center gap-4">
           <LanguageSwitcher />
-          <MobileNav translations={translations} />
+          <MobileNav translations={translations} lang={lang} />
         </div>
       </div>
     </header>

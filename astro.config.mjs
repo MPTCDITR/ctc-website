@@ -9,15 +9,35 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://example.com',
-    integrations: [mdx(), sitemap(), react(), tailwind(), tailwind({
+    site: process.env.PUBLIC_SITE_URL || "http://localhost:4321",
+    integrations: [
+      mdx(), 
+      sitemap({i18n: {
+        locales: {
+          en: "en-US",
+          km: "km-KH",},
+        defaultLocale: "en",
+      },}), 
+      react(), 
+      tailwind({
         applyBaseStyles: false,
       }),],
       i18n: {
-        locales: [ "en", "km"],
         defaultLocale: "en",
+        locales: ["en", "km"],
         routing: {
-            prefixDefaultLocale: true
-        }
+          prefixDefaultLocale: true,
+          redirectToDefaultLocale: false,
+        },
+        fallback: {
+          km: "en",
+        },
       },
+      prefetch: {
+        prefetchAll: true,
+      },
+      experimental: {
+        contentIntellisense: true,
+      },
+      
 });

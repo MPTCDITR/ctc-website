@@ -1,19 +1,20 @@
-import React from 'react';
-import { MenuIcon } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import React from "react";
+import { MenuIcon } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import {
   Sheet,
   SheetContent,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from '@/components/ui/sheet';
+} from "@/components/ui/sheet";
 
 interface MobileNavProps {
   translations: Record<string, string>;
+  lang?: string;
 }
 
-export function MobileNav({ translations }: MobileNavProps) {
+export function MobileNav({ translations, lang }: MobileNavProps) {
   const t = (key: string) => translations[key] || key;
 
   return (
@@ -28,17 +29,29 @@ export function MobileNav({ translations }: MobileNavProps) {
           <SheetTitle>Menu</SheetTitle>
         </SheetHeader>
         <nav className="flex flex-col gap-4 mt-4">
-          <a href="/" className="font-medium transition-colors hover:text-primary">
-            {t('nav.home')}
+          <a
+            href={`/${lang}`}
+            className="font-medium transition-colors hover:text-primary"
+          >
+            {t("nav.home")}
           </a>
-          <a href="/about" className="font-medium transition-colors hover:text-primary">
-            {t('nav.about')}
+          <a
+            href={`/${lang}/about/`}
+            className="font-medium transition-colors hover:text-primary"
+          >
+            {t("nav.about")}
           </a>
-          <a href="/blog" className="font-medium transition-colors hover:text-primary">
-            {t('nav.blog')}
+          <a
+            href={`/${lang}/blog/`}
+            className="font-medium transition-colors hover:text-primary"
+          >
+            {t("nav.blog")}
           </a>
-          <a href="/contact" className="font-medium transition-colors hover:text-primary">
-            {t('nav.contact')}
+          <a
+            href={`/${lang}/contact/`}
+            className="font-medium transition-colors hover:text-primary"
+          >
+            {t("nav.contact")}
           </a>
         </nav>
       </SheetContent>
