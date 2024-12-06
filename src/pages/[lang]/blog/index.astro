@@ -1,12 +1,28 @@
 ---
 import { NewsContent } from "src/components/news-content.tsx";
-
 import Layout from "@/layouts/Layout.astro";
-
 import { getCollection } from "astro:content";
 import { languages } from "@/i18n/ui";
 
-const posts = (await getCollection("blog"))
+export async function getStaticPaths() {
+  const allLanguages = Object.keys(languages);
+  const allPosts = await getCollection("blog");
+
+  return allLanguages.map((lang) => {
+    const langPosts = allPosts.filter((post) =>
+      post.slug.startsWith(`${lang}/`)
+    );
+    return {
+      params: { lang },
+      props: { posts: langPosts },
+    };
+  });
+}
+
+const { lang } = Astro.params;
+const { posts } = Astro.props;
+
+const sortedPosts = posts
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
   .map((post) => ({
     id: post.id,
@@ -16,14 +32,8 @@ const posts = (await getCollection("blog"))
     description: post.data.description,
     heroImage: post.data.heroImage,
   }));
-
-export async function getStaticPaths() {
-  return Object.keys(languages).map((lang) => ({
-    params: { lang },
-  }));
-}
 ---
 
 <Layout title="News - Blog Article CTC">
-  <NewsContent posts={posts} client:load />
+  <NewsContent posts={sortedPosts} client:load />
 </Layout>
