@@ -3,6 +3,7 @@ import { NewsContent } from "src/components/news-content.tsx";
 import Layout from "@/layouts/Layout.astro";
 import { getCollection } from "astro:content";
 import { languages } from "@/i18n/ui";
+import { getLangFromUrl } from "@/lib/i18n";
 
 export async function getStaticPaths() {
   const allLanguages = Object.keys(languages);
@@ -19,7 +20,8 @@ export async function getStaticPaths() {
   });
 }
 
-const { lang } = Astro.params;
+const lang = getLangFromUrl(Astro.url);
+
 const { posts } = Astro.props;
 
 const sortedPosts = posts
@@ -27,7 +29,10 @@ const sortedPosts = posts
   .map((post) => ({
     id: post.id,
     slug: post.slug,
-    data: post.data,
+    data: {
+      ...post.data,
+      lang: lang,
+    },
     pubDate: new Date(post.data.pubDate),
     description: post.data.description,
     heroImage: post.data.heroImage,

@@ -39,12 +39,6 @@ export function Header({ translations, lang }: HeaderProps) {
             {t("nav.blog")}
           </a>
           <a
-            href={`/${lang}/news/`}
-            className="font-medium transition-colors hover:text-primary nav-link"
-          >
-            {t("nav.news")}
-          </a>
-          <a
             href={`/${lang}/contact/`}
             className="font-medium transition-colors hover:text-primary nav-link"
           >
@@ -53,7 +47,7 @@ export function Header({ translations, lang }: HeaderProps) {
         </nav>
 
         <div className="flex items-center gap-4">
-          <LanguageSwitcher />
+          <LanguageSwitcher lang={lang} />
           <MobileNav translations={translations} lang={lang} />
         </div>
       </div>

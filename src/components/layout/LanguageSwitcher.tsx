@@ -1,5 +1,4 @@
-import React from "react";
-import { GlobeIcon } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -9,7 +8,12 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { languages, type Language } from "@/i18n/ui";
 
-export function LanguageSwitcher() {
+interface LanguageSwitcherProps {
+  translations?: Record<string, string>;
+  lang?: string;
+}
+
+export function LanguageSwitcher({ lang }: LanguageSwitcherProps) {
   const switchLanguage = (lang: Language) => {
     const currentPath = window.location.pathname;
     const segments = currentPath.split("/").filter(Boolean);
@@ -19,12 +23,16 @@ export function LanguageSwitcher() {
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="icon">
-          <GlobeIcon className="h-5 w-5" />
+      <DropdownMenuTrigger
+        asChild
+        className="font-medium transition-colors hover:text-primary nav-link "
+      >
+        <Button variant="ghost" className="flex items-center gap-1">
+          {lang == "en" ? "Englist" : "ខ្មែរ"}
+          <ChevronDown className="h-4 w-4" />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
+      <DropdownMenuContent>
         {Object.entries(languages).map(([lang, label]) => (
           <DropdownMenuItem
             key={lang}
