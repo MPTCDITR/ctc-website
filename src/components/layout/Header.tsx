@@ -25,9 +25,9 @@ export function Header({ translations, lang }: HeaderProps) {
       label: t("nav.about"),
       href: "#",
       children: [
-        { label: "Our Story", href: `/${lang}/about/our-story` },
-        { label: "Mission & Vision", href: `/${lang}/about/mission ` },
-        { label: "Team", href: `/${lang}/about/mission ` },
+        { label: "About Us", href: `/${lang}/about/about-us` },
+        { label: "Mission & Vision", href: `/${lang}/about/mission-vision ` },
+        { label: "CTC Structure", href: `/${lang}/about/ctc-structure ` },
       ],
     },
     { href: `/${lang}/our-centers/`, label: "Our Centers" },

@@ -1,7 +1,8 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import { languages } from "@/i18n/ui";
-import { CentersContent } from "@/components/ourCenters/centers-sections";
+import { AboutContent } from "@/components/about/about-us-content";
+
 export async function getStaticPaths() {
   return Object.keys(languages).map((lang) => ({
     params: { lang },
@@ -10,5 +11,5 @@ export async function getStaticPaths() {
 ---
 
 <Layout title="BlogSpace - Welcome">
-  <CentersContent client:load />
+  <AboutContent client:load />
 </Layout>
