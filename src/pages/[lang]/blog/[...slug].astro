@@ -4,18 +4,6 @@ import FormattedDate from "@/components/FormattedDate.astro";
 import Layout from "@/layouts/Layout.astro";
 import { Card } from "@/components/ui/card";
 
-// export async function getStaticPaths() {
-//   const posts = await getCollection("blog");
-//   return posts.map((post) => ({
-//     params: { slug: post.slug },
-//     props: post,
-//   }));
-// }
-// type Props = CollectionEntry<"blog">;
-
-// const post = Astro.props;
-// const { Content } = await post.render();
-
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
 
