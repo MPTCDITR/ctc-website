@@ -2,6 +2,8 @@
 
 import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
+import { styles } from "@/components/text-element/ElementStyle";
 
 export function CentersContent() {
   return (
@@ -13,7 +15,7 @@ export function CentersContent() {
         transition={{ duration: 0.5 }}
       >
         <motion.h1
-          className="text-4xl font-bold text-center text-[#004282]"
+          className={cn(styles.heading, "text-center text-[#004282]")}
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
@@ -21,7 +23,10 @@ export function CentersContent() {
           Structure of CTC
         </motion.h1>
         <motion.p
-          className="text-center max-w-3xl mx-auto text-[#202020]"
+          className={cn(
+            styles.body,
+            "text-center max-w-3xl mx-auto text-[#202020]"
+          )}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}

@@ -3,6 +3,7 @@
 import { Card } from "@/components/ui/card";
 import { Facebook, Instagram, Mail, MapPin, Phone, Send } from "lucide-react";
 import { motion } from "framer-motion";
+import TextElement from "@/components/text-element/TextElement";
 
 export function ContactContent() {
   return (
@@ -15,15 +16,15 @@ export function ContactContent() {
           transition={{ duration: 0.5 }}
         >
           <div className="space-y-4">
-            <h1 className="text-4xl font-bold text-[#004282]">
+            <TextElement variant="heading" className="text-[#004282]">
               Contact Information
-            </h1>
-            <p className="text-[#202020]">
+            </TextElement>
+            <TextElement variant="body" className="text-[#202020]">
               It was popularised in the 1960s with the release of Letraset
               sheets containing Lorem Ipsum passages, and more recently with
               desktop publishing software like Aldus PageMaker including
               versions of Lorem Ipsum.
-            </p>
+            </TextElement>
           </div>
 
           <div className="space-y-6">
@@ -34,10 +35,10 @@ export function ContactContent() {
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               <MapPin className="w-5 h-5 mt-1 text-[#004282]" />
-              <span>
+              <TextElement variant="body" className="text-[#202020]">
                 Building 13, Monivong Blvd, Sangkat Srah Chak, Khan Daun Penh,
                 Phnom Penh, Cambodia, 120210
-              </span>
+              </TextElement>
             </motion.div>
             <motion.div
               className="flex items-center gap-3"
@@ -46,7 +47,9 @@ export function ContactContent() {
               transition={{ duration: 0.5, delay: 0.3 }}
             >
               <Phone className="w-5 h-5 text-[#004282]" />
-              <span>1234</span>
+              <TextElement variant="body" className="text-[#202020]">
+                1234
+              </TextElement>
             </motion.div>
             <motion.div
               className="flex items-center gap-3"
@@ -55,7 +58,9 @@ export function ContactContent() {
               transition={{ duration: 0.5, delay: 0.4 }}
             >
               <Mail className="w-5 h-5 text-[#004282]" />
-              <span>info@docd.gov.kh</span>
+              <TextElement variant="body" className="text-[#202020]">
+                info@docd.gov.kh
+              </TextElement>
             </motion.div>
           </div>
 

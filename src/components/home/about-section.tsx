@@ -1,21 +1,22 @@
 import { Button } from "@/components/ui/button";
+import TextElement from "@/components/text-element/TextElement";
 
 export function AboutSection() {
   return (
     <div className="bg-slate-100">
       <div className="container grid md:grid-cols-2 grid-cols-1 gap-12 py-16 h-100">
         <div>
-          <h2 className="text-4xl font-bold text-[#004282]">
+          <TextElement variant="heading" className="text-[#004282]">
             About Community Tech Center
-          </h2>
+          </TextElement>
         </div>
         <div className="flex flex-col gap-6">
-          <p className="text-lg text-[#202020]">
+          <TextElement variant="body" className="text-[#202020]">
             It was popularised in the 1960s with the release of Letraset sheets
             containing Lorem Ipsum passages, and more recently with desktop
             publishing software like Aldus PageMaker including versions of Lorem
             Ipsum.
-          </p>
+          </TextElement>
           <Button
             variant="link"
             className="w-fit text-[#F58220] hover:text-[#F58220]/90"

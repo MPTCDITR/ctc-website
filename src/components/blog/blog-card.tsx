@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { formatDate } from "@/lib/utils";
 import { motion } from "framer-motion";
+import TextElement from "@/components/text-element/TextElement";
 
 interface BlogCardProps {
   index: number;
@@ -53,14 +54,14 @@ export function BlogCard({
               />
             </div>
             <div className="space-y-4">
-              <span className="text-[#F58220] hover:underline">
+              <TextElement variant="body" className="text-[#F58220] hover:underline">
                 <time dateTime={date}>{formatDate(new Date(date), lang)}</time>
-              </span>
-              <h2 className="text-2xl font-semibold text-[#004282]">{title}</h2>
-              <p className="text-gray-600">{description}</p>
-              <p className="text-[#004282] font-bold hover:underline">
+              </TextElement>
+              <TextElement variant="title" className="text-[#004282]">{title}</TextElement>
+              <TextElement variant="body" className="text-gray-600">{description}</TextElement>
+              <TextElement variant="body" className="text-[#004282] font-bold hover:underline">
                 Read More →
-              </p>
+              </TextElement>
             </div>
           </div>
         </Card>

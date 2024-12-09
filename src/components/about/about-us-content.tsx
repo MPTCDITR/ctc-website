@@ -1,11 +1,14 @@
 import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
+import TextElement from "@/components/text-element/TextElement";
+import { cn } from "@/lib/utils";
+import { styles } from "@/components/text-element/ElementStyle";
 
 export function AboutContent() {
   return (
     <div className="container py-12 space-y-12">
       <motion.h1
-        className="text-4xl font-bold text-center text-[#004282]"
+        className={cn(styles.heading, "text-center text-[#004282]")}
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -14,7 +17,7 @@ export function AboutContent() {
       </motion.h1>
 
       <motion.p
-        className="text-center max-w-3xl mx-auto"
+        className={cn(styles.body, "text-center max-w-3xl mx-auto")}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
@@ -40,7 +43,7 @@ export function AboutContent() {
       </motion.div>
 
       <motion.p
-        className="max-w-3xl mx-auto"
+        className={cn(styles.body, "max-w-3xl mx-auto")}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.6 }}
@@ -71,29 +74,30 @@ export function AboutContent() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 1 }}
         >
-          <p>
+          <TextElement variant="body">
             It was popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages, and more recently it was
-            popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages, and more recently it was
-            popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages, and more recently it was
-            popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages, and more recently it was
-            popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages.
-          </p>
-          <p>
+            containing Lorem Ipsum passages, and more recently with desktop
+            publishing software like Aldus PageMaker including versions of Lorem
+            Ipsum. It was popularised in the 1960s with the release of Letraset
+            sheets containing Lorem Ipsum passages, and more recently with
+            desktop publishing software like Aldus PageMaker including versions
+            of Lorem Ipsum. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently
+            with desktop publishing software like Aldus PageMaker including
+            versions of Lorem Ipsum.
+          </TextElement>
+          <TextElement variant="body">
             Lorem Ipsum passages, and more recently it was popularised in the
             1960s with the release of Letraset sheets containing Lorem Ipsum
             Lorem Ipsum passages, and more recently it was popularised in the
             1960s
-          </p>
+          </TextElement>
+          <p></p>
         </motion.div>
       </div>
 
       <motion.p
-        className="max-w-3xl mx-auto"
+        className={cn(styles.body, "max-w-3xl mx-auto")}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 1.2 }}
@@ -119,7 +123,7 @@ export function AboutContent() {
       </motion.div>
 
       <motion.p
-        className="max-w-3xl mx-auto"
+        className={cn(styles.body, "max-w-3xl mx-auto")}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 1.6 }}
