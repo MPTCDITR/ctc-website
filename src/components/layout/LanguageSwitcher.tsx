@@ -28,7 +28,7 @@ export function LanguageSwitcher({ lang }: LanguageSwitcherProps) {
         className="font-medium transition-colors hover:text-primary nav-link "
       >
         <Button variant="ghost" className="flex items-center gap-1">
-          {lang == "en" ? "Englist" : "ខ្មែរ"}
+          {lang == "en" ? "English" : "ខ្មែរ"}
           <ChevronDown className="h-4 w-4" />
         </Button>
       </DropdownMenuTrigger>

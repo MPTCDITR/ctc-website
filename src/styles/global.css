@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Kantumruy Pro", serif;
+  font-family: "Kantumruy Pro";
   font-weight: 100 200 300 400 500 600 700;
   font-display: optional;
   src:
-    url("/public/fonts/kantumruypro.woff2") format("woff2"),
-    url("/public/fonts/kantumruypro.woff") format("woff");
+    url("/fonts/kantumruypro.woff2") format("woff2"),
+    url("/fonts/kantumruypro.woff") format("woff");
 }
 
 @layer base {
