@@ -1,64 +1,40 @@
 ---
-import { type CollectionEntry, getCollection } from "astro:content";
-import FormattedDate from "@/components/FormattedDate.astro";
+import "@/styles/global.css";
 import Layout from "@/layouts/Layout.astro";
-import { Card } from "@/components/ui/card";
+import { BlogContent } from "@/components/blog/blog-content";
+import { getLangFromUrl } from "@/lib/i18n";
+import { type CollectionEntry, getCollection } from "astro:content";
 
 export async function getStaticPaths() {
-  const posts = await getCollection("blog");
-
-  const paths = posts.map((post) => {
-    const [lang, ...slug] = post.slug.split("/");
-    return { params: { lang, slug: slug.join("/") || undefined }, props: post };
+  const blogEntries = await getCollection("blog");
+  return blogEntries.map((entry) => {
+    const [lang, ...slug] = entry.slug.split("/");
+    return {
+      params: { lang, slug: slug.join("/") },
+      props: { entry },
+    };
   });
-
-  return paths;
 }
-type Props = CollectionEntry<"blog">;
-const { lang, slug } = Astro.params;
-const post = Astro.props;
 
-const { Content } = await post.render();
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+const lang = getLangFromUrl(Astro.url);
+
+type Props = CollectionEntry<"blog">;
 ---
 
-<Layout title="Artticle Details - Welcome">
-  <article class="container py-12 space-y-8">
-    <Card className="w-full aspect-[21/9] bg-gray-200">
-      {
-        post.data.heroImage && (
-          <img
-            src={post.data.heroImage}
-            width="full"
-            height=""
-            alt={post.data.title}
-            style={{ objectFit: "cover" }}
-            class="w-full"
-          />
-        )
-      }
-    </Card>
-
-    <div class="max-w-5xl mx-auto space-y-6">
-      <h1 class="text-4xl font-bold text-[#004282]">{post.data.title}</h1>
-
-      <div class="flex items-center gap-2 text-gray-600">
-        <!-- <span>{article.author}</span> -->
-        <!-- <span>•</span> -->
-        <span>
-          <FormattedDate date={post.data.pubDate} />
-          {
-            post.data.updatedDate && (
-              <div class="last-updated-on">
-                Last updated on <FormattedDate date={post.data.updatedDate} />
-              </div>
-            )
-          }</span
-        >
-      </div>
-
-      <div class="prose max-w-none">
-        <Content />
-      </div>
-    </div>
-  </article>
+<Layout title={`${entry.data.title} - BlogSpace`}>
+  <main class="container py-12">
+    <BlogContent
+      title={entry.data.title}
+      date={entry.data.date}
+      author={entry.data.author}
+      description={entry.data.description}
+      image={entry.data.image}
+      lang={lang}
+      client:load
+    >
+      <Content />
+    </BlogContent>
+  </main>
 </Layout>
