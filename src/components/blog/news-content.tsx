@@ -2,6 +2,9 @@ import { Card } from "@/components/ui/card";
 import { Dot } from "lucide-react";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import TextElement from "@/components/text-element/TextElement";
+import { cn } from "@/lib/utils";
+import { styles } from "@/components/text-element/ElementStyle";
 
 const formatDate = (dateString: string): string => {
   const date = new Date(dateString);
@@ -24,7 +27,7 @@ export function NewsContent({
   return (
     <div className="container py-12 space-y-12">
       <motion.h1
-        className="text-4xl font-bold text-center text-[#004282]"
+        className={cn(styles.heading, "text-center text-[#004282]")}
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -33,7 +36,7 @@ export function NewsContent({
       </motion.h1>
 
       <motion.p
-        className="text-center max-w-3xl mx-auto"
+        className={cn(styles.heading, "text-center max-w-3xl mx-auto")}
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
@@ -71,16 +74,24 @@ export function NewsContent({
                       />
                     </div>
                     <div className="space-y-4">
-                      <span className="text-[#F58220] hover:underline">
+                      <TextElement
+                        variant="small"
+                        className="text-[#F58220] hover:underline"
+                      >
                         {formatDate(post.data.pubDate)}
-                      </span>
-                      <h2 className="text-2xl font-semibold text-[#004282]">
+                      </TextElement>
+                      <TextElement variant="title" className="text-[#004282]">
                         {post.data.title}
-                      </h2>
-                      <p className="text-gray-600">{post.data.description}</p>
-                      <p className="text-[#004282] font-bold hover:underline">
+                      </TextElement>
+                      <TextElement variant="body" className="text-gray-600">
+                        {post.data.description}
+                      </TextElement>
+                      <TextElement
+                        variant="body"
+                        className="text-[#004282] font-bold hover:underline"
+                      >
                         Read More →
-                      </p>
+                      </TextElement>
                     </div>
                   </div>
                 </Card>

@@ -3,6 +3,7 @@ import { type CollectionEntry, getCollection } from "astro:content";
 import FormattedDate from "@/components/FormattedDate.astro";
 import Layout from "@/layouts/Layout.astro";
 import { Card } from "@/components/ui/card";
+import TextElement from "@/components/text-element/TextElement";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
@@ -39,21 +40,26 @@ const { Content } = await post.render();
     </Card>
 
     <div class="max-w-5xl mx-auto space-y-6">
-      <h1 class="text-4xl font-bold text-[#004282]">{post.data.title}</h1>
+      <TextElement variant="heading" className="text-[#004282]">
+        {post.data.title}
+      </TextElement>
+      
 
       <div class="flex items-center gap-2 text-gray-600">
-        <!-- <span>{article.author}</span> -->
-        <!-- <span>•</span> -->
-        <span>
-          <FormattedDate date={post.data.pubDate} />
-          {
-            post.data.updatedDate && (
-              <div class="last-updated-on">
+        <TextElement variant="small">
+          <!-- <span>{article.author}</span> -->
+          <!-- <span>•</span> -->
+          <span>
+            <FormattedDate date={post.data.pubDate} />
+            {
+              post.data.updatedDate && (
+                <div class="last-updated-on">
                 Last updated on <FormattedDate date={post.data.updatedDate} />
               </div>
             )
           }</span
         >
+      </TextElement>
       </div>
 
       <div class="prose max-w-none">
