@@ -20,7 +20,7 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 const lang = getLangFromUrl(Astro.url);
 
-type Props = CollectionEntry<"blog">;
+// type Props = CollectionEntry<"blog">;
 ---
 
 <Layout title={`${entry.data.title} - BlogSpace`}>
