@@ -1,5 +1,8 @@
 import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
+import PostOfficeView from "@/assets/post-office-view.webp";
+import CTCOpeningCeremony from "@/assets/about/ctc-opening-ceremony.webp";
+import CTCLeftView from "@/assets/about/ctc-left-view.webp";
 
 export function AboutContent() {
   return (
@@ -36,7 +39,14 @@ export function AboutContent() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.4 }}
       >
-        <Card className="w-full aspect-video bg-gray-200" />
+        <Card className="w-full aspect-video bg-gray-200">
+          <img
+            src={PostOfficeView.src}
+            alt="c.t.c. post office view"
+            className="w-full"
+            style={{ objectFit: "cover" }}
+          />
+        </Card>
       </motion.div>
 
       <motion.p
@@ -63,7 +73,14 @@ export function AboutContent() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.8 }}
         >
-          <Card className="aspect-square bg-gray-200" />
+          <Card className="bg-gray-200">
+            <img
+              src={CTCOpeningCeremony.src}
+              alt="c.t.c. opening ceremony"
+              className="w-full"
+              style={{ objectFit: "cover" }}
+            />
+          </Card>
         </motion.div>
         <motion.div
           className="space-y-4"
@@ -115,7 +132,14 @@ export function AboutContent() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 1.4 }}
       >
-        <Card className="w-full aspect-video bg-gray-200" />
+        <Card className="w-full aspect-video bg-gray-200">
+          <img
+            src={CTCLeftView.src}
+            alt="c.t.c. post office left view"
+            className="w-full"
+            style={{ objectFit: "cover" }}
+          />
+        </Card>
       </motion.div>
 
       <motion.p

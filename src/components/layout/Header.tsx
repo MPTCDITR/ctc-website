@@ -3,6 +3,7 @@ import { MobileNav } from "./MobileNav";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import CTCLogo from "@/assets/logo/ctc-logo.webp";
 
 import {
   DropdownMenu,
@@ -39,7 +40,12 @@ export function Header({ translations, lang }: HeaderProps) {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
-          <Rabbit className="h-10 w-10" />
+          <img
+            src={CTCLogo.src}
+            alt="c.t.c. logo"
+            className="h-10"
+            style={{ objectFit: "cover" }}
+          />
           <span className="font-bold text-lg">Community Tech Center</span>
         </div>
 

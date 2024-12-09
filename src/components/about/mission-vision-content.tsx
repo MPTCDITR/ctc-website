@@ -1,5 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
+import Mission from "@/assets/vision-mission/mission.svg";
+import Vision from "@/assets/vision-mission/vision.svg";
 
 export function MissionVisionContent() {
   return (
@@ -38,11 +40,19 @@ export function MissionVisionContent() {
           </motion.p>
         </div>
         <motion.div
+          className="flex justify-center"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
-          <Card className="aspect-square bg-gray-200" />
+          <Card className="aspect-square bg-background border-none max-w-60 lg:max-w-80">
+            <img
+              src={Vision.src}
+              alt="c.t.c. vision"
+              className="w-full"
+              style={{ objectFit: "cover" }}
+            />
+          </Card>
         </motion.div>
       </motion.section>
 
@@ -53,12 +63,19 @@ export function MissionVisionContent() {
         transition={{ duration: 0.5, delay: 0.8 }}
       >
         <motion.div
-          className="md:order-1"
+          className="md:order-1 flex justify-center"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 1 }}
         >
-          <Card className="aspect-square bg-gray-200" />
+          <Card className="aspect-square bg-background border-none max-w-60 lg:max-w-80">
+            <img
+              src={Mission.src}
+              alt="c.t.c. mission"
+              className="w-full"
+              style={{ objectFit: "cover" }}
+            />
+          </Card>
         </motion.div>
         <div className="space-y-6 md:order-1">
           <motion.h2

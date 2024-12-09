@@ -2,6 +2,7 @@
 
 import { Mail, Phone, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
+import CTCLogo from "@/assets/logo/ctc-logo.webp";
 
 export function SiteFooter() {
   const containerVariants = {
@@ -31,7 +32,14 @@ export function SiteFooter() {
     >
       <div className="container py-12 grid grid-cols-1 md:grid-cols-4 gap-8 mx-auto">
         <motion.div variants={itemVariants}>
-          <div className="w-16 h-16 bg-gray-300 rounded-full mb-4" />
+          <div className=" rounded-full mb-4">
+            <img
+              src={CTCLogo.src}
+              alt="c.t.c. logo"
+              className="h-16"
+              style={{ objectFit: "cover" }}
+            />
+          </div>
         </motion.div>
         <motion.div variants={itemVariants}>
           <h3 className="font-semibold mb-4">Quick Links</h3>

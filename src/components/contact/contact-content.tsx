@@ -3,6 +3,7 @@
 import { Card } from "@/components/ui/card";
 import { Facebook, Instagram, Mail, MapPin, Phone, Send } from "lucide-react";
 import { motion } from "framer-motion";
+import PostOfficeView from "@/assets/post-office-view.webp";
 
 export function ContactContent() {
   return (
@@ -91,7 +92,14 @@ export function ContactContent() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <Card className="aspect-square bg-gray-200" />
+          <Card className="bg-gray-200">
+            <img
+              src={PostOfficeView.src}
+              alt="c.t.c. post office view"
+              className="w-full"
+              style={{ objectFit: "cover" }}
+            />
+          </Card>
         </motion.div>
       </div>
 
@@ -100,7 +108,13 @@ export function ContactContent() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.4 }}
       >
-        <Card className="w-full aspect-[21/9] bg-gray-200" />
+        <Card className="w-full aspect-[21/9] bg-gray-200">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1162.8156767476266!2d104.86875695463935!3d11.23476819449948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310965004b1805c1%3A0x6ad74b518822fb3f!2z4Z6Y4Z6H4Z-S4Z6I4Z6Y4Z6O4Z-S4Z6M4Z6b4Z6U4Z6F4Z-S4Z6F4Z-B4Z6A4Z6c4Z634Z6R4Z-S4Z6Z4Z624Z6f4Z6g4Z6C4Z6Y4Z6T4Z-N!5e0!3m2!1sen!2skh!4v1733729558785!5m2!1sen!2skh"
+            className="size-full"
+            title="Google Maps: Telecommunication Regulator of Cambodia Location"
+          ></iframe>
+        </Card>
       </motion.div>
     </div>
   );
