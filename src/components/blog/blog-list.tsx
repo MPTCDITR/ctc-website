@@ -3,6 +3,9 @@ import { BlogCard } from "./blog-card";
 import type { CollectionEntry } from "astro:content";
 import { Dot } from "lucide-react";
 import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
+import { styles } from "@/components/text-element/ElementStyle";
+import { TextElement } from "@/components/text-element/TextElement";
 
 interface BlogListProps {
   translations: Record<string, string>;
@@ -16,8 +19,8 @@ export function BlogList({ translations, posts, lang }: BlogListProps) {
   if (!posts?.length) {
     return (
       <div className="space-y-8">
-        <h1 className="text-4xl font-bold tracking-tight">{t("blog.title")}</h1>
-        <p className="text-muted-foreground">{t("blog.no_posts")}</p>
+        <TextElement variant="heading">{t("blog.title")}</TextElement>
+        <TextElement variant="body" className="text-muted-foreground">{t("blog.no_posts")}</TextElement>
       </div>
     );
   }
@@ -29,7 +32,7 @@ export function BlogList({ translations, posts, lang }: BlogListProps) {
   return (
     <div className="container py-12 space-y-12">
       <motion.h1
-        className="text-4xl font-bold text-center text-[#004282]"
+        className={cn(styles.heading, "text-center text-[#004282]")}
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -38,7 +41,7 @@ export function BlogList({ translations, posts, lang }: BlogListProps) {
       </motion.h1>
 
       <motion.p
-        className="text-center max-w-3xl mx-auto"
+        className={cn(styles.body, "text-center max-w-3xl mx-auto")}
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}

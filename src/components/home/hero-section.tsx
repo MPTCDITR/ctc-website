@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import TextElement from "@/components/text-element/TextElement";
+import { cn } from "@/lib/utils";
+import { styles } from "@/components/text-element/ElementStyle";
 
 const slides = [
   {
@@ -62,16 +65,19 @@ const Hero = () => {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5 }}
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            <TextElement variant="heading" className="mb-6">
               {slides[currentSlide].title}
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-autos">
+            </TextElement>
+            <TextElement variant="body" className="mb-8 max-w-3xl mx-autos">
               {slides[currentSlide].description}
-            </p>
+            </TextElement>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-white text-gray-900 px-8 py-3 rounded-full text-lg font-medium hover:bg-gray-100 transition-colors"
+              className={cn(
+                styles.button,
+                "bg-white text-gray-900 px-8 py-3 rounded-full hover:bg-gray-100 transition-colors"
+              )}
             >
               Learn More
             </motion.button>

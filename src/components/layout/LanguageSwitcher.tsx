@@ -7,6 +7,8 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { languages, type Language } from "@/i18n/ui";
+import KhmerIcon from "@/assets/languages/KH.svg";
+import USIcon from "@/assets/languages/UK.svg";
 
 interface LanguageSwitcherProps {
   translations?: Record<string, string>;
@@ -27,8 +29,19 @@ export function LanguageSwitcher({ lang }: LanguageSwitcherProps) {
         asChild
         className="font-medium transition-colors hover:text-primary nav-link "
       >
-        <Button variant="ghost" className="flex items-center gap-1">
-          {lang == "en" ? "English" : "ខ្មែរ"}
+        <Button variant="ghost" className="flex items-center gap-2">
+          {lang == "en" ? (
+            <>
+              <img src={USIcon.src} width="23" height="15" />
+              <span>English</span>
+            </>
+          ) : (
+            <>
+              <img src={KhmerIcon.src} width="23" height="15" />
+              <span>ខ្មែរ</span>
+            </>
+            
+          )}
           <ChevronDown className="h-4 w-4" />
         </Button>
       </DropdownMenuTrigger>

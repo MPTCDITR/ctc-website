@@ -1,6 +1,7 @@
 import React from "react";
 import { formatDate } from "@/lib/utils";
 import { Card } from "@/components/ui/card";
+import { TextElement } from "@/components/text-element/TextElement";
 
 interface BlogContentProps {
   title: string;
@@ -36,13 +37,13 @@ export function BlogContent({
         <h1 className="text-4xl font-bold text-[#004282]">{title}</h1>
         {/* <p className="text-xl text-muted-foreground">{description}</p> */}
 
-        <div className="flex items-center gap-2 text-gray-600">
+        <TextElement variant="small" className="flex items-center gap-2 text-gray-600">
           <span>{author}</span>
           <span>•</span>
           <span>
             <time dateTime={date.toISOString()}>{formatDate(date, lang)}</time>
           </span>
-        </div>
+        </TextElement>
 
         <div className="prose prose-neutral max-w-none">{children}</div>
       </div>
