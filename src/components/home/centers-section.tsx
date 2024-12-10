@@ -4,12 +4,12 @@ export function CentersSection() {
   return (
     <div className="py-16 bg-gray-50">
       <div className="container flex flex-col items-center gap-8">
-        <TextElement variant="heading" className="text-[#004282]">
+        <TextElement variant="heading" className="text-primary">
           Our Centers
         </TextElement>
         <TextElement
           variant="body"
-          className="max-w-2xl text-center text-[#202020]"
+          className="max-w-2xl text-center "
         >
           It was popularised in the 1960s with the release of Letraset sheets
           containing Lorem Ipsum passages, and more recently with desktop

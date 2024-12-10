@@ -55,7 +55,7 @@ export function Header({ translations, lang }: HeaderProps) {
               <DropdownMenu key={item.label}>
                 <DropdownMenuTrigger
                   asChild
-                  className="font-medium transition-colors hover:text-[#004282] nav-link"
+                  className="font-medium transition-colors hover:text-primary nav-link"
                 >
                   <Button variant="ghost" className="flex items-center gap-1 ">
                     {item.label} <ChevronDown className="h-4 w-4" />
@@ -77,7 +77,7 @@ export function Header({ translations, lang }: HeaderProps) {
               >
                 <a
                   href={item.href}
-                  className=" hover:text-[#004282] font-medium transition-colors nav-link"
+                  className=" hover:text-primary font-medium transition-colors nav-link"
                 >
                   {item.label}
                 </a>

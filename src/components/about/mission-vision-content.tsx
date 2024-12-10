@@ -16,7 +16,7 @@ export function MissionVisionContent() {
       >
         <div className="space-y-6">
           <motion.h1
-            className={cn(styles.heading, "text-[#004282]")}
+            className={cn(styles.heading, "text-primary")}
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -24,7 +24,7 @@ export function MissionVisionContent() {
             Vision
           </motion.h1>
           <motion.p
-            className={cn(styles.body, "text-[#202020] leading-relaxed")}
+            className={cn(styles.body, "leading-relaxed")}
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
@@ -81,7 +81,7 @@ export function MissionVisionContent() {
         </motion.div>
         <div className="space-y-6 md:order-1">
           <motion.h1
-            className={cn(styles.heading, "text-[#004282]")}
+            className={cn(styles.heading, "text-primary")}
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 1.2 }}
@@ -89,7 +89,7 @@ export function MissionVisionContent() {
             Mission
           </motion.h1>
           <motion.p
-            className={cn(styles.body, "text-[#202020] leading-relaxed")}
+            className={cn(styles.body, "leading-relaxed")}
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 1.4 }}
