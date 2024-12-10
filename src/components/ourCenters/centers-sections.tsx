@@ -24,10 +24,7 @@ export function CentersContent() {
           Structure of CTC
         </motion.h1>
         <motion.p
-          className={cn(
-            styles.body,
-            "text-center max-w-3xl mx-auto "
-          )}
+          className={cn(styles.body, "text-center max-w-3xl mx-auto ")}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
@@ -45,7 +42,12 @@ export function CentersContent() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
-          <Card className="w-full aspect-[16/9] bg-gray-200" />
+          <Card className="w-full aspect-[16/9] bg-gray-200">
+            <iframe
+              src="https://www.google.com/maps/d/u/0/embed?mid=1oXXkivO9_Cx8KyA2kAjlhWqoEK_DbuM&ehbc=2E312F&noprof=1"
+              className="w-full h-full"
+            ></iframe>
+          </Card>
         </motion.div>
       </motion.section>
       <motion.section
