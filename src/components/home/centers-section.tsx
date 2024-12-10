@@ -1,4 +1,5 @@
 import TextElement from "@/components/text-element/TextElement";
+import PostOfficeView from "@/assets/post-office-view.webp";
 
 export function CentersSection() {
   return (
@@ -7,16 +8,20 @@ export function CentersSection() {
         <TextElement variant="heading" className="text-primary">
           Our Centers
         </TextElement>
-        <TextElement
-          variant="body"
-          className="max-w-2xl text-center "
-        >
+        <TextElement variant="body" className="max-w-2xl text-center ">
           It was popularised in the 1960s with the release of Letraset sheets
           containing Lorem Ipsum passages, and more recently with desktop
           publishing software like Aldus PageMaker including versions of Lorem
           Ipsum.
         </TextElement>
-        <div className="w-full max-w-3xl aspect-[16/9] bg-gray-200 rounded-lg" />
+        <div className="w-full max-w-8xl aspect-[16/9] bg-gray-200 rounded-lg">
+          <img
+            src={PostOfficeView.src}
+            alt="c.t.c. post office view"
+            className="w-full"
+            style={{ objectFit: "cover" }}
+          />
+        </div>
       </div>
     </div>
   );
