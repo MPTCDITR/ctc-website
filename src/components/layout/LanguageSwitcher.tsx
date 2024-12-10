@@ -29,7 +29,7 @@ export function LanguageSwitcher({ lang }: LanguageSwitcherProps) {
         asChild
         className="font-medium transition-colors hover:text-primary nav-link "
       >
-        <Button variant="ghost" className="flex items-center gap-2">
+        <Button variant="ghost" className="flex items-center gap-2 text-base">
           {lang == "en" ? (
             <>
               <img src={USIcon.src} width="23" height="15" />
@@ -50,6 +50,7 @@ export function LanguageSwitcher({ lang }: LanguageSwitcherProps) {
           <DropdownMenuItem
             key={lang}
             onClick={() => switchLanguage(lang as Language)}
+            className="text-base"
           >
             {label}
           </DropdownMenuItem>

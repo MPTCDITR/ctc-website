@@ -58,7 +58,7 @@
 
   .nav-link::after {
     content: "";
-    @apply absolute left-0 bottom-0 w-full h-0.5 bg-gray-900 scale-x-0 transition-transform duration-300 origin-right;
+    @apply absolute left-0 bottom-0 w-full h-0.5 bg-secondary scale-x-0 transition-transform duration-300 origin-right;
   }
 
   .nav-link:hover::after {

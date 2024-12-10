@@ -8,6 +8,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 interface MobileNavProps {
   translations: Record<string, string>;
@@ -20,7 +21,7 @@ export function MobileNav({ translations, lang }: MobileNavProps) {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button variant="ghost" size="icon" className="md:hidden">
+        <Button variant="ghost" size="icon" className="lg:hidden">
           <MenuIcon className="h-5 w-5" />
         </Button>
       </SheetTrigger>
@@ -28,6 +29,9 @@ export function MobileNav({ translations, lang }: MobileNavProps) {
         <SheetHeader>
           <SheetTitle>Menu</SheetTitle>
         </SheetHeader>
+        <div className="-mx-4 -my-2 pt-4 md:hidden">
+          <LanguageSwitcher lang={lang} />
+        </div>
         <nav className="flex flex-col gap-4 mt-4">
           <a
             href={`/${lang}`}
