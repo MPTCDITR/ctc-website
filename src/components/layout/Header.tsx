@@ -3,7 +3,7 @@ import { MobileNav } from "./MobileNav";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import CTCLogo from "@/assets/logo/ctc-logo.webp";
+import CTCLogoBlueSubtitle from "@/assets/logo/ctc-logo-blue-subtitle.webp";
 
 import {
   DropdownMenu,
@@ -32,24 +32,23 @@ export function Header({ translations, lang }: HeaderProps) {
       ],
     },
     { href: `/${lang}/our-centers/`, label: "Our Centers" },
-    { href: `/${lang}/blog/`, label: t("nav.blog") },
+    { href: `/${lang}/blog/`, label: t("nav.news") },
     { href: `/${lang}/contact/`, label: t("nav.contact") },
   ];
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-full py-2 lg:py-4 items-center justify-between">
-        <div className="flex items-center gap-2">
+      <div className="container flex h-full py-4 items-center justify-between">
+        <a href={`/${lang}`} aria-label="Go to home page">
           <img
-            src={CTCLogo.src}
+            src={CTCLogoBlueSubtitle.src}
             alt="c.t.c. logo"
-            className="h-16"
+            className="h-12 md:h-14"
             style={{ objectFit: "cover" }}
           />
-          <span className="font-bold text-lg text-primary">Community Tech Center</span>
-        </div>
+        </a>
 
-        <nav className="hidden lg:flex gap-4 items-center">
+        <nav className="hidden lg:flex lg:gap-0 xl:gap-4 items-center">
           {navigation.map((item) =>
             item.children ? (
               <DropdownMenu key={item.label}>
@@ -57,14 +56,19 @@ export function Header({ translations, lang }: HeaderProps) {
                   asChild
                   className="font-medium transition-colors hover:text-[#004282] nav-link"
                 >
-                  <Button variant="ghost" className="flex items-center gap-1 text-base">
+                  <Button
+                    variant="ghost"
+                    className="flex items-center gap-1 text-base lg:px-3 xl:px-4"
+                  >
                     {item.label} <ChevronDown className="h-4 w-4" />
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
                   {item.children.map((child) => (
                     <DropdownMenuItem key={child.label}>
-                      <a href={child.href} className="text-base">{child.label}</a>
+                      <a href={child.href} className="text-base">
+                        {child.label}
+                      </a>
                     </DropdownMenuItem>
                   ))}
                 </DropdownMenuContent>
@@ -77,7 +81,7 @@ export function Header({ translations, lang }: HeaderProps) {
               >
                 <a
                   href={item.href}
-                  className=" hover:text-[#004282] font-medium transition-colors nav-link text-base"
+                  className=" hover:text-[#004282] lg:px-3 xl:px-4 font-medium transition-colors nav-link text-base"
                 >
                   {item.label}
                 </a>
@@ -87,7 +91,9 @@ export function Header({ translations, lang }: HeaderProps) {
         </nav>
 
         <div className="flex items-center">
-          <LanguageSwitcher lang={lang} />
+          <div className="hidden md:flex">
+            <LanguageSwitcher lang={lang} />
+          </div>
           <MobileNav translations={translations} lang={lang} />
         </div>
       </div>
