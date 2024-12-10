@@ -4,7 +4,11 @@ import { Mail, Phone, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 import CTCLogo from "@/assets/logo/ctc-logo.webp";
 
-export function SiteFooter() {
+interface FooterProps {
+  lang?: string;
+}
+
+export function SiteFooter({ lang }: FooterProps){
   const containerVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -44,25 +48,25 @@ export function SiteFooter() {
         <motion.div variants={itemVariants}>
           <h3 className="font-semibold mb-4">Quick Links</h3>
           <div className="flex flex-col gap-2">
-            <a href="/" className="text-gray-600 hover:text-primary">
+            <a href={`/${lang}`} className="text-gray-600 hover:text-primary">
               Home
             </a>
             <a
-              href="/about/our-story"
+               href={`/${lang}/about/about-us`}
               className="text-gray-600 hover:text-primary"
             >
               Our Story
             </a>
             <a
-              href="/about/mission"
+              href={`/${lang}/about/mission-vision`}
               className="text-gray-600 hover:text-primary"
             >
               Mission & Vision
             </a>
-            <a href="/centers" className="text-gray-600 hover:text-primary">
+            <a href={`/${lang}/our-centers`}  className="text-gray-600 hover:text-primary">
               Our Centers
             </a>
-            <a href="/news" className="text-gray-600 hover:text-primary">
+            <a href={`/${lang}/blog`} className="text-gray-600 hover:text-primary">
               News And Events
             </a>
           </div>
@@ -70,7 +74,7 @@ export function SiteFooter() {
         <motion.div variants={itemVariants}>
           <h3 className="font-semibold mb-4">Other as</h3>
           <div className="flex flex-col gap-2">
-            <a href="#" className="text-gray-600 hover:text-primary">
+            <a href={`/${lang}`}className="text-gray-600 hover:text-primary">
               Ministry Of Post And Telecommunications
             </a>
           </div>

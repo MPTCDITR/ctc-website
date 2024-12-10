@@ -42,7 +42,7 @@ const translations = ui[lang];
       <main class="flex-1">
         <slot />
       </main>
-      <SiteFooter client:load />
+      <SiteFooter lang={lang} client:load />
     </div>
   </body>
 </html>
