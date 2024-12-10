@@ -54,12 +54,12 @@ export function BlogCard({
               />
             </div>
             <div className="space-y-4">
-              <TextElement variant="body" className="text-[#F58220] hover:underline">
+              <TextElement variant="body" className="text-secondary hover:underline">
                 <time dateTime={date}>{formatDate(new Date(date), lang)}</time>
               </TextElement>
-              <TextElement variant="title" className="text-[#004282]">{title}</TextElement>
+              <TextElement variant="title" className="text-primary">{title}</TextElement>
               <TextElement variant="body" className="text-gray-600">{description}</TextElement>
-              <TextElement variant="body" className="text-[#004282] font-bold hover:underline">
+              <TextElement variant="body" className="text-primary font-bold hover:underline">
                 Read More →
               </TextElement>
             </div>
