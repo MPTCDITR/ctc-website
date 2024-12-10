@@ -73,19 +73,19 @@ export function ContactContent() {
           >
             <a
               href="#"
-              className="p-2 rounded-full bg-primary text-white hover:bg-primarytransition-colors"
+              className="p-2 rounded-full bg-primary text-white hover:bg-primary transition-colors"
             >
               <Facebook className="w-5 h-5" />
             </a>
             <a
               href="#"
-              className="p-2 rounded-full bg-primary text-white hover:bg-primarytransition-colors"
+              className="p-2 rounded-full bg-primary text-white hover:bg-primary transition-colors"
             >
               <Send className="w-5 h-5" />
             </a>
             <a
               href="#"
-              className="p-2 rounded-full bg-primary text-white hover:bg-primarytransition-colors"
+              className="p-2 rounded-full bg-primary text-white hover:bg-primary transition-colors"
             >
               <Instagram className="w-5 h-5" />
             </a>
