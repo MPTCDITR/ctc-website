@@ -5,6 +5,7 @@ import BaseHead from "../components/BaseHead.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import Navbar from "@/components/layout/Navbar";
 // import Header from "../components/Header.astro";
+import CTCLogo from "@/assets/logo/ctc-logo.webp";
 
 interface Props {
   title: string;
@@ -29,7 +30,7 @@ const translations = ui[lang];
       content="Discover our Tech Center Community and insights on our website"
     />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/webp" href={CTCLogo.src} />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />

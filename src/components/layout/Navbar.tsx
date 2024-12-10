@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 // import { a, useLocation } from "react-router-dom";
 // import { useTranslation } from "react-i18next";
 import { Globe, Menu, X, Rabbit } from "lucide-react";
+import CTCLogo from "@/assets/logo/ctc-logo.webp";
 
 import { LanguageSwitcher } from "./LanguageSwitcher";
 
@@ -46,7 +47,12 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           <a href="/" className="font-bold">
             <div className="flex items-center gap-2">
-              <Rabbit className="h-10 w-10" />
+              <img
+                src={CTCLogo.src}
+                alt="c.t.c. logo"
+                className="h-10"
+                style={{ objectFit: "cover" }}
+              />
               <span className="font-bold text-lg">Community Tech Center</span>
             </div>
           </a>
