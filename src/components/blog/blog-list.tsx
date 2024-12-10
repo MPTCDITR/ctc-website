@@ -32,7 +32,7 @@ export function BlogList({ translations, posts, lang }: BlogListProps) {
   return (
     <div className="container py-12 space-y-12">
       <motion.h1
-        className={cn(styles.heading, "text-center text-[#004282]")}
+        className={cn(styles.heading, "text-center text-primary")}
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -78,7 +78,7 @@ export function BlogList({ translations, posts, lang }: BlogListProps) {
               className="focus:outline-none"
             >
               <Dot
-                className={`h-2 w-4 ${i === currentPage ? "text-[#004282]" : "text-gray-400"}`}
+                className={`h-2 w-4 ${i === currentPage ? "text-primary" : "text-gray-400"}`}
               />
             </button>
           ))}

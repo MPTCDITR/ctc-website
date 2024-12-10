@@ -44,25 +44,25 @@ export function SiteFooter() {
         <motion.div variants={itemVariants}>
           <h3 className="font-semibold mb-4">Quick Links</h3>
           <div className="flex flex-col gap-2">
-            <a href="/" className="text-gray-600 hover:text-[#004282]">
+            <a href="/" className="text-gray-600 hover:text-primary">
               Home
             </a>
             <a
               href="/about/our-story"
-              className="text-gray-600 hover:text-[#004282]"
+              className="text-gray-600 hover:text-primary"
             >
               Our Story
             </a>
             <a
               href="/about/mission"
-              className="text-gray-600 hover:text-[#004282]"
+              className="text-gray-600 hover:text-primary"
             >
               Mission & Vision
             </a>
-            <a href="/centers" className="text-gray-600 hover:text-[#004282]">
+            <a href="/centers" className="text-gray-600 hover:text-primary">
               Our Centers
             </a>
-            <a href="/news" className="text-gray-600 hover:text-[#004282]">
+            <a href="/news" className="text-gray-600 hover:text-primary">
               News And Events
             </a>
           </div>
@@ -70,7 +70,7 @@ export function SiteFooter() {
         <motion.div variants={itemVariants}>
           <h3 className="font-semibold mb-4">Other as</h3>
           <div className="flex flex-col gap-2">
-            <a href="#" className="text-gray-600 hover:text-[#004282]">
+            <a href="#" className="text-gray-600 hover:text-primary">
               Ministry Of Post And Telecommunications
             </a>
           </div>

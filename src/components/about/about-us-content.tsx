@@ -11,7 +11,7 @@ export function AboutContent() {
   return (
     <div className="container py-12 space-y-12">
       <motion.h1
-        className={cn(styles.heading, "text-center text-[#004282]")}
+        className={cn(styles.heading, "text-center text-primary")}
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}

@@ -17,10 +17,10 @@ export function ContactContent() {
           transition={{ duration: 0.5 }}
         >
           <div className="space-y-4">
-            <TextElement variant="heading" className="text-[#004282]">
+            <TextElement variant="heading" className="text-primary">
               Contact Information
             </TextElement>
-            <TextElement variant="body" className="text-[#202020]">
+            <TextElement variant="body">
               It was popularised in the 1960s with the release of Letraset
               sheets containing Lorem Ipsum passages, and more recently with
               desktop publishing software like Aldus PageMaker including
@@ -35,8 +35,8 @@ export function ContactContent() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <MapPin className="w-5 h-5 mt-1 text-[#004282]" />
-              <TextElement variant="body" className="text-[#202020]">
+              <MapPin className="w-5 h-5 mt-1 text-primary" />
+              <TextElement variant="body" >
                 Building 13, Monivong Blvd, Sangkat Srah Chak, Khan Daun Penh,
                 Phnom Penh, Cambodia, 120210
               </TextElement>
@@ -47,8 +47,8 @@ export function ContactContent() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              <Phone className="w-5 h-5 text-[#004282]" />
-              <TextElement variant="body" className="text-[#202020]">
+              <Phone className="w-5 h-5 text-primary" />
+              <TextElement variant="body" >
                 1234
               </TextElement>
             </motion.div>
@@ -58,8 +58,8 @@ export function ContactContent() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              <Mail className="w-5 h-5 text-[#004282]" />
-              <TextElement variant="body" className="text-[#202020]">
+              <Mail className="w-5 h-5 text-primary" />
+              <TextElement variant="body" >
                 info@docd.gov.kh
               </TextElement>
             </motion.div>
@@ -73,19 +73,19 @@ export function ContactContent() {
           >
             <a
               href="#"
-              className="p-2 rounded-full bg-[#004282] text-white hover:bg-[#004282]/90 transition-colors"
+              className="p-2 rounded-full bg-primary text-white hover:bg-primary transition-colors"
             >
               <Facebook className="w-5 h-5" />
             </a>
             <a
               href="#"
-              className="p-2 rounded-full bg-[#004282] text-white hover:bg-[#004282]/90 transition-colors"
+              className="p-2 rounded-full bg-primary text-white hover:bg-primary transition-colors"
             >
               <Send className="w-5 h-5" />
             </a>
             <a
               href="#"
-              className="p-2 rounded-full bg-[#004282] text-white hover:bg-[#004282]/90 transition-colors"
+              className="p-2 rounded-full bg-primary text-white hover:bg-primary transition-colors"
             >
               <Instagram className="w-5 h-5" />
             </a>

@@ -52,7 +52,7 @@ export function BlogLatestCard({
         <Button
           asChild
           variant="outline"
-          className="w-full text-[#F58220] border-[#F58220] hover:bg-[#F58220] hover:text-white"
+          className="w-full text-secondary border-secondary hover:bg-secondary hover:text-white"
         >
           <a href={`/${lang}/blog/${urlSlug}`}>
             {translations["blog.read_more"] || "Read More"}

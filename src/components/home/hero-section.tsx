@@ -65,7 +65,7 @@ const Hero = () => {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5 }}
           >
-            <TextElement variant="heading" className="mb-6">
+            <TextElement variant="heading" className="mb-6 text-white">
               {slides[currentSlide].title}
             </TextElement>
             <TextElement variant="body" className="mb-8 max-w-3xl mx-autos">
