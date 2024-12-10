@@ -38,18 +38,18 @@ export function Header({ translations, lang }: HeaderProps) {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center justify-between">
+      <div className="container flex h-full py-2 lg:py-4 items-center justify-between">
         <div className="flex items-center gap-2">
           <img
             src={CTCLogo.src}
             alt="c.t.c. logo"
-            className="h-10"
+            className="h-16"
             style={{ objectFit: "cover" }}
           />
-          <span className="font-bold text-lg">Community Tech Center</span>
+          <span className="font-bold text-lg text-primary">Community Tech Center</span>
         </div>
 
-        <nav className="hidden md:flex gap-6 items-center">
+        <nav className="hidden lg:flex gap-4 items-center">
           {navigation.map((item) =>
             item.children ? (
               <DropdownMenu key={item.label}>
@@ -57,14 +57,14 @@ export function Header({ translations, lang }: HeaderProps) {
                   asChild
                   className="font-medium transition-colors hover:text-[#004282] nav-link"
                 >
-                  <Button variant="ghost" className="flex items-center gap-1 ">
+                  <Button variant="ghost" className="flex items-center gap-1 text-base">
                     {item.label} <ChevronDown className="h-4 w-4" />
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
                   {item.children.map((child) => (
                     <DropdownMenuItem key={child.label}>
-                      <a href={child.href}>{child.label}</a>
+                      <a href={child.href} className="text-base">{child.label}</a>
                     </DropdownMenuItem>
                   ))}
                 </DropdownMenuContent>
@@ -77,7 +77,7 @@ export function Header({ translations, lang }: HeaderProps) {
               >
                 <a
                   href={item.href}
-                  className=" hover:text-[#004282] font-medium transition-colors nav-link"
+                  className=" hover:text-[#004282] font-medium transition-colors nav-link text-base"
                 >
                   {item.label}
                 </a>
@@ -86,7 +86,7 @@ export function Header({ translations, lang }: HeaderProps) {
           )}
         </nav>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center">
           <LanguageSwitcher lang={lang} />
           <MobileNav translations={translations} lang={lang} />
         </div>
