@@ -20,7 +20,9 @@ export function BlogList({ translations, posts, lang }: BlogListProps) {
     return (
       <div className="space-y-8">
         <TextElement variant="heading">{t("blog.title")}</TextElement>
-        <TextElement variant="body" className="text-muted-foreground">{t("blog.no_posts")}</TextElement>
+        <TextElement variant="body" className="text-muted-foreground">
+          {t("blog.no_posts")}
+        </TextElement>
       </div>
     );
   }
@@ -41,7 +43,7 @@ export function BlogList({ translations, posts, lang }: BlogListProps) {
       </motion.h1>
 
       <motion.p
-        className={cn(styles.body, "text-center max-w-3xl mx-auto")}
+        className={cn(styles.body, "text-center max-w-8xl mx-auto")}
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
