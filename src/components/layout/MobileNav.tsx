@@ -8,7 +8,6 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { LanguageSwitcher } from "./LanguageSwitcher";
 import {
   Accordion,
   AccordionContent,
@@ -25,7 +24,7 @@ interface NavMenuProps {
 
 interface MobileNavProps {
   translations: Record<string, string>;
-  lang?: string;
+  lang: string;
   navigationItems: NavMenuProps[];
 }
 
@@ -47,9 +46,6 @@ export function MobileNav({
         <SheetHeader>
           <SheetTitle>Menu</SheetTitle>
         </SheetHeader>
-        <div className="-mx-4 -my-2 pt-4 md:hidden">
-          <LanguageSwitcher lang={lang} />
-        </div>
         <nav className="flex flex-col gap-4 mt-4">
           {navigationItems.map((item, index) =>
             item.children ? (

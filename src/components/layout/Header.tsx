@@ -1,4 +1,4 @@
-import { Rabbit, ChevronDown } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { MobileNav } from "./MobileNav";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { Button } from "@/components/ui/button";
@@ -20,7 +20,7 @@ interface NavMenuProps {
 
 interface HeaderProps {
   translations: Record<string, string>;
-  lang?: string;
+  lang: string;
   navigationItems: NavMenuProps[];
 }
 
@@ -80,9 +80,7 @@ export function Header({ translations, lang, navigationItems }: HeaderProps) {
         </nav>
 
         <div className="flex items-center">
-          <div className="hidden md:flex">
-            <LanguageSwitcher lang={lang} />
-          </div>
+          <LanguageSwitcher lang={lang} />
           <MobileNav
             translations={translations}
             lang={lang}
