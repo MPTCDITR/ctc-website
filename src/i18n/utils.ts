@@ -57,3 +57,10 @@ export function useTranslatedPath(lang: keyof typeof ui) {
     return slug.replace(`${lang}/`, "");
   }
   
+  export function getTranslatedkey(
+    key: string,
+    lang: string = "en",
+  ): string {
+    const validLang = lang in ui ? lang : "en";
+    return ui[validLang][key] || ui[defaultLang][key];
+  }
