@@ -13,12 +13,16 @@ interface Props {
 
 const { title } = Astro.props;
 import { getLangFromUrl, useTranslations } from "@/lib/i18n";
-import { ui } from "@/i18n/ui";
+import { ui, defaultLang } from "@/i18n/ui";
+import { getLocalizedRoutes, navigation } from "@/lib/route";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 const translations = ui[lang];
+
+const locale = Astro.currentLocale ?? defaultLang;
+const navigationItems = getLocalizedRoutes(navigation, locale);
 ---
 
 <!doctype html>
@@ -38,7 +42,7 @@ const translations = ui[lang];
   <body>
     <div class="min-h-screen flex flex-col">
       <!-- <Navbar client:load /> -->
-      <Header translations={translations} lang={lang} client:load />
+      <Header translations={translations} lang={lang} navigationItems={navigationItems} client:load />
       <main class="flex-1">
         <slot />
       </main>

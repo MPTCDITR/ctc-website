@@ -9,13 +9,31 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { LanguageSwitcher } from "./LanguageSwitcher";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { motion } from "framer-motion";
+
+interface NavMenuProps {
+  href?: string;
+  label: string;
+  children?: NavMenuProps[];
+}
 
 interface MobileNavProps {
   translations: Record<string, string>;
   lang?: string;
+  navigationItems: NavMenuProps[];
 }
 
-export function MobileNav({ translations, lang }: MobileNavProps) {
+export function MobileNav({
+  translations,
+  lang,
+  navigationItems,
+}: MobileNavProps) {
   const t = (key: string) => translations[key] || key;
 
   return (
@@ -33,30 +51,47 @@ export function MobileNav({ translations, lang }: MobileNavProps) {
           <LanguageSwitcher lang={lang} />
         </div>
         <nav className="flex flex-col gap-4 mt-4">
-          <a
-            href={`/${lang}`}
-            className="font-medium transition-colors hover:text-primary"
-          >
-            {t("nav.home")}
-          </a>
-          <a
-            href={`/${lang}/about/`}
-            className="font-medium transition-colors hover:text-primary"
-          >
-            {t("nav.about")}
-          </a>
-          <a
-            href={`/${lang}/blog/`}
-            className="font-medium transition-colors hover:text-primary"
-          >
-            {t("nav.blog")}
-          </a>
-          <a
-            href={`/${lang}/contact/`}
-            className="font-medium transition-colors hover:text-primary"
-          >
-            {t("nav.contact")}
-          </a>
+          {navigationItems.map((item, index) =>
+            item.children ? (
+              <Accordion type="single" collapsible className="border-0">
+                <AccordionItem
+                  value={`item_${index}`}
+                  className="rounded border-0 data-[state=open]:bg-accent/50"
+                >
+                  <AccordionTrigger className="rounded-md bg-transparent px-4 py-2 font-medium hover:bg-accent nav-link hover:text-primary hover:no-underline text-base text-gray-700">
+                    {item.label}
+                  </AccordionTrigger>
+                  <AccordionContent className="border-t bg-transparent">
+                    <ul>
+                      {item.children?.map((child) => (
+                        <li
+                          key={child.label}
+                          className="rounded-md bg-transparent font-medium hover:text-primary nav-link hover:bg-accent text-base text-gray-700"
+                        >
+                          <a className="block px-4 py-1" href={child.href}>
+                            {child.label}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            ) : (
+              <motion.div
+                key={item.label}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <a
+                  href={item.href}
+                  className=" hover:text-primary block lg:px-3 xl:px-4 font-medium transition-colors nav-link text-base"
+                >
+                  {item.label}
+                </a>
+              </motion.div>
+            )
+          )}
         </nav>
       </SheetContent>
     </Sheet>
