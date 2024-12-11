@@ -6,12 +6,12 @@ export const navigation = [
   {
     label: "nav.about",
     children: [
-      { label: "nav.about.aboutUs", href: `/about/about-us` },
-      { label: "nav.about.missionVision", href: `/about/mission-vision` },
-      { label: "nav.about.ctcStructure", href: `/about/ctc-structure` },
+      { label: "nav.about.aboutus", href: `/about/about-us` },
+      { label: "nav.about.mission", href: `/about/mission-vision` },
+      { label: "nav.about.structure", href: `/about/ctc-structure` },
     ],
   },
-  { href: `/our-centers/`, label: "nav.ourCenters" },
+  { href: `/our-centers/`, label: "nav.ourcenters" },
   { href: `/blog/`, label: "nav.news" },
   { href: `/contact/`, label: "nav.contact" },
 ];
