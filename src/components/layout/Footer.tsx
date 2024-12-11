@@ -57,13 +57,15 @@ export function SiteFooter({ lang }: FooterProps) {
             <img
               src={CTCLogo.src}
               alt="C.T.C. logo"
-              className="h-24 object-cover"
+              className=" h-28 object-cover"
             />
           </div>
         </motion.div>
 
         <motion.div variants={itemVariants}>
-          <h3 className="font-semibold text-lg text-white mb-4">Quick Links</h3>
+          <h3 className="font-semibold text-lg text-secondary mb-4">
+            Quick Links
+          </h3>
           <div className="flex flex-col gap-2 text-lg">
             {links(lang).map(({ href, label }) => (
               <a
@@ -78,7 +80,9 @@ export function SiteFooter({ lang }: FooterProps) {
         </motion.div>
 
         <motion.div variants={itemVariants}>
-          <h3 className="font-semibold mb-4 text-lg text-white">Other Links</h3>
+          <h3 className="font-semibold mb-4 text-lg text-secondary">
+            Other Links
+          </h3>
           <div className="flex flex-col gap-2 text-lg">
             <a href={`/${lang}`} className="text-white hover:text-secondary">
               Ministry Of Post And Telecommunications
@@ -87,7 +91,7 @@ export function SiteFooter({ lang }: FooterProps) {
         </motion.div>
 
         <motion.div variants={itemVariants}>
-          <h3 className="font-semibold mb-4 text-lg text-white">Contact</h3>
+          <h3 className="font-semibold mb-4 text-lg text-secondary">Contact</h3>
           <div className="flex flex-col gap-4 text-lg">
             {contacts.map(({ icon: Icon, text }, index) => (
               <div key={index} className="flex items-start gap-2 text-white">
