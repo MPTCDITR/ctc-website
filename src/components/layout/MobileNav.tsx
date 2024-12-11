@@ -22,7 +22,7 @@ export function MobileNav({ translations, lang }: MobileNavProps) {
     <Sheet>
       <SheetTrigger asChild>
         <Button variant="ghost" size="icon" className="lg:hidden">
-          <MenuIcon className="h-5 w-5" />
+          <MenuIcon className="h-6 w-6 font-semibold text-primary" />
         </Button>
       </SheetTrigger>
       <SheetContent side="left">

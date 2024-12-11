@@ -5,7 +5,7 @@ export default {
 	theme: {
 		container: {
 			center: true,
-			padding: "2rem",
+			padding: "1rem",
 			screens: {
 			  "2xl": "1400px",
 			},
@@ -22,6 +22,7 @@ export default {
     		colors: {
     			background: 'hsl(var(--background))',
     			foreground: 'hsl(var(--foreground))',
+				lightblue:"#14B1E7",
     			card: {
     				DEFAULT: 'hsl(var(--card))',
     				foreground: 'hsl(var(--card-foreground))'

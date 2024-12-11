@@ -4,6 +4,8 @@ import { LanguageSwitcher } from "./LanguageSwitcher";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import CTCLogoBlueSubtitle from "@/assets/logo/ctc-logo-blue-subtitle.webp";
+import { LangSwitcher } from "./LangSwitcher";
+import { type SupportedLanguage } from "@/i18n/ui";
 
 import {
   DropdownMenu,
@@ -31,19 +33,19 @@ export function Header({ translations, lang }: HeaderProps) {
         { label: "CTC Structure", href: `/${lang}/about/ctc-structure ` },
       ],
     },
-    { href: `/${lang}/our-centers/`, label: "Our Centers" },
+    { href: `/${lang}/our-centers/`, label: t("nav.ourcenters") },
     { href: `/${lang}/blog/`, label: t("nav.news") },
     { href: `/${lang}/contact/`, label: t("nav.contact") },
   ];
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-full py-4 items-center justify-between">
+      <div className="lg:container flex h-full py-2 items-center justify-between">
         <a href={`/${lang}`} aria-label="Go to home page">
           <img
             src={CTCLogoBlueSubtitle.src}
             alt="c.t.c. logo"
-            className="h-12 md:h-14"
+            className="h-14 md:h-16"
             style={{ objectFit: "cover" }}
           />
         </a>
@@ -58,7 +60,7 @@ export function Header({ translations, lang }: HeaderProps) {
                 >
                   <Button
                     variant="ghost"
-                    className="flex items-center gap-1 text-base lg:px-3 xl:px-4"
+                    className="flex text-lightblue items-center gap-1 text-base lg:px-3 xl:px-4"
                   >
                     {item.label} <ChevronDown className="h-4 w-4" />
                   </Button>
@@ -66,7 +68,10 @@ export function Header({ translations, lang }: HeaderProps) {
                 <DropdownMenuContent>
                   {item.children.map((child) => (
                     <DropdownMenuItem key={child.label}>
-                      <a href={child.href} className="text-base">
+                      <a
+                        href={child.href}
+                        className="text-base text-lightblue hover:text-primary"
+                      >
                         {child.label}
                       </a>
                     </DropdownMenuItem>
@@ -81,7 +86,7 @@ export function Header({ translations, lang }: HeaderProps) {
               >
                 <a
                   href={item.href}
-                  className=" hover:text-primary lg:px-3 xl:px-4 font-medium transition-colors nav-link text-base"
+                  className="text-lightblue hover:text-primary lg:px-3 xl:px-4 font-medium transition-colors nav-link text-base flex items-center text-nowrap"
                 >
                   {item.label}
                 </a>
@@ -94,6 +99,7 @@ export function Header({ translations, lang }: HeaderProps) {
           <div className="hidden md:flex">
             <LanguageSwitcher lang={lang} />
           </div>
+          <LangSwitcher initialLocale={lang as SupportedLanguage} />
           <MobileNav translations={translations} lang={lang} />
         </div>
       </div>

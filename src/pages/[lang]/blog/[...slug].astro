@@ -24,17 +24,15 @@ const lang = getLangFromUrl(Astro.url);
 ---
 
 <Layout title={`${entry.data.title} - BlogSpace`}>
-  <main class="container py-12">
-    <BlogContent
-      title={entry.data.title}
-      date={entry.data.date}
-      author={entry.data.author}
-      description={entry.data.description}
-      image={entry.data.image}
-      lang={lang}
-      client:load
-    >
-      <Content />
-    </BlogContent>
-  </main>
+  <BlogContent
+    title={entry.data.title}
+    date={entry.data.date}
+    author={entry.data.author}
+    description={entry.data.description}
+    image={entry.data.image}
+    lang={lang}
+    client:load
+  >
+    <Content />
+  </BlogContent>
 </Layout>

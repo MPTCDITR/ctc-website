@@ -9,7 +9,7 @@ interface BlogContentProps {
   author: string;
   description: string;
   image?: string;
-  lang: string;
+  lang?: string;
   children: React.ReactNode;
 }
 
@@ -37,7 +37,10 @@ export function BlogContent({
         <h1 className="text-4xl font-bold ttext-primary">{title}</h1>
         {/* <p className="text-xl text-muted-foreground">{description}</p> */}
 
-        <TextElement variant="small" className="flex items-center gap-2 text-gray-600">
+        <TextElement
+          variant="small"
+          className="flex items-center gap-2 text-gray-600"
+        >
           <span>{author}</span>
           <span>•</span>
           <span>

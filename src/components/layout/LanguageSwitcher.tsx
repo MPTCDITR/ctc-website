@@ -27,9 +27,12 @@ export function LanguageSwitcher({ lang }: LanguageSwitcherProps) {
     <DropdownMenu>
       <DropdownMenuTrigger
         asChild
-        className="font-medium transition-colors hover:text-primary nav-link "
+        className="font-medium transition-colors hover:text-primary nav-link"
       >
-        <Button variant="ghost" className="flex items-center gap-2 text-base">
+        <Button
+          variant="ghost"
+          className="flex items-center gap-2 text-base text-primary"
+        >
           {lang == "en" ? (
             <>
               <img src={USIcon.src} width="23" height="15" />
@@ -40,7 +43,6 @@ export function LanguageSwitcher({ lang }: LanguageSwitcherProps) {
               <img src={KhmerIcon.src} width="23" height="15" />
               <span>ខ្មែរ</span>
             </>
-            
           )}
           <ChevronDown className="h-4 w-4" />
         </Button>
@@ -50,9 +52,10 @@ export function LanguageSwitcher({ lang }: LanguageSwitcherProps) {
           <DropdownMenuItem
             key={lang}
             onClick={() => switchLanguage(lang as Language)}
-            className="text-base"
           >
-            {label}
+            <span className="text-base w-full text-primary hover:text-lightblue">
+              {label}
+            </span>
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>
