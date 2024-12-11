@@ -15,8 +15,9 @@ import {
 
 interface HeaderProps {
   translations: Record<string, string>;
+  lang: string;
 }
-const Navbar = () => {
+const Navbar = ({ lang }: HeaderProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   // const location = useLocation();
@@ -101,7 +102,7 @@ const Navbar = () => {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            <LanguageSwitcher />
+            <LanguageSwitcher lang={lang} />
           </div>
         </div>
 
