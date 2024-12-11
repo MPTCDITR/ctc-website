@@ -26,12 +26,18 @@ export function Header({ translations, lang }: HeaderProps) {
       label: t("nav.about"),
       href: "#",
       children: [
-        { label: "About Us", href: `/${lang}/about/about-us` },
-        { label: "Mission & Vision", href: `/${lang}/about/mission-vision ` },
-        { label: "CTC Structure", href: `/${lang}/about/ctc-structure ` },
+        { label: t("nav.about.aboutus"), href: `/${lang}/about/about-us` },
+        {
+          label: t("nav.about.mission"),
+          href: `/${lang}/about/mission-vision `,
+        },
+        {
+          label: t("nav.about.structure"),
+          href: `/${lang}/about/ctc-structure `,
+        },
       ],
     },
-    { href: `/${lang}/our-centers/`, label: "Our Centers" },
+    { href: `/${lang}/our-centers/`, label: t("nav.ourcenters") },
     { href: `/${lang}/blog/`, label: t("nav.news") },
     { href: `/${lang}/contact/`, label: t("nav.contact") },
   ];
