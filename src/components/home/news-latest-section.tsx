@@ -18,7 +18,7 @@ export function LatestBlogs({ posts, translations, lang }: LatestBlogsProps) {
     <div className="bg-accent/10 py-24">
       <div className="container flex flex-col items-center gap-12">
         <motion.h2
-          className="text-4xl font-bold text-primary text-center text-primary "
+          className="text-4xl font-bold text-primary text-center"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -26,7 +26,7 @@ export function LatestBlogs({ posts, translations, lang }: LatestBlogsProps) {
           Latest News and Events
         </motion.h2>
         <motion.p
-          className="max-w-2xl text-center text-lg text-text"
+          className="max-w-8xl text-center text-lg text-text"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}

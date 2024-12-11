@@ -10,6 +10,10 @@ const CONFIG = {
     tag: "h3",
     tw: styles.title,
   },
+  titleblog: {
+    tag: "h2",
+    tw: styles.titleblog,
+  },
   body: {
     tag: "p",
     tw: styles.body,
