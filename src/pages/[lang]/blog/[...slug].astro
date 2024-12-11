@@ -23,8 +23,7 @@ const lang = getLangFromUrl(Astro.url);
 // type Props = CollectionEntry<"blog">;
 ---
 
-<Layout title={`${entry.data.title} - BlogSpace`}>
-  <main class="container py-12">
+<Layout title={`${entry.data.title} - Community Tech Centers`}>
     <BlogContent
       title={entry.data.title}
       date={entry.data.date}
@@ -36,5 +35,4 @@ const lang = getLangFromUrl(Astro.url);
     >
       <Content />
     </BlogContent>
-  </main>
 </Layout>

@@ -34,17 +34,13 @@ export function BlogContent({
         )}
       </Card>
       <div className="max-w-5xl mx-auto space-y-6">
-        <h1 className="text-4xl font-bold ttext-primary">{title}</h1>
-        {/* <p className="text-xl text-muted-foreground">{description}</p> */}
-
-        <TextElement variant="small" className="flex items-center gap-2 text-gray-600">
-          <span>{author}</span>
-          <span>•</span>
+        <h1 className="text-4xl font-bold text-primary">{title}</h1>
+        <TextElement variant="small" className="flex items-center gap-4 text-secondary">
+          <span>{author},</span>
           <span>
             <time dateTime={date.toISOString()}>{formatDate(date, lang)}</time>
           </span>
         </TextElement>
-
         <div className="prose prose-neutral max-w-none">{children}</div>
       </div>
     </article>
