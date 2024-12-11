@@ -45,31 +45,31 @@ const contacts = [
 export function SiteFooter({ lang }: FooterProps) {
   return (
     <motion.footer
-      className="bg-gray-100"
+      className="bg-primary"
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
     >
-      <div className="container py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="container py-12 grid grid-cols-1 md:grid-cols-4 gap-6">
         <motion.div variants={itemVariants}>
           <div className="rounded-full mb-4">
             <img
               src={CTCLogo.src}
               alt="C.T.C. logo"
-              className="h-16 object-cover"
+              className="h-24 object-cover"
             />
           </div>
         </motion.div>
 
         <motion.div variants={itemVariants}>
-          <h3 className="font-semibold mb-4">Quick Links</h3>
-          <div className="flex flex-col gap-2">
+          <h3 className="font-semibold text-lg text-white mb-4">Quick Links</h3>
+          <div className="flex flex-col gap-2 text-lg">
             {links(lang).map(({ href, label }) => (
               <a
                 key={href}
                 href={href}
-                className="text-gray-600 hover:text-primary"
+                className="text-white hover:text-secondary"
               >
                 {label}
               </a>
@@ -78,19 +78,19 @@ export function SiteFooter({ lang }: FooterProps) {
         </motion.div>
 
         <motion.div variants={itemVariants}>
-          <h3 className="font-semibold mb-4">Other Links</h3>
-          <div className="flex flex-col gap-2">
-            <a href={`/${lang}`} className="text-gray-600 hover:text-primary">
+          <h3 className="font-semibold mb-4 text-lg text-white">Other Links</h3>
+          <div className="flex flex-col gap-2 text-lg">
+            <a href={`/${lang}`} className="text-white hover:text-secondary">
               Ministry Of Post And Telecommunications
             </a>
           </div>
         </motion.div>
 
         <motion.div variants={itemVariants}>
-          <h3 className="font-semibold mb-4">Contact</h3>
-          <div className="flex flex-col gap-4">
+          <h3 className="font-semibold mb-4 text-lg text-white">Contact</h3>
+          <div className="flex flex-col gap-4 text-lg">
             {contacts.map(({ icon: Icon, text }, index) => (
-              <div key={index} className="flex items-start gap-2 text-gray-600">
+              <div key={index} className="flex items-start gap-2 text-white">
                 <Icon className="h-4 min-w-4 mt-1" />
                 <span> {text}</span>
               </div>

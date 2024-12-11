@@ -27,7 +27,7 @@ interface HeaderProps {
 export function Header({ translations, lang, navigationItems }: HeaderProps) {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-full py-4 items-center justify-between">
+      <div className="lg:container px-1 lg:px-0 flex h-full py-4 items-center justify-between">
         <a href={`/${lang}`} aria-label="Go to home page">
           <img
             src={CTCLogoBlueSubtitle.src}
