@@ -51,7 +51,7 @@ export function SiteFooter({ lang }: FooterProps) {
       whileInView="visible"
       viewport={{ once: true }}
     >
-      <div className="container py-12 grid grid-cols-1 md:grid-cols-4 gap-6">
+      <div className="container py-12 grid grid-cols-1 md:grid-cols-4 md:gap-2 lg:gap-8 gap-12">
         <motion.div variants={itemVariants}>
           <div className="rounded-full mb-4">
             <img
