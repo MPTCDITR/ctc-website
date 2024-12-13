@@ -1,9 +1,11 @@
 import { Mail, Phone, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 import CTCLogo from "@/assets/logo/ctc-logo.webp";
+import { useTranslations } from "@/i18n/utils";
+import type { SupportedLanguage } from "@/i18n/ui";
 
 interface FooterProps {
-  lang?: string;
+  lang: SupportedLanguage;
 }
 
 const containerVariants = {
@@ -32,17 +34,17 @@ const links = (lang: string | undefined) => [
 ];
 
 const contacts = [
-  { icon: Mail, text: "info@doct.gov.kh" },
-  { icon: Phone, text: "1234" },
+  { icon: Mail, text: "footer.email" },
+  { icon: Phone, text: "footer.phonenumber" },
   {
     icon: MapPin,
-    text: `អគារលេខ ១៣ មហាវិថីព្រះនរោត្តម
-រាជធានីភ្នំពេញ ព្រះរាជាណាចក្រកម្ពុជា
-ប្រអប់សំបុត្រលេខ ១២០១០`,
+    text: "footer.address",
   },
 ];
 
 export function SiteFooter({ lang }: FooterProps) {
+  const t = useTranslations(lang);
+
   return (
     <motion.footer
       className="bg-primary"
@@ -96,7 +98,7 @@ export function SiteFooter({ lang }: FooterProps) {
             {contacts.map(({ icon: Icon, text }, index) => (
               <div key={index} className="flex items-start gap-2 text-white">
                 <Icon className="h-4 min-w-4 mt-1" />
-                <span> {text}</span>
+                <span> {t(text)}</span>
               </div>
             ))}
           </div>
