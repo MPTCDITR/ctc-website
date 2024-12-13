@@ -12,19 +12,25 @@ const slides = [
   },
   {
     image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-    title: "Digital Learning Hub",
-    description: "Access to cutting-edge technology and educational resources",
+    title: "Computer Lab",
+    description: "A space for teaching digital skills, both in person and online, and for hosting meetings.",
   },
   {
     image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
-    title: "Innovation Space",
-    description: "Where ideas transform into digital reality",
+    title: "Training Room",
+    description: "A place for learning how to repair technology and for offering short courses on digital skills to local authorities and community members.",
   },
   {
     image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
-    title: "Innovation Space for Digital Learning",
-    description: "Where ideas transform into digital reality",
+    title: "Post Office",
+    description: "Offers package services for sending and receiving items locally and internationally, along with other services for merchants, traders, and the community.",
   },
+  {
+    image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
+    title: "Public Hall",
+    description: "Provides access to computers and the Internet, allowing community members to find information on agriculture, business, and public services.",
+  },
+
 ];
 
 const Hero = () => {
