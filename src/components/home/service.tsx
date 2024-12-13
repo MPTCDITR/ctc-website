@@ -39,7 +39,7 @@ export function ServiceSection() {
       </TextElement>
       <div className="grid md:grid-cols-2 lg:grid-cols-4 grid-cols-1 gap-4 py-12">
         {serviceItems.map((item, index) => (
-          <div key={index} className="grid justify-center p-4 rounded-lg hover:bg-slate-100">
+          <div key={index} className="flex flex-col p-4 rounded-lg hover:bg-slate-100">
             <div className="w-full rounded-lg grid justify-center">
               <img
                 src={item.src}
