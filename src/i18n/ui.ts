@@ -10,7 +10,7 @@ export const defaultLang = 'en';
 export const showDefaultLang = true;
 
 
-export const ui = {
+export const ui: Record<string, Record<string, string>> = {
   en: {
     'nav.home': 'Home',
     'nav.about': 'About',
@@ -21,6 +21,9 @@ export const ui = {
     'nav.contact': 'Contact',
     'nav.blog': 'Blog',
     'nav.news': 'News and Events',
+    'footer.email': 'www.mptc.gov.kh',
+    'footer.phonenumber': '1234',
+    'footer.address': 'Building 13, Monivong Blvd, Sangkat Srah Chak, Khan Daun Penh Phnom Penh, Cambodia, 120210',
     'hero.title': 'Welcome to Our Blog',
     'hero.subtitle': 'Discover amazing stories and insights',
     'about.title': 'About Us',
@@ -42,6 +45,9 @@ export const ui = {
     'nav.news': 'ព័ត៌មាន និង ព្រឹត្តិការណ៍',
     'hero.title': 'សូមស្វាគមន៍មកកាន់ប្លុករបស់យើង',
     'hero.subtitle': 'ស្វែងរករឿងរ៉ាវ និងគំនិតអស្ចារ្យ',
+    'footer.email': 'www.mptc.gov.kh',
+    'footer.phonenumber': '១២៣៤',
+    'footer.address': 'អគារលេខ ១៣ មហាវិថីព្រះនរោត្តម រាជធានីភ្នំពេញ ព្រះរាជាណាចក្រកម្ពុជា ប្រអប់សំបុត្រលេខ ១២០១០',
     'about.title': 'អំពីពួកយើង',
     'about.description': 'យើងមានចំណាប់អារម្មណ៍ក្នុងការចែករំលែកចំណេះដឹង និងបំផុសគំនិតដល់អ្នកដទៃតាមរយៈការសរសេររបស់យើង។',
     'about.mission.title': 'បេសកកម្មរបស់យើង',

@@ -36,8 +36,8 @@ export function ContactContent() {
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               <MapPin className="w-5 h-5 mt-1 text-primary" />
-              <TextElement variant="body" >
-                Building 13, Monivong Blvd, Sangkat Srah Chak, Khan Daun Penh,
+              <TextElement variant="body">
+                Building 13, Monivong Blvd, Sangkat Srah Chak, Khan Daun Penh
                 Phnom Penh, Cambodia, 120210
               </TextElement>
             </motion.div>
@@ -48,9 +48,7 @@ export function ContactContent() {
               transition={{ duration: 0.5, delay: 0.3 }}
             >
               <Phone className="w-5 h-5 text-primary" />
-              <TextElement variant="body" >
-                1234
-              </TextElement>
+              <TextElement variant="body">1234</TextElement>
             </motion.div>
             <motion.div
               className="flex items-center gap-3"
@@ -59,9 +57,7 @@ export function ContactContent() {
               transition={{ duration: 0.5, delay: 0.4 }}
             >
               <Mail className="w-5 h-5 text-primary" />
-              <TextElement variant="body" >
-                info@docd.gov.kh
-              </TextElement>
+              <TextElement variant="body">www.mptc.gov.kh</TextElement>
             </motion.div>
           </div>
 
