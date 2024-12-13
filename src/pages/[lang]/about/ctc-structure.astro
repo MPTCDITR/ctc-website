@@ -1,7 +1,7 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import { languages } from "@/i18n/ui";
-import { CentersContent } from "@/components/ourCenters/centers-sections";
+import { StructureCtc } from "@/components/about/ctc-structure.tsx";
 
 export async function getStaticPaths() {
   return Object.keys(languages).map((lang) => ({
@@ -11,5 +11,5 @@ export async function getStaticPaths() {
 ---
 
 <Layout title="Our Center - Community Tech Centers">
-  <CentersContent client:load />
+  <StructureCtc client:load />
 </Layout>
