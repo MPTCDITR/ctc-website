@@ -1,6 +1,8 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import { languages } from "@/i18n/ui";
+import UnderConstruction from "@/components/UnderConstruction.astro";
+
 export async function getStaticPaths() {
   return Object.keys(languages).map((lang) => ({
     params: { lang },
@@ -11,5 +13,5 @@ export async function getStaticPaths() {
 <Layout
   title="Community Tech Center - Our Center Management and operational member"
 >
-  <h1>For Our Center Management</h1>
+  <UnderConstruction />
 </Layout>
