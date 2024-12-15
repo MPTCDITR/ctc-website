@@ -16,7 +16,7 @@ export const ui: Record<string, Record<string, string>> = {
     'nav.about': 'About',
     'nav.about.aboutus': 'About Us',
     'nav.about.mission': 'Mission & Vision',
-    'nav.about.structure': 'Structure C.T.C',
+    'nav.about.structure': 'C.T.C Structure',
     'nav.center.centermanagement':'Center Management',
     'nav.center.ourcenters':'Our Centers',
     'nav.center.ourservices':'Our Services',
