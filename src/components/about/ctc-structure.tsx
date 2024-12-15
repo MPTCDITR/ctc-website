@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
+import TextElement from "@/components/text-element/TextElement";
 
 const staffMembers = [
   {
@@ -50,15 +51,14 @@ export function StructureCtc() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="text-4xl font-bold text-primary">Structure Of CTC</h1>
-          <p className="text-text max-w-3xl mx-auto">
+          <TextElement variant="heading">Structure Of CTC</TextElement>
+          <TextElement variant="paragraph">
             It was popularised in the 1960s with the release of Letraset sheets
             containing Lorem Ipsum passages, and more recently with desktop
             publishing software like Aldus PageMaker including versions of Lorem
             Ipsum.
-          </p>
+          </TextElement>
         </motion.div>
-
         <motion.div
           className="max-w-4xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
@@ -115,12 +115,12 @@ export function StructureCtc() {
           <h2 className="text-3xl font-bold text-primary">
             Structure of CTC General Secretariat
           </h2>
-          <p className="text-text">
+          <TextElement variant="paragraph">
             It has survived not only five centuries, but also the leap into
             electronic typesetting, remaining essentially unchanged. It has
             survived not only five centuries, but also the leap into electronic
             typesetting, remaining essentially unchanged.
-          </p>
+          </TextElement>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
@@ -164,12 +164,12 @@ export function StructureCtc() {
           <h2 className="text-3xl font-bold text-primary">
             Structure of CTC General Secretariat
           </h2>
-          <p className="text-text">
+          <TextElement variant="paragraph">
             It has survived not only five centuries, but also the leap into
             electronic typesetting, remaining essentially unchanged. It has
             survived not only five centuries, but also the leap into electronic
             typesetting, remaining essentially unchanged.
-          </p>
+          </TextElement>
         </motion.div>
 
         <motion.div
