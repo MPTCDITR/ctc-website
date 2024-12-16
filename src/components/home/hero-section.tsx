@@ -31,19 +31,21 @@ const Hero = ({ translations, lang }: HeroSectionProps) => {
     },
     {
       image: ctclestside.src,
-      title: "Digital Learning Hub",
+      title: "Computer Lab",
       description:
-        "Access to cutting-edge technology and educational resources",
+        "A space for teaching digital skills, both in person and online, and for hosting meetings.",
     },
     {
       image: ctcImage.src,
-      title: "Innovation Space",
-      description: "Where ideas transform into digital reality",
+      title: "Post Office",
+      description:
+        "Offers package services for sending and receiving items locally and internationally, along with other services for merchants, traders, and the community.",
     },
     {
       image: ctclestside.src,
-      title: "Innovation Space for Digital Learning",
-      description: "Where ideas transform into digital reality",
+      title: "Public Hall",
+      description:
+        "Provides access to computers and the Internet, allowing community members to find information on agriculture, business, and public services.",
     },
   ];
 
@@ -58,7 +60,7 @@ const Hero = ({ translations, lang }: HeroSectionProps) => {
     <div className="relative h-[800px] w-full overflow-hidden">
       {slides.map((slide, index) => (
         <motion.div
-          key={slide.title}
+          key={slide.image}
           className="absolute inset-0"
           initial={{ opacity: 0 }}
           animate={{ opacity: index === currentSlide ? 1 : 0 }}
