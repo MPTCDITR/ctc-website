@@ -9,28 +9,25 @@ const slides = [
     image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
     title: "Community Tech Center",
     description: "Empowering communities through technology and innovation",
-    hasLearnMore: true,
+    href: "#"
   },
   {
     image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
     title: "Computer Lab",
     description:
       "A space for teaching digital skills, both in person and online, and for hosting meetings.",
-    hasLearnMore: false,
   },
   {
     image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
     title: "Training Room",
     description:
       "A place for learning how to repair technology and for offering short courses on digital skills to local authorities and community members.",
-    hasLearnMore: false,
   },
   {
     image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
     title: "Post Office",
     description:
       "Offers package services for sending and receiving items locally and internationally, along with other services for merchants, traders, and the community.",
-    hasLearnMore: false,
   },
   {
     image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
@@ -38,7 +35,6 @@ const slides = [
     description:
       "Provides access to computers and the Internet, allowing community members to find information on agriculture, business, and public services.",
 
-    hasLearnMore: false,
   },
 ];
 
@@ -86,7 +82,7 @@ const Hero = () => {
             <TextElement variant="body" className="mb-8 max-w-3xl mx-autos">
               {slides[currentSlide].description}
             </TextElement>
-            {slides[currentSlide].hasLearnMore && <motion.button
+            {slides[currentSlide].href && <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className={cn(
