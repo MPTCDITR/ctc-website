@@ -22,9 +22,25 @@ interface HeaderProps {
   translations: Record<string, string>;
   lang: string;
   navigationItems: NavMenuProps[];
+  currentPath: string;
 }
 
-export function Header({ translations, lang, navigationItems }: HeaderProps) {
+export function Header({
+  translations,
+  lang,
+  navigationItems,
+  currentPath,
+}: HeaderProps) {
+  const isActive = (item: NavMenuProps) => {
+    if (currentPath === item.href) {
+      return true;
+    }
+    if (item.children) {
+      return item.children.some((child) => currentPath === child.href);
+    }
+    return false;
+  };
+
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="lg:container px-1 lg:px-0 flex h-full py-4 items-center justify-between">
@@ -47,7 +63,7 @@ export function Header({ translations, lang, navigationItems }: HeaderProps) {
                 >
                   <Button
                     variant="ghost"
-                    className="flex items-center gap-1 text-base lg:px-3 xl:px-4"
+                    className={`${isActive(item) ? "active flex items-center gap-1 text-base lg:px-3 xl:px-4" : "flex items-center gap-1 text-base lg:px-3 xl:px-4"}`}
                   >
                     {item.label} <ChevronDown className="h-4 w-4" />
                   </Button>
@@ -55,7 +71,10 @@ export function Header({ translations, lang, navigationItems }: HeaderProps) {
                 <DropdownMenuContent>
                   {item.children.map((child) => (
                     <a href={child.href} className="text-base">
-                      <DropdownMenuItem key={child.label}>
+                      <DropdownMenuItem
+                        key={child.label}
+                        className="cursor-pointer"
+                      >
                         {child.label}
                       </DropdownMenuItem>
                     </a>
@@ -70,7 +89,7 @@ export function Header({ translations, lang, navigationItems }: HeaderProps) {
               >
                 <a
                   href={item.href}
-                  className=" hover:text-primary lg:px-3 xl:px-4 font-medium transition-colors nav-link text-base"
+                  className={`${isActive(item) ? "active hover:text-primary lg:px-3 xl:px-4 font-medium transition-colors nav-link text-base" : "hover:text-primary lg:px-3 xl:px-4 font-medium transition-colors nav-link text-base"}`}
                 >
                   {item.label}
                 </a>

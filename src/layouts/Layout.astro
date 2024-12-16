@@ -23,6 +23,7 @@ const translations = ui[lang];
 
 const locale = Astro.currentLocale ?? defaultLang;
 const navigationItems = getLocalizedRoutes(navigation, locale);
+const currentPath = Astro.url.pathname
 ---
 
 <!doctype html>
@@ -42,7 +43,7 @@ const navigationItems = getLocalizedRoutes(navigation, locale);
   <body>
     <div class="min-h-screen flex flex-col">
       <!-- <Navbar client:load /> -->
-      <Header translations={translations} lang={lang} navigationItems={navigationItems} client:load />
+      <Header translations={translations} lang={lang} navigationItems={navigationItems} currentPath={currentPath} client:load />
       <main class="flex-1">
         <slot />
       </main>

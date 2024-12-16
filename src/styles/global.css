@@ -65,6 +65,18 @@
     @apply scale-x-100 origin-left;
   }
 
+  .nav-link.active {
+    @apply text-secondary;
+  }
+  
+  .nav-link.active::after {
+    @apply bg-primary scale-x-100 origin-right;
+  }
+
+  .nav-link.active:hover::after {
+    @apply bg-secondary scale-x-100 origin-left;
+  }
+
   .hero-title {
     @apply text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight;
   }
