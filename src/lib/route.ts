@@ -11,7 +11,14 @@ export const navigation = [
       { label: "nav.about.structure", href: `/about/ctc-structure` },
     ],
   },
-  { href: `/our-centers/`, label: "nav.ourcenters" },
+  {
+    label: "nav.ourcenters",
+    children: [
+      { label: "nav.center.centermanagement", href: `/center/centers-management` },
+      { label: "nav.center.ourcenters", href: `/center/our-centers` },
+      { label: "nav.center.ourservices", href: `/center/center-services` },
+    ],
+  },
   { href: `/blog/`, label: "nav.news" },
   { href: `/contact/`, label: "nav.contact" },
 ];

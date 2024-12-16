@@ -36,8 +36,8 @@ export function ContactContent() {
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               <MapPin className="w-5 h-5 mt-1 text-primary" />
-              <TextElement variant="body" >
-                Building 13, Monivong Blvd, Sangkat Srah Chak, Khan Daun Penh,
+              <TextElement variant="body">
+                Building 13, Monivong Blvd, Sangkat Srah Chak, Khan Daun Penh
                 Phnom Penh, Cambodia, 120210
               </TextElement>
             </motion.div>
@@ -48,9 +48,7 @@ export function ContactContent() {
               transition={{ duration: 0.5, delay: 0.3 }}
             >
               <Phone className="w-5 h-5 text-primary" />
-              <TextElement variant="body" >
-                1234
-              </TextElement>
+              <TextElement variant="body">1234</TextElement>
             </motion.div>
             <motion.div
               className="flex items-center gap-3"
@@ -59,9 +57,7 @@ export function ContactContent() {
               transition={{ duration: 0.5, delay: 0.4 }}
             >
               <Mail className="w-5 h-5 text-primary" />
-              <TextElement variant="body" >
-                info@docd.gov.kh
-              </TextElement>
+              <TextElement variant="body">www.mptc.gov.kh</TextElement>
             </motion.div>
           </div>
 
@@ -72,19 +68,19 @@ export function ContactContent() {
             transition={{ duration: 0.5, delay: 0.5 }}
           >
             <a
-              href="#"
+              href="https://www.facebook.com/www.mptc.gov.kh" target="_blank"
               className="p-2 rounded-full bg-primary text-white hover:bg-primary transition-colors"
             >
               <Facebook className="w-5 h-5" />
             </a>
             <a
-              href="#"
+              href="https://t.me/mptcgovkh" target="_blank"
               className="p-2 rounded-full bg-primary text-white hover:bg-primary transition-colors"
             >
               <Send className="w-5 h-5" />
             </a>
             <a
-              href="#"
+              href="https://www.facebook.com/www.mptc.gov.kh" target="_blank"
               className="p-2 rounded-full bg-primary text-white hover:bg-primary transition-colors"
             >
               <Instagram className="w-5 h-5" />
@@ -115,7 +111,7 @@ export function ContactContent() {
       >
         <Card className="w-full aspect-[21/9] bg-gray-200">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1162.8156767476266!2d104.86875695463935!3d11.23476819449948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310965004b1805c1%3A0x6ad74b518822fb3f!2z4Z6Y4Z6H4Z-S4Z6I4Z6Y4Z6O4Z-S4Z6M4Z6b4Z6U4Z6F4Z-S4Z6F4Z-B4Z6A4Z6c4Z634Z6R4Z-S4Z6Z4Z624Z6f4Z6g4Z6C4Z6Y4Z6T4Z-N!5e0!3m2!1sen!2skh!4v1733729558785!5m2!1sen!2skh"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.6732883906925!2d104.91480367570388!3d11.57526268862627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31095142eadcf8db%3A0xbd4e32a5eccddfb7!2sMinistry%20of%20Post%20and%20Telecommunications!5e0!3m2!1sen!2skh!4v1734070475614!5m2!1sen!2skh"
             className="size-full"
             title="Google Maps: Telecommunication Regulator of Cambodia Location"
           ></iframe>
