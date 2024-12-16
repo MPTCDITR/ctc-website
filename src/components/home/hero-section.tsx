@@ -4,31 +4,50 @@ import TextElement from "@/components/text-element/TextElement";
 import { cn } from "@/lib/utils";
 import { styles } from "@/components/text-element/ElementStyle";
 
-const slides = [
-  {
-    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-    title: "Community Tech Center",
-    description: "Empowering communities through technology and innovation",
-  },
-  {
-    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-    title: "Digital Learning Hub",
-    description: "Access to cutting-edge technology and educational resources",
-  },
-  {
-    image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
-    title: "Innovation Space",
-    description: "Where ideas transform into digital reality",
-  },
-  {
-    image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
-    title: "Innovation Space for Digital Learning",
-    description: "Where ideas transform into digital reality",
-  },
-];
+import ctcImage from "@/assets/post-office-view.webp";
+import ctclestside from "@/assets/about/ctc-left-view.webp";
 
-const Hero = () => {
+interface Slide {
+  image: string;
+  title: string;
+  description: string;
+  href?: string;
+}
+interface HeroSectionProps {
+  translations: Record<string, string>;
+  lang?: string;
+}
+
+const Hero = ({ translations, lang }: HeroSectionProps) => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const t = (key: string) => translations[key] || key;
+
+  const slides: Slide[] = [
+    {
+      image: ctcImage.src,
+      title: "Community Tech Center",
+      description: "Empowering communities through technology and innovation",
+      href: `/${lang}/about/about-us/`,
+    },
+    {
+      image: ctclestside.src,
+      title: "Computer Lab",
+      description:
+        "A space for teaching digital skills, both in person and online, and for hosting meetings.",
+    },
+    {
+      image: ctcImage.src,
+      title: "Post Office",
+      description:
+        "Offers package services for sending and receiving items locally and internationally, along with other services for merchants, traders, and the community.",
+    },
+    {
+      image: ctclestside.src,
+      title: "Public Hall",
+      description:
+        "Provides access to computers and the Internet, allowing community members to find information on agriculture, business, and public services.",
+    },
+  ];
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -71,16 +90,20 @@ const Hero = () => {
             <TextElement variant="body" className="mb-8 max-w-3xl mx-autos">
               {slides[currentSlide].description}
             </TextElement>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className={cn(
-                styles.button,
-                "bg-white text-gray-900 px-8 py-3 rounded-full hover:bg-gray-100 transition-colors"
-              )}
-            >
-              Learn More
-            </motion.button>
+            {slides[currentSlide].href && (
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className={cn(styles.button)}
+              >
+                <a
+                  href={slides[currentSlide].href}
+                  className="w-full h-full shadow-lg hover:shadow-lightblue bg-white/60 text-primary px-8 py-3 rounded-full hover:bg-gray-100 transition-colors text-base"
+                >
+                  {t("btn.learnmore")}
+                </a>
+              </motion.button>
+            )}
           </motion.div>
         </div>
       </div>
