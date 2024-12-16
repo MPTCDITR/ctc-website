@@ -4,46 +4,48 @@ import TextElement from "@/components/text-element/TextElement";
 import { cn } from "@/lib/utils";
 import { styles } from "@/components/text-element/ElementStyle";
 
-const slides = [
-  {
-    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-    title: "Community Tech Center",
-    description: "Empowering communities through technology and innovation",
-    hasLearnMore: true,
-  },
-  {
-    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-    title: "Computer Lab",
-    description:
-      "A space for teaching digital skills, both in person and online, and for hosting meetings.",
-    hasLearnMore: false,
-  },
-  {
-    image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
-    title: "Training Room",
-    description:
-      "A place for learning how to repair technology and for offering short courses on digital skills to local authorities and community members.",
-    hasLearnMore: false,
-  },
-  {
-    image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
-    title: "Post Office",
-    description:
-      "Offers package services for sending and receiving items locally and internationally, along with other services for merchants, traders, and the community.",
-    hasLearnMore: false,
-  },
-  {
-    image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
-    title: "Public Hall",
-    description:
-      "Provides access to computers and the Internet, allowing community members to find information on agriculture, business, and public services.",
+import ctcImage from "@/assets/post-office-view.webp";
+import ctclestside from "@/assets/about/ctc-left-view.webp";
 
-    hasLearnMore: false,
-  },
-];
+interface Slide {
+  image: string;
+  title: string;
+  description: string;
+  href?: string;
+}
+interface HeroSectionProps {
+  translations: Record<string, string>;
+  lang?: string;
+}
 
-const Hero = () => {
+const Hero = ({ translations, lang }: HeroSectionProps) => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const t = (key: string) => translations[key] || key;
+
+  const slides: Slide[] = [
+    {
+      image: ctcImage.src,
+      title: "Community Tech Center",
+      description: "Empowering communities through technology and innovation",
+      href: `/${lang}/about/about-us/`,
+    },
+    {
+      image: ctclestside.src,
+      title: "Digital Learning Hub",
+      description:
+        "Access to cutting-edge technology and educational resources",
+    },
+    {
+      image: ctcImage.src,
+      title: "Innovation Space",
+      description: "Where ideas transform into digital reality",
+    },
+    {
+      image: ctclestside.src,
+      title: "Innovation Space for Digital Learning",
+      description: "Where ideas transform into digital reality",
+    },
+  ];
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -56,7 +58,7 @@ const Hero = () => {
     <div className="relative h-[800px] w-full overflow-hidden">
       {slides.map((slide, index) => (
         <motion.div
-          key={slide.image}
+          key={slide.title}
           className="absolute inset-0"
           initial={{ opacity: 0 }}
           animate={{ opacity: index === currentSlide ? 1 : 0 }}
@@ -86,16 +88,20 @@ const Hero = () => {
             <TextElement variant="body" className="mb-8 max-w-3xl mx-autos">
               {slides[currentSlide].description}
             </TextElement>
-            {slides[currentSlide].hasLearnMore && <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className={cn(
-                styles.button,
-                "bg-white text-gray-900 px-8 py-3 rounded-full hover:bg-gray-100 transition-colors"
-              )}
-            >
-              Learn More
-            </motion.button>}
+            {slides[currentSlide].href && (
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className={cn(styles.button)}
+              >
+                <a
+                  href={slides[currentSlide].href}
+                  className="w-full h-full shadow-lg hover:shadow-lightblue bg-white/60 text-primary px-8 py-3 rounded-full hover:bg-gray-100 transition-colors text-base"
+                >
+                  {t("btn.learnmore")}
+                </a>
+              </motion.button>
+            )}
           </motion.div>
         </div>
       </div>

@@ -21,7 +21,7 @@ const posts = await getBlogPosts(lang);
 ---
 
 <Layout title="Community Tech Center - Welcome">
-  <Hero client:load />
+  <Hero lang={lang} translations={translations} client:load />
   <AboutSection />
   <CentersSection />
   <LatestBlogs

@@ -29,6 +29,7 @@ export const ui = {
     'about.mission.description': 'To create a platform where ideas flourish and knowledge is shared freely.',
     'about.vision.title': 'Our Vision',
     'about.vision.description': 'To build a global community of learners and thought leaders.',
+    'btn.learnmore':'Learn More →'
   },
   km: {
     'nav.home': 'ទំព័រដើម',
@@ -48,6 +49,7 @@ export const ui = {
     'about.mission.description': 'បង្កើតវេទិកាដែលគំនិតអាចរីកចម្រើន និងចំណេះដឹងអាចចែករំលែកបានយ៉ាងសេរី។',
     'about.vision.title': 'ទស្សនៈរបស់យើង',
     'about.vision.description': 'សាងសង់សហគមន៍អន្តរជាតិនៃអ្នករៀន និងមេដឹកនាំគំនិត។',
+    'btn.learnmore':'ស្វែងយល់បន្ថែម →'
 }
 } as const;
 
