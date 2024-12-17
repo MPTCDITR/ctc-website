@@ -1,12 +1,12 @@
 import { Card } from "@/components/ui/card";
-import OurService1 from "@/assets/our-centers/our-service/service-5.svg";
-import OurService2 from "@/assets/our-centers/our-service/service-3.svg";
-import OurService3 from "@/assets/our-centers/our-service/service-1.svg";
-import OurService4 from "@/assets/our-centers/our-service/service-6.svg";
-import OurService5 from "@/assets/our-centers/our-service/service-7.svg";
-import OurService6 from "@/assets/our-centers/our-service/service-4.svg";
-import OurService7 from "@/assets/our-centers/our-service/service-2.svg";
-import OurService8 from "@/assets/our-centers/our-service/service-8.svg";
+import OurService1 from "@/assets/our-centers/our-service/service-5.png";
+import OurService2 from "@/assets/our-centers/our-service/service-3.png";
+import OurService3 from "@/assets/our-centers/our-service/service-1.png";
+import OurService4 from "@/assets/our-centers/our-service/service-6.png";
+import OurService5 from "@/assets/our-centers/our-service/service-7.png";
+import OurService6 from "@/assets/our-centers/our-service/service-4.png";
+import OurService7 from "@/assets/our-centers/our-service/service-2.png";
+import OurService8 from "@/assets/our-centers/our-service/service-8.png";
 import TextElement from "../text-element/TextElement";
 
 export function ServiceSection() {
