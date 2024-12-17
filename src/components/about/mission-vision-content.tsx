@@ -5,7 +5,13 @@ import Vision from "@/assets/vision-mission/vision.svg";
 import { cn } from "@/lib/utils";
 import { styles } from "@/components/text-element/ElementStyle";
 
-export function MissionVisionContent() {
+interface MissionVisionProps {
+  translations: Record<string, string>;
+}
+
+export function MissionVisionContent({ translations }: MissionVisionProps) {
+  const t = (key: string) => translations[key] || key;
+
   return (
     <div className="container py-12 space-y-24">
       <motion.section
@@ -21,7 +27,7 @@ export function MissionVisionContent() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Vision
+            {t("about.vision.title")}
           </motion.h1>
           <motion.p
             className={cn(styles.body, "leading-relaxed")}
@@ -29,16 +35,7 @@ export function MissionVisionContent() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            It was popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of Lorem
-            Ipsum. It was popularised in the 1960s with the release of Letraset
-            sheets containing Lorem Ipsum passages, and more recently with
-            desktop publishing software like Aldus PageMaker including versions
-            of Lorem Ipsum. It was popularised in the 1960s with the release of
-            Letraset sheets containing Lorem Ipsum passages, and more recently
-            with desktop publishing software like Aldus PageMaker including
-            versions of Lorem Ipsum.
+            {t("about.vision.description")}
           </motion.p>
         </div>
         <motion.div
@@ -86,25 +83,17 @@ export function MissionVisionContent() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 1.2 }}
           >
-            Mission
+            {t("about.mission.title")}
           </motion.h1>
-          <motion.p
-            className={cn(styles.body, "leading-relaxed")}
+          <motion.ul
+            className={cn(styles.body, "leading-relaxed list-disc pl-4")}
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 1.4 }}
           >
-            It was popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of Lorem
-            Ipsum. It was popularised in the 1960s with the release of Letraset
-            sheets containing Lorem Ipsum passages, and more recently with
-            desktop publishing software like Aldus PageMaker including versions
-            of Lorem Ipsum. It was popularised in the 1960s with the release of
-            Letraset sheets containing Lorem Ipsum passages, and more recently
-            with desktop publishing software like Aldus PageMaker including
-            versions of Lorem Ipsum.
-          </motion.p>
+            <li>{t("about.mission.description1")}</li>
+            <li>{t("about.mission.description2")}</li>
+          </motion.ul>
         </div>
       </motion.section>
     </div>

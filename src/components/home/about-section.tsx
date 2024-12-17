@@ -1,27 +1,31 @@
 import { Button } from "@/components/ui/button";
 import TextElement from "@/components/text-element/TextElement";
 
-export function AboutSection() {
+interface AboutSectionProps {
+  translations: Record<string, string>;
+  lang?: string;
+}
+
+export function AboutSection({ translations, lang }: AboutSectionProps) {
+  const t = (key: string) => translations[key] || key;
+
   return (
     <div className="bg-slate-100">
       <div className="container grid md:grid-cols-2 grid-cols-1 gap-12 py-16 h-100">
         <div>
           <TextElement variant="heading" className="text-primary">
-            About Community Tech Center
+            {t("home.about")}
           </TextElement>
         </div>
         <div className="flex flex-col gap-6">
           <TextElement variant="body">
-            It was popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of Lorem
-            Ipsum.
+            {t("home.about.description")}
           </TextElement>
           <Button
-            variant="link"
+            variant="link"   
             className="w-fit text-secondary hover:text-secondary"
           >
-            About Us →
+            {t("home.about.aboutus")} →
           </Button>
         </div>
       </div>

@@ -6,7 +6,13 @@ import { motion } from "framer-motion";
 import PostOfficeView from "@/assets/post-office-view.webp";
 import TextElement from "@/components/text-element/TextElement";
 
-export function ContactContent() {
+interface ContactProps {
+  translations: Record<string, string>;
+}
+
+export function ContactContent({ translations }: ContactProps) {
+  const t = (key: string) => translations[key] || key;
+
   return (
     <div className="container py-12 space-y-12">
       <div className="grid md:grid-cols-2 gap-12">
@@ -18,13 +24,7 @@ export function ContactContent() {
         >
           <div className="space-y-4">
             <TextElement variant="heading" className="text-primary">
-              Contact Information
-            </TextElement>
-            <TextElement variant="body">
-              It was popularised in the 1960s with the release of Letraset
-              sheets containing Lorem Ipsum passages, and more recently with
-              desktop publishing software like Aldus PageMaker including
-              versions of Lorem Ipsum.
+              {t("contact")}
             </TextElement>
           </div>
 
@@ -37,8 +37,7 @@ export function ContactContent() {
             >
               <MapPin className="w-5 h-5 mt-1 text-primary" />
               <TextElement variant="body">
-                Building 13, Monivong Blvd, Sangkat Srah Chak, Khan Daun Penh
-                Phnom Penh, Cambodia, 120210
+              {t("footer.address")}
               </TextElement>
             </motion.div>
             <motion.div
@@ -48,7 +47,7 @@ export function ContactContent() {
               transition={{ duration: 0.5, delay: 0.3 }}
             >
               <Phone className="w-5 h-5 text-primary" />
-              <TextElement variant="body">1234</TextElement>
+              <TextElement variant="body">{t("footer.phonenumber")}</TextElement>
             </motion.div>
             <motion.div
               className="flex items-center gap-3"
@@ -57,7 +56,7 @@ export function ContactContent() {
               transition={{ duration: 0.5, delay: 0.4 }}
             >
               <Mail className="w-5 h-5 text-primary" />
-              <TextElement variant="body">www.mptc.gov.kh</TextElement>
+              <TextElement variant="body">{t("footer.email")}</TextElement>
             </motion.div>
           </div>
 

@@ -1,6 +1,9 @@
 import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import imageservice from "@/assets/service/service.svg";
+import computerLab from "@/assets/service/computer-lab.svg";
+import trainingRoom from "@/assets/service/training-room.svg";
+import postOffice from "@/assets/service/post-office.svg";
+import publicHall from "@/assets/service/public-hall.svg";
 import TextElement from "@/components/text-element/TextElement";
 
 interface ServiceItem {
@@ -8,34 +11,42 @@ interface ServiceItem {
   description: string;
   src: string;
 }
+
+interface ServiceSectionProps {
+  translations: Record<string, string>;
+  lang?: string;
+}
+
 const services: ServiceItem[] = [
   {
-    title: "មជ្ឈមណ្ឌល",
+    title: "home.service.computerlab",
     description:
-      "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.",
-    src: imageservice.src,
+      "home.service.computerlab.description",
+    src: computerLab.src,
   },
   {
-    title: "មជ្ឈមណ្ឌលបណ្តុះបណ្តាល",
+    title: "home.service.trainingroom",
     description:
-      "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.",
-    src: imageservice.src,
+      "home.service.trainingroom.description",
+    src: trainingRoom.src,
   },
   {
-    title: "សាលាសាធារណៈ",
+    title: "home.service.postoffice",
     description:
-      "It was popularised in the 1960s with the release of Letraset, It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.",
-    src: imageservice.src,
+      "home.service.postoffice.description",
+    src: postOffice.src,
   },
   {
-    title: "បណ្តុំប្រព័ន្ធថ្មី",
+    title: "home.service.publichall",
     description:
-      "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.",
-    src: imageservice.src,
+      "home.service.publichall.description",
+    src: publicHall.src,
   },
 ];
 
-export function ServiceHighlights() {
+export function ServiceHighlights({ translations, lang }: ServiceSectionProps) {
+  const t = (key: string) => translations[key] || key;
+
   return (
     <section className="py-24 bg-background">
       <div className="container">
@@ -46,13 +57,10 @@ export function ServiceHighlights() {
           transition={{ duration: 0.5 }}
         >
           <TextElement variant="heading">
-            គោលការណ៍ប្រតិបត្តិនៃមជ្ឈមណ្ឌលបច្ចេកវិទ្យាសហគមន៍
+            {t("home.service")}
           </TextElement>
           <TextElement variant="body" className="max-w-8xl">
-            It was popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of Lorem
-            Ipsum.
+           {t("home.service.description")}
           </TextElement>
         </motion.div>
 
@@ -79,10 +87,10 @@ export function ServiceHighlights() {
                   variant="title"
                   className="text-xl font-bold mb-4 text-primary"
                 >
-                  {service.title}
+                  {t(service.title)}
                 </TextElement>
 
-                <TextElement variant="small">{service.description}</TextElement>
+                <TextElement variant="small">{t(service.description)}</TextElement>
               </Card>
             </motion.div>
           ))}

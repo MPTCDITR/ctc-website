@@ -1,6 +1,17 @@
 import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import TextElement from "@/components/text-element/TextElement";
+import { cn } from "@/lib/utils";
+import { styles } from "@/components/text-element/ElementStyle";
+
+import enNationalGovernmentCouncil from "@/assets/structure/en-national-government-council.svg";
+import khNationalGovernmentCouncil from "@/assets/structure/kh-national-government-council.svg";
+import listCenters from "@/assets/structure/list-centers.svg";
+
+interface StructureProps {
+  translations: Record<string, string>;
+  lang: string;
+}
 
 const staffMembers = [
   {
@@ -40,7 +51,9 @@ const tableStaff = [
   { title: "Title", name: "Name", role: "Role" },
 ];
 
-export function StructureCtc() {
+export function StructureCtc({ translations, lang }: StructureProps) {
+  const t = (key: string) => translations[key] || key;
+
   return (
     <div className="container py-12 space-y-24">
       {/* First Section - Structure of CTC */}
@@ -51,7 +64,7 @@ export function StructureCtc() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <TextElement variant="heading">Structure Of CTC</TextElement>
+          <TextElement variant="heading">{t("about.structure")}</TextElement>
           <TextElement variant="paragraph">
             It was popularised in the 1960s with the release of Letraset sheets
             containing Lorem Ipsum passages, and more recently with desktop
@@ -60,46 +73,52 @@ export function StructureCtc() {
           </TextElement>
         </motion.div>
         <motion.div
-          className="max-w-4xl mx-auto"
+          className="max-w-5xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <div className="space-y-4">
-            {/* Org Chart */}
-            <div className="flex flex-col items-center gap-8">
-              <div className="bg-primary text-white px-8 py-4 rounded-lg text-center w-64">
-                Community Tech Center
-              </div>
+            {lang === "en" ? (
+              <img
+                src={enNationalGovernmentCouncil.src}
+                alt="ctc national government council orgchart"
+                className="object-cover"
+              />
+            ) : (
+              <img
+                src={khNationalGovernmentCouncil.src}
+                alt="ctc national government council orgchart"
+                className="object-cover"
+              />
+            )}
+          </div>
+        </motion.div>
 
-              <div className="flex justify-center gap-8 items-center">
-                <div className="bg-secondary text-white px-6 py-3 rounded-lg">
-                  Secretariat
-                </div>
-                <div className="bg-primary text-white px-6 py-3 rounded-lg">
-                  Secretary General
-                </div>
-              </div>
+        <motion.div
+          className={cn(styles.paragraph, "text-center space-y-4")}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          It was popularised in the 1960s with the release of Letraset sheets
+          containing Lorem Ipsum passages, and more recently with desktop
+          publishing software like Aldus PageMaker including versions of Lorem
+          Ipsum.
+        </motion.div>
 
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-4 w-full">
-                {[
-                  "Deputy Secretary",
-                  "Deputy Secretary",
-                  "Deputy Secretary",
-                  "Deputy Secretary",
-                ].map((unit, index) => (
-                  <motion.div
-                    key={unit}
-                    className="bg-lightblue text-white px-4 py-3 rounded-lg text-center"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-                  >
-                    {unit}
-                  </motion.div>
-                ))}
-              </div>
-            </div>
+        <motion.div
+          className="max-w-5xl mx-auto"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          <div className="space-y-4">
+            <img
+              src={listCenters.src}
+              alt="ctc centers"
+              className="object-cover"
+            />
           </div>
         </motion.div>
       </section>
