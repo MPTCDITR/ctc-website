@@ -1,6 +1,5 @@
 ---
 import "@/styles/global.css";
-import { ContactContent } from "@/components/contact/contact-content";
 import Layout from "@/layouts/Layout.astro";
 import Hero from "@/components/home/hero-section";
 import { AboutSection } from "@/components/home/about-section";
@@ -33,5 +32,4 @@ const posts = await getBlogPosts(lang);
     lang={lang}
     client:load
   />
-  <ContactContent client:load />
 </Layout>
