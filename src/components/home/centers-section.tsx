@@ -1,18 +1,22 @@
 import TextElement from "@/components/text-element/TextElement";
 import PostOfficeView from "@/assets/post-office-view.webp";
 
-export function CentersSection() {
+interface CenterSectionProps {
+  translations: Record<string, string>;
+  lang?: string;
+}
+
+export function CentersSection({ translations, lang }: CenterSectionProps) {
+  const t = (key: string) => translations[key] || key;
+
   return (
     <div className="py-16 bg-gray-50">
       <div className="container flex flex-col items-center gap-8">
         <TextElement variant="heading" className="text-primary">
-          Our Centers
+          {t("nav.center.ourcenters")}
         </TextElement>
         <TextElement variant="body" className="max-w-8xl text-center ">
-          It was popularised in the 1960s with the release of Letraset sheets
-          containing Lorem Ipsum passages, and more recently with desktop
-          publishing software like Aldus PageMaker including versions of Lorem
-          Ipsum.
+          {t("home.center.description")}
         </TextElement>
         <div className="w-full max-w-8xl aspect-[16/9] bg-gray-200 rounded-lg">
           <img
