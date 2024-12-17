@@ -1,6 +1,6 @@
 import { Mail, Phone, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
-import CTCLogo from "@/assets/logo/ctc-logo.webp";
+import CTCLogo from "@/assets/logo/ctc-logo.svg";
 import { useTranslations } from "@/i18n/utils";
 import type { SupportedLanguage } from "@/i18n/ui";
 
@@ -55,11 +55,11 @@ export function SiteFooter({ lang }: FooterProps) {
     >
       <div className="container py-12 grid grid-cols-1 md:grid-cols-4 md:gap-2 lg:gap-8 gap-12">
         <motion.div variants={itemVariants}>
-          <div className="rounded-full mb-4">
+          <div className="rounded-full mb-4 flex justify-center lg:justify-start">
             <img
               src={CTCLogo.src}
               alt="C.T.C. logo"
-              className=" h-28 object-cover"
+              className="h-40 lg:h-36 object-contain"
             />
           </div>
         </motion.div>
