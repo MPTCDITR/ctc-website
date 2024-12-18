@@ -3,7 +3,7 @@ title: Press Release On The Signing Ceremony of the Memorandum of Understanding 
 description: Phnom Penh, 9th October 2023, at the Ministry of Post and Telecommunications, His Excellency Minister Chea Vandeth and His Excellency Deputy Prime Minister Hangchuon Naron, Minister of Education, Youth and Sport, presided over the signing ceremony of the Memorandum of Understanding on the Establishment of Community Tech Centers at Public High Schools. The ceremony was attended by the leadership, officials, and representatives from both ministries as well as representatives from higher education institutions, high schools, private sectors, and press units, totaling approximately 270 attendees.
 date: 2023-10-09
 author: Ministry of Posts and Telecommunications
-image: "/blog-placeholder-3.jpg"
+image: "/src/assets/news-and-events/article-2/thumbnail.jpg"
 tags: []
 ---
 
@@ -16,3 +16,13 @@ H.E. Minister Chea Vandeth highlighted that to build the digital government, eco
 His Excellency Deputy Prime Minister Hangchuon Naron thanked MPTC for the CTC initiative in promoting digital literacy and skills and integrating technology subjects for digital education in the classroom, school, and community as a whole. This MoU is significant in a timely and targeted manner in supporting the development of digital education toward the promotion of growth, and increase in productivity and effectiveness in building Cambodia’s future digital citizens.
 
 The first CTC is being constructed at Hun Sen Mouy Mithona High School in Peaream commune, Bati district, Takeo province. Hun Sen Mouy Mithona is a leading high school in Bati district, Takeo province; the principal has received 2nd place in Good Management category across the country. The CTC project will commence at all high schools in Takeo starting November 2023 and will continue to roll out across the country.
+
+![photo 1](src/assets/news-and-events/article-2/photo-1.jpg)
+![photo 2](src/assets/news-and-events/article-2/photo-2.jpg)
+![photo 3](src/assets/news-and-events/article-2/photo-3.jpg)
+![photo 4](src/assets/news-and-events/article-2/photo-4.jpg)
+![photo 5](src/assets/news-and-events/article-2/photo-5.jpg)
+![photo 6](src/assets/news-and-events/article-2/photo-6.jpg)
+![photo 7](src/assets/news-and-events/article-2/photo-7.jpg)
+![photo 8](src/assets/news-and-events/article-2/photo-8.jpg)
+![photo 9](src/assets/news-and-events/article-2/photo-9.jpg)

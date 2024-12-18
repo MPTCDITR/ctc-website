@@ -3,7 +3,7 @@ title: Press Release on the Inauguration Ceremony of Community Technology Center
 description: In the morning of June 24th, 2024, in Pearam commune, Bati district, Takeo province, His Excellency Chea Vandet, Minister of Posts and Telecommunications (MPTC), presided over the “Inauguration Ceremony of the Community Technology Center at Hun Sen Muy Mithona High School” with the participation of His Excellency Ueno Atsushi, Ambassador Extraordinary and Plenipotentiary of Japan to the Kingdom of Cambodia, and His Excellency San Vathana, Secretary of State of the Ministry of Education, Youth and Sports (MOEYS), in charge of the Community Technology Center.
 date: 2024-06-24
 author: Ministry of Posts and Telecommunications
-image: "/blog-placeholder-1.jpg"
+image: "/src/assets/news-and-events/article-1/thumbnail.jpg"
 tags: []
 ---
 
@@ -22,3 +22,13 @@ Speaking at the ceremony, His Excellency Chea Vandet, Minister of Post and Telec
 The Minister is optimistic that when fully operational, the C.T.C. will be a new, important, timely and targeted achievement that supports the development of digital education with a proactive spirit and an open mind in fulfilling the mission of digital government transformation, aiming to contribute to the effective implementation of the strategic goals set in the Cambodian Digital Government Policy 2022-2035 and one angle of the Five-Point Strategy - Phase 1 of the Royal Government to achieve Cambodian Vision 2050 under the wise leadership of His Excellency President Hun Manet, Prime Minister of the Kingdom of Cambodia.
 
 Please be aware that the C.T.C. at Hun Sen Muy Mithona High School is the first achievement among the projects to establish C.T.C. in public high schools in the Kingdom of Cambodia, which started in Takeo province as a project in the first phase, and the task force in charge plans to study and identify priority locations in order to build C.T.C. in public high schools in other provinces in the future.
+
+![photo 1](src/assets/news-and-events/article-1/photo-1.jpg)
+![photo 2](src/assets/news-and-events/article-1/photo-2.jpg)
+![photo 3](src/assets/news-and-events/article-1/photo-3.jpg)
+![photo 4](src/assets/news-and-events/article-1/photo-4.jpg)
+![photo 5](src/assets/news-and-events/article-1/photo-5.jpg)
+![photo 6](src/assets/news-and-events/article-1/photo-6.jpg)
+![photo 7](src/assets/news-and-events/article-1/photo-7.jpg)
+![photo 8](src/assets/news-and-events/article-1/photo-8.jpg)
+![photo 9](src/assets/news-and-events/article-1/photo-9.jpg)
