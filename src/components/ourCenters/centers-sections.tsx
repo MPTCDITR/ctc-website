@@ -2,7 +2,7 @@
 
 import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import PostOfficeView from "@/assets/post-office-view.webp";
+import PostOfficeView from "@/assets//image-assets/post-office-view.webp";
 import { cn } from "@/lib/utils";
 import { styles } from "@/components/text-element/ElementStyle";
 

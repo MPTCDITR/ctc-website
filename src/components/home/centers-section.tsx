@@ -1,5 +1,5 @@
 import TextElement from "@/components/text-element/TextElement";
-import PostOfficeView from "@/assets/post-office-view.webp";
+import PostOfficeView from "@/assets//image-assets/post-office-view.webp";
 
 interface CenterSectionProps {
   translations: Record<string, string>;
