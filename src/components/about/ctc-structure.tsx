@@ -4,10 +4,10 @@ import TextElement from "@/components/text-element/TextElement";
 import { cn } from "@/lib/utils";
 import { styles } from "@/components/text-element/ElementStyle";
 
-import enNationalGovernmentCouncil from "@/assets/structure/en-national-government-councils.svg";
+import enNationalGovernmentCouncil from "@/assets/structure/en-national-government-council.svg";
 import khNationalGovernmentCouncil from "@/assets/structure/kh-national-government-council.svg";
-import enNationalGovernmentCouncils from "@/assets/structure/en-national-government-councils.svg";
-import khNationalGovernmentCouncils from "@/assets/structure/kh-national-government-councils.svg";
+import enListCenters from "@/assets/structure/en-list-centers.svg";
+import khListCenters from "@/assets/structure/kh-list-centers.svg";
 
 interface StructureProps {
   translations: Record<string, string>;
@@ -67,10 +67,7 @@ export function StructureCtc({ translations, lang }: StructureProps) {
         >
           <TextElement variant="heading">{t("about.structure")}</TextElement>
           <TextElement variant="paragraph">
-            It was popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of Lorem
-            Ipsum.
+            {t("about.structure.description")}
           </TextElement>
         </motion.div>
         <motion.div
@@ -117,13 +114,13 @@ export function StructureCtc({ translations, lang }: StructureProps) {
           <div className="space-y-4">
             {lang === "en" ? (
               <img
-                src={enNationalGovernmentCouncils.src}
+                src={enListCenters.src}
                 alt="ctc national government council orgchart"
                 className="object-cover"
               />
             ) : (
               <img
-                src={khNationalGovernmentCouncils.src}
+                src={khListCenters.src}
                 alt="ctc national government council orgchart"
                 className="object-cover"
               />

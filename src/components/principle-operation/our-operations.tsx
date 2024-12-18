@@ -10,40 +10,45 @@ import OurService6 from "@/assets/our-centers/our-service/post-order.png";
 import OurService7 from "@/assets/image-assets/ctc-opening-ceremony.webp";
 import TextElement from "../text-element/TextElement";
 
-export function OperationPrinciple() {
+interface FunctionalityProps {
+  translations: Record<string, string>;
+}
+
+export function OperationPrinciple({ translations }: FunctionalityProps) {
+  const t = (key: string) => translations[key] || key;
+
   const facilitySections = [
     {
       id: "computer-lab",
-      title: "បន្ទប់កំព្យូទ័រ",
-      description:
-        "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      title: "home.service.computerlab",
+      description1: "center.computerlab.description1",
+      description2: "center.computerlab.description2",
       image1: OurService1.src,
       image2: OurService2.src,
     },
     {
       id: "training-room",
-      title: "មជ្ឈមណ្ឌលបណ្តុះបណ្តាល",
-      description:
-        "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      title: "home.service.trainingroom",
+      description1: "center.trainingroom.description1",
+      description2: "center.trainingroom.description2",
       image1: OurService3.src,
       image2: OurService3.src,
     },
     {
       id: "public-hall",
-      title: "សាធារណៈ",
-      description:
-        "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      title: "home.service.publichall",
+      description1: "center.publichall.description1",
+      description2: "center.publichall.description2",
       image1: OurService4.src,
       image2: OurService5.src,
     },
     {
       id: "post-office",
-      title: "បញ្ជារប្រៃសណីយ៍",
-      description:
-        "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      title: "home.service.postoffice",
+      description1: "center.postoffice.description1",
       image1: OurService6.src,
       image2: OurService7.src,
-    },
+    },  
   ];
 
   return (
@@ -61,7 +66,7 @@ export function OperationPrinciple() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            C.T.C Operation Principles
+            {t("nav.center.ourservices")}
           </motion.h1>
           <motion.p
             className={cn(styles.body, "text-center max-w-8xl mx-auto ")}
@@ -94,9 +99,9 @@ export function OperationPrinciple() {
             <div className="p-8 md:p-12 space-y-8">
               <div className="grid md:grid-cols-2 gap-8">
                 <div className=" space-y-4 ">
-                  <h2 className="text-3xl font-bold">{section.title}</h2>
+                  <h2 className="text-3xl font-bold">{t(section.title)}</h2>
                   <TextElement variant="paragraph">
-                    {section.description}
+                    {t(section.description1)}
                   </TextElement>
                   <div className="aspect-video relative rounded-lg overflow-hidden">
                     <img
@@ -114,9 +119,11 @@ export function OperationPrinciple() {
                       className="object-cover w-full"
                     />
                   </div>
-                  <TextElement variant="paragraph">
-                    {section.description}
-                  </TextElement>
+                  {section.description2 && (
+                    <TextElement variant="paragraph">
+                      {t(section.description2)}
+                    </TextElement>
+                  )}
                 </div>
               </div>
             </div>

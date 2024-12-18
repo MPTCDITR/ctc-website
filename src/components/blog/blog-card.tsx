@@ -63,7 +63,7 @@ export function BlogCard({
               <TextElement variant="titleblog" className="text-primary">
                 {title}
               </TextElement>
-              <TextElement variant="body" className="text-gray-600">
+              <TextElement variant="body" className="text-gray-600 line-clamp-4">
                 {description}
               </TextElement>
               <TextElement
