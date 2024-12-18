@@ -4,6 +4,10 @@ import TextElement from "@/components/text-element/TextElement";
 import { cn } from "@/lib/utils";
 import { styles } from "@/components/text-element/ElementStyle";
 
+import computerLab from "@/assets/home/computer-lab.webp"
+import trainingRoom from "@/assets/home/training-room.jpg"
+import publicHall from "@/assets/home/public-hall.png"
+import postOffice from "@/assets/home/post-office.svg"
 import ctcImage from "@/assets/post-office-view.webp";
 import ctclestside from "@/assets/about/ctc-left-view.webp";
 
@@ -30,22 +34,24 @@ const Hero = ({ translations, lang }: HeroSectionProps) => {
       href: `/${lang}/about/about-us/`,
     },
     {
-      image: ctclestside.src,
-      title: "Computer Lab",
-      description:
-        "A space for teaching digital skills, both in person and online, and for hosting meetings.",
+      image: computerLab.src,
+      title: "home.service.computerlab",
+      description: "home.service.computerlab.description",
     },
     {
-      image: ctcImage.src,
-      title: "Post Office",
-      description:
-        "Offers package services for sending and receiving items locally and internationally, along with other services for merchants, traders, and the community.",
+      image: trainingRoom.src,
+      title: "home.service.trainingroom",
+      description: "home.service.trainingroom.description",
     },
     {
-      image: ctclestside.src,
-      title: "Public Hall",
-      description:
-        "Provides access to computers and the Internet, allowing community members to find information on agriculture, business, and public services.",
+      image: postOffice.src,
+      title: "home.service.postoffice",
+      description: "home.service.postoffice.description",
+    },
+    {
+      image: publicHall.src,
+      title: "home.service.publichall",
+      description: "home.service.publichall.description",
     },
   ];
 
@@ -85,10 +91,10 @@ const Hero = ({ translations, lang }: HeroSectionProps) => {
             transition={{ duration: 0.5 }}
           >
             <TextElement variant="heading" className="mb-6 text-white">
-              {slides[currentSlide].title}
+              {t(slides[currentSlide].title)}
             </TextElement>
             <TextElement variant="body" className="mb-8 max-w-3xl mx-autos">
-              {slides[currentSlide].description}
+              {t(slides[currentSlide].description)}
             </TextElement>
             {slides[currentSlide].href && (
               <motion.button
