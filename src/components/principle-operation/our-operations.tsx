@@ -1,7 +1,13 @@
 import { cn } from "@/lib/utils";
 import { styles } from "@/components/text-element/ElementStyle";
 import { motion } from "framer-motion";
-import OurService5 from "@/assets/our-centers/our-service/service-7.png";
+import OurService1 from "@/assets/image-assets/computer-lab.webp";
+import OurService2 from "@/assets/our-centers/our-service/computer-labs.png";
+import OurService3 from "@/assets/our-centers/our-service/trainning-center.png";
+import OurService4 from "@/assets/image-assets/ctc-left-view.webp";
+import OurService5 from "@/assets/image-assets/post-office-view.webp";
+import OurService6 from "@/assets/our-centers/our-service/post-order.png";
+import OurService7 from "@/assets/image-assets/ctc-opening-ceremony.webp";
 import TextElement from "../text-element/TextElement";
 
 export function OperationPrinciple() {
@@ -11,23 +17,23 @@ export function OperationPrinciple() {
       title: "បន្ទប់កំព្យូទ័រ",
       description:
         "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      image1: OurService5.src,
-      image2: OurService5.src,
+      image1: OurService1.src,
+      image2: OurService2.src,
     },
     {
       id: "training-room",
       title: "មជ្ឈមណ្ឌលបណ្តុះបណ្តាល",
       description:
         "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      image1: OurService5.src,
-      image2: OurService5.src,
+      image1: OurService3.src,
+      image2: OurService3.src,
     },
     {
       id: "public-hall",
       title: "សាធារណៈ",
       description:
         "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      image1: OurService5.src,
+      image1: OurService4.src,
       image2: OurService5.src,
     },
     {
@@ -35,8 +41,8 @@ export function OperationPrinciple() {
       title: "បញ្ជារប្រៃសណីយ៍",
       description:
         "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      image1: OurService5.src,
-      image2: OurService5.src,
+      image1: OurService6.src,
+      image2: OurService7.src,
     },
   ];
 
