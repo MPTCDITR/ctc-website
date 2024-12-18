@@ -7,6 +7,7 @@ import publicHall from "@/assets/service/public-hall.svg";
 import TextElement from "@/components/text-element/TextElement";
 
 interface ServiceItem {
+  href: string;
   title: string;
   description: string;
   src: string;
@@ -17,35 +18,35 @@ interface ServiceSectionProps {
   lang?: string;
 }
 
-const services: ServiceItem[] = [
-  {
-    title: "home.service.computerlab",
-    description:
-      "home.service.computerlab.description",
-    src: computerLab.src,
-  },
-  {
-    title: "home.service.trainingroom",
-    description:
-      "home.service.trainingroom.description",
-    src: trainingRoom.src,
-  },
-  {
-    title: "home.service.postoffice",
-    description:
-      "home.service.postoffice.description",
-    src: postOffice.src,
-  },
-  {
-    title: "home.service.publichall",
-    description:
-      "home.service.publichall.description",
-    src: publicHall.src,
-  },
-];
-
 export function ServiceHighlights({ translations, lang }: ServiceSectionProps) {
   const t = (key: string) => translations[key] || key;
+
+  const services: ServiceItem[] = [
+    {
+      href: `/${lang}/center/center-services/#computer-lab`,
+      title: "home.service.computerlab",
+      description: "home.service.computerlab.description",
+      src: computerLab.src,
+    },
+    {
+      href: `/${lang}/center/center-services/#training-room`,
+      title: "home.service.trainingroom",
+      description: "home.service.trainingroom.description",
+      src: trainingRoom.src,
+    },
+    {
+      href: `/${lang}/center/center-services/#post-office`,
+      title: "home.service.postoffice",
+      description: "home.service.postoffice.description",
+      src: postOffice.src,
+    },
+    {
+      href: `/${lang}/center/center-services/#public-hall`,
+      title: "home.service.publichall",
+      description: "home.service.publichall.description",
+      src: publicHall.src,
+    },
+  ];
 
   return (
     <section className="py-24 bg-background">
@@ -56,11 +57,9 @@ export function ServiceHighlights({ translations, lang }: ServiceSectionProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <TextElement variant="heading">
-            {t("home.service")}
-          </TextElement>
+          <TextElement variant="heading">{t("home.service")}</TextElement>
           <TextElement variant="body" className="max-w-8xl">
-           {t("home.service.description")}
+            {t("home.service.description")}
           </TextElement>
         </motion.div>
 
@@ -73,25 +72,29 @@ export function ServiceHighlights({ translations, lang }: ServiceSectionProps) {
               transition={{ duration: 0.5, delay: index * 0.2 }}
               className="bg-background rounded-lg border border-lightblue shadow-sm shadow-lightblue transition-colors hover:bg-slate-100"
             >
-              <Card className="p-6 text-center bg-transparent border-none shadow-none">
-                <div className="flex justify-center mb-6">
-                  <div className="rounded-full flex items-center justify-center">
-                    <img
-                      src={service.src}
-                      alt={service.title}
-                      className="size-44 object-cover"
-                    />
+              <a href={service.href}>
+                <Card className="p-6 text-center bg-transparent border-none shadow-none">
+                  <div className="flex justify-center mb-6">
+                    <div className="rounded-full flex items-center justify-center">
+                      <img
+                        src={service.src}
+                        alt={service.title}
+                        className="size-44 object-cover"
+                      />
+                    </div>
                   </div>
-                </div>
-                <TextElement
-                  variant="title"
-                  className="text-xl font-bold mb-4 text-primary"
-                >
-                  {t(service.title)}
-                </TextElement>
+                  <TextElement
+                    variant="title"
+                    className="text-xl font-bold mb-4 text-primary"
+                  >
+                    {t(service.title)}
+                  </TextElement>
 
-                <TextElement variant="small">{t(service.description)}</TextElement>
-              </Card>
+                  <TextElement variant="small">
+                    {t(service.description)}
+                  </TextElement>
+                </Card>
+              </a>
             </motion.div>
           ))}
         </div>

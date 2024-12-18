@@ -7,6 +7,7 @@ import TextElement from "../text-element/TextElement";
 export function OperationPrinciple() {
   const facilitySections = [
     {
+      id: "computer-lab",
       title: "បន្ទប់កំព្យូទ័រ",
       description:
         "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
@@ -14,6 +15,7 @@ export function OperationPrinciple() {
       image2: OurService5.src,
     },
     {
+      id: "training-room",
       title: "មជ្ឈមណ្ឌលបណ្តុះបណ្តាល",
       description:
         "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
@@ -21,6 +23,7 @@ export function OperationPrinciple() {
       image2: OurService5.src,
     },
     {
+      id: "public-hall",
       title: "សាធារណៈ",
       description:
         "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
@@ -28,6 +31,7 @@ export function OperationPrinciple() {
       image2: OurService5.src,
     },
     {
+      id: "post-office",
       title: "បញ្ជារប្រៃសណីយ៍",
       description:
         "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
@@ -71,7 +75,8 @@ export function OperationPrinciple() {
       </div>
       {facilitySections.map((section, index) => (
         <div
-          className={`${index % 2 === 1 ? "bg-background text-primary" : "bg-primary text-white"} py-12 space-y-24`}
+          id={section.id}
+          className={`${index % 2 === 1 ? "bg-background text-primary" : "bg-primary text-white"} py-12 space-y-24 scroll-mt-20`}
         >
           <motion.section
             key={section.title}
