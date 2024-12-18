@@ -39,7 +39,7 @@ export function BlogList({ translations, posts, lang }: BlogListProps) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        News and Events
+        {t("nav.news")}
       </motion.h1>
 
       <motion.p

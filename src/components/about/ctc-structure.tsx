@@ -66,10 +66,7 @@ export function StructureCtc({ translations, lang }: StructureProps) {
         >
           <TextElement variant="heading">{t("about.structure")}</TextElement>
           <TextElement variant="paragraph">
-            It was popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of Lorem
-            Ipsum.
+            {t("about.structure.description")}
           </TextElement>
         </motion.div>
         <motion.div

@@ -14,8 +14,8 @@ export const navigation = [
   {
     label: "nav.ourcenters",
     children: [
-      { label: "nav.center.centermanagement", href: `/center/centers-management` },
       { label: "nav.center.ourcenters", href: `/center/our-centers` },
+      { label: "nav.center.centermanagement", href: `/center/centers-management` },
       { label: "nav.center.ourservices", href: `/center/center-services` },
     ],
   },
