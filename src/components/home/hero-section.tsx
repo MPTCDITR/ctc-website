@@ -4,7 +4,7 @@ import TextElement from "@/components/text-element/TextElement";
 import { cn } from "@/lib/utils";
 import { styles } from "@/components/text-element/ElementStyle";
 
-import computerLab from "@/assets/home/computer-lab.webp"
+import computerLab from "@/assets/image-assets/computer-lab.webp"
 import trainingRoom from "@/assets/home/training-room.jpg"
 import publicHall from "@/assets/home/public-hall.png"
 import postOffice from "@/assets/home/post-office.svg"

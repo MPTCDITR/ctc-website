@@ -1,8 +1,8 @@
 import { cn } from "@/lib/utils";
 import { styles } from "@/components/text-element/ElementStyle";
 import { motion } from "framer-motion";
-import OurService1 from "@/assets/our-centers/our-service/computer-lab.png";
-import OurService2 from "@/assets/our-centers/our-service/computer-lab-1.png";
+import OurService1 from "@/assets/image-assets/computer-lab.webp";
+import OurService2 from "@/assets/our-centers/our-service/computer-labs.png";
 import OurService3 from "@/assets/our-centers/our-service/trainning-center.png";
 import OurService4 from "@/assets/image-assets/ctc-left-view.webp";
 import OurService5 from "@/assets/image-assets/post-office-view.webp";
