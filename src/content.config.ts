@@ -12,6 +12,35 @@ const blog = defineCollection({
   })
 });
 
+const centers = defineCollection({
+  type: 'content',
+  schema: () => z.object({
+    name: z.string(),
+    description: z.string(),
+    managementTeam: z.object({
+      description: z.string(),
+      member:  z.array(z.object({
+        title: z.string(),
+        name: z.string(),
+        role: z.string(),
+        phonenumber: z.string(),
+        email: z.string().email(),
+      }))
+    }),
+    operationTeam: z.object({
+      description: z.string(),
+      member:  z.array(z.object({
+        title: z.string(),
+        name: z.string(),
+        role: z.string(),
+        phonenumber: z.string(),
+        email: z.string().email(),
+      }))
+    }),
+  })
+});
+
 export const collections = {
   blog,
+  centers
 };
