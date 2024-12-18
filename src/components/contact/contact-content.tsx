@@ -3,7 +3,7 @@
 import { Card } from "@/components/ui/card";
 import { Facebook, Instagram, Mail, MapPin, Phone, Send } from "lucide-react";
 import { motion } from "framer-motion";
-import PostOfficeView from "@/assets/post-office-view.webp";
+import PostOfficeView from "@/assets//image-assets/post-office-view.webp";
 import TextElement from "@/components/text-element/TextElement";
 
 interface ContactProps {

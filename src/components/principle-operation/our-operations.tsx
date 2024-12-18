@@ -1,7 +1,13 @@
 import { cn } from "@/lib/utils";
 import { styles } from "@/components/text-element/ElementStyle";
 import { motion } from "framer-motion";
-import OurService5 from "@/assets/our-centers/our-service/service-7.png";
+import OurService1 from "@/assets/image-assets/computer-lab.webp";
+import OurService2 from "@/assets/our-centers/our-service/computer-labs.png";
+import OurService3 from "@/assets/our-centers/our-service/trainning-center.png";
+import OurService4 from "@/assets/image-assets/ctc-left-view.webp";
+import OurService5 from "@/assets/image-assets/post-office-view.webp";
+import OurService6 from "@/assets/our-centers/our-service/post-order.png";
+import OurService7 from "@/assets/image-assets/ctc-opening-ceremony.webp";
 import TextElement from "../text-element/TextElement";
 
 interface FunctionalityProps {
@@ -13,32 +19,36 @@ export function OperationPrinciple({ translations }: FunctionalityProps) {
 
   const facilitySections = [
     {
+      id: "computer-lab",
       title: "home.service.computerlab",
       description1: "center.computerlab.description1",
       description2: "center.computerlab.description2",
-      image1: OurService5.src,
-      image2: OurService5.src,
+      image1: OurService1.src,
+      image2: OurService2.src,
     },
     {
+      id: "training-room",
       title: "home.service.trainingroom",
       description1: "center.trainingroom.description1",
       description2: "center.trainingroom.description2",
-      image1: OurService5.src,
-      image2: OurService5.src,
+      image1: OurService3.src,
+      image2: OurService3.src,
     },
     {
+      id: "public-hall",
       title: "home.service.publichall",
       description1: "center.publichall.description1",
       description2: "center.publichall.description2",
-      image1: OurService5.src,
+      image1: OurService4.src,
       image2: OurService5.src,
     },
     {
+      id: "post-office",
       title: "home.service.postoffice",
       description1: "center.postoffice.description1",
-      image1: OurService5.src,
-      image2: OurService5.src,
-    },
+      image1: OurService6.src,
+      image2: OurService7.src,
+    },  
   ];
 
   return (
@@ -76,7 +86,8 @@ export function OperationPrinciple({ translations }: FunctionalityProps) {
       </div>
       {facilitySections.map((section, index) => (
         <div
-          className={`${index % 2 === 1 ? "bg-background text-primary" : "bg-primary text-white"} py-12 space-y-24`}
+          id={section.id}
+          className={`${index % 2 === 1 ? "bg-background text-primary" : "bg-primary text-white"} py-12 space-y-24 scroll-mt-20`}
         >
           <motion.section
             key={section.title}

@@ -28,7 +28,7 @@ export function BlogList({ translations, posts, lang }: BlogListProps) {
   }
 
   const [currentPage, setCurrentPage] = useState(0);
-  const itemsPerPage = 4;
+  const itemsPerPage = 3;
   const totalPages = Math.ceil(posts.length / itemsPerPage);
 
   return (

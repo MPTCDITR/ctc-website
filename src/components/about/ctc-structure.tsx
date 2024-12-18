@@ -6,7 +6,8 @@ import { styles } from "@/components/text-element/ElementStyle";
 
 import enNationalGovernmentCouncil from "@/assets/structure/en-national-government-council.svg";
 import khNationalGovernmentCouncil from "@/assets/structure/kh-national-government-council.svg";
-import listCenters from "@/assets/structure/list-centers.svg";
+import enListCenters from "@/assets/structure/en-list-centers.svg";
+import khListCenters from "@/assets/structure/kh-list-centers.svg";
 
 interface StructureProps {
   translations: Record<string, string>;
@@ -111,11 +112,19 @@ export function StructureCtc({ translations, lang }: StructureProps) {
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <div className="space-y-4">
-            <img
-              src={listCenters.src}
-              alt="ctc centers"
-              className="object-cover"
-            />
+            {lang === "en" ? (
+              <img
+                src={enListCenters.src}
+                alt="ctc national government council orgchart"
+                className="object-cover"
+              />
+            ) : (
+              <img
+                src={khListCenters.src}
+                alt="ctc national government council orgchart"
+                className="object-cover"
+              />
+            )}
           </div>
         </motion.div>
       </section>
@@ -167,47 +176,6 @@ export function StructureCtc({ translations, lang }: StructureProps) {
             </motion.div>
           ))}
         </div>
-      </section>
-
-      {/* Third Section - Additional Structure */}
-      <section className="space-y-8">
-        <motion.div
-          className="space-y-4"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <h2 className="text-3xl font-bold text-primary">
-            Structure of CTC General Secretariat
-          </h2>
-          <TextElement variant="paragraph">
-            It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It has
-            survived not only five centuries, but also the leap into electronic
-            typesetting, remaining essentially unchanged.
-          </TextElement>
-        </motion.div>
-
-        <motion.div
-          className="space-y-4"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          {tableStaff.map((staff, index) => (
-            <Card key={index} className="p-6">
-              <div className="flex justify-between items-center">
-                <div className="space-y-1">
-                  <div className="font-semibold text-primary">
-                    {staff.title}
-                  </div>
-                  <div className="text-lg">{staff.name}</div>
-                </div>
-                <div className="text-secondary">{staff.role}</div>
-              </div>
-            </Card>
-          ))}
-        </motion.div>
       </section>
     </div>
   );
