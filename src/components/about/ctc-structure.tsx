@@ -8,6 +8,7 @@ import enNationalGovernmentCouncil from "@/assets/structure/en-national-governme
 import khNationalGovernmentCouncil from "@/assets/structure/kh-national-government-council.svg";
 import enListCenters from "@/assets/structure/en-list-centers.svg";
 import khListCenters from "@/assets/structure/kh-list-centers.svg";
+import AVARTA from "@/assets/image-assets/avarta.png";
 
 interface StructureProps {
   translations: Record<string, string>;
@@ -16,40 +17,40 @@ interface StructureProps {
 
 const staffMembers = [
   {
-    title: "Title",
-    name: "Name",
-    department: "Department",
-    role: "Role",
+    title: "H.E",
+    name: "Chea Vandeth",
+    department: "Minister of The Ministry of Post and Telecommunications",
+    role: "chairman",
     image: "/placeholder.svg?height=200&width=200",
   },
   {
-    title: "Title",
+    title: "H.E",
     name: "Name",
-    department: "Department",
-    role: "Role",
+    department: "Representative of the Ministry of Education, Youth and Sports",
+    role: "Vice-chair",
     image: "/placeholder.svg?height=200&width=200",
   },
   {
-    title: "Title",
+    title: "H.E",
     name: "Name",
-    department: "Department",
-    role: "Role",
+    department: "Representative of the Ministry of Post and Telecommunications",
+    role: "Vice-chair",
     image: "/placeholder.svg?height=200&width=200",
   },
   {
-    title: "Title",
+    title: "H.E",
     name: "Name",
-    department: "Department",
-    role: "Role",
+    department: "Director General of the General Department of the Ministry of Post and Telecommunications",
+    role: "Member",
     image: "/placeholder.svg?height=200&width=200",
   },
-];
-
-const tableStaff = [
-  { title: "Title", name: "Name", role: "Role" },
-  { title: "Title", name: "Name", role: "Role" },
-  { title: "Title", name: "Name", role: "Role" },
-  { title: "Title", name: "Name", role: "Role" },
+  {
+    title: "H.E",
+    name: "Name",
+    department: "Director General of the General Department of the Ministry of Education, Youth and Sports",
+    role: "Member",
+    image: "/placeholder.svg?height=200&width=200",
+  },
 ];
 
 export function StructureCtc({ translations, lang }: StructureProps) {
@@ -151,14 +152,20 @@ export function StructureCtc({ translations, lang }: StructureProps) {
         <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
           {staffMembers.map((member, index) => (
             <motion.div
-              key={index}
+              key={member.name}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
             >
-              <Card className="p-6">
+              <Card className="p-4">
                 <div className="flex gap-6">
-                  <div className="relative w-24 h-24 rounded-full overflow-hidden bg-gray-200"></div>
+                  <div className="relative overflow-hidden ">
+                    <img
+                      src={AVARTA.src}
+                      alt="ctc national government council orgchart"
+                      className="object-cover size-32"
+                    />
+                  </div>
                   <div className="w-full">
                     <div className="flex-1 lg:flex sm:block justify-between items-center">
                       <div className="flex gap-2">
