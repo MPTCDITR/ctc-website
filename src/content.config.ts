@@ -2,14 +2,14 @@ import { defineCollection, z } from 'astro:content';
 
 const blog = defineCollection({
   type: 'content',
-  schema: ({image}) => z.object({
+  schema: ({ image }) => z.object({
     title: z.string(),
     description: z.string(),
     date: z.date(),
     author: z.string(),
     image: z.string().optional(),
     tags: z.array(z.string()),
-  })
+  }),
 });
 
 const centers = defineCollection({
@@ -20,28 +20,33 @@ const centers = defineCollection({
     managementTeam: z.object({
       title: z.string(),
       description: z.string(),
-      member:  z.array(z.object({
-        title: z.string(),
-        name: z.string(),
-        role: z.string(),
-        phonenumber: z.string(),
-        email: z.string().email(),
-      }))
+      member: z.array(
+        z.object({
+          title: z.string(),
+          name: z.string(),
+          role: z.string(),
+          phoneNumber: z.string(),
+          email: z.string().email(),
+        })
+      ),
     }),
     operationTeam: z.object({
       title: z.string(),
       description: z.string(),
-      member:  z.array(z.object({
-        title: z.string(),
-        name: z.string(),
-        role: z.string(),
-        phonenumber: z.string(),
-        email: z.string().email(),
-      }))
+      member: z.array(
+        z.object({
+          title: z.string(),
+          name: z.string(),
+          role: z.string(),
+          phoneNumber: z.string(),
+          email: z.string().email(),
+        })
+      ),
     }),
-  })
+  }),
 });
 
 export const collections = {
-  blog,centers
+  blog,
+  centers,
 };
