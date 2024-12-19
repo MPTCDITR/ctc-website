@@ -30,6 +30,7 @@ export function BlogCard({
   translations,
 }: BlogCardProps) {
   const urlSlug = slug.split("/").slice(1).join("/");
+  const t = (key: string) => translations[key] || key;
 
   return (
     <motion.div
@@ -74,7 +75,7 @@ export function BlogCard({
                 variant="body"
                 className="text-primary font-bold hover:underline"
               >
-                Read More →
+                {t("blog.readmore")} →
               </TextElement>
             </div>
           </div>

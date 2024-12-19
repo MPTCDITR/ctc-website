@@ -78,6 +78,7 @@ export const ui: Record<string, Record<string, string>> = {
     'btn.learnmore':'Learn More →',
     'contact': 'Contact Information',
     'blog.readmore': 'Read More',
+    'blog.list.description':'Find updates on the latest happenings, initiatives, and activities within the center and the highlights upcoming workshops, training sessions, community gatherings, and technology-related events aimed at fostering engagement and learning among community members.'
   },
   km: {
     communitytechcenter: 'មជ្ឈមណ្ឌលបច្ចេកវិទ្យាសហគមន៍',
@@ -146,6 +147,7 @@ export const ui: Record<string, Record<string, string>> = {
     'btn.learnmore':'ស្វែងយល់បន្ថែម →',
     'contact': 'ព័ត៌មានទំនាក់ទំនង',
     'blog.readmore': 'អានបន្ថែម',
+    'blog.list.description':'សូមស្វែងរកព័ត៌មានអាប់ដេតអំពីព្រឹត្តិការណ៍ថ្មីៗ ការប្រមូលផ្តុំ និងសកម្មភាពនៅក្នុងមជ្ឈមណ្ឌលនិងការបង្ហាញពីវគ្គសិក្សាដែលនឹងមកដល់ សម័យបណ្តុះបណ្តាល ការប្រជុំសហគមន៍ និងព្រឹត្តិការណ៍ដែលពាក់ព័ន្ធនឹងបច្ចេកវិទ្យា ដែលមានគោលបំណងដើម្បីលើកកម្ពស់ការចូលរួម និងការរៀននៅក្នុងសមាជិកសហគមន៍។'
 }
 } as const;
 

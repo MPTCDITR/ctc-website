@@ -48,10 +48,7 @@ export function BlogList({ translations, posts, lang }: BlogListProps) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        It was popularised in the 1960s with the release of Letraset sheets
-        containing Lorem Ipsum passages, and more recently with desktop
-        publishing software like Aldus PageMaker including versions of Lorem
-        Ipsum.
+        {t("blog.list.description")}
       </motion.p>
 
       <div className="space-y-8">
