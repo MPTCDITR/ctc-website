@@ -39,8 +39,8 @@ export function BlogLatestCard({
         </div>
       )}
       <CardHeader>
-        <CardTitle className="line-clamp-2">{title}</CardTitle>
-        <div className="flex items-center gap-2 text-sm text-muted-foreground">
+        <CardTitle className="line-clamp-2 leading-9">{title}</CardTitle>
+        <div className="text-sm text-muted-foreground space-x-2 mt-2">
           <span>{author}</span>
           <span>•</span>
           <time dateTime={date}>{formatDate(new Date(date), lang)}</time>
@@ -56,7 +56,7 @@ export function BlogLatestCard({
           className="w-full text-secondary border-secondary hover:bg-secondary hover:text-white"
         >
           <a href={`/${lang}/blog/${urlSlug}`}>
-            {translations["blog.read_more"] || "Read More"}
+            {translations["blog.readmore"] || "Read More"}
           </a>
         </Button>
       </CardContent>

@@ -13,6 +13,7 @@ interface LatestBlogsProps {
 export function LatestBlogs({ posts, translations, lang }: LatestBlogsProps) {
   const [visibleNews, setVisibleNews] = useState(3);
   const latestPosts = posts.slice(0, 3);
+  const t = (key: string) => translations[key] || key;
 
   return (
     <div className="bg-accent/10 py-24">
@@ -23,7 +24,7 @@ export function LatestBlogs({ posts, translations, lang }: LatestBlogsProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Latest News and Events
+          {t("home.latest.newsandevents")}
         </motion.h2>
         <motion.p
           className="max-w-8xl text-center text-lg text-text"
@@ -31,9 +32,7 @@ export function LatestBlogs({ posts, translations, lang }: LatestBlogsProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          Stay updated with the latest happenings at Community Tech Center. From
-          new course offerings to community events, there's always something
-          exciting on the horizon.
+          {t("home.latest.newsandevents.description")}
         </motion.p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
           {latestPosts.map((post, i) => (
@@ -71,7 +70,7 @@ export function LatestBlogs({ posts, translations, lang }: LatestBlogsProps) {
                 )
               }
             >
-              Load More News
+              {t("home.loadmorenews")}
             </Button>
           </motion.div>
         )}
@@ -83,7 +82,7 @@ export function LatestBlogs({ posts, translations, lang }: LatestBlogsProps) {
           >
             <a href={`/${lang}/blog`}>
               <Button className="bg-primary hover:hover:bg-secondary text-white">
-                View All News
+              {t("home.viewallnews")}
               </Button>
             </a>
           </motion.div>
