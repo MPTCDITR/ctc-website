@@ -28,7 +28,7 @@ export function BlogList({ translations, posts, lang }: BlogListProps) {
   }
 
   const [currentPage, setCurrentPage] = useState(0);
-  const itemsPerPage = 4;
+  const itemsPerPage = 3;
   const totalPages = Math.ceil(posts.length / itemsPerPage);
 
   return (
@@ -39,7 +39,7 @@ export function BlogList({ translations, posts, lang }: BlogListProps) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        News and Events
+        {t("nav.news")}
       </motion.h1>
 
       <motion.p

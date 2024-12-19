@@ -1,8 +1,8 @@
 import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import PostOfficeView from "@/assets/post-office-view.webp";
-import CTCOpeningCeremony from "@/assets/about/ctc-opening-ceremony.webp";
-import CTCLeftView from "@/assets/about/ctc-left-view.webp";
+import PostOfficeView from "@/assets/image-assets/post-office-view.webp";
+import CTCOpeningCeremony from "@/assets/image-assets/ctc-opening-ceremony.webp";
+import CTCLeftView from "@/assets/image-assets/ctc-left-view.webp";
 import TextElement from "@/components/text-element/TextElement";
 import { cn } from "@/lib/utils";
 import { styles } from "@/components/text-element/ElementStyle";

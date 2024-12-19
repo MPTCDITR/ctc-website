@@ -2,7 +2,7 @@
 
 import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import PostOfficeView from "@/assets/post-office-view.webp";
+import PostOfficeView from "@/assets//image-assets/post-office-view.webp";
 import { cn } from "@/lib/utils";
 import { styles } from "@/components/text-element/ElementStyle";
 
@@ -49,45 +49,6 @@ export function CentersContent() {
             ></iframe>
           </Card>
         </motion.div>
-      </motion.section>
-      <motion.section
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        <div className="grid md:grid-cols-2 gap-8">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
-          >
-            <Card className="w-full aspect-[16/9] bg-gray-200">
-              <img
-                src={PostOfficeView.src}
-                alt="c.t.c. post office view"
-                className="w-full"
-                style={{ objectFit: "cover" }}
-              />
-            </Card>
-          </motion.div>
-          <motion.p
-            className={cn(styles.body, "space-y-4")}
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 1 }}
-          >
-            It was popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages, and more recently it was
-            popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages, and more recently it was
-            popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages, and more recently it was
-            popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages, and more recently it was
-            popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages.
-          </motion.p>
-        </div>
       </motion.section>
     </div>
   );
