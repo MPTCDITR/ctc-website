@@ -138,7 +138,7 @@ export function StructureCtc({ translations, lang }: StructureProps) {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl font-bold text-primary">
-            Structure of CTC General Secretariat
+          C.T.C. National Board
           </h2>
           <TextElement variant="paragraph">
             It has survived not only five centuries, but also the leap into
