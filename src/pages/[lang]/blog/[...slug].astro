@@ -24,15 +24,15 @@ const lang = getLangFromUrl(Astro.url);
 ---
 
 <Layout title={`${entry.data.title} - Community Tech Centers`}>
-    <BlogContent
-      title={entry.data.title}
-      date={entry.data.date}
-      author={entry.data.author}
-      description={entry.data.description}
-      image={entry.data.image}
-      lang={lang}
-      client:load
-    >
-      <Content />
-    </BlogContent>
+  <BlogContent
+    title={entry.data.title}
+    date={entry.data.date}
+    author={entry.data.author}
+    description={entry.data.description}
+    image={entry.data.image}
+    lang={lang}
+    client:load
+  >
+    <Content />
+  </BlogContent>
 </Layout>

@@ -18,6 +18,7 @@ const centers = defineCollection({
     name: z.string(),
     description: z.string(),
     managementTeam: z.object({
+      title: z.string(),
       description: z.string(),
       member:  z.array(z.object({
         title: z.string(),
@@ -28,6 +29,7 @@ const centers = defineCollection({
       }))
     }),
     operationTeam: z.object({
+      title: z.string(),
       description: z.string(),
       member:  z.array(z.object({
         title: z.string(),
@@ -41,6 +43,5 @@ const centers = defineCollection({
 });
 
 export const collections = {
-  blog,
-  centers
+  blog,centers
 };

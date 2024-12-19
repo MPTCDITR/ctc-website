@@ -18,10 +18,5 @@ const posts = await getBlogPosts(lang);
 ---
 
 <Layout title={`${translations["blog.title"]} - Community Tech Centers`}>
-    <BlogList
-      translations={translations}
-      posts={posts}
-      lang={lang}
-      client:load
-    />
+  <BlogList translations={translations} posts={posts} lang={lang} client:load />
 </Layout>
