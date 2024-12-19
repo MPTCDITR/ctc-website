@@ -3,7 +3,7 @@ title: ឯកឧត្តមរដ្ឋមន្ត្រី ជា វ៉ា�
 description: ឯកឧត្តមរដ្ឋមន្ត្រី ជា វ៉ាន់ដេត បានអនុញ្ញាតឱ្យ លោកបណ្ឌិត Cosmas Zavazava នាយកការិយាល័យអភិវឌ្ឍន៍ទូរគមនាគមន៍ នៃសហភាពទូរគមនាគមន៍អន្តរជាតិ (International Telecommunication Union - ITU) ចូលជួបសម្តែងការគួរសម និងពិភាក្សាការងារ នៅទីស្តីការក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍ ក្នុងគោលបំណងពង្រឹងកិច្ចសហប្រតិបត្តិការអន្តរជាតិរវាងប្រទេសកម្ពុជា ជាមួយ ITU ព្រមទាំងបណ្តាប្រទេសសមាជិកផ្សេងៗទៀត។
 date: 2024-07-22
 author: ក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍
-image: "/src/assets/news-and-events/article-4/thumbnail.jpg"
+image: "src/assets/news-and-events/article-4/thumbnail.jpg"
 tags: []
 ---
 

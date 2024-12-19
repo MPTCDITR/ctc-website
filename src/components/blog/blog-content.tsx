@@ -2,13 +2,14 @@ import React from "react";
 import { formatDate } from "@/lib/utils";
 import { Card } from "@/components/ui/card";
 import { TextElement } from "@/components/text-element/TextElement";
+import type { ImageMetadata } from "astro";
 
 interface BlogContentProps {
   title: string;
   date: Date;
   author: string;
   description: string;
-  image?: string;
+  image?: ImageMetadata;
   lang: string;
   children: React.ReactNode;
 }
@@ -27,7 +28,7 @@ export function BlogContent({
       <Card className="w-full aspect-[21/9] bg-gray-200">
         {image && (
           <img
-            src={image}
+            src={image?.src}
             alt={title}
             className="rounded-lg w-full aspect-video object-cover"
           />

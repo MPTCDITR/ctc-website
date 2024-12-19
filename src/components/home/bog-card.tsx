@@ -2,13 +2,14 @@ import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { formatDate } from "@/lib/utils";
+import type { ImageMetadata } from "astro";
 
 interface BlogCardProps {
   title: string;
   description: string;
   date: string;
   author: string;
-  image?: string;
+  image?: ImageMetadata;
   slug: string;
   lang: string;
   translations: Record<string, string>;
@@ -31,7 +32,7 @@ export function BlogLatestCard({
       {image && (
         <div className="relative w-full pt-[56.25%] overflow-hidden rounded-t-lg">
           <img
-            src={image}
+            src={image?.src}
             alt={title}
             className="absolute inset-0 w-full h-full object-cover"
           />
