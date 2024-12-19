@@ -1,0 +1,37 @@
+---
+import "@/styles/global.css";
+import Layout from "@/layouts/Layout.astro";
+import { getLangFromUrl } from "@/lib/i18n";
+import { getCollection } from "astro:content";
+import { CenterTeamInfo } from "@/components/centers-management/management-team-info.tsx";
+
+export async function getStaticPaths() {
+  const centerEntries = await getCollection("centers");
+  return centerEntries.map((entry) => {
+    const [lang, ...slug] = entry.slug.split("/");
+    return {
+      params: { lang, slug: slug.join("/") },
+      props: { entry },
+    };
+  });
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+const lang = getLangFromUrl(Astro.url);
+---
+
+<Layout title={`${entry.data.name} - Community Tech Centers`}>
+  <CenterTeamInfo
+    centerName={entry.data.name}
+    centerDescription={entry.data.description}
+    teamManagementTitle={entry.data.managementTeam.title}
+    teamOperationTitle={entry.data.operationTeam.title}
+    teamOperationDescription={entry.data.operationTeam.description}
+    teamManagementDescription={entry.data.managementTeam.description}
+    managementTeam={entry.data.managementTeam.member}
+    operationTeam={entry.data.managementTeam.member}
+    client:load
+  />
+  <Content />
+</Layout>

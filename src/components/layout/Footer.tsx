@@ -35,7 +35,7 @@ const links = (lang: string | undefined) => [
 
 const contacts = [
   { icon: Mail, text: "footer.email" },
-  { icon: Phone, text: "footer.phonenumber" },
+  { icon: Phone, text: "footer.phoneNumber" },
   {
     icon: MapPin,
     text: "footer.address",
