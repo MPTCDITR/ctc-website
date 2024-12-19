@@ -3,7 +3,7 @@ title: Press Release on the Inauguration Ceremony of Community Technology Center
 description: In the morning of June 24th, 2024, in Pearam commune, Bati district, Takeo province, His Excellency Chea Vandet, Minister of Posts and Telecommunications (MPTC), presided over the “Inauguration Ceremony of the Community Technology Center at Hun Sen Muy Mithona High School” with the participation of His Excellency Ueno Atsushi, Ambassador Extraordinary and Plenipotentiary of Japan to the Kingdom of Cambodia, and His Excellency San Vathana, Secretary of State of the Ministry of Education, Youth and Sports (MOEYS), in charge of the Community Technology Center.
 date: 2024-06-24
 author: Ministry of Posts and Telecommunications
-image: "/src/assets/news-and-events/article-1/thumbnail.jpg"
+image: "src/assets/news-and-events/article-1/thumbnail.jpg"
 tags: []
 ---
 

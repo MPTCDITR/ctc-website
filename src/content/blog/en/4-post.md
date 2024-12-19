@@ -3,7 +3,7 @@ title: His Excellency Minister Chea Vandet allowed Dr. Cosmas Zavazava, Director
 description: is Excellency Minister Chea Vandet allowed Dr. Cosmas Zavazava, Director of the Telecommunication Development Bureau of the International Telecommunication Union (ITU), to pay a courtesy call and discuss work at the Ministry of Posts and Telecommunications with the aim of strengthening international cooperation between Cambodia, ITU and other member countries.
 date: 2024-07-22
 author: Ministry of Posts and Telecommunications
-image: "/src/assets/news-and-events/article-4/thumbnail.jpg"
+image: "src/assets/news-and-events/article-4/thumbnail.jpg"
 tags: []
 ---
 
