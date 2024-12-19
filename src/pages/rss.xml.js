@@ -22,7 +22,7 @@ export async function GET(context) {
   }
 
 
-  export async function GET(context) {
+  export async function GETCenter(context) {
 	const centers = await getCollection('centers');
 	const defaultCenters = centers.filter(center => center.slug.startsWith(defaultLang));
   
