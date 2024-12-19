@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { formatDate } from "@/lib/utils";
 import { motion } from "framer-motion";
 import TextElement from "@/components/text-element/TextElement";
+import type { ImageMetadata } from "astro";
 
 interface BlogCardProps {
   index: number;
@@ -11,7 +12,7 @@ interface BlogCardProps {
   description: string;
   date: string;
   author: string;
-  image?: string;
+  image?: ImageMetadata;
   slug: string;
   lang: string;
   translations: Record<string, string>;
@@ -47,7 +48,7 @@ export function BlogCard({
           >
             <div className="aspect-auto relative rounded-lg overflow-hidden">
               <img
-                src={image}
+                src={image?.src}
                 alt={title}
                 className="w-full"
                 style={{ objectFit: "cover" }}
