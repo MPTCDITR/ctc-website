@@ -48,7 +48,7 @@ export function OperationPrinciple({ translations }: FunctionalityProps) {
       description1: "center.postoffice.description1",
       image1: OurService6.src,
       image2: OurService7.src,
-    },  
+    },
   ];
 
   return (
@@ -74,13 +74,7 @@ export function OperationPrinciple({ translations }: FunctionalityProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            It was popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of Lorem
-            Ipsum. It was popularised in the 1960s with the release of Letraset
-            sheets containing Lorem Ipsum passages, and more recently with
-            desktop publishing software like Aldus PageMaker including versions
-            of Lorem Ipsum.
+            {t("center.functionality.description")}
           </motion.p>
         </motion.section>
       </div>

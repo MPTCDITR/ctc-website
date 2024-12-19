@@ -28,8 +28,8 @@ const Hero = ({ translations, lang }: HeroSectionProps) => {
   const slides: Slide[] = [
     {
       image: ctcImage.src,
-      title: "Community Tech Center",
-      description: "Empowering communities through technology and innovation",
+      title: "communitytechcenter",
+      description: "home.hero.ctc.description",
       href: `/${lang}/about/about-us/`,
     },
     {

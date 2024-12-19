@@ -25,7 +25,10 @@ export function AboutSection({ translations, lang }: AboutSectionProps) {
             variant="link"   
             className="w-fit text-secondary hover:text-secondary"
           >
+            <a href={`/${lang}/about/about-us`}>
+
             {t("home.about.aboutus")} →
+            </a>
           </Button>
         </div>
       </div>

@@ -26,11 +26,11 @@ const itemVariants = {
 };
 
 const links = (lang: string | undefined) => [
-  { href: `/${lang}`, label: "Home" },
-  { href: `/${lang}/about/about-us`, label: "Our Story" },
-  { href: `/${lang}/about/mission-vision`, label: "Mission & Vision" },
-  { href: `/${lang}/our-centers`, label: "Our Centers" },
-  { href: `/${lang}/blog`, label: "News And Events" },
+  { href: `/${lang}`, label: "nav.home" },
+  { href: `/${lang}/about/about-us`, label: "nav.about.aboutus" },
+  { href: `/${lang}/about/mission-vision`, label: "nav.about.mission" },
+  { href: `/${lang}/our-centers`, label: "nav.center.ourcenters" },
+  { href: `/${lang}/blog`, label: "nav.news" },
 ];
 
 const contacts = [
@@ -66,7 +66,7 @@ export function SiteFooter({ lang }: FooterProps) {
 
         <motion.div variants={itemVariants}>
           <h3 className="font-semibold text-lg text-secondary mb-4">
-            Quick Links
+            {t("footer.quicklink")}
           </h3>
           <div className="flex flex-col gap-2 text-lg">
             {links(lang).map(({ href, label }) => (
@@ -75,7 +75,7 @@ export function SiteFooter({ lang }: FooterProps) {
                 href={href}
                 className="text-white hover:text-secondary"
               >
-                {label}
+                {t(label)}
               </a>
             ))}
           </div>
@@ -83,17 +83,19 @@ export function SiteFooter({ lang }: FooterProps) {
 
         <motion.div variants={itemVariants}>
           <h3 className="font-semibold mb-4 text-lg text-secondary">
-            Other Links
+            {t("footer.otherlink")}
           </h3>
           <div className="flex flex-col gap-2 text-lg">
             <a href={`/${lang}`} className="text-white hover:text-secondary">
-              Ministry Of Post And Telecommunications
+              {t("footer.mptc")}
             </a>
           </div>
         </motion.div>
 
         <motion.div variants={itemVariants}>
-          <h3 className="font-semibold mb-4 text-lg text-secondary">Contact</h3>
+          <h3 className="font-semibold mb-4 text-lg text-secondary">
+            {t("nav.contact")}
+          </h3>
           <div className="flex flex-col gap-4 text-lg">
             {contacts.map(({ icon: Icon, text }, index) => (
               <div key={index} className="flex items-start gap-2 text-white">
