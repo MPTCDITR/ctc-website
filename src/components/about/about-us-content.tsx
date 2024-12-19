@@ -7,7 +7,12 @@ import TextElement from "@/components/text-element/TextElement";
 import { cn } from "@/lib/utils";
 import { styles } from "@/components/text-element/ElementStyle";
 
-export function AboutContent() {
+interface AboutUsContent {
+  translations: Record<string, string>;
+}
+export function AboutContent({ translations }: AboutUsContent) {
+  const t = (key: string) => translations[key] || key;
+
   return (
     <div className="container py-12 space-y-12">
       <motion.h1
@@ -16,25 +21,16 @@ export function AboutContent() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        About Community Tech Center
+        {t("about.ctc.title")}
       </motion.h1>
 
       <motion.p
-        className={cn(styles.body, "text-center max-w-8xl mx-auto")}
+        className={cn(styles.body, "text-justify  max-w-8xl mx-auto")}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        It was popularised in the 1960s with the release of Letraset sheets
-        containing Lorem Ipsum passages, and more recently with desktop
-        publishing software like Aldus PageMaker including versions of Lorem
-        Ipsum. It was popularised in the 1960s with the release of Letraset
-        sheets containing Lorem Ipsum passages, and more recently with desktop
-        publishing software like Aldus PageMaker including versions of Lorem
-        Ipsum. It was popularised in the 1960s with the release of Letraset
-        sheets containing Lorem Ipsum passages, and more recently with desktop
-        publishing software like Aldus PageMaker including versions of Lorem
-        Ipsum.
+        {t("about.ctc.paragraph1")}
       </motion.p>
 
       <motion.div
@@ -53,21 +49,12 @@ export function AboutContent() {
       </motion.div>
 
       <motion.p
-        className={cn(styles.body, "max-w-8xl mx-auto")}
+        className={cn(styles.body, "max-w-8xl mx-auto text-justify ")}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.6 }}
       >
-        It was popularised in the 1960s with the release of Letraset sheets
-        containing Lorem Ipsum passages, and more recently with desktop
-        publishing software like Aldus PageMaker including versions of Lorem
-        Ipsum. It was popularised in the 1960s with the release of Letraset
-        sheets containing Lorem Ipsum passages, and more recently with desktop
-        publishing software like Aldus PageMaker including versions of Lorem
-        Ipsum. It was popularised in the 1960s with the release of Letraset
-        sheets containing Lorem Ipsum passages, and more recently with desktop
-        publishing software like Aldus PageMaker including versions of Lorem
-        Ipsum.
+        {t("about.ctc.paragraph2")}
       </motion.p>
 
       <div className="grid md:grid-cols-2 gap-8">
@@ -91,24 +78,10 @@ export function AboutContent() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 1 }}
         >
-          <TextElement variant="body">
-            It was popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of Lorem
-            Ipsum. It was popularised in the 1960s with the release of Letraset
-            sheets containing Lorem Ipsum passages, and more recently with
-            desktop publishing software like Aldus PageMaker including versions
-            of Lorem Ipsum. It was popularised in the 1960s with the release of
-            Letraset sheets containing Lorem Ipsum passages, and more recently
-            with desktop publishing software like Aldus PageMaker including
-            versions of Lorem Ipsum.
+          <TextElement variant="body" className="text-justify ">
+            {t("about.ctc.paragraph3")}
           </TextElement>
-          <TextElement variant="body">
-            Lorem Ipsum passages, and more recently it was popularised in the
-            1960s with the release of Letraset sheets containing Lorem Ipsum
-            Lorem Ipsum passages, and more recently it was popularised in the
-            1960s
-          </TextElement>
+          <TextElement variant="body">{t("about.ctc.paragraph4")}</TextElement>
           <p></p>
         </motion.div>
       </div>
@@ -118,18 +91,7 @@ export function AboutContent() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 1.2 }}
-      >
-        It was popularised in the 1960s with the release of Letraset sheets
-        containing Lorem Ipsum passages, and more recently with desktop
-        publishing software like Aldus PageMaker including versions of Lorem
-        Ipsum. It was popularised in the 1960s with the release of Letraset
-        sheets containing Lorem Ipsum passages, and more recently with desktop
-        publishing software like Aldus PageMaker including versions of Lorem
-        Ipsum. It was popularised in the 1960s with the release of Letraset
-        sheets containing Lorem Ipsum passages, and more recently with desktop
-        publishing software like Aldus PageMaker including versions of Lorem
-        Ipsum.
-      </motion.p>
+      ></motion.p>
 
       <motion.div
         initial={{ opacity: 0, y: 50 }}
@@ -147,21 +109,12 @@ export function AboutContent() {
       </motion.div>
 
       <motion.p
-        className={cn(styles.body, "max-w-8xl mx-auto")}
+        className={cn(styles.body, "max-w-8xl mx-auto text-justify ")}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 1.6 }}
       >
-        It was popularised in the 1960s with the release of Letraset sheets
-        containing Lorem Ipsum passages, and more recently with desktop
-        publishing software like Aldus PageMaker including versions of Lorem
-        Ipsum. It was popularised in the 1960s with the release of Letraset
-        sheets containing Lorem Ipsum passages, and more recently with desktop
-        publishing software like Aldus PageMaker including versions of Lorem
-        Ipsum. It was popularised in the 1960s with the release of Letraset
-        sheets containing Lorem Ipsum passages, and more recently with desktop
-        publishing software like Aldus PageMaker including versions of Lorem
-        Ipsum.
+        {t("about.ctc.paragraph5")}
       </motion.p>
     </div>
   );
