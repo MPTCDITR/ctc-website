@@ -59,7 +59,7 @@ export function CenterTeamInfo({
                       <TableCell>{member.title}</TableCell>
                       <TableCell>{member.name}</TableCell>
                       <TableCell>{member.role}</TableCell>
-                      <TableCell>{member.phonenumber}</TableCell>
+                      <TableCell>{member.phoneNumber}</TableCell>
                       <TableCell>{member.email}</TableCell>
                     </TableRow>
                   ))
@@ -101,7 +101,7 @@ export function CenterTeamInfo({
                       <TableCell>{member.title}</TableCell>
                       <TableCell>{member.name}</TableCell>
                       <TableCell>{member.role}</TableCell>
-                      <TableCell>{member.phonenumber}</TableCell>
+                      <TableCell>{member.phoneNumber}</TableCell>
                       <TableCell>{member.email}</TableCell>
                     </TableRow>
                   ))

@@ -36,9 +36,7 @@ export function ContactContent({ translations }: ContactProps) {
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               <MapPin className="w-5 h-5 mt-1 text-primary" />
-              <TextElement variant="body">
-              {t("footer.address")}
-              </TextElement>
+              <TextElement variant="body">{t("footer.address")}</TextElement>
             </motion.div>
             <motion.div
               className="flex items-center gap-3"
@@ -47,7 +45,9 @@ export function ContactContent({ translations }: ContactProps) {
               transition={{ duration: 0.5, delay: 0.3 }}
             >
               <Phone className="w-5 h-5 text-primary" />
-              <TextElement variant="body">{t("footer.phonenumber")}</TextElement>
+              <TextElement variant="body">
+                {t("footer.phoneNumber")}
+              </TextElement>
             </motion.div>
             <motion.div
               className="flex items-center gap-3"
@@ -67,19 +67,22 @@ export function ContactContent({ translations }: ContactProps) {
             transition={{ duration: 0.5, delay: 0.5 }}
           >
             <a
-              href="https://www.facebook.com/www.mptc.gov.kh" target="_blank"
+              href="https://www.facebook.com/www.mptc.gov.kh"
+              target="_blank"
               className="p-2 rounded-full bg-primary text-white hover:bg-primary transition-colors"
             >
               <Facebook className="w-5 h-5" />
             </a>
             <a
-              href="https://t.me/mptcgovkh" target="_blank"
+              href="https://t.me/mptcgovkh"
+              target="_blank"
               className="p-2 rounded-full bg-primary text-white hover:bg-primary transition-colors"
             >
               <Send className="w-5 h-5" />
             </a>
             <a
-              href="https://www.facebook.com/www.mptc.gov.kh" target="_blank"
+              href="https://www.facebook.com/www.mptc.gov.kh"
+              target="_blank"
               className="p-2 rounded-full bg-primary text-white hover:bg-primary transition-colors"
             >
               <Instagram className="w-5 h-5" />

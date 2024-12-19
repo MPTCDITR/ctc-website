@@ -9,12 +9,12 @@ managementTeam:
     - title: "អ្នកគ្រប់គ្រង"
       name: "កូសាល់ រិទ្ធ"
       role: "អ្នកគ្រប់គ្រងមជ្ឈមណ្ឌល"
-      phonenumber: "+855-14-321-098"
+      phoneNumber: "+855-14-321-098"
       email: "kosal.rith@example.com"
     - title: "អ្នកជំនួយអ្នកគ្រប់គ្រង"
       name: "សុភីប វណ្ណ"
       role: "អ្នកជំនួយអ្នកគ្រប់គ្រង"
-      phonenumber: "+855-13-654-321"
+      phoneNumber: "+855-13-654-321"
       email: "sopheap.vann@example.com"
 
 operationTeam:
@@ -24,11 +24,11 @@ operationTeam:
     - title: "មេបញ្ជាការប្រតិបត្តិការ"
       name: "ចក្រីយ៉ា ណីម"
       role: "មេបញ្ជាការប្រតិបត្តិការ"
-      phonenumber: "+855-19-456-789"
+      phoneNumber: "+855-19-456-789"
       email: "chakriya.nhim@example.com"
     - title: "អ្នកជំនាញប្រតិបត្តិការ"
       name: "វណ្ណា ជូអ៊ិន"
       role: "អ្នកជំនាញប្រតិបត្តិការ"
-      phonenumber: "+855-18-987-654"
+      phoneNumber: "+855-18-987-654"
       email: "vanna.choeun@example.com"
 ---

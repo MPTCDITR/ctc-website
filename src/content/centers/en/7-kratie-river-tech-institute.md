@@ -9,12 +9,12 @@ managementTeam:
     - title: "Manager"
       name: "Sophal Chhay"
       role: "Center Manager"
-      phonenumber: "+855-12-345-678"
+      phoneNumber: "+855-12-345-678"
       email: "sophal.chhay@example.com"
     - title: "Assistant Manager"
       name: "Mony Nhim"
       role: "Assistant Manager"
-      phonenumber: "+855-98-765-432"
+      phoneNumber: "+855-98-765-432"
       email: "mony.nhim@example.com"
 
 operationTeam:
@@ -24,11 +24,11 @@ operationTeam:
     - title: "Operations Lead"
       name: "Vannak Chheang"
       role: "Operations Lead"
-      phonenumber: "+855-77-123-456"
+      phoneNumber: "+855-77-123-456"
       email: "vannak.chheang@example.com"
     - title: "Operations Specialist"
       name: "Sreyneang Ly"
       role: "Operations Specialist"
-      phonenumber: "+855-88-654-321"
+      phoneNumber: "+855-88-654-321"
       email: "sreyneang.ly@example.com"
 ---

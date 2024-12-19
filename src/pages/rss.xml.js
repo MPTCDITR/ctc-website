@@ -40,7 +40,7 @@ export async function GET(context) {
 				center.data.managementTeam.member.title,
 				center.data.managementTeam.member.name,
 				center.data.managementTeam.member.role,
-				center.data.managementTeam.member.phonenumber,
+				center.data.managementTeam.member.phoneNumber,
 				center.data.managementTeam.member.email
 			]
 		},
@@ -51,7 +51,7 @@ export async function GET(context) {
 				title:center.data.managementTeam.member.title,
 				name:center.data.managementTeam.member.name,
 				role:center.data.managementTeam.member.role,
-				phonenumber:center.data.managementTeam.member.phonenumber,
+				phoneNumber:center.data.managementTeam.member.phoneNumber,
 				email:center.data.managementTeam.member.email
 			}
 		},
