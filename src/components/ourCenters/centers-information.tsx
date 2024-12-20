@@ -354,7 +354,11 @@ const allCenters = [
   },
 ];
 
-export function CentersInformation() {
+interface CenterInfoProps {
+  translations: Record<string, string>;
+}
+
+export function CentersInformation({ translations }: CenterInfoProps) {
   const [searchTerm, setSearchTerm] = useState("");
 
   const filteredCenters = allCenters.filter(
@@ -363,6 +367,7 @@ export function CentersInformation() {
       center.location.toLowerCase().includes(searchTerm.toLowerCase()) ||
       center.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
+  const t = (key: string) => translations[key] || key;
 
   return (
     <div className="container py-12 space-y-4">
@@ -372,7 +377,7 @@ export function CentersInformation() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        All Centers Information
+        {t("our.ctc.allinfo.title")}
       </motion.h1>
       <motion.p
         className="text-start max-w-3xl text-lg pb-5"
@@ -380,8 +385,7 @@ export function CentersInformation() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        Overview of our tech centers across Cambodia, including management,
-        operational staff details, and center-specific information.
+        {t("our.ctc.allinfo.description")}
       </motion.p>
 
       <section>
