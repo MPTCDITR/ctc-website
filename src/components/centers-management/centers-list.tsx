@@ -14,6 +14,8 @@ export function CenterManagementInfo({
   centers,
   lang,
 }: CentersListProps) {
+  const t = (key: string) => translations[key] || key;
+
   return (
     <div className="container py-12 space-y-24">
       <motion.section
@@ -22,15 +24,12 @@ export function CenterManagementInfo({
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.6 }}
       >
-        <div className="text-center space-y-4">
+        <div className="text-center space-y-8">
           <TextElement variant="heading">
-            Community Operation and Management
+            {t("ctc.management.title")}
           </TextElement>
           <TextElement variant="paragraph">
-            It was popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of Lorem
-            Ipsum.
+            {t("ctc.management.description")}
           </TextElement>
         </div>
 
