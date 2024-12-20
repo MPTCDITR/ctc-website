@@ -33,14 +33,10 @@ export function MobileNav({
   translations,
   lang,
   navigationItems,
-  currentPath
+  currentPath,
 }: MobileNavProps) {
   const t = (key: string) => translations[key] || key;
   const isActive = (item: NavMenuProps) => {
-    console.log(
-      currentPath, item.href
-    );
-    
     if (currentPath === item.href) {
       return true;
     }
@@ -69,7 +65,9 @@ export function MobileNav({
                   value={`item_${index}`}
                   className="rounded border-0 data-[state=open]:bg-accent/50"
                 >
-                  <AccordionTrigger className={`${isActive(item) ? "active" : ""} "rounded-md bg-transparent px-4 py-2 font-medium hover:bg-accent nav-link hover:text-primary hover:no-underline text-base text-gray-700"`}>
+                  <AccordionTrigger
+                    className={`${isActive(item) ? "active" : ""} "rounded-md bg-transparent px-4 py-2 font-medium hover:bg-accent nav-link hover:text-primary hover:no-underline text-base text-gray-700"`}
+                  >
                     {item.label}
                   </AccordionTrigger>
                   <AccordionContent className="border-t bg-transparent">

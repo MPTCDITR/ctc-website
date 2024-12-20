@@ -32,10 +32,6 @@ export function Header({
   currentPath,
 }: HeaderProps) {
   const isActive = (item: NavMenuProps) => {
-    console.log(
-      currentPath, item.href
-    );
-    
     if (currentPath === item.href) {
       return true;
     }
