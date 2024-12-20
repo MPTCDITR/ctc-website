@@ -36,7 +36,7 @@ export function LanguageSwitcher({ lang }: LanguageSwitcherProps) {
         <DropdownMenu>
           <DropdownMenuTrigger
             asChild
-            className="font-medium transition-colors hover:text-primary nav-link "
+            className="font-medium transition-colors hover:text-primary nav-link"
           >
             <Button
               variant="ghost"
@@ -57,10 +57,10 @@ export function LanguageSwitcher({ lang }: LanguageSwitcherProps) {
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent>
-            {Object.entries(languages).map(([lang, label]) => (
+            {Object.entries(languages).map(([langKey, label]) => (
               <DropdownMenuItem
-                key={lang}
-                onClick={() => switchLanguage(lang as Language)}
+                key={langKey}
+                onClick={() => switchLanguage(langKey as Language)}
                 className="text-base"
               >
                 {label}
@@ -73,10 +73,11 @@ export function LanguageSwitcher({ lang }: LanguageSwitcherProps) {
         ([language]) =>
           lang !== language && (
             <button
+              key={language}
               onClick={() => switchLanguage(language as SupportedLanguage)}
               type="button"
               aria-label={`Current language: ${switchLanguage[language]}. Click to toggle language.`}
-              className=" flex min-w-max rounded-full border-2 border-solid border-secondary sm:flex md:hidden 2xl:ml-10"
+              className="flex min-w-max rounded-full border-2 border-solid border-secondary sm:flex md:hidden 2xl:ml-10"
             >
               <img
                 src={langImages[language].src}
