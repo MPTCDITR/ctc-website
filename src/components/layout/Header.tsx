@@ -32,6 +32,10 @@ export function Header({
   currentPath,
 }: HeaderProps) {
   const isActive = (item: NavMenuProps) => {
+    console.log(
+      currentPath, item.href
+    );
+    
     if (currentPath === item.href) {
       return true;
     }
@@ -73,7 +77,7 @@ export function Header({
                     <a href={child.href} className="text-base">
                       <DropdownMenuItem
                         key={child.label}
-                        className="cursor-pointer"
+                        className={`${isActive(child) ? "nav-link text-secondary cursor-pointer focus:text-primary" : "nav-link cursor-pointer focus:text-primary"}`}
                       >
                         {child.label}
                       </DropdownMenuItem>
@@ -104,6 +108,7 @@ export function Header({
             translations={translations}
             lang={lang}
             navigationItems={navigationItems}
+            currentPath={currentPath}
           />
         </div>
       </div>

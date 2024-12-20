@@ -26,14 +26,29 @@ interface MobileNavProps {
   translations: Record<string, string>;
   lang: string;
   navigationItems: NavMenuProps[];
+  currentPath: string;
 }
 
 export function MobileNav({
   translations,
   lang,
   navigationItems,
+  currentPath
 }: MobileNavProps) {
   const t = (key: string) => translations[key] || key;
+  const isActive = (item: NavMenuProps) => {
+    console.log(
+      currentPath, item.href
+    );
+    
+    if (currentPath === item.href) {
+      return true;
+    }
+    if (item.children) {
+      return item.children.some((child) => currentPath === child.href);
+    }
+    return false;
+  };
 
   return (
     <Sheet>
@@ -54,7 +69,7 @@ export function MobileNav({
                   value={`item_${index}`}
                   className="rounded border-0 data-[state=open]:bg-accent/50"
                 >
-                  <AccordionTrigger className="rounded-md bg-transparent px-4 py-2 font-medium hover:bg-accent nav-link hover:text-primary hover:no-underline text-base text-gray-700">
+                  <AccordionTrigger className={`${isActive(item) ? "active" : ""} "rounded-md bg-transparent px-4 py-2 font-medium hover:bg-accent nav-link hover:text-primary hover:no-underline text-base text-gray-700"`}>
                     {item.label}
                   </AccordionTrigger>
                   <AccordionContent className="border-t bg-transparent">
@@ -62,7 +77,7 @@ export function MobileNav({
                       {item.children?.map((child) => (
                         <li
                           key={child.label}
-                          className="rounded-md bg-transparent font-medium hover:text-primary nav-link hover:bg-accent text-base text-gray-700"
+                          className={`${isActive(child) ? "text-secondary" : ""} "rounded-md bg-transparent font-medium hover:text-primary nav-link hover:bg-accent text-base text-gray-700"`}
                         >
                           <a className="block px-4 py-1" href={child.href}>
                             {child.label}
@@ -81,7 +96,7 @@ export function MobileNav({
               >
                 <a
                   href={item.href}
-                  className=" hover:text-primary block lg:px-3 xl:px-4 font-medium transition-colors nav-link text-base"
+                  className={`${isActive(item) ? "active" : ""} "hover:text-primary block lg:px-3 xl:px-4 font-medium transition-colors nav-link text-base"`}
                 >
                   {item.label}
                 </a>
