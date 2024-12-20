@@ -2,11 +2,16 @@
 
 import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import PostOfficeView from "@/assets//image-assets/post-office-view.webp";
 import { cn } from "@/lib/utils";
 import { styles } from "@/components/text-element/ElementStyle";
 
-export function CentersContent() {
+interface CenterLocationsProps {
+  translations: Record<string, string>;
+}
+
+export function CenterLocations({ translations }: CenterLocationsProps) {
+  const t = (key: string) => translations[key] || key;
+
   return (
     <div className="container py-12 space-y-12">
       <motion.section
@@ -21,7 +26,7 @@ export function CentersContent() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          Structure of CTC
+          {t("our.ctc.title")}
         </motion.h1>
         <motion.p
           className={cn(styles.body, "text-center max-w-8xl mx-auto ")}
@@ -29,13 +34,7 @@ export function CentersContent() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          It was popularised in the 1960s with the release of Letraset sheets
-          containing Lorem Ipsum passages, and more recently with desktop
-          publishing software like Aldus PageMaker including versions of Lorem
-          Ipsum. It was popularised in the 1960s with the release of Letraset
-          sheets containing Lorem Ipsum passages, and more recently with desktop
-          publishing software like Aldus PageMaker including versions of Lorem
-          Ipsum.
+          {t("our.ctc.description")}
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
