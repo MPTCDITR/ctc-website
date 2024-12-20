@@ -9,6 +9,29 @@ import {
 } from "@/components/ui/table";
 import { motion } from "framer-motion";
 import TextElement from "@/components/text-element/TextElement";
+interface CenterTeamInfoProps {
+  centerName: string;
+  centerDescription: string;
+  teamManagementTitle: string;
+  teamOperationTitle: string;
+  teamManagementDescription: string;
+  teamOperationDescription: string;
+  managementTeam: Array<{
+    title: string;
+    name: string;
+    role: string;
+    phoneNumber: string;
+    email: string;
+  }>;
+  operationTeam: Array<{
+    title: string;
+    name: string;
+    role: string;
+    phoneNumber: string;
+    email: string;
+  }>;
+  translations: Record<string, string>;
+}
 
 export function CenterTeamInfo({
   centerName,
@@ -19,7 +42,10 @@ export function CenterTeamInfo({
   teamOperationDescription,
   managementTeam,
   operationTeam,
-}) {
+  translations,
+}: CenterTeamInfoProps) {
+  const t = (key: string) => translations[key] || key;
+
   return (
     <div className="container py-12 space-y-24">
       <motion.section
@@ -45,11 +71,11 @@ export function CenterTeamInfo({
             <Table className="text-lg">
               <TableHeader>
                 <TableRow className="[&>*]:text-primary [&>*]:font-medium">
-                  <TableHead>Title</TableHead>
-                  <TableHead>Name</TableHead>
-                  <TableHead>Role</TableHead>
-                  <TableHead>Phone Number</TableHead>
-                  <TableHead>Email</TableHead>
+                  <TableHead>{t("ctc.teaminfo.title")}</TableHead>
+                  <TableHead>{t("ctc.teaminfo.name")}</TableHead>
+                  <TableHead>{t("ctc.teaminfo.role")}</TableHead>
+                  <TableHead>{t("ctc.teaminfo.phoneNumber")}</TableHead>
+                  <TableHead>{t("ctc.teaminfo.email")}</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -87,11 +113,11 @@ export function CenterTeamInfo({
             <Table className="text-lg">
               <TableHeader>
                 <TableRow className="[&>*]:text-primary [&>*]:font-medium">
-                  <TableHead>Title</TableHead>
-                  <TableHead>Name</TableHead>
-                  <TableHead>Role</TableHead>
-                  <TableHead>Phone Number</TableHead>
-                  <TableHead>Email</TableHead>
+                  <TableHead>{t("ctc.teaminfo.title")}</TableHead>
+                  <TableHead>{t("ctc.teaminfo.name")}</TableHead>
+                  <TableHead>{t("ctc.teaminfo.role")}</TableHead>
+                  <TableHead>{t("ctc.teaminfo.phoneNumber")}</TableHead>
+                  <TableHead>{t("ctc.teaminfo.email")}</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
