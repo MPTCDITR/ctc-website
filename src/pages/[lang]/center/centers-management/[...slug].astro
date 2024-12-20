@@ -4,6 +4,7 @@ import Layout from "@/layouts/Layout.astro";
 import { getLangFromUrl } from "@/lib/i18n";
 import { getCollection } from "astro:content";
 import { CenterTeamInfo } from "@/components/centers-management/management-team-info.tsx";
+import { ui } from "@/i18n/ui";
 
 export async function getStaticPaths() {
   const centerEntries = await getCollection("centers");
@@ -19,6 +20,7 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 const lang = getLangFromUrl(Astro.url);
+const translations = ui[lang];
 ---
 
 <Layout title={`${entry.data.name} - Community Tech Centers`}>
@@ -31,6 +33,7 @@ const lang = getLangFromUrl(Astro.url);
     teamManagementDescription={entry.data.managementTeam.description}
     managementTeam={entry.data.managementTeam.member}
     operationTeam={entry.data.managementTeam.member}
+    translations={translations}
     client:load
   />
   <Content />
