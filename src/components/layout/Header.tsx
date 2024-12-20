@@ -70,9 +70,12 @@ export function Header({
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
                   {item.children.map((child) => (
-                    <a href={child.href} className="text-base">
+                    <a
+                      key={child.label}
+                      href={child.href}
+                      className="text-base"
+                    >
                       <DropdownMenuItem
-                        key={child.label}
                         className={`${isActive(child) ? "nav-link text-secondary cursor-pointer focus:text-primary" : "nav-link cursor-pointer focus:text-primary"}`}
                       >
                         {child.label}

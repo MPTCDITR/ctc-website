@@ -1,12 +1,19 @@
 import { useState } from "react";
 import { BlogCard } from "./blog-card";
 import type { CollectionEntry } from "astro:content";
-import { Dot } from "lucide-react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { styles } from "@/components/text-element/ElementStyle";
 import { TextElement } from "@/components/text-element/TextElement";
-
+import {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination";
 interface BlogListProps {
   translations: Record<string, string>;
   posts: CollectionEntry<"blog">[];
@@ -27,9 +34,13 @@ export function BlogList({ translations, posts, lang }: BlogListProps) {
     );
   }
 
-  const [currentPage, setCurrentPage] = useState(0);
-  const itemsPerPage = 3;
-  const totalPages = Math.ceil(posts.length / itemsPerPage);
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const ITEMS_PER_PAGE = 4;
+  const totalPages = Math.ceil(posts.length / ITEMS_PER_PAGE);
+  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+  const endIndex = startIndex + ITEMS_PER_PAGE;
+  const currentArticles = posts.slice(startIndex, endIndex);
 
   return (
     <div className="container py-12 space-y-12">
@@ -52,7 +63,7 @@ export function BlogList({ translations, posts, lang }: BlogListProps) {
       </motion.p>
 
       <div className="space-y-8">
-        {posts.map((post, index) => (
+        {currentArticles.map((post, index) => (
           <BlogCard
             index={index}
             key={post.slug}
@@ -68,21 +79,43 @@ export function BlogList({ translations, posts, lang }: BlogListProps) {
         ))}
       </div>
 
-      {totalPages > 1 && (
-        <div className="flex justify-center gap-2">
-          {[...Array(totalPages)].map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setCurrentPage(i)}
-              className="focus:outline-none"
-            >
-              <Dot
-                className={`h-2 w-4 ${i === currentPage ? "text-primary" : "text-gray-400"}`}
+      <div className="mt-12">
+        <Pagination>
+          <PaginationContent>
+            <PaginationItem>
+              <PaginationPrevious
+                onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+                className={
+                  currentPage === 1 ? "pointer-events-none opacity-50" : ""
+                }
               />
-            </button>
-          ))}
-        </div>
-      )}
+            </PaginationItem>
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+              <PaginationItem key={page}>
+                <PaginationLink
+                  onClick={() => setCurrentPage(page)}
+                  isActive={currentPage === page}
+                >
+                  {page}
+                </PaginationLink>
+              </PaginationItem>
+            ))}
+
+            <PaginationItem>
+              <PaginationNext
+                onClick={() =>
+                  setCurrentPage((prev) => Math.min(prev + 1, totalPages))
+                }
+                className={
+                  currentPage === totalPages
+                    ? "pointer-events-none opacity-50"
+                    : ""
+                }
+              />
+            </PaginationItem>
+          </PaginationContent>
+        </Pagination>
+      </div>
     </div>
   );
 }
