@@ -1,15 +1,23 @@
 ---
 import "../styles/global.css";
 import CTCLogo from "@/assets/logo/ctc-logo.webp";
+import { languages, type SupportedLanguage } from "@/i18n/ui";
+import { removeLanguagePrefix } from "@/i18n/utils";
 interface Props {
   title: string;
   description: string;
   image?: string;
 }
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
 
 const { title, description, image = CTCLogo.src } = Astro.props;
+const currentLocale = Astro.currentLocale || "en";
+
+const pathWithoutLocale = removeLanguagePrefix(
+  Astro.url.pathname,
+  currentLocale as SupportedLanguage
+);
 ---
 
 <!-- Global Metadata -->
@@ -17,6 +25,28 @@ const { title, description, image = CTCLogo.src } = Astro.props;
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <link rel="icon" type="image/webp" href={image} />
 <meta name="generator" content={Astro.generator} />
+<link rel="sitemap" href="/sitemap-index.xml" />
+<link rel="canonical" href={canonicalURL} />
+<title>{title} | CTC - Cambodia Community Tech Center</title>
+<meta
+  name="title"
+  content={`${title} | CTC - Cambodia Community Tech Center`}
+/>
+<meta name="description" content={description} />
+<meta
+  name="keywords"
+  content="CTC, Cambodia Community Tech Center, community technology, digital literacy, tech education, community tech Cambodia, tech education, community learning, khmer tech community, cambodia digital transformation, digital school, "
+/>
+
+{
+  Object.values(languages).map((lang) => (
+    <link
+      rel="alternate"
+      hreflang={lang}
+      href={new URL(`/${lang}${pathWithoutLocale}`, Astro.site).href}
+    />
+  ))
+}
 
 <!-- Font preloads -->
 <link
@@ -32,21 +62,6 @@ const { title, description, image = CTCLogo.src } = Astro.props;
   as="font"
   type="font/woff2"
   crossorigin
-/>
-
-<!-- Canonical URL -->
-<link rel="canonical" href={canonicalURL} />
-
-<!-- Primary Meta Tags -->
-<title>{title} | CTC - Cambodia Community Tech Center</title>
-<meta
-  name="title"
-  content={`${title} | CTC - Cambodia Community Tech Center`}
-/>
-<meta name="description" content={description} />
-<meta
-  name="keywords"
-  content="CTC, Cambodia Community Tech Center, community technology, digital literacy, tech education, community tech Cambodia, tech education, community learning, khmer tech community, cambodia digital transformation, digital school, "
 />
 
 <!-- Open Graph / Facebook -->
