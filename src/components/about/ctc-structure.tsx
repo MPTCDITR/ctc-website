@@ -9,51 +9,16 @@ import khNationalGovernmentCouncil from "@/assets/structure/kh-national-governme
 import enListCenters from "@/assets/structure/en-list-centers.svg";
 import khListCenters from "@/assets/structure/kh-list-centers.svg";
 import AVARTA from "@/assets/image-assets/avarta.png";
+import type { ImageMetadata } from "astro";
+import type { CollectionEntry } from "astro:content";
 
 interface StructureProps {
   translations: Record<string, string>;
   lang: string;
+  nationalBoardMembers: CollectionEntry<"national-board-member">[];
 }
 
-const staffMembers = [
-  {
-    title: "H.E",
-    name: "Chea Vandeth",
-    department: "Minister of The Ministry of Post and Telecommunications",
-    role: "chairman",
-    image: "/placeholder.svg?height=200&width=200",
-  },
-  {
-    title: "H.E",
-    name: "Name",
-    department: "Representative of the Ministry of Education, Youth and Sports",
-    role: "Vice-chair",
-    image: "/placeholder.svg?height=200&width=200",
-  },
-  {
-    title: "H.E",
-    name: "Name",
-    department: "Representative of the Ministry of Post and Telecommunications",
-    role: "Vice-chair",
-    image: "/placeholder.svg?height=200&width=200",
-  },
-  {
-    title: "H.E",
-    name: "Name",
-    department: "Director General of the General Department of the Ministry of Post and Telecommunications",
-    role: "Member",
-    image: "/placeholder.svg?height=200&width=200",
-  },
-  {
-    title: "H.E",
-    name: "Name",
-    department: "Director General of the General Department of the Ministry of Education, Youth and Sports",
-    role: "Member",
-    image: "/placeholder.svg?height=200&width=200",
-  },
-];
-
-export function StructureCtc({ translations, lang }: StructureProps) {
+export function StructureCtc({ translations, lang, nationalBoardMembers }: StructureProps) {
   const t = (key: string) => translations[key] || key;
 
   return (
@@ -100,10 +65,7 @@ export function StructureCtc({ translations, lang }: StructureProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          It was popularised in the 1960s with the release of Letraset sheets
-          containing Lorem Ipsum passages, and more recently with desktop
-          publishing software like Aldus PageMaker including versions of Lorem
-          Ipsum.
+          {t("about.structure.description2")}
         </motion.div>
 
         <motion.div
@@ -139,7 +101,7 @@ export function StructureCtc({ translations, lang }: StructureProps) {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl font-bold text-primary">
-          C.T.C. National Board
+            C.T.C. National Board
           </h2>
           <TextElement variant="paragraph">
             It has survived not only five centuries, but also the leap into
@@ -150,9 +112,9 @@ export function StructureCtc({ translations, lang }: StructureProps) {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
-          {staffMembers.map((member, index) => (
+          {nationalBoardMembers.map((member, index) => (
             <motion.div
-              key={member.name}
+              key={member.data.name}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
@@ -161,7 +123,7 @@ export function StructureCtc({ translations, lang }: StructureProps) {
                 <div className="flex gap-6">
                   <div className="relative overflow-hidden ">
                     <img
-                      src={AVARTA.src}
+                      src={member.data.image?.src}
                       alt="ctc national government council orgchart"
                       className="object-cover size-32"
                     />
@@ -169,14 +131,14 @@ export function StructureCtc({ translations, lang }: StructureProps) {
                   <div className="w-full">
                     <div className="flex-1 lg:flex sm:block justify-between items-center">
                       <div className="flex gap-2">
-                        <div className="text-lg">{member.title}</div>
+                        <div className="text-lg">{member.data.title}</div>
                         <div className="font-semibold text-lg text-primary">
-                          {member.name}
+                          {member.data.name}
                         </div>
                       </div>
-                      <div className="text-secondary">{member.role}</div>
+                      <div className="text-text">{member.data.role}</div>
                     </div>
-                    <div className="text-text">{member.department}</div>
+                    <div className="text-text">{member.data.department}</div>
                   </div>
                 </div>
               </Card>

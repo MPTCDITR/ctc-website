@@ -1,13 +1,13 @@
 ---
-title: His Excellency Minister Chea Vandet allowed Dr. Cosmas Zavazava, Director of the Telecommunication Development Bureau of the International Telecommunication Union (ITU)
-description: is Excellency Minister Chea Vandet allowed Dr. Cosmas Zavazava, Director of the Telecommunication Development Bureau of the International Telecommunication Union (ITU), to pay a courtesy call and discuss work at the Ministry of Posts and Telecommunications with the aim of strengthening international cooperation between Cambodia, ITU and other member countries.
+title: His Excellency Minister Chea Vandeth hold talks with Dr. Cosmas Zavazava, Director of the Telecommunication Development Bureau of the International Telecommunication Union (ITU)
+description: is Excellency Minister Chea Vandeth hold talks with Dr. Cosmas Zavazava, Director of the Telecommunication Development Bureau of the International Telecommunication Union (ITU), to pay a courtesy call and discuss work at the Ministry of Posts and Telecommunications with the aim of strengthening international cooperation between Cambodia, ITU and other member countries.
 date: 2024-07-22
 author: Ministry of Posts and Telecommunications
 image: "src/assets/news-and-events/article-4/thumbnail.jpg"
 tags: []
 ---
 
-His Excellency Minister Chea Vandet allowed Dr. Cosmas Zavazava, Director of the Telecommunication Development Bureau of the International Telecommunication Union (ITU), to pay a courtesy call and discuss work at the Ministry of Posts and Telecommunications with the aim of strengthening international cooperation between Cambodia, ITU and other member countries.
+His Excellency Minister Chea Vandeth hold talks with Dr. Cosmas Zavazava, Director of the Telecommunication Development Bureau of the International Telecommunication Union (ITU), to pay a courtesy call and discuss work at the Ministry of Posts and Telecommunications with the aim of strengthening international cooperation between Cambodia, ITU and other member countries.
 
 At the same time, the ministry's leaders led a delegation to visit the Community Tech Centre (CTC) in Takeo province and the Cambodia Academy of Digital Technology to understand the ministry's priority work in developing various sectors.
 

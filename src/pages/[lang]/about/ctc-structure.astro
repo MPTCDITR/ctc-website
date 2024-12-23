@@ -3,6 +3,7 @@ import Layout from "@/layouts/Layout.astro";
 import { languages, ui } from "@/i18n/ui";
 import { StructureCtc } from "@/components/about/ctc-structure.tsx";
 import { getLangFromUrl } from "@/lib/i18n";
+import { getNationalBoardMembers } from "@/lib/nationalBoardMembers";
 
 export async function getStaticPaths() {
   return Object.keys(languages).map((lang) => ({
@@ -12,8 +13,9 @@ export async function getStaticPaths() {
 
 const lang = getLangFromUrl(Astro.url);
 const translations = ui[lang];
+const nationalBoardMembers = await getNationalBoardMembers(lang);
 ---
 
 <Layout title="Our Center - Community Tech Centers">
-  <StructureCtc lang={lang} translations={translations} client:load />
+  <StructureCtc lang={lang} translations={translations} nationalBoardMembers={nationalBoardMembers} client:load />
 </Layout>
