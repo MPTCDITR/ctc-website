@@ -20,9 +20,8 @@ const pathWithoutLocale = removeLanguagePrefix(
 );
 ---
 
-<!-- Global Metadata -->
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
 <link rel="icon" type="image/webp" href={image} />
 <meta name="generator" content={Astro.generator} />
 <link rel="sitemap" href="/sitemap-index.xml" />
@@ -33,6 +32,7 @@ const pathWithoutLocale = removeLanguagePrefix(
   content={`${title} | CTC - Cambodia Community Tech Center`}
 />
 <meta name="description" content={description} />
+<meta name="author" content="Community Tech Center" />
 <meta
   name="keywords"
   content="CTC, Cambodia Community Tech Center, community technology, digital literacy, tech education, community tech Cambodia, tech education, community learning, khmer tech community, cambodia digital transformation, digital school, "
@@ -74,6 +74,7 @@ const pathWithoutLocale = removeLanguagePrefix(
 <meta property="og:description" content={description} />
 <meta property="og:image" content={new URL(image, Astro.url)} />
 <meta property="og:site_name" content="CTC - Cambodia Community Tech Center" />
+<meta property="og:locale" content={Astro.currentLocale || "en"} />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
