@@ -123,7 +123,7 @@ export function StructureCtc({ translations, lang, nationalBoardMembers }: Struc
                 <div className="flex gap-6">
                   <div className="relative overflow-hidden ">
                     <img
-                      src={AVARTA.src}
+                      src={member.data.image?.src}
                       alt="ctc national government council orgchart"
                       className="object-cover size-32"
                     />
