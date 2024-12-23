@@ -10,34 +10,40 @@ managementTeam:
       [
         {
           title: លោក,
-          name: John,
-          role: Role,
-          phoneNumber: "12345",
-          email: john@gmail.com,
-        },
-        {
-          title: លោក,
-          name: John,
-          role: Role,
-          phoneNumber: "12345",
-          email: john@gmail.com,
+          name: ហោ  ប្រុស,
+          role: នាយករង,
+          phoneNumber: "០៧៨ ៤៤៧ ៤៧៤",
+          email: example@gmail.com,
         },
       ],
   }
 
 operationTeam:
   {
-    title: Title,
-    description: It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-    and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.,
+    title: បុគ្គលិកប្រតិបត្តិ,
+    description: ប្រធាន ម.ប.ស. ត្រូវបានជ្រើសរើសដោយមានការចូលរួមពីគណៈគ្រប់គ្រងវិទ្យាល័យ និងក្រុមការងារទទួល បន្ទុកសាងសង់ និងដាក់ឱ្យដំណើរការ ម.ប.ស. តាមវិទ្យាល័យសាធារណៈ នៃ ក.ប.ទ.។,
     member:
       [
         {
-          title: Title,
-          name: Jane,
-          role: Role,
-          phoneNumber: "123456",
-          email: jane@gmail.com,
+          title: លោក,
+          name: ហោ  ប្រុស,
+          role: ប្រធាន,
+          phoneNumber: "០៧៨ ៤៤៧ ៤៧៤",
+          email: example@gmail.com,
+        },
+        {
+          title: លោក,
+          name: ម៉េង ស្រេង,
+          role: គ្រូ IT,
+          phoneNumber: "០១២ ៥៥៩ ៨៥៣",
+          email: example@gmail.com,
+        },
+        {
+          title: លោក,
+          name: ហេ ទិត្យ,
+          role: គ្រូ ជំនួយ,
+          phoneNumber: "០៧០ ៦៨៦ ០៧៧",
+          email: example@gmail.com,
         },
       ],
   }
