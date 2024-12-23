@@ -3,7 +3,6 @@ import type { CollectionEntry } from 'astro:content';
 
 export async function getNationalBoardMembers(lang: string): Promise<CollectionEntry<'national-board-member'>[]> {
   const allNationalBoardMembers = await getCollection('national-board-member');
-  console.log(allNationalBoardMembers);
   
   return allNationalBoardMembers
     .filter(nationalBoardMembers => nationalBoardMembers.slug.startsWith(lang + '/')).sort((a, b) => {
