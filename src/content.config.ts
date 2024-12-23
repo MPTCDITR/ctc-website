@@ -46,7 +46,19 @@ const centers = defineCollection({
   }),
 });
 
+const nationalBoardMember = defineCollection({
+  type: 'content',
+  schema: ({ image }) => z.object({
+    title: z.string(),
+    name: z.string(),
+    department: z.string(),
+    role: z.string(),
+    image: image().optional(),
+  }),
+});
+
 export const collections = {
   blog,
   centers,
+  'national-board-member': nationalBoardMember,
 };
