@@ -60,7 +60,12 @@ export function MobileNav({
         <nav className="flex flex-col gap-4 mt-4">
           {navigationItems.map((item, index) =>
             item.children ? (
-              <Accordion type="single" collapsible className="border-0">
+              <Accordion
+                type="single"
+                collapsible
+                className="border-0"
+                key={item.label}
+              >
                 <AccordionItem
                   value={`item_${index}`}
                   className="rounded border-0 data-[state=open]:bg-accent/50"

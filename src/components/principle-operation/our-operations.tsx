@@ -80,6 +80,7 @@ export function OperationPrinciple({ translations }: FunctionalityProps) {
       </div>
       {facilitySections.map((section, index) => (
         <div
+          key={section.title}
           id={section.id}
           className={`${index % 2 === 1 ? "bg-background text-primary" : "bg-primary text-white"} py-12 space-y-24 scroll-mt-20`}
         >

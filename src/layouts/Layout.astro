@@ -3,47 +3,44 @@ import { Header } from "@/components/layout/Header";
 import { SiteFooter } from "@/components/layout/Footer";
 import BaseHead from "../components/BaseHead.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
-import Navbar from "@/components/layout/Navbar";
-// import Header from "../components/Header.astro";
 import CTCLogo from "@/assets/logo/ctc-logo.webp";
 
 interface Props {
   title: string;
+  description?: string;
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 import { getLangFromUrl, useTranslations } from "@/lib/i18n";
 import { ui, defaultLang } from "@/i18n/ui";
 import { getLocalizedRoutes, navigation } from "@/lib/route";
 
 const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
 
 const translations = ui[lang];
 
 const locale = Astro.currentLocale ?? defaultLang;
 const navigationItems = getLocalizedRoutes(navigation, locale);
-const currentPath = Astro.url.pathname
+const currentPath = Astro.url.pathname;
 ---
 
 <!doctype html>
 <html lang={Astro.currentLocale || "en"}>
   <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="description"
-      content="Discover our Tech Center Community and insights on our website"
+    <BaseHead
+      title={title || SITE_TITLE}
+      description={description || SITE_DESCRIPTION}
     />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/webp" href={CTCLogo.src} />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body>
     <div class="min-h-screen flex flex-col">
-      <!-- <Navbar client:load /> -->
-      <Header translations={translations} lang={lang} navigationItems={navigationItems} currentPath={currentPath} client:load />
+      <Header
+        translations={translations}
+        lang={lang}
+        navigationItems={navigationItems}
+        currentPath={currentPath}
+        client:load
+      />
       <main class="flex-1">
         <slot />
       </main>

@@ -23,7 +23,10 @@ const lang = getLangFromUrl(Astro.url);
 // type Props = CollectionEntry<"blog">;
 ---
 
-<Layout title={`${entry.data.title} - Community Tech Centers`}>
+<Layout
+  title={`${entry.data.title} - Community Tech Centers`}
+  description={entry.data.description}
+>
   <BlogContent
     title={entry.data.title}
     date={entry.data.date}
