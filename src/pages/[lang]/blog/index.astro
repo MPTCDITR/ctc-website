@@ -17,6 +17,6 @@ const translations = ui[lang];
 const posts = await getBlogPosts(lang);
 ---
 
-<Layout title={`${translations["blog.title"]} - Community Tech Centers`}>
+<Layout title={`Our News and Article - Community Tech Centers`}>
   <BlogList translations={translations} posts={posts} lang={lang} client:load />
 </Layout>
