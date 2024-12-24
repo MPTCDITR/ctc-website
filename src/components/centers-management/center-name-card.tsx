@@ -26,7 +26,7 @@ function CenterNameCard({
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
     >
-      <a href={`/${lang}/center/centers-management/${urlSlug}`}>
+      <a href={`/${lang}/center/our-ctc/${urlSlug}`}>
         <Card
           className={`p-4 h-full text-lg text-primary flex items-center justify-between transition-all duration-300 ease-in-out 
                   hover:scale-105 hover:bg-slate-50 shadow-sm hover:shadow-lightblue hover:border-none`}
