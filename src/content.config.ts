@@ -50,8 +50,8 @@ const nationalBoardMember = defineCollection({
   type: 'content',
   schema: ({ image }) => z.object({
     title: z.string(),
-    name: z.string(),
-    department: z.string(),
+    name: z.string().optional().nullable(),
+    organization: z.string().optional(),
     role: z.string(),
     image: image().optional(),
   }),

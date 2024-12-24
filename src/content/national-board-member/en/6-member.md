@@ -1,7 +1,7 @@
 ---
 title: H.E.
-name: Name
-department: Chief of Secretariat
+name:
+organization: Chief of Secretariat
 role: Permanent Member
 image: "src/assets/image-assets/avarta.png"
 ---
