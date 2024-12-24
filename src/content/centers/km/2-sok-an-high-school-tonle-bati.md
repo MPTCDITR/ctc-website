@@ -9,10 +9,52 @@ managementTeam:
     member:
       [
         {
-          title: លោក,
-          name: អៀង សៅប្រាថ្នា,
-          role: លេខាធិការ,
-          phoneNumber: "០១១ ៩៩៧ ៣៦៦",
+          title: ប្រធានគណៈកម្មការគ្រប់គ្រងសាលារៀន,
+          name: ហោ  ប្រុស,
+          role: ប្រធានកិត្តិយស,
+          phoneNumber: "០៧៨ ៤៤៧ ៤៧៤",
+          email: example@gmail.com,
+        },
+        {
+          title: នាយកវិទ្យាល័យ ,
+          name: ហោ  ប្រុស,
+          role: ប្រធាន,
+          phoneNumber: "០៧៨ ៤៤៧ ៤៧៤",
+          email: example@gmail.com,
+        },
+        {
+          title: នាយក ម.ប.ស. ,
+          name: ហោ  ប្រុស,
+          role: អនុប្រធាន,
+          phoneNumber: "០៧៨ ៤៤៧ ៤៧៤",
+          email: example@gmail.com,
+        },
+        {
+          title: តំណាងរដ្ឋបាលឃុំ សង្កាត់,
+          name: ហោ  ប្រុស,
+          role: សមាជិក,
+          phoneNumber: "០៧៨ ៤៤៧ ៤៧៤",
+          email: example@gmail.com,
+        },
+        {
+          title: គ្រូបង្រៀនបច្ចេកវិទ្យាឌីជីថល  ,
+          name: ហោ  ប្រុស,
+          role: សមាជិក,
+          phoneNumber: "០៧៨ ៤៤៧ ៤៧៤",
+          email: example@gmail.com,
+        },
+        {
+          title: មេភូមិ ដែល ម.ប.ស. ស្ថិតនៅ ,
+          name: ហោ  ប្រុស,
+          role: សមាជិក,
+          phoneNumber: "០៧៨ ៤៤៧ ៤៧៤",
+          email: example@gmail.com,
+        },
+        {
+          title: តំណាងអាណាព្យាបាលសិស្ស,
+          name: ហោ  ប្រុស,
+          role: សមាជិក,
+          phoneNumber: "០៧៨ ៤៤៧ ៤៧៤",
           email: example@gmail.com,
         },
       ],
@@ -25,21 +67,21 @@ operationTeam:
     member:
       [
          {
-          title: លោក,
+          title: លេខាធិការ,
           name: អៀង សៅប្រាថ្នា,
           role: ប្រធាន,
           phoneNumber: "០១១ ៩៩៧ ៣៦៦",
           email: example@gmail.com,
         },
         {
-          title: លោក,
+          title: គ្រូបង្រៀនភាសាអង់គ្លេស,
           name: ប៉ត សច្ចៈ ,
           role: គ្រូ IT,
           phoneNumber: "០៩៦ ៥៧៥ ៣៣៣៥",
           email: example@gmail.com,
         },
         {
-          title: លោក,
+          title: គណនេយ្យ,
           name: ឡាច ខុម,
           role: គ្រូ ជំនួយ,
           phoneNumber: "០៩៧ ២០១ ៤៣៤៣",

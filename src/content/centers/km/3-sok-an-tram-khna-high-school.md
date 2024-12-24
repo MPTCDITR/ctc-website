@@ -9,10 +9,52 @@ managementTeam:
     member:
       [
         {
-          title: លោក,
-          name: ចក់ ពេជ្រសង្ហា,
-          role: នាយករង,
-          phoneNumber: "០១១ ៣៨៩ ៧៨៧",
+          title: ប្រធានគណៈកម្មការគ្រប់គ្រងសាលារៀន,
+          name: ហោ  ប្រុស,
+          role: ប្រធានកិត្តិយស,
+          phoneNumber: "០៧៨ ៤៤៧ ៤៧៤",
+          email: example@gmail.com,
+        },
+        {
+          title: នាយកវិទ្យាល័យ ,
+          name: ហោ  ប្រុស,
+          role: ប្រធាន,
+          phoneNumber: "០៧៨ ៤៤៧ ៤៧៤",
+          email: example@gmail.com,
+        },
+        {
+          title: នាយក ម.ប.ស. ,
+          name: ហោ  ប្រុស,
+          role: អនុប្រធាន,
+          phoneNumber: "០៧៨ ៤៤៧ ៤៧៤",
+          email: example@gmail.com,
+        },
+        {
+          title: តំណាងរដ្ឋបាលឃុំ សង្កាត់ ,
+          name: ហោ  ប្រុស,
+          role: សមាជិក,
+          phoneNumber: "០៧៨ ៤៤៧ ៤៧៤",
+          email: example@gmail.com,
+        },
+        {
+          title: គ្រូបង្រៀនបច្ចេកវិទ្យាឌីជីថល  ,
+          name: ហោ  ប្រុស,
+          role: សមាជិក,
+          phoneNumber: "០៧៨ ៤៤៧ ៤៧៤",
+          email: example@gmail.com,
+        },
+        {
+          title: មេភូមិ ដែល ម.ប.ស. ស្ថិតនៅ ,
+          name: ហោ  ប្រុស,
+          role: សមាជិក,
+          phoneNumber: "០៧៨ ៤៤៧ ៤៧៤",
+          email: example@gmail.com,
+        },
+        {
+          title: តំណាងអាណាព្យាបាលសិស្ស,
+          name: ហោ  ប្រុស,
+          role: សមាជិក,
+          phoneNumber: "០៧៨ ៤៤៧ ៤៧៤",
           email: example@gmail.com,
         },
       ],
@@ -25,21 +67,21 @@ operationTeam:
     member:
       [
         {
-          title: លោក,
+          title: នាយករង,
           name: ចក់ ពេជ្រសង្ហា,
           role: ប្រធាន,
           phoneNumber: "០១១ ៣៨៩ ៧៨៧",
           email: example@gmail.com,
         },
         {
-          title: លោក,
+          title: គ្រូបង្រៀនព័ត៌មានវិទ្យា,
           name: សួន ចាន់ថន ,
           role: គ្រូ IT,
           phoneNumber: "០១៥ ៩៩៥ ៣៦៦",
           email: example@gmail.com,
         },
         {
-          title: លោក,
+          title: លេខាធិការ,
           name: មៀវ នរៈសិទ្ធិ,
           role: គ្រូ ជំនួយ,
           phoneNumber: "០៧១ ៤១៧ ៨៨៣៣",

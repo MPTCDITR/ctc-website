@@ -9,10 +9,52 @@ managementTeam:
     member:
       [
         {
-          title: លោកស្រី,
-          name: ម៉ី ស៊ុនធារី,
-          role: នាយករង,
-          phoneNumber: "០១២ ៥៦១ ៤៨០",
+          title: ប្រធានគណៈកម្មការគ្រប់គ្រងសាលារៀន,
+          name: ហោ  ប្រុស,
+          role: ប្រធានកិត្តិយស,
+          phoneNumber: "០៧៨ ៤៤៧ ៤៧៤",
+          email: example@gmail.com,
+        },
+        {
+          title: នាយកវិទ្យាល័យ ,
+          name: ហោ  ប្រុស,
+          role: ប្រធាន,
+          phoneNumber: "០៧៨ ៤៤៧ ៤៧៤",
+          email: example@gmail.com,
+        },
+        {
+          title: នាយក ម.ប.ស. ,
+          name: ហោ  ប្រុស,
+          role: អនុប្រធាន,
+          phoneNumber: "០៧៨ ៤៤៧ ៤៧៤",
+          email: example@gmail.com,
+        },
+        {
+          title: តំណាងរដ្ឋបាលឃុំ សង្កាត់ ,
+          name: ហោ  ប្រុស,
+          role: សមាជិក,
+          phoneNumber: "០៧៨ ៤៤៧ ៤៧៤",
+          email: example@gmail.com,
+        },
+        {
+          title: គ្រូបង្រៀនបច្ចេកវិទ្យាឌីជីថល  ,
+          name: ហោ  ប្រុស,
+          role: សមាជិក,
+          phoneNumber: "០៧៨ ៤៤៧ ៤៧៤",
+          email: example@gmail.com,
+        },
+        {
+          title: មេភូមិ ដែល ម.ប.ស. ស្ថិតនៅ ,
+          name: ហោ  ប្រុស,
+          role: សមាជិក,
+          phoneNumber: "០៧៨ ៤៤៧ ៤៧៤",
+          email: example@gmail.com,
+        },
+        {
+          title: តំណាងអាណាព្យាបាលសិស្ស ,
+          name: ហោ  ប្រុស,
+          role: សមាជិក,
+          phoneNumber: "០៧៨ ៤៤៧ ៤៧៤",
           email: example@gmail.com,
         },
       ],
@@ -25,21 +67,21 @@ operationTeam:
     member:
       [
         {
-          title: លោកស្រី,
+          title: នាយករង,
           name: ម៉ី ស៊ុនធារី,
           role: ប្រធាន,
           phoneNumber: "០១២ ៥៦១ ៤៨០",
           email: example@gmail.com,
         }, 
         {
-          title: លោក,
+          title: គ្រូបង្រៀនរូបវិទ្យា,
           name:  ឃុត ខេនគ្រឹស្នា ,
           role: គ្រូ IT,
           phoneNumber: "០១២/០៩៣ ៣៧៨ ៦៨២",
           email: example@gmail.com,
         },
         {
-          title: លោក,
+          title: គ្រូបង្រៀនព័ត៌មានវិទ្យា,
           name: ប៉ាន់ លាងហេង,
           role: គ្រូ ជំនួយ,
           phoneNumber: "០៨៦ ៥៥៤ ៥២០",
