@@ -4,10 +4,10 @@ import TextElement from "@/components/text-element/TextElement";
 import { cn } from "@/lib/utils";
 import { styles } from "@/components/text-element/ElementStyle";
 
-import computerLab from "@/assets/image-assets/computer-lab.webp"
-import trainingRoom from "@/assets/home/training-room.jpg"
-import publicHall from "@/assets/home/public-hall.png"
-import postOffice from "@/assets/home/post-office.svg"
+import computerLab from "@/assets/image-assets/computer-lab.webp";
+import trainingRoom from "@/assets/home/training-room.jpg";
+import publicHall from "@/assets/home/public-hall.png";
+import postOffice from "@/assets/home/post-office.svg";
 import ctcImage from "@/assets//image-assets/post-office-view.webp";
 
 interface Slide {
@@ -62,7 +62,7 @@ const Hero = ({ translations, lang }: HeroSectionProps) => {
   }, []);
 
   return (
-    <div className="relative h-[800px] w-full overflow-hidden">
+    <div className="relative h-[600px] w-full overflow-hidden">
       {slides.map((slide, index) => (
         <motion.div
           key={slide.image}
@@ -74,7 +74,7 @@ const Hero = ({ translations, lang }: HeroSectionProps) => {
           <img
             src={slide.image}
             alt={slide.title}
-            className="w-full h-[800px] object-cover"
+            className="w-full h-[600px] object-cover"
           />
           <div className="absolute inset-0 bg-black/60" />
         </motion.div>
