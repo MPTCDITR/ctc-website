@@ -2,10 +2,9 @@
 name: "Sok An Tonler Bati High School"
 description: "Sok An Tonler Bati High School is a prestigious educational institution that provides students with opportunities to acquire knowledge, skills, and virtues. The school boasts a conducive learning environment with experienced teachers and modern learning facilities. The curriculum is designed in accordance with national and international educational standards to provide students with comprehensive knowledge. Moreover, the school also offers students opportunities to participate in social activities and sports"
 managementTeam:
-    title: "Management Committee"
-    description: "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-    and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
-    member:
+  title: "Management Committee of C.T.C."
+  description: "The C.T.C. Management Committee oversees staff recruitment, operations, resources, monitors finances, promotes community involvement, reviews plans and reports, and supports strategic improvements to enhance efficiency and transparency."
+  member:
 
         - title: "Chair of the School Management Committee  "
           name: "Name"
@@ -44,8 +43,8 @@ managementTeam:
           email: "example@gmail.com"   
 
 operationTeam:
-    title: "Executive Officer"
-    description: "President of the CPPCC Selected with the participation of the high school management and the team in charge of construction and commissioning According to the public high school of K.P.T."
+    title: "Operational Staff of C.T.C."
+    description: "The operational staff are responsible for daily operations and running of the C.T.C."
     member:
 
         - title: "Secretary"

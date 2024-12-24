@@ -3,8 +3,8 @@ name: "Akka Moha Sena Padei Techo Hun Sen Ang Preah Sdach High School"
 description: "Akka Moha Sena Padei Techo Hun Sen Ang Preah Sdach High School is a dynamic educational institution that provides opportunities for students to gain knowledge, skills, and virtues. The high school has a good learning environment, experienced teachers, and modern learning equipment. The curriculum is designed in accordance with national and international educational standards to provide students with a broad knowledge base. In addition, the high school also provides opportunities for students to participate in social and sports activities."
 
 managementTeam:
-  title: "Management Team"
-  description: "The passionate team leading the Kampot Digital Skills Center."
+  title: "Management Committee of C.T.C."
+  description: "The C.T.C. Management Committee oversees staff recruitment, operations, resources, monitors finances, promotes community involvement, reviews plans and reports, and supports strategic improvements to enhance efficiency and transparency."
   member:
         - title: "Chair of the School Management Committee  "
           name: "Name"
@@ -44,8 +44,8 @@ managementTeam:
    
 
 operationTeam:
-  title: "Executive Officer"
-  description: "President of the CPPCC Selected with the participation of the high school management and the team in charge of construction and commissioning According to the public high school of K.P.T."
+  title: "Operational Staff of C.T.C."
+  description: "The operational staff are responsible for daily operations and running of the C.T.C."
   member:
     - title: "Secretary"
       name: "ភឿក សុខា"
