@@ -34,8 +34,7 @@ export function CentersSection({ translations, lang }: CenterSectionProps) {
             <img
               src={Locations.src}
               alt="18 location of CTC"
-              className="w-full"
-              style={{ objectFit: "cover" }}
+              className="w-full min-w-96 object-cover"
             />
           </div>
         </div>
