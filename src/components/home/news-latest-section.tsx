@@ -11,7 +11,6 @@ interface LatestBlogsProps {
 }
 
 export function LatestBlogs({ posts, translations, lang }: LatestBlogsProps) {
-  const [visibleNews, setVisibleNews] = useState(3);
   const latestPosts = posts.slice(0, 3);
   const t = (key: string) => translations[key] || key;
 
@@ -56,37 +55,18 @@ export function LatestBlogs({ posts, translations, lang }: LatestBlogsProps) {
             </motion.div>
           ))}
         </div>
-        {visibleNews < posts.length && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-          >
-            <Button
-              className="bg-primary hover:bg-secondary/90 text-white"
-              onClick={() =>
-                setVisibleNews((prevVisible) =>
-                  Math.min(prevVisible + 3, posts.length)
-                )
-              }
-            >
-              {t("home.loadmorenews")}
-            </Button>
-          </motion.div>
-        )}
-        {visibleNews >= posts.length && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-          >
-            <a href={`/${lang}/blog`}>
-              <Button className="bg-primary hover:hover:bg-secondary text-white">
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+        >
+          <a href={`/${lang}/blog`}>
+            <Button className="bg-primary hover:hover:bg-secondary text-white">
               {t("home.viewallnews")}
-              </Button>
-            </a>
-          </motion.div>
-        )}
+            </Button>
+          </a>
+        </motion.div>
       </div>
     </div>
   );
