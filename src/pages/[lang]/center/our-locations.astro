@@ -1,7 +1,6 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import { CenterLocations } from "@/components/ourCenters/centers-sections";
-import { CentersInformation } from "@/components/ourCenters/centers-information";
 import { languages, ui } from "@/i18n/ui";
 import { getLangFromUrl } from "@/lib/i18n";
 
@@ -17,5 +16,4 @@ const translations = ui[lang];
 
 <Layout title="Community Tech Center - Centers Location">
   <CenterLocations translations={translations} client:load />
-  <CentersInformation translations={translations} client:load />
 </Layout>
