@@ -42,6 +42,17 @@ const contacts = [
   },
 ];
 
+const otherLinks = [
+  {
+    href: "https://mptc.gov.kh/",
+    label: "footer.mptc",
+  },
+  {
+    href: "https://moeys.gov.kh/",
+    label: "footer.moeys",
+  },
+];
+
 export function SiteFooter({ lang }: FooterProps) {
   const t = useTranslations(lang);
 
@@ -68,7 +79,7 @@ export function SiteFooter({ lang }: FooterProps) {
           <h3 className="font-semibold text-lg text-secondary mb-4">
             {t("footer.quicklink")}
           </h3>
-          <div className="flex flex-col gap-2 text-lg">
+          <div className="flex flex-col gap-3 text-lg">
             {links(lang).map(({ href, label }) => (
               <a
                 key={href}
@@ -85,10 +96,12 @@ export function SiteFooter({ lang }: FooterProps) {
           <h3 className="font-semibold mb-4 text-lg text-secondary">
             {t("footer.otherlink")}
           </h3>
-          <div className="flex flex-col gap-2 text-lg">
-            <a href={`/${lang}`} className="text-white hover:text-secondary">
-              {t("footer.mptc")}
-            </a>
+          <div className="flex flex-col gap-3 text-lg">
+            {otherLinks.map(({ href, label }) => (
+              <a href={href} target="_blank" className="text-white hover:text-secondary">
+                {t(label)}
+              </a>
+            ))}
           </div>
         </motion.div>
 
@@ -96,7 +109,7 @@ export function SiteFooter({ lang }: FooterProps) {
           <h3 className="font-semibold mb-4 text-lg text-secondary">
             {t("nav.contact")}
           </h3>
-          <div className="flex flex-col gap-4 text-lg">
+          <div className="flex flex-col gap-3 text-lg">
             {contacts.map(({ icon: Icon, text }, index) => (
               <div key={index} className="flex items-start gap-2 text-white">
                 <Icon className="h-4 min-w-4 mt-1" />

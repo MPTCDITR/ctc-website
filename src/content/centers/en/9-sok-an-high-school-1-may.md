@@ -3,7 +3,7 @@ name: "Sok An High School 1 May"
 description: "Sok An High School 1 May is a dynamic educational institution that provides opportunities for students to gain knowledge, skills, and virtues. The high school has a good learning environment, experienced teachers, and modern learning equipment. The curriculum is designed in accordance with national and international educational standards to provide students with a broad knowledge base. In addition, the high school also provides opportunities for students to participate in social and sports activities."
 
 managementTeam:
-  ttitle: "Management Committee of C.T.C."
+  title: "Management Committee of C.T.C."
   description: "The C.T.C. Management Committee oversees staff recruitment, operations, resources, monitors finances, promotes community involvement, reviews plans and reports, and supports strategic improvements to enhance efficiency and transparency."
   member:
         - title: "Chair of the School Management Committee  "

@@ -31,6 +31,7 @@ interface CenterTeamInfoProps {
     email: string;
   }>;
   translations: Record<string, string>;
+  children?: React.ReactNode;
 }
 
 export function CenterTeamInfo({
@@ -43,6 +44,7 @@ export function CenterTeamInfo({
   managementTeam,
   operationTeam,
   translations,
+  children,
 }: CenterTeamInfoProps) {
   const t = (key: string) => translations[key] || key;
 
@@ -58,6 +60,24 @@ export function CenterTeamInfo({
           <TextElement variant="heading">{centerName}</TextElement>
           <TextElement variant="paragraph">{centerDescription}</TextElement>
         </div>
+        <Card>
+          <CardHeader>
+            <h3 className="text-3xl font-bold text-primary">
+              Center Information
+            </h3>
+            <TextElement variant="paragraph">
+              The Ministry of Post and Telecommunications, in collaboration with
+              the Ministry of Education, Youth, and Sports, aims to enhance
+              digital literacy in Cambodia through the establishment of 558
+              Community Technology Centers
+            </TextElement>
+          </CardHeader>
+          <CardContent>
+            <div className="prose prose-neutral dark:prose-invert max-w-none mx-auto text-lg">
+              {children}
+            </div>
+          </CardContent>
+        </Card>
         <Card>
           <CardHeader>
             <h3 className="text-3xl font-bold text-primary">
