@@ -18,7 +18,11 @@ interface StructureProps {
   nationalBoardMembers: CollectionEntry<"national-board-member">[];
 }
 
-export function StructureCtc({ translations, lang, nationalBoardMembers }: StructureProps) {
+export function StructureCtc({
+  translations,
+  lang,
+  nationalBoardMembers,
+}: StructureProps) {
   const t = (key: string) => translations[key] || key;
 
   return (
@@ -129,16 +133,23 @@ export function StructureCtc({ translations, lang, nationalBoardMembers }: Struc
                     />
                   </div>
                   <div className="w-full">
-                    <div className="flex-1 lg:flex sm:block justify-between items-center">
-                      <div className="flex gap-2">
-                        <div className="text-lg">{member.data.title}</div>
-                        <div className="font-semibold text-lg text-primary">
-                          {member.data.name}
+                    <div className="flex-1 lg:flex sm:block justify-between items-start">
+                      <div>
+                        {member.data?.name && (
+                          <div className="flex gap-2">
+                            <div className="text-lg">{member.data.title}</div>
+                            <div className="font-semibold text-lg text-primary">
+                              {member.data.name}
+                            </div>
+                          </div>
+                        )}
+                        <div className="text-text">
+                          {member.data.organization}
                         </div>
                       </div>
+
                       <div className="text-text">{member.data.role}</div>
                     </div>
-                    <div className="text-text">{member.data.department}</div>
                   </div>
                 </div>
               </Card>

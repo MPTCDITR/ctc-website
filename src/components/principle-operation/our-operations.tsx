@@ -66,7 +66,7 @@ export function OperationPrinciple({ translations }: FunctionalityProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            {t("nav.center.ourservices")}
+            {t("nav.center.ourfunctionalities")}
           </motion.h1>
           <motion.p
             className={cn(styles.body, "text-center max-w-8xl mx-auto ")}
