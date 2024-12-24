@@ -1,0 +1,68 @@
+---
+name: "Sok An Tonler Bati High School"
+description: "Sok An Tonler Bati High School is a prestigious educational institution that provides students with opportunities to acquire knowledge, skills, and virtues. The school boasts a conducive learning environment with experienced teachers and modern learning facilities. The curriculum is designed in accordance with national and international educational standards to provide students with comprehensive knowledge. Moreover, the school also offers students opportunities to participate in social activities and sports"
+managementTeam:
+  title: "Management Committee of C.T.C."
+  description: "The C.T.C. Management Committee oversees staff recruitment, operations, resources, monitors finances, promotes community involvement, reviews plans and reports, and supports strategic improvements to enhance efficiency and transparency."
+  member:
+
+        - title: "Chair of the School Management Committee  "
+          name: "Name"
+          role: "Honorary Chair"
+          phoneNumber: "078 447 474"
+          email: "example@gmail.com"
+        - title: "Principal of the High School   "
+          name: "Name"
+          role: " Chair"
+          phoneNumber: "078 447 474"
+          email: "example@gmail.com"
+        - title: "Principal of the C.T.C. "
+          name: "Name"
+          role: "Vice-chair"
+          phoneNumber: "078 447 474"
+          email: "example@gmail.com"
+        - title: "Commune Administrative Representative "
+          name: "Name"
+          role: "Member"
+          phoneNumber: "078 447 474"
+          email: "example@gmail.com" 
+        - title: "Digital Technology Teacher   "
+          name: "Name"
+          role: "Member"
+          phoneNumber: "078 447 474"
+          email: "example@gmail.com" 
+        - title: "Village Chief where the High School is located  "
+          name: "Name"
+          role: "Member"
+          phoneNumber: "078 447 474"
+          email: "example@gmail.com" 
+        - title: "Representative of Students' Guardians "
+          name: "Name"
+          role: "Member"
+          phoneNumber: "078 447 474"
+          email: "example@gmail.com"   
+
+operationTeam:
+    title: "Operational Staff of C.T.C."
+    description: "The operational staff are responsible for daily operations and running of the C.T.C."
+    member:
+
+        - title: "Secretary"
+          name: "អៀង សៅប្រាថ្នា"
+          role: "Chair"
+          phoneNumber: "011 997 366"
+          email: "example@gmail.com"
+          
+        - title: "English teacher"
+          name: " ប៉ត សច្ចៈ " 
+          role: "IT Teacher"
+          phoneNumber: "096 575 3335"
+          email: "example@gmail.com"
+
+        - title: "Accounting"
+          name: "ឡាច ខុម"
+          role: "Assistant Teacher"
+          phoneNumber: "097 201 4343"
+          email: "example@gmail.com"
+   
+---
