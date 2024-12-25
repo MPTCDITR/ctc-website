@@ -73,7 +73,7 @@ export function CenterTeamInfo({
             </TextElement>
           </CardHeader>
           <CardContent>
-            <div className="prose prose-neutral dark:prose-invert max-w-none mx-auto text-lg">
+            <div className="prose prose-h2:mt-0 prose-neutral dark:prose-invert max-w-none mx-auto text-lg">
               {children}
             </div>
           </CardContent>
@@ -137,7 +137,7 @@ export function CenterTeamInfo({
                   <TableHead>{t("ctc.teaminfo.name")}</TableHead>
                   <TableHead>{t("ctc.teaminfo.role")}</TableHead>
                   <TableHead>{t("ctc.teaminfo.phoneNumber")}</TableHead>
-                  <TableHead>{t("ctc.teaminfo.email")}</TableHead>
+                  {/* <TableHead>{t("ctc.teaminfo.email")}</TableHead> */}
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -148,7 +148,7 @@ export function CenterTeamInfo({
                       <TableCell>{member.name}</TableCell>
                       <TableCell>{member.role}</TableCell>
                       <TableCell>{member.phoneNumber}</TableCell>
-                      <TableCell>{member.email}</TableCell>
+                      {/* <TableCell>{member.email}</TableCell> */}
                     </TableRow>
                   ))
                 ) : (

@@ -66,7 +66,7 @@ operationTeam:
 ---
 <div >
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="p-4 rounded-lg">
+            <div class="rounded-lg">
                 <h2 class="text-2xl font-bold text-primary mb-4">Contact Information</h2>
                 <p class="mb-4">
                     Focused on tourism technology and cultural preservation, our Siem Reap center bridges tradition and innovation.
@@ -85,11 +85,11 @@ operationTeam:
                         <a href="mailto:siemreap@ctc.com">siemreap@ctc.com</a>
                     </li>
                 </ul>
-                <button class="mt-6 bg-blue-800 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300 hidden">
+                <button class="mt-6 bg-blue-800 text-white rounded hover:bg-blue-700 transition duration-300 hidden">
                     Contact Center
                 </button>
             </div>
-            <div class="p-4 rounded-lg">
+            <div class=" rounded-lg">
                 <h2 class="text-2xl font-bold text-primary mb-4">Courses Offered</h2>
                 <ul class="list-disc list-inside mb-6">
                     <li>Digital Marketing</li>

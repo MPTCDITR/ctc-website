@@ -29,8 +29,10 @@ const links = (lang: string | undefined) => [
   { href: `/${lang}`, label: "nav.home" },
   { href: `/${lang}/about/about-us`, label: "nav.about.aboutus" },
   { href: `/${lang}/about/mission-vision`, label: "nav.about.mission" },
-  { href: `/${lang}/center/our-centers`, label: "nav.center.ourcenters" },
+  { href: `/${lang}/center/our-ctc`, label: "nav.center.ourctc" },
+  { href: `/${lang}/center/our-locations`, label: "nav.center.ourlocations" },
   { href: `/${lang}/blog`, label: "nav.news" },
+  
 ];
 
 const contacts = [
