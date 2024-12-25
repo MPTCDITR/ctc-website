@@ -105,10 +105,7 @@ export function StructureCtc({
             
           </h2>
           <TextElement variant="paragraph">
-            It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It has
-            survived not only five centuries, but also the leap into electronic
-            typesetting, remaining essentially unchanged.
+            {t("about.structure.ctcnational.board.description")}
           </TextElement>
         </motion.div>
 
