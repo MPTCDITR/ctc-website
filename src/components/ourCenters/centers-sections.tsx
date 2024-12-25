@@ -41,7 +41,7 @@ export function CenterLocations({ translations }: CenterLocationsProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
-          <Card className="w-full aspect-[16/9] bg-gray-200">
+          <Card className="w-full aspect-square lg:aspect-[16/9] bg-gray-200">
             <iframe
               src="https://www.google.com/maps/d/u/0/embed?mid=1oXXkivO9_Cx8KyA2kAjlhWqoEK_DbuM&ehbc=2E312F&noprof=1"
               className="w-full h-full"

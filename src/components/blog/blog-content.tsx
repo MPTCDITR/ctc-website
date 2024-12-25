@@ -35,11 +35,16 @@ export function BlogContent({
         )}
       </Card>
       <div className="max-w-5xl mx-auto space-y-6">
-        <h1 className="text-4xl font-bold text-primary">{title}</h1>
-        <TextElement variant="small" className="flex items-center gap-4 text-secondary">
+        <h1 className="text-xl lg:text-4xl font-bold text-primary leading-normal lg:leading-relaxed text-justify lg:text-start">
+          {title}
+        </h1>
+        <TextElement
+          variant="small"
+          className="flex items-center gap-4 text-secondary"
+        >
           <span>{author},</span>
           <span>
-            <time dateTime={date.toISOString()}>{formatDate(date, lang)}</time>
+            <time>{formatDate(date.toISOString(), lang)}</time>
           </span>
         </TextElement>
         <div className="prose prose-neutral max-w-none">{children}</div>

@@ -73,7 +73,7 @@ export function CenterTeamInfo({
             </TextElement>
           </CardHeader>
           <CardContent>
-            <div className="prose prose-neutral dark:prose-invert max-w-none mx-auto text-lg">
+            <div className="prose prose-h2:mt-0 prose-neutral dark:prose-invert max-w-none mx-auto text-lg">
               {children}
             </div>
           </CardContent>

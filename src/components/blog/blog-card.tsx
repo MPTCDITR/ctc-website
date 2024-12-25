@@ -47,12 +47,11 @@ export function BlogCard({
           <div
             className={`grid md:grid-cols-2 gap-8 p-4 lg:p-6 ${index % 2 === 1 ? "md:flex-row-reverse" : ""}`}
           >
-            <div className="aspect-auto relative rounded-lg overflow-hidden">
+            <div className=" aspect-auto relative rounded-lg overflow-hidden">
               <img
                 src={image?.src}
                 alt={title}
-                className="w-full"
-                style={{ objectFit: "cover" }}
+                className="w-full h-full object-cover"
               />
             </div>
             <div className="space-y-4">
@@ -60,7 +59,7 @@ export function BlogCard({
                 variant="body"
                 className="text-secondary hover:underline"
               >
-                <time dateTime={date}>{formatDate(new Date(date), lang)}</time>
+                <time dateTime={date}>{formatDate(date, lang)}</time>
               </TextElement>
               <TextElement variant="titleblog" className="text-primary">
                 {title}

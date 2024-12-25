@@ -43,7 +43,7 @@ export function BlogLatestCard({
         <div className="text-sm text-muted-foreground space-x-2 mt-2">
           <span>{author}</span>
           <span>•</span>
-          <time dateTime={date}>{formatDate(new Date(date), lang)}</time>
+          <time dateTime={date}>{formatDate(date, lang)}</time>
         </div>
       </CardHeader>
       <CardContent className="flex-1 flex flex-col">
