@@ -5,14 +5,14 @@ import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { styles } from "@/components/text-element/ElementStyle";
 import { TextElement } from "@/components/text-element/TextElement";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { convertNumberToKhmer } from "@/lib/utils";
+
 import {
   Pagination,
   PaginationContent,
-  PaginationEllipsis,
   PaginationItem,
   PaginationLink,
-  PaginationNext,
-  PaginationPrevious,
 } from "@/components/ui/pagination";
 interface BlogListProps {
   translations: Record<string, string>;
@@ -83,12 +83,13 @@ export function BlogList({ translations, posts, lang }: BlogListProps) {
         <Pagination>
           <PaginationContent>
             <PaginationItem>
-              <PaginationPrevious
+              <div
                 onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
-                className={
-                  currentPage === 1 ? "pointer-events-none opacity-50" : ""
-                }
-              />
+                className={`flex text-sm font-semibold space-x-2 me-5 items-center ${currentPage === 1 ? "pointer-events-none opacity-50" : ""}`}
+              >
+                <ChevronLeft className="h-4 w-4" />
+                <span>{t("btn.previous")}</span>
+              </div>
             </PaginationItem>
             {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
               <PaginationItem key={page}>
@@ -96,22 +97,21 @@ export function BlogList({ translations, posts, lang }: BlogListProps) {
                   onClick={() => setCurrentPage(page)}
                   isActive={currentPage === page}
                 >
-                  {page}
+                  {lang === "en" ? page : convertNumberToKhmer(page)}
                 </PaginationLink>
               </PaginationItem>
             ))}
 
             <PaginationItem>
-              <PaginationNext
+              <div
                 onClick={() =>
                   setCurrentPage((prev) => Math.min(prev + 1, totalPages))
                 }
-                className={
-                  currentPage === totalPages
-                    ? "pointer-events-none opacity-50"
-                    : ""
-                }
-              />
+                className={`flex text-sm font-semibold space-x-2 ms-5 items-center ${currentPage === totalPages ? "pointer-events-none opacity-50" : ""}`}
+              >
+                <span>{t("btn.next")}</span>
+                <ChevronRight className="h-4 w-4" />
+              </div>
             </PaginationItem>
           </PaginationContent>
         </Pagination>
