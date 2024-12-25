@@ -23,7 +23,7 @@ export function AboutSection({ translations, lang }: AboutSectionProps) {
           </TextElement>
           <Button
             variant="link"   
-            className="w-fit text-secondary hover:text-secondary"
+            className="w-fit text-secondary hover:text-secondary md:text-lg"
           >
             <a href={`/${lang}/about/about-us`}>
 
