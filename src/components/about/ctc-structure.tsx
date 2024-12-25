@@ -105,7 +105,8 @@ export function StructureCtc({
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl font-bold text-primary">
-            C.T.C. National Board
+          {t("about.structure.ctcnational.board")}
+            
           </h2>
           <TextElement variant="paragraph">
             It has survived not only five centuries, but also the leap into
