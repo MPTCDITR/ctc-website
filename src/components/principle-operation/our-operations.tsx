@@ -3,7 +3,8 @@ import { styles } from "@/components/text-element/ElementStyle";
 import { motion } from "framer-motion";
 import OurService1 from "@/assets/image-assets/computer-lab.webp";
 import OurService2 from "@/assets/our-centers/our-service/computer-labs.png";
-import OurService3 from "@/assets/our-centers/our-service/trainning-center.png";
+import trainingRoom1 from "@/assets/our-centers/our-service/training-room-1.webp";
+import OurService3 from "@/assets/our-centers/our-service/training-room-2.png";
 import OurService4 from "@/assets/image-assets/ctc-left-view.webp";
 import OurService5 from "@/assets/image-assets/post-office-view.webp";
 import OurService6 from "@/assets/our-centers/our-service/post-order.png";
@@ -31,7 +32,7 @@ export function OperationPrinciple({ translations }: FunctionalityProps) {
       title: "home.service.trainingroom",
       description1: "center.trainingroom.description1",
       description2: "center.trainingroom.description2",
-      image1: OurService3.src,
+      image1: trainingRoom1.src,
       image2: OurService3.src,
     },
     {
