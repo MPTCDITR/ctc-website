@@ -62,7 +62,7 @@ export function MissionVisionContent({ translations }: MissionVisionProps) {
         transition={{ duration: 0.5, delay: 0.8 }}
       >
         <motion.div
-          className="md:order-1 flex justify-center"
+          className="order-2 md:order-1 flex justify-center"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 1 }}
@@ -76,7 +76,7 @@ export function MissionVisionContent({ translations }: MissionVisionProps) {
             />
           </Card>
         </motion.div>
-        <div className="space-y-6 md:order-1">
+        <div className="space-y-6 order-1 md:order-2">
           <motion.h1
             className={cn(styles.heading, "text-primary")}
             initial={{ opacity: 0, x: -50 }}
