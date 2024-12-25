@@ -8,7 +8,7 @@ import computerLab from "@/assets/image-assets/computer-lab.webp";
 import trainingRoom from "@/assets/home/training-room.jpg";
 import publicHall from "@/assets/home/public-hall.png";
 import postOffice from "@/assets/home/post-office.svg";
-import ctcImage from "@/assets//image-assets/post-office-view.webp";
+import ctcImage from "@/assets/image-assets/about-ctc-1.webp";
 
 interface Slide {
   image: string;

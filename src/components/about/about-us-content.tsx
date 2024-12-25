@@ -1,8 +1,8 @@
 import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import PostOfficeView from "@/assets/image-assets/post-office-view.webp";
+import aboutctc1 from "@/assets/image-assets/about-ctc-1.webp";
+import aboutctc2 from "@/assets/image-assets/about-ctc-2.webp";
 import CTCOpeningCeremony from "@/assets/image-assets/ctc-opening-ceremony.webp";
-import CTCLeftView from "@/assets/image-assets/ctc-left-view.webp";
 import TextElement from "@/components/text-element/TextElement";
 import { cn } from "@/lib/utils";
 import { styles } from "@/components/text-element/ElementStyle";
@@ -40,7 +40,7 @@ export function AboutContent({ translations }: AboutUsContent) {
       >
         <Card className="w-full aspect-video bg-gray-200">
           <img
-            src={PostOfficeView.src}
+            src={aboutctc1.src}
             alt="c.t.c. post office view"
             className="w-full"
             style={{ objectFit: "cover" }}
@@ -100,7 +100,7 @@ export function AboutContent({ translations }: AboutUsContent) {
       >
         <Card className="w-full aspect-video bg-gray-200">
           <img
-            src={CTCLeftView.src}
+            src={aboutctc2.src}
             alt="c.t.c. post office left view"
             className="w-full"
             style={{ objectFit: "cover" }}
