@@ -23,7 +23,7 @@ export function CentersSection({ translations, lang }: CenterSectionProps) {
             </TextElement>
             <Button
               variant="link"
-              className="w-fit mt-5 lg:text-lg text-secondary hover:text-secondary"
+              className="w-fit mt-5 md:text-lg text-secondary hover:text-secondary"
             >
               <a href={`/${lang}/center/our-locations`}>
                 {t("home.center.viewalllocations")} →
@@ -34,7 +34,7 @@ export function CentersSection({ translations, lang }: CenterSectionProps) {
             <img
               src={Locations.src}
               alt="18 location of CTC"
-              className="w-full min-w-96 object-cover"
+              className="w-full object-cover"
             />
           </div>
         </div>
