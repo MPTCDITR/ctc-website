@@ -94,10 +94,6 @@ export function StructureCtc({
             )}
           </div>
         </motion.div>
-      </section>
-
-      {/* Second Section - Structure of CTC General Secretariat */}
-      <section className="space-y-8">
         <motion.div
           className="space-y-4"
           initial={{ opacity: 0, y: 20 }}
