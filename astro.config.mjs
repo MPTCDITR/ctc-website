@@ -9,7 +9,7 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-    site: process.env.PUBLIC_SITE_URL || "http://localhost:4321",
+    site: "https://ctc-dev.domnerka.com/",
     integrations: [
       mdx(), 
       sitemap({i18n: {
