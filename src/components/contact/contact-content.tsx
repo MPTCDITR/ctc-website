@@ -1,7 +1,15 @@
 "use client";
 
 import { Card } from "@/components/ui/card";
-import { Facebook, Instagram, Mail, MapPin, Phone, Send } from "lucide-react";
+import {
+  Facebook,
+  Instagram,
+  Link,
+  Mail,
+  MapPin,
+  Phone,
+  Send,
+} from "lucide-react";
 import { motion } from "framer-motion";
 import PostOfficeView from "@/assets//image-assets/post-office-view.webp";
 import TextElement from "@/components/text-element/TextElement";
@@ -38,7 +46,7 @@ export function ContactContent({ translations }: ContactProps) {
               <MapPin className="w-5 h-5 mt-1 text-primary" />
               <TextElement variant="body">{t("footer.address")}</TextElement>
             </motion.div>
-            <motion.div
+            {/* <motion.div
               className="flex items-center gap-3"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -48,15 +56,17 @@ export function ContactContent({ translations }: ContactProps) {
               <TextElement variant="body">
                 {t("footer.phoneNumber")}
               </TextElement>
-            </motion.div>
+            </motion.div> */}
             <motion.div
               className="flex items-center gap-3"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              <Mail className="w-5 h-5 text-primary" />
-              <TextElement variant="body">{t("footer.email")}</TextElement>
+              <Link className="w-5 h-5 text-primary" />
+              <a href="https://www.mptc.gov.kh" target="_blank">
+                <TextElement variant="body" className="hover:text-primary">{t("footer.email")}</TextElement>
+              </a>
             </motion.div>
           </div>
 

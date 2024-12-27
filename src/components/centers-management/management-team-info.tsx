@@ -65,11 +65,8 @@ export function CenterTeamInfo({
             <h3 className="text-3xl font-bold text-primary">
               Center Information
             </h3>
-            <TextElement variant="paragraph">
-              The Ministry of Post and Telecommunications, in collaboration with
-              the Ministry of Education, Youth, and Sports, aims to enhance
-              digital literacy in Cambodia through the establishment of 558
-              Community Technology Centers
+            <TextElement variant="body" className="max-w-8xl">
+              {t("home.service.description")}
             </TextElement>
           </CardHeader>
           <CardContent>

@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Link, Phone, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 import CTCLogo from "@/assets/logo/ctc-logo.svg";
 import { useTranslations } from "@/i18n/utils";
@@ -36,8 +36,8 @@ const links = (lang: string | undefined) => [
 ];
 
 const contacts = [
-  { icon: Mail, text: "footer.email" },
-  { icon: Phone, text: "footer.phoneNumber" },
+  { icon: Link, text: "footer.email" },
+  // { icon: Phone, text: "footer.phoneNumber" },
   {
     icon: MapPin,
     text: "footer.address",
