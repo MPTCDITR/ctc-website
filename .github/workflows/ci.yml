@@ -1,0 +1,40 @@
+name: Deploy CTC Project to Cloudflare
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - prod
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'npm'
+
+      - name: Go to Project Directory
+        working-directory: ./ctc-website
+        run: echo "Switched to project directory."
+
+      - name: Install dependencies
+        run: |
+          npm install
+
+      - name: Build production site to ./dist/
+        run: npm run build
+
+      # - name: Deploy to Cloudflare Pages
+      #   if: github.ref == 'refs/heads/main'
+      #   uses: cloudflare/pages-action@v1
+      #   with:
+      #     apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      #     accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      #     projectName: your-cloudflare-pages-project-name
+      #     directory: ./ctc-website/dist
