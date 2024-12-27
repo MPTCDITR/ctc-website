@@ -15,14 +15,14 @@ managementTeam:
           email: example@gmail.com,
         },
         {
-          title: នាយកវិទ្យាល័យ ,
+          title: នាយកវិទ្យាល័យ,
           name: ហោ  ប្រុស,
           role: ប្រធាន,
           phoneNumber: "០៧៨ ៤៤៧ ៤៧៤",
           email: example@gmail.com,
         },
         {
-          title: នាយក ម.ប.ស. ,
+          title: នាយក ម.ប.ស.,
           name: ហោ  ប្រុស,
           role: អនុប្រធាន,
           phoneNumber: "០៧៨ ៤៤៧ ៤៧៤",
@@ -36,14 +36,14 @@ managementTeam:
           email: example@gmail.com,
         },
         {
-          title: គ្រូបង្រៀនបច្ចេកវិទ្យាឌីជីថល  ,
+          title: គ្រូបង្រៀនបច្ចេកវិទ្យាឌីជីថល,
           name: ហោ  ប្រុស,
           role: សមាជិក,
           phoneNumber: "០៧៨ ៤៤៧ ៤៧៤",
           email: example@gmail.com,
         },
         {
-          title: មេភូមិ ដែល ម.ប.ស. ស្ថិតនៅ ,
+          title: មេភូមិ ដែល ម.ប.ស. ស្ថិតនៅ,
           name: ហោ  ប្រុស,
           role: សមាជិក,
           phoneNumber: "០៧៨ ៤៤៧ ៤៧៤",
@@ -65,7 +65,7 @@ operationTeam:
     description: បុគ្គលិកប្រតិបត្តិការទទួលខុសត្រូវចំពោះប្រតិបត្តិការប្រចាំថ្ងៃ និងដំណើរការរបស់ C.T.C.។,
     member:
       [
-         {
+        {
           title: លេខាធិការ,
           name: អៀង សៅប្រាថ្នា,
           role: ប្រធាន,
@@ -74,7 +74,7 @@ operationTeam:
         },
         {
           title: គ្រូបង្រៀនភាសាអង់គ្លេស,
-          name: ប៉ត សច្ចៈ ,
+          name: ប៉ត សច្ចៈ,
           role: គ្រូ IT,
           phoneNumber: "០៩៦ ៥៧៥ ៣៣៣៥",
           email: example@gmail.com,
@@ -89,6 +89,7 @@ operationTeam:
       ],
   }
 ---
+
 <div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div class="p-4 rounded-lg">
@@ -96,7 +97,7 @@ operationTeam:
             <ul class="list-disc list-inside">
                 <li class="flex items-center gap-x-3">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
-                    <a href="https://maps.app.goo.gl/Bc6VYop2pSXYT3Us8" target="_blank" rel="noopener noreferrer">វិទ្យាល័យទន្លេបាទី ទន្លេបាទី<a>
+                    <a href="https://maps.app.goo.gl/Bc6VYop2pSXYT3Us8" target="_blank" rel="noopener noreferrer">វិទ្យាល័យទន្លេបាទី ទន្លេបាទី</a>
                 </li>
             </ul>
             <button class="mt-6 bg-blue-800 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300 hidden">
