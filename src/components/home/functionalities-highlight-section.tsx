@@ -6,42 +6,45 @@ import postOffice from "@/assets/service/post-office.svg";
 import publicHall from "@/assets/service/public-hall.svg";
 import TextElement from "@/components/text-element/TextElement";
 
-interface ServiceItem {
+interface FunctionalitiesItem {
   href: string;
   title: string;
   description: string;
   src: string;
 }
 
-interface ServiceSectionProps {
+interface FunctionalitiesSectionProps {
   translations: Record<string, string>;
   lang?: string;
 }
 
-export function ServiceHighlights({ translations, lang }: ServiceSectionProps) {
+export function FunctionalitiesHighlights({
+  translations,
+  lang,
+}: FunctionalitiesSectionProps) {
   const t = (key: string) => translations[key] || key;
 
-  const services: ServiceItem[] = [
+  const services: FunctionalitiesItem[] = [
     {
-      href: `/${lang}/center/center-services/#computer-lab`,
+      href: `/${lang}/center/our-functionalities/#computer-lab`,
       title: "home.service.computerlab",
       description: "home.service.computerlab.description",
       src: computerLab.src,
     },
     {
-      href: `/${lang}/center/center-services/#training-room`,
+      href: `/${lang}/center/our-functionalities/#training-room`,
       title: "home.service.trainingroom",
       description: "home.service.trainingroom.description",
       src: trainingRoom.src,
     },
     {
-      href: `/${lang}/center/center-services/#post-office`,
+      href: `/${lang}/center/our-functionalities/#post-office`,
       title: "home.service.postoffice",
       description: "home.service.postoffice.description",
       src: postOffice.src,
     },
     {
-      href: `/${lang}/center/center-services/#public-hall`,
+      href: `/${lang}/center/our-functionalities/#public-hall`,
       title: "home.service.publichall",
       description: "home.service.publichall.description",
       src: publicHall.src,
