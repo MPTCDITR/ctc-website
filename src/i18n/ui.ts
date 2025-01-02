@@ -42,7 +42,7 @@ export const ui: Record<string, Record<string, string>> = {
     'home.service.description': 'C.T.C. offer four main functions for citizens and students in the community, like accesses to computers and the Internet, as well as training programming in digital skills and postal services.',
     'home.service.computerlab': 'Computer Lab',
     'home.service.computerlab.description': 'A space for teaching digital skills, both in person and online, and for hosting meetings.',
-    'home.service.trainingroom': 'Traning Room',
+    'home.service.trainingroom': 'Training Room',
     'home.service.trainingroom.description': 'A place for learning how to repair technology and for offering short courses on digital skills to local authorities and community members.',
     'home.service.postoffice': 'Post Office',
     'home.service.postoffice.description': 'Offers package services for sending and receiving items locally and internationally, along with other services for merchants, traders, and the community.',
