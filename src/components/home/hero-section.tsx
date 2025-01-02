@@ -4,10 +4,10 @@ import TextElement from "@/components/text-element/TextElement";
 import { cn } from "@/lib/utils";
 import { styles } from "@/components/text-element/ElementStyle";
 
-import computerLab from "@/assets/image-assets/computer-lab.webp";
-import trainingRoom from "@/assets/home/training-room.jpg";
+import computerLab from "@/assets/our-centers/our-service/computer-lab-2.webp";
+import trainingRoom from "@/assets/home/training-room.webp";
 import publicHall from "@/assets/home/public-hall.png";
-import postOffice from "@/assets/home/post-office.svg";
+import postOffice from "@/assets/home/post-office.webp";
 import ctcImage from "@/assets/image-assets/about-ctc-1.webp";
 
 interface Slide {
