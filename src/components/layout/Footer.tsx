@@ -36,7 +36,7 @@ const links = (lang: string | undefined) => [
 ];
 
 const contacts = [
-  { icon: Link, text: "footer.email" },
+  { icon: Link, text: "footer.email", href:"https://www.mptc.gov.kh", },
   // { icon: Phone, text: "footer.phoneNumber" },
   {
     icon: MapPin,
@@ -112,10 +112,14 @@ export function SiteFooter({ lang }: FooterProps) {
             {t("nav.contact")}
           </h3>
           <div className="flex flex-col gap-3 text-lg">
-            {contacts.map(({ icon: Icon, text }, index) => (
+            {contacts.map(({ icon: Icon, text, href }, index) => (
               <div key={index} className="flex items-start gap-2 text-white">
                 <Icon className="h-4 min-w-4 mt-1" />
-                <span> {t(text)}</span>
+                { href 
+                  ? (<a href={href} target="_blank" rel="noreferrer" className="hover:text-secondary"><span> {t(text)}</span></a>) 
+                  : (<span> {t(text)}</span>) 
+                }
+                
               </div>
             ))}
           </div>
