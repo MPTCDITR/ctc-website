@@ -89,10 +89,7 @@ export function CenterTeamInfo({
               <TableHeader>
                 <TableRow className="[&>*]:text-primary [&>*]:font-medium">
                   <TableHead>{t("ctc.teaminfo.title")}</TableHead>
-                  {/* <TableHead>{t("ctc.teaminfo.name")}</TableHead> */}
                   <TableHead>{t("ctc.teaminfo.role")}</TableHead>
-                  {/* <TableHead>{t("ctc.teaminfo.phoneNumber")}</TableHead>
-                  <TableHead>{t("ctc.teaminfo.email")}</TableHead> */}
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -100,10 +97,7 @@ export function CenterTeamInfo({
                   managementTeam.map((member, index) => (
                     <TableRow key={member.name}>
                       <TableCell>{member.title}</TableCell>
-                      {/* <TableCell>{member.name}</TableCell> */}
                       <TableCell>{member.role}</TableCell>
-                      {/* <TableCell>{member.phoneNumber}</TableCell>
-                      <TableCell>{member.email}</TableCell> */}
                     </TableRow>
                   ))
                 ) : (
@@ -134,7 +128,6 @@ export function CenterTeamInfo({
                   <TableHead>{t("ctc.teaminfo.name")}</TableHead>
                   <TableHead>{t("ctc.teaminfo.role")}</TableHead>
                   <TableHead>{t("ctc.teaminfo.phoneNumber")}</TableHead>
-                  {/* <TableHead>{t("ctc.teaminfo.email")}</TableHead> */}
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -145,7 +138,6 @@ export function CenterTeamInfo({
                       <TableCell>{member.name}</TableCell>
                       <TableCell>{member.role}</TableCell>
                       <TableCell>{member.phoneNumber}</TableCell>
-                      {/* <TableCell>{member.email}</TableCell> */}
                     </TableRow>
                   ))
                 ) : (

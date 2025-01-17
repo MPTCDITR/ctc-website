@@ -6,7 +6,7 @@ import { styles } from "@/components/text-element/ElementStyle";
 
 import computerLab from "@/assets/our-centers/our-service/computer-lab-2.webp";
 import trainingRoom from "@/assets/home/training-room.webp";
-import publicHall from "@/assets/home/public-hall.png";
+import publicHall from "@/assets/home/public-hall.webp";
 import postOffice from "@/assets/home/post-office.webp";
 import ctcImage from "@/assets/image-assets/about-ctc-1.webp";
 

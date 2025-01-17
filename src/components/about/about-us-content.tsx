@@ -82,7 +82,6 @@ export function AboutContent({ translations }: AboutUsContent) {
             {t("about.ctc.paragraph3")}
           </TextElement>
           <TextElement variant="body">{t("about.ctc.paragraph4")}</TextElement>
-          <p></p>
         </motion.div>
       </div>
 
@@ -91,7 +90,7 @@ export function AboutContent({ translations }: AboutUsContent) {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 1.2 }}
-      ></motion.p>
+      />
 
       <motion.div
         initial={{ opacity: 0, y: 50 }}

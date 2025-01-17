@@ -5,9 +5,7 @@ import {
   Facebook,
   Instagram,
   Link,
-  Mail,
   MapPin,
-  Phone,
   Send,
 } from "lucide-react";
 import { motion } from "framer-motion";
@@ -46,17 +44,7 @@ export function ContactContent({ translations }: ContactProps) {
               <MapPin className="w-5 h-5 mt-1 text-primary" />
               <TextElement variant="body">{t("footer.address")}</TextElement>
             </motion.div>
-            {/* <motion.div
-              className="flex items-center gap-3"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-            >
-              <Phone className="w-5 h-5 text-primary" />
-              <TextElement variant="body">
-                {t("footer.phoneNumber")}
-              </TextElement>
-            </motion.div> */}
+         
             <motion.div
               className="flex items-center gap-3"
               initial={{ opacity: 0, y: 20 }}
@@ -125,8 +113,9 @@ export function ContactContent({ translations }: ContactProps) {
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.6732883906925!2d104.91480367570388!3d11.57526268862627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31095142eadcf8db%3A0xbd4e32a5eccddfb7!2sMinistry%20of%20Post%20and%20Telecommunications!5e0!3m2!1sen!2skh!4v1734070475614!5m2!1sen!2skh"
             className="size-full"
-            title="Google Maps: Telecommunication Regulator of Cambodia Location"
-          ></iframe>
+            title="Google Maps: Ministry of Post and Telecommunications"
+          >
+          </iframe>
         </Card>
       </motion.div>
     </div>

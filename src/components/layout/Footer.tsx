@@ -1,8 +1,9 @@
-import { Link, Phone, MapPin } from "lucide-react";
+import { Link, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 import CTCLogo from "@/assets/logo/ctc-logo.svg";
 import { useTranslations } from "@/i18n/utils";
 import type { SupportedLanguage } from "@/i18n/ui";
+import TextElement from "../text-element/TextElement";
 
 interface FooterProps {
   lang: SupportedLanguage;
@@ -37,7 +38,6 @@ const links = (lang: string | undefined) => [
 
 const contacts = [
   { icon: Link, text: "footer.email", href:"https://www.mptc.gov.kh", },
-  // { icon: Phone, text: "footer.phoneNumber" },
   {
     icon: MapPin,
     text: "footer.address",
@@ -78,9 +78,7 @@ export function SiteFooter({ lang }: FooterProps) {
         </motion.div>
 
         <motion.div variants={itemVariants}>
-          <h3 className="font-semibold text-lg text-secondary mb-4">
-            {t("footer.quicklink")}
-          </h3>
+        <TextElement variant="titleblog" className="font-semibold text-lg text-secondary mb-4">{t("footer.quicklink")}</TextElement>
           <div className="flex flex-col gap-3 text-lg">
             {links(lang).map(({ href, label }) => (
               <a
@@ -95,9 +93,7 @@ export function SiteFooter({ lang }: FooterProps) {
         </motion.div>
 
         <motion.div variants={itemVariants}>
-          <h3 className="font-semibold mb-4 text-lg text-secondary">
-            {t("footer.otherlink")}
-          </h3>
+        <TextElement variant="titleblog" className="font-semibold text-lg text-secondary mb-4">{t("footer.otherlink")}</TextElement>
           <div className="flex flex-col gap-3 text-lg">
             {otherLinks.map(({ href, label }) => (
               <a href={href} target="_blank" className="text-white hover:text-secondary">
@@ -108,9 +104,7 @@ export function SiteFooter({ lang }: FooterProps) {
         </motion.div>
 
         <motion.div variants={itemVariants}>
-          <h3 className="font-semibold mb-4 text-lg text-secondary">
-            {t("nav.contact")}
-          </h3>
+        <TextElement variant="titleblog" className="font-semibold text-lg text-secondary mb-4"> {t("nav.contact")}</TextElement>
           <div className="flex flex-col gap-3 text-lg">
             {contacts.map(({ icon: Icon, text, href }, index) => (
               <div key={index} className="flex items-start gap-2 text-white">
