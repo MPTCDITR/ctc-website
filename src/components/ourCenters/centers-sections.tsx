@@ -44,8 +44,9 @@ export function CenterLocations({ translations }: CenterLocationsProps) {
           <Card className="w-full aspect-square lg:aspect-[16/9] bg-gray-200">
             <iframe
               src="https://www.google.com/maps/d/u/0/embed?mid=1oXXkivO9_Cx8KyA2kAjlhWqoEK_DbuM&ehbc=2E312F&noprof=1"
-              className="w-full h-full"
-            ></iframe>
+              className="w-full h-full" title="Google Map: Community Tech Center"
+            >
+            </iframe>
           </Card>
         </motion.div>
       </motion.section>

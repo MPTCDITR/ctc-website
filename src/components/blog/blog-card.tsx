@@ -1,6 +1,5 @@
 import React from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { Card} from "@/components/ui/card";
 import { formatDate } from "@/lib/utils";
 import { motion } from "framer-motion";
 import TextElement from "@/components/text-element/TextElement";

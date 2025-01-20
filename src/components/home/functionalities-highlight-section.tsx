@@ -87,7 +87,7 @@ export function FunctionalitiesHighlights({
                     </div>
                   </div>
                   <TextElement
-                    variant="title"
+                    variant="titleblog"
                     className="text-xl font-bold mb-4 text-primary"
                   >
                     {t(service.title)}
