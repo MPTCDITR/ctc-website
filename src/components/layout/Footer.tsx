@@ -4,6 +4,7 @@ import CTCLogo from "@/assets/logo/ctc-logo.svg";
 import { useTranslations } from "@/i18n/utils";
 import type { SupportedLanguage } from "@/i18n/ui";
 import TextElement from "../text-element/TextElement";
+import Cambodia from "@/assets/footer/cambodia-cities.svg";
 
 interface FooterProps {
   lang: SupportedLanguage;
@@ -60,12 +61,23 @@ export function SiteFooter({ lang }: FooterProps) {
 
   return (
     <motion.footer
-      className="bg-primary"
+      className="bg-primary bg-center relative overflow-hidden"
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
     >
+        <div 
+        className="absolute inset-0 pointer-events-none opacity-30"
+        aria-hidden="true"
+      >
+        <img 
+          src={Cambodia.src}
+          alt="" // Empty alt text since this is decorative
+          className="w-full h-full object-cover"
+          loading="lazy"
+        />
+      </div>
       <div className="container py-12 grid grid-cols-1 md:grid-cols-4 md:gap-2 lg:gap-8 gap-12">
         <motion.div variants={itemVariants}>
           <div className="rounded-full mb-4 flex justify-center lg:justify-start">
@@ -118,7 +130,10 @@ export function SiteFooter({ lang }: FooterProps) {
             ))}
           </div>
         </motion.div>
+       
+      {/* </div> */}
       </div>
+     
     </motion.footer>
   );
 }
