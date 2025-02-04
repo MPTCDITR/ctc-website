@@ -68,7 +68,7 @@ export function SiteFooter({ lang }: FooterProps) {
       viewport={{ once: true }}
     >
         <div 
-        className="absolute inset-0 pointer-events-none opacity-30"
+        className="absolute inset-0 pointer-events-none opacity-25"
         aria-hidden="true"
       >
         <img 
@@ -97,6 +97,7 @@ export function SiteFooter({ lang }: FooterProps) {
                 key={href}
                 href={href}
                 className="text-white hover:text-secondary"
+                style={{ WebkitTextStroke: " black" }}
               >
                 {t(label)}
               </a>
@@ -108,7 +109,7 @@ export function SiteFooter({ lang }: FooterProps) {
         <TextElement variant="titleblog" className="font-semibold text-lg text-secondary mb-4">{t("footer.otherlink")}</TextElement>
           <div className="flex flex-col gap-3 text-lg">
             {otherLinks.map(({ href, label }) => (
-              <a href={href} target="_blank" className="text-white hover:text-secondary">
+              <a href={href} target="_blank" className="text-white hover:text-secondary outline-black">
                 {t(label)}
               </a>
             ))}
@@ -122,7 +123,7 @@ export function SiteFooter({ lang }: FooterProps) {
               <div key={index} className="flex items-start gap-2 text-white">
                 <Icon className="h-4 min-w-4 mt-1" />
                 { href 
-                  ? (<a href={href} target="_blank" rel="noreferrer" className="hover:text-secondary"><span> {t(text)}</span></a>) 
+                  ? (<a href={href} target="_blank" rel="noreferrer" className="hover:text-secondary outline-black"><span> {t(text)}</span></a>) 
                   : (<span> {t(text)}</span>) 
                 }
                 
