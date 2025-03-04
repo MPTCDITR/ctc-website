@@ -4,8 +4,6 @@ import type {
   YouTubeVideoResponse,
 } from "./types";
 
-import { PUBLIC_YOUTUBE_API_KEY, PUBLIC_PLAYLIST_ID } from "astro:env/client";
-
 function formatDuration(isoDuration: string): string {
   const match = isoDuration.match(/PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?/);
   if (!match) return "";
