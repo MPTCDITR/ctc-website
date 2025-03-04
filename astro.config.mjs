@@ -1,11 +1,11 @@
 // @ts-check
-import { defineConfig, envField } from 'astro/config';
-import mdx from '@astrojs/mdx';
-import sitemap from '@astrojs/sitemap';
+import { defineConfig } from "astro/config";
+import mdx from "@astrojs/mdx";
+import sitemap from "@astrojs/sitemap";
 
-import react from '@astrojs/react';
+import react from "@astrojs/react";
 
-import tailwind from '@astrojs/tailwind';
+import tailwind from "@astrojs/tailwind";
 
 import cloudflare from "@astrojs/cloudflare";
 
@@ -18,17 +18,21 @@ export default defineConfig({
   },
 
   integrations: [
-    mdx(), 
-    sitemap({i18n: {
-      locales: {
-        en: "en-US",
-        km: "km-KH",},
-      defaultLocale: "en",
-    },}), 
-    react(), 
+    mdx(),
+    sitemap({
+      i18n: {
+        locales: {
+          en: "en-US",
+          km: "km-KH",
+        },
+        defaultLocale: "en",
+      },
+    }),
+    react(),
     tailwind({
       applyBaseStyles: false,
-    }),],
+    }),
+  ],
 
   i18n: {
     defaultLocale: "en",
@@ -50,19 +54,6 @@ export default defineConfig({
     contentIntellisense: true,
   },
 
-  env: {
-    schema: {
-      PUBLIC_PLAYLIST_ID: envField.string({
-        context: "client",
-        access: "public",
-      }),
-      PUBLIC_YOUTUBE_API_KEY: envField.string({
-        context:"client",
-        access:"public",
-      })
-    },
-    validateSecrets: true,
-  },
-
   adapter: cloudflare(),
 });
+

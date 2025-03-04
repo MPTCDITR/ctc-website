@@ -17,14 +17,26 @@ function formatDuration(isoDuration: string): string {
   return `${hours}${minutes}${seconds}`;
 }
 
-const key_youtube = PUBLIC_YOUTUBE_API_KEY;
-const playlistId = PUBLIC_PLAYLIST_ID;
+export async function fetchPlaylistVideos(
+  key_youtube?: string,
+  playlistId?: string
+): Promise<Video[]> {
+  if (!key_youtube || !playlistId) {
+    console.error("Missing YouTube API key or Playlist ID");
+    return [];
+  }
 
-export async function fetchPlaylistVideos(): Promise<Video[]> {
   try {
     const playlistUrl = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=24&playlistId=${playlistId}&key=${key_youtube}`;
 
-    const playlistRes = await fetch(playlistUrl);
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 10000);
+
+    const playlistRes = await fetch(playlistUrl, {
+      signal: controller.signal,
+    });
+
+    clearTimeout(timeout);
 
     if (!playlistRes.ok) {
       console.error("YouTube API error:", await playlistRes.text());
@@ -78,3 +90,4 @@ export async function fetchPlaylistVideos(): Promise<Video[]> {
     return [];
   }
 }
+
