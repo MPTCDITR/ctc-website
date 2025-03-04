@@ -16,10 +16,19 @@ export const navigation = [
     children: [
       { label: "nav.center.ourctc", href: `/center/our-ctc` },
       { label: "nav.center.ourlocations", href: `/center/our-locations` },
-      { label: "nav.center.ourfunctionalities", href: `/center/our-functionalities` },
+      {
+        label: "nav.center.ourfunctionalities",
+        href: `/center/our-functionalities`,
+      },
     ],
   },
-  { href: `/blog/`, label: "nav.news" },
+  {
+    label: "nav.news",
+    children: [
+      { label: "nav.news-event", href: `/blog/` },
+      { label: "nav.news-media", href: `/videos/` },
+    ],
+  },
   { href: `/contact/`, label: "nav.contact" },
 ];
 

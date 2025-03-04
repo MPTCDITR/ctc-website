@@ -7,9 +7,12 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 interface Props {
   title: string;
   description?: string;
+  img?: string;
 }
+const { title, description, img } = Astro.props;
+const ImageURL = new URL(img ? img : "@/assets/logo/ctc-logo.svg", Astro.url)
+  .href;
 
-const { title, description } = Astro.props;
 import { getLangFromUrl } from "@/lib/i18n";
 import { ui, defaultLang } from "@/i18n/ui";
 import { getLocalizedRoutes, navigation } from "@/lib/route";
@@ -29,6 +32,7 @@ const currentPath = Astro.url.pathname;
     <BaseHead
       title={title || SITE_TITLE}
       description={description || SITE_DESCRIPTION}
+      ogImage={ImageURL}
     />
   </head>
   <body>

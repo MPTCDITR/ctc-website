@@ -6,12 +6,15 @@ import { removeLanguagePrefix } from "@/i18n/utils";
 interface Props {
   title: string;
   description: string;
-  image?: string;
+  ogImage?: string | undefined;
 }
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
+const { title, description, ogImage = CTCLogo.src } = Astro.props;
 
-const { title, description, image = CTCLogo.src } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
+const socialImageURL = new URL(ogImage ? ogImage : '@/assets/logo/ctc-logo.webp', Astro.url).href
+
+
 const currentLocale = Astro.currentLocale || "en";
 
 const pathWithoutLocale = removeLanguagePrefix(
@@ -22,7 +25,7 @@ const pathWithoutLocale = removeLanguagePrefix(
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-<link rel="icon" type="image/webp" href={image} />
+<link rel="icon" type="image/svg+xml" href={`/favicons.svg`} />
 <meta name="generator" content={Astro.generator} />
 <link rel="sitemap" href="/sitemap-index.xml" />
 <link rel="canonical" href={canonicalURL} />
@@ -72,7 +75,7 @@ const pathWithoutLocale = removeLanguagePrefix(
   content={`${title} | CTC - Cambodia Community Tech Center`}
 />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={new URL(image, Astro.url)} />
+<meta property="og:image" content={socialImageURL} />
 <meta property="og:site_name" content="CTC - Cambodia Community Tech Center" />
 <meta property="og:locale" content={Astro.currentLocale || "en"} />
 
@@ -84,7 +87,7 @@ const pathWithoutLocale = removeLanguagePrefix(
   content={`${title} | CTC - Cambodia Community Tech Center`}
 />
 <meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={new URL(image, Astro.url)} />
+<meta property="twitter:image" content={socialImageURL} />
 
 <script type="application/ld+json">
 {`{

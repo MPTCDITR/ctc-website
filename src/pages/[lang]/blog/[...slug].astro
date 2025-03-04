@@ -26,6 +26,7 @@ const lang = getLangFromUrl(Astro.url);
 <Layout
   title={`${entry.data.title} - Community Tech Centers`}
   description={entry.data.description}
+  img={entry.data.image?.src}
 >
   <BlogContent
     title={entry.data.title}
