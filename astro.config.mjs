@@ -7,12 +7,16 @@ import react from '@astrojs/react';
 
 import tailwind from '@astrojs/tailwind';
 
+import cloudflare from "@astrojs/cloudflare";
+
 // https://astro.build/config
 export default defineConfig({
   site: process.env.PUBLIC_SITE_URL || "http://localhost:4321",
+
   server: {
     host: "::",
   },
+
   integrations: [
     mdx(), 
     sitemap({i18n: {
@@ -41,9 +45,11 @@ export default defineConfig({
   prefetch: {
     prefetchAll: true,
   },
+
   experimental: {
     contentIntellisense: true,
   },
+
   env: {
     schema: {
       PUBLIC_PLAYLIST_ID: envField.string({
@@ -57,4 +63,6 @@ export default defineConfig({
     },
     validateSecrets: true,
   },
+
+  adapter: cloudflare(),
 });
