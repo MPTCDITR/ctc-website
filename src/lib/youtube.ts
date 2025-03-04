@@ -4,6 +4,8 @@ import type {
   YouTubeVideoResponse,
 } from "./types";
 
+import { PUBLIC_YOUTUBE_API_KEY, PUBLIC_PLAYLIST_ID } from "astro:env/client";
+
 function formatDuration(isoDuration: string): string {
   const match = isoDuration.match(/PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?/);
   if (!match) return "";
@@ -15,8 +17,8 @@ function formatDuration(isoDuration: string): string {
   return `${hours}${minutes}${seconds}`;
 }
 
-const key_youtube = import.meta.env.PUBLIC_YOUTUBE_API_KEY;
-const playlistId = import.meta.env.PUBLIC_PLAYLIST_ID;
+const key_youtube = PUBLIC_YOUTUBE_API_KEY;
+const playlistId = PUBLIC_PLAYLIST_ID;
 
 export async function fetchPlaylistVideos(): Promise<Video[]> {
   try {
