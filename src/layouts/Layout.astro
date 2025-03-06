@@ -3,6 +3,7 @@ import { Header } from "@/components/layout/Header";
 import { SiteFooter } from "@/components/layout/Footer";
 import BaseHead from "../components/BaseHead.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import CTCLogo from "@/assets/logo/ctc-logo.webp";
 
 interface Props {
   title: string;
@@ -10,7 +11,7 @@ interface Props {
   img?: string;
 }
 const { title, description, img } = Astro.props;
-const ImageURL = new URL(img ? img : "@/assets/logo/ctc-logo.svg", Astro.url)
+const ImageURL = new URL(img ? img : CTCLogo.src, Astro.url)
   .href;
 
 import { getLangFromUrl } from "@/lib/i18n";
