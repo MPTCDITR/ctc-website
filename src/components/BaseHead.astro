@@ -6,13 +6,13 @@ import { removeLanguagePrefix } from "@/i18n/utils";
 interface Props {
   title: string;
   description: string;
-  ogImage?: string | undefined;
+  ogImage: string;
 }
 
 const { title, description, ogImage = CTCLogo.src } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
-const socialImageURL = new URL(ogImage ? ogImage : CTCLogo.src, Astro.url).href
+const socialImageURL = new URL(ogImage ? ogImage : CTCLogo.src, Astro.url).href;
 
 
 const currentLocale = Astro.currentLocale || "en";
