@@ -12,7 +12,7 @@ interface Props {
 const { title, description, ogImage = CTCLogo.src } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
-const socialImageURL = new URL(ogImage ? ogImage : '@/assets/logo/ctc-logo.webp', Astro.url).href
+const socialImageURL = new URL(ogImage ? ogImage : CTCLogo.src, Astro.url).href
 
 
 const currentLocale = Astro.currentLocale || "en";
