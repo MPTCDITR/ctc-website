@@ -163,14 +163,14 @@ export function SiteFooter({ lang }: FooterProps) {
                   <a
                     href="https://www.youtube.com/@MPTCCommunityTechCenter "
                     target="_blank"
-                    className="p-2 rounded-full bg-primary text-white hover:bg-secondary transition-colors"
+                    className="p-2 rounded-full text-white bg-secondary hover:bg-secondary/80 transition-colors"
                   >
-                    <Youtube className="w-5 h-5" />
+                    <Youtube className="w-5 h-5"/>
                   </a>
                   <a
                     href="https://www.tiktok.com/@community.tech.center"
                     target="_blank"
-                    className="p-2 rounded-full bg-primary text-white hover:bg-secondary transition-colors"
+                    className="p-2 rounded-full bg-secondary hover:bg-secondary/80 transition-colors"
                   >
                     <img
                         src={tiktok.src}
