@@ -1,4 +1,4 @@
-import { Link, MapPin, Youtube ,Facebook, Send, Instagram} from "lucide-react";
+import { Link, MapPin, Youtube} from "lucide-react";
 import { motion } from "framer-motion";
 import CTCLogo from "@/assets/logo/ctc-logo.svg";
 import { useTranslations } from "@/i18n/utils";
@@ -46,16 +46,6 @@ const contacts = [
   },
 ];
 
-const social = [
-  {
-    icon: Youtube,
-    href:"https://www.youtube.com/@MPTCCommunityTechCenter", 
-  },
-  {
-    icon: Youtube,
-    href:"https://www.youtube.com/@MPTCCommunityTechCenter", 
-  },
-];
 
 const otherLinks = [
   {
@@ -143,15 +133,6 @@ export function SiteFooter({ lang }: FooterProps) {
                 </div>
               ))}
             </div>
-            {/* <div className="flex gap-3 ">
-              {social.map(({ icon: Icon, href }, index) => (
-                <div key={index} className="flex items-start gap-2 text-white">
-                  <a href={href} target="_blank"  className="p-2 rounded-full border text-white hover:text-white hover:bg-secondary transition-colors">
-                  <Icon className="size-6 " />
-                </a>
-                </div>
-              ))}
-            </div> */}
 
               <motion.div
                   className="flex gap-2"
@@ -159,7 +140,6 @@ export function SiteFooter({ lang }: FooterProps) {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.5 }}
                 >
-                  
                   <a
                     href="https://www.youtube.com/@MPTCCommunityTechCenter "
                     target="_blank"
@@ -182,8 +162,7 @@ export function SiteFooter({ lang }: FooterProps) {
                 </motion.div>
                 </div>
               </motion.div>   
-       
-      {/* </div> */}
+    
       </div>
      
     </motion.footer>
