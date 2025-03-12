@@ -1,10 +1,11 @@
-import { Link, MapPin } from "lucide-react";
+import { Link, MapPin, Youtube} from "lucide-react";
 import { motion } from "framer-motion";
 import CTCLogo from "@/assets/logo/ctc-logo.svg";
 import { useTranslations } from "@/i18n/utils";
 import type { SupportedLanguage } from "@/i18n/ui";
 import TextElement from "../text-element/TextElement";
 import Cambodia from "@/assets/footer/cambodia-cities.svg";
+import tiktok from "@/assets/footer/tiktok.svg";
 
 interface FooterProps {
   lang: SupportedLanguage;
@@ -44,6 +45,7 @@ const contacts = [
     text: "footer.address",
   },
 ];
+
 
 const otherLinks = [
   {
@@ -118,21 +120,49 @@ export function SiteFooter({ lang }: FooterProps) {
 
         <motion.div variants={itemVariants}>
         <TextElement variant="titleblog" className="font-semibold text-lg text-secondary mb-4"> {t("nav.contact")}</TextElement>
-          <div className="flex flex-col gap-3 text-lg">
-            {contacts.map(({ icon: Icon, text, href }, index) => (
-              <div key={index} className="flex items-start gap-2 text-white">
-                <Icon className="h-4 min-w-4 mt-1" />
-                { href 
-                  ? (<a href={href} target="_blank" rel="noreferrer" className="hover:text-secondary outline-black"><span> {t(text)}</span></a>) 
-                  : (<span> {t(text)}</span>) 
-                }
-                
-              </div>
-            ))}
-          </div>
-        </motion.div>
-       
-      {/* </div> */}
+          <div className="grid gap-2">
+            <div className="flex flex-col gap-3 text-lg">
+              {contacts.map(({ icon: Icon, text, href }, index) => (
+                <div key={index} className="flex items-start gap-2 text-white">
+                  <Icon className="h-4 min-w-4 mt-1" />
+                  { href 
+                    ? (<a href={href} target="_blank" rel="noreferrer" className="hover:text-secondary outline-black"><span> {t(text)}</span></a>) 
+                    : (<span> {t(text)}</span>) 
+                  }
+                  
+                </div>
+              ))}
+            </div>
+
+              <motion.div
+                  className="flex gap-2"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.5 }}
+                >
+                  <a
+                    href="https://www.youtube.com/@MPTCCommunityTechCenter "
+                    target="_blank"
+                    className="p-2 rounded-full text-white bg-secondary hover:bg-secondary/80 transition-colors"
+                  >
+                    <Youtube className="w-5 h-5"/>
+                  </a>
+                  <a
+                    href="https://www.tiktok.com/@community.tech.center"
+                    target="_blank"
+                    className="p-2 rounded-full bg-secondary hover:bg-secondary/80 transition-colors"
+                  >
+                    <img
+                        src={tiktok.src}
+                        alt="Social"
+                        className="size-5"
+                        style={{ objectFit: "cover" }}
+                    />
+                  </a>
+                </motion.div>
+                </div>
+              </motion.div>   
+    
       </div>
      
     </motion.footer>
