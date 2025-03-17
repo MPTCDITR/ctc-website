@@ -1,5 +1,5 @@
 ---
-title: teaching activities for students at the C.T.C. to promote digital adoption in the community.
+title: Teaching activities for students at the C.T.C. to promote digital adoption in the community.
 description: Pictures show teaching activities for students at the C.T.C. to promote digital adoption in the community.
 date: 2025-03-14
 author: Ministry of Posts and Telecommunications
