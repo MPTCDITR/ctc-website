@@ -1,5 +1,5 @@
 ---
-title: Community Technology Center at Sok An Khvao High School, Takeo Province.
+title: Community Technology Center at Sok An Khvav High School, Takeo Province.
 description: Pictures of the Community Technology Center in Sok An Khvav on Monday, March 21th.
 date: 2025-03-21
 author: Ministry of Posts and Telecommunications
