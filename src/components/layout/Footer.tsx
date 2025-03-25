@@ -1,4 +1,4 @@
-import { Link, MapPin, Youtube} from "lucide-react";
+import { Facebook, Link, MapPin, Youtube} from "lucide-react";
 import { motion } from "framer-motion";
 import CTCLogo from "@/assets/logo/ctc-logo.svg";
 import { useTranslations } from "@/i18n/utils";
@@ -140,6 +140,13 @@ export function SiteFooter({ lang }: FooterProps) {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.5 }}
                 >
+                <a
+                    href="https://www.facebook.com/profile.php?id=61574204880819 "
+                    target="_blank"
+                    className="p-2 rounded-full text-white bg-secondary hover:bg-secondary/80 transition-colors"
+                  >
+                    <Facebook className="w-5 h-5"/>
+                  </a>
                   <a
                     href="https://www.youtube.com/@MPTCCommunityTechCenter "
                     target="_blank"
