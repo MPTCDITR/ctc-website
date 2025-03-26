@@ -1,5 +1,5 @@
 ---
-title: Community Technology Center cleaning activity by students of Sok An Tonloab High School High School, Takeo Province.
+title: Community Technology Center cleaning activity by students of Sok An Tonloab High School, Takeo Province.
 description: Community Technology Center clean-up activity by students of Sok An Tonloab High School, Takeo Province on March 21th, 2025.
 date: 2025-03-21
 author: Ministry of Posts and Telecommunications
