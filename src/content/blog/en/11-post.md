@@ -7,7 +7,7 @@ image: "src/assets/news-and-events/article-11/thumbnail.webp"
 tags: []
 ---
 
-Takeo Province, March 21, 2025: Activities to showcase the achievements of the Ministry of Posts and Telecommunications, including the Community Tech Center, during the 9th River Festival in Takeo Province, with the high presence of His Majesty the Prime Minister of the Kingdom of Cambodia, leaders of ministries, institutions, and many national and international guests.
+Takeo Province, March 21st, 2025: Activities to showcase the achievements of the Ministry of Posts and Telecommunications, including the Community Tech Center, during the 9th River Festival in Takeo Province, with the high presence of His Majesty the Prime Minister of the Kingdom of Cambodia, leaders of ministries, institutions, and many national and international guests.
 
 ![photo 3](src/assets/news-and-events/article-11/photo-1.jpg)
 ![photo 4](src/assets/news-and-events/article-11/photo-2.webp)
