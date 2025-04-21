@@ -258,7 +258,7 @@ export const ui: Record<string, Record<string, string>> = {
     "ctc.teaminfo.email": "អ៊ីម៉ែល",
     "btn.learnmore": "ស្វែងយល់បន្ថែម →",
     "btn.next": "ទំព័របន្ទាប់",
-    "btn.previous": "ទំព័រ មុន",
+    "btn.previous": "ទំព័រមុន",
     contact: "ព័ត៌មានទំនាក់ទំនង",
     "blog.readmore": "អានបន្ថែម",
     "blog.list.description":
