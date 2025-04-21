@@ -127,7 +127,7 @@ export function CenterTeamInfo({
                   <TableHead>{t("ctc.teaminfo.title")}</TableHead>
                   <TableHead>{t("ctc.teaminfo.name")}</TableHead>
                   <TableHead>{t("ctc.teaminfo.role")}</TableHead>
-                  <TableHead>{t("ctc.teaminfo.phoneNumber")}</TableHead>
+                  <TableHead className="hidden">{t("ctc.teaminfo.phoneNumber")}</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -137,7 +137,7 @@ export function CenterTeamInfo({
                       <TableCell>{member.title}</TableCell>
                       <TableCell>{member.name}</TableCell>
                       <TableCell>{member.role}</TableCell>
-                      <TableCell>{member.phoneNumber}</TableCell>
+                      <TableCell className="hidden">{member.phoneNumber}</TableCell>
                     </TableRow>
                   ))
                 ) : (
