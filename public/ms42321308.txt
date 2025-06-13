@@ -1,0 +1,5 @@
+﻿{
+  "Description": "Domain ownership verification file for Microsoft 365 - place in the website root",
+  "Domain": "ctc.edu.kh",
+  "Id": "c9c0b361-00d7-4ce1-b00b-bdfc947054b2"
+}
