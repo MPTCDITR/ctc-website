@@ -23,7 +23,11 @@ const lang = getLangFromUrl(Astro.url);
 const translations = ui[lang];
 ---
 
-<Layout title={`${entry.data.name} - Community Tech Centers`}>
+<Layout
+  pageTitle={`${entry.data.name} - Community Tech Centers`}
+  description={entry.data.description}
+  type="article"
+>
   <CenterTeamInfo
     centerName={entry.data.name}
     centerDescription={entry.data.description}

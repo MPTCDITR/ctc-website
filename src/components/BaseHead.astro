@@ -1,40 +1,60 @@
 ---
 import "../styles/global.css";
 import CTCLogo from "@/assets/logo/ctc-logo.webp";
-import { languages, type SupportedLanguage } from "@/i18n/ui";
+import { languages, type SupportedLanguage, defaultLang } from "@/i18n/ui";
 import { removeLanguagePrefix } from "@/i18n/utils";
+
 interface Props {
-  title: string;
+  pageTitle: string; 
   description: string;
-  ogImage: string;
+  ogImage?: string; 
+  type?: 'website' | 'article'; 
+  customCanonicalUrl?: string;
 }
 
-const { title, description, ogImage = CTCLogo.src } = Astro.props;
+const {
+  pageTitle,
+  description,
+  ogImage, 
+  type = 'website',
+  customCanonicalUrl,
+} = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
-const socialImageURL = new URL(ogImage ? ogImage : CTCLogo.src, Astro.url).href;
+if (!Astro.site) {
+  throw new Error('Astro.site is not defined. Please set it in astro.config.mjs');
+}
 
+const socialImageURL = new URL(ogImage || CTCLogo.src, Astro.site).href;
 
-const currentLocale = Astro.currentLocale || "en";
+const canonicalURL = customCanonicalUrl || new URL(Astro.url.pathname, Astro.site).href;
 
+const currentLocale = Astro.currentLocale || defaultLang; 
 const pathWithoutLocale = removeLanguagePrefix(
   Astro.url.pathname,
   currentLocale as SupportedLanguage
 );
+
+const SITE_NAME = "C.T.C Cambodia Community Tech Center";
+const SITE_TAGLINE = "ម.ប.ស មជ្ឈមណ្ឌលបច្ចេកវិទ្យាសហគមន៍កម្ពុជា";
+const FULL_SITE_NAME = `${SITE_NAME} - ${SITE_TAGLINE}`;
+const SITE_URL = Astro.site.href; // Use Astro.site.href for JSON-LD URL
+const SITE_LOGO_URL = new URL('/assets/logo/ctc-logo-blue-subtitle.webp', Astro.site).href; // Use a static path for JSON-LD logo
+
 ---
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-<link rel="icon" type="image/svg+xml" href={`/favicons.svg`} />
+<link rel="icon" type="image/svg+xml" href="/favicons.svg" />
 <meta name="generator" content={Astro.generator} />
+
 <link rel="sitemap" href="/sitemap-index.xml" />
+
 <link rel="canonical" href={canonicalURL} />
-<title>{title} | CTC Cambodia Community Tech Center - មបស មជ្ឈមណ្ឌលបច្ចេកវិទ្យាសហគមន៍កម្ពុជា</title>
-<meta
-  name="title"
-  content={`${title} | CTC Cambodia Community Tech Center - មបស មជ្ឈមណ្ឌលបច្ចេកវិទ្យាសហគមន៍កម្ពុជា`}
-/>
+
+<title>{pageTitle} | {FULL_SITE_NAME}</title>
+
 <meta name="description" content={description} />
+
 <meta name="author" content="Community Tech Center" />
 <meta
   name="keywords"
@@ -50,8 +70,12 @@ const pathWithoutLocale = removeLanguagePrefix(
     />
   ))
 }
+<link
+  rel="alternate"
+  hreflang="x-default"
+  href={new URL(`/${defaultLang}${pathWithoutLocale}`, Astro.site).href}
+/>
 
-<!-- Font preloads -->
 <link
   rel="preload"
   href="/fonts/kantumruypro.woff"
@@ -67,52 +91,43 @@ const pathWithoutLocale = removeLanguagePrefix(
   crossorigin
 />
 
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
-<meta property="og:url" content={Astro.url} />
-<meta
-  property="og:title"
-  content={`${title} | CTC - Cambodia Community Tech Center`}
-/>
+<meta property="og:type" content={type} />
+<meta property="og:url" content={Astro.url.href} />
+<meta property="og:title" content={`${pageTitle} | ${SITE_NAME}`} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={socialImageURL} />
-<meta property="og:site_name" content="CTC - Cambodia Community Tech Center" />
-<meta property="og:locale" content={Astro.currentLocale || "en"} />
+<meta property="og:site_name" content={SITE_NAME} />
+<meta property="og:locale" content={Astro.currentLocale || defaultLang} />
 
-<!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content={Astro.url} />
-<meta
-  property="twitter:title"
-  content={`${title} | CTC - Cambodia Community Tech Center`}
-/>
+<meta property="twitter:url" content={Astro.url.href} />
+<meta property="twitter:title" content={`${pageTitle} | ${SITE_NAME}`} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={socialImageURL} />
-
 <script is:inline type="application/ld+json">
 {`{
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "${title}",
-  "url": "${Astro.site}",
-  "logo": "https://ctc-dev.domnerka.com/_astro/ctc-logo-blue-subtitle.CbJiC6p6.webp",
-    "sameAs": [
-      "https://www.facebook.com/CTCCambodia",
-      "https://twitter.com/CTCCambodia",
-      "https://www.linkedin.com/company/ctc-cambodia"
-    ],
+  "name": "${SITE_NAME}",
+  "url": "${SITE_URL}",
+  "logo": "${SITE_LOGO_URL}",
   "description": "${description}",
+  "sameAs": [
+    "https://www.facebook.com/CTCCambodia",
+    "https://twitter.com/CTCCambodia",
+    "https://www.linkedin.com/company/ctc-cambodia"
+  ],
   "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Phnom Penh",
-      "addressCountry": "Cambodia"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+855-12345678",
-      "contactType": "Community Tech Center Cambodia",
-      "areaServed": "KH",
-      "availableLanguage": "English"
-    }
+    "@type": "PostalAddress",
+    "addressLocality": "Phnom Penh",
+    "addressCountry": "Cambodia"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+855-12345678",
+    "contactType": "Community Tech Center Cambodia",
+    "areaServed": "KH",
+    "availableLanguage": ["en", "km"]
+  }
 }`}
 </script>
