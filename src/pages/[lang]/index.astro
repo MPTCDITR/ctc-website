@@ -9,6 +9,7 @@ import { LatestBlogs } from "@/components/home/news-latest-section";
 import { getLangFromUrl } from "@/lib/i18n";
 import { getBlogPosts } from "@/lib/blog";
 import { FunctionalitiesHighlights } from "@/components/home/functionalities-highlight-section";
+import { HOME_PAGE_TITLE } from "@/consts";
 
 export async function getStaticPaths() {
   return Object.keys(languages).map((lang) => ({
@@ -21,7 +22,11 @@ const translations = ui[lang];
 const posts = await getBlogPosts(lang);
 ---
 
-<Layout title="ទំព័រដើម - Home">
+<Layout
+  pageTitle={HOME_PAGE_TITLE.title}
+  description={HOME_PAGE_TITLE.description}
+  type="website"
+>
   <Hero lang={lang} translations={translations} client:load />
   <AboutSection lang={lang} translations={translations} />
   <FunctionalitiesHighlights

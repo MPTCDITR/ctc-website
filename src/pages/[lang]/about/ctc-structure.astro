@@ -4,6 +4,7 @@ import { languages, ui } from "@/i18n/ui";
 import { StructureCtc } from "@/components/about/ctc-structure.tsx";
 import { getLangFromUrl } from "@/lib/i18n";
 import { getNationalBoardMembers } from "@/lib/nationalBoardMembers";
+import { CTC_STRUCTURE_PAGE_TITLE } from "@/consts";
 
 export async function getStaticPaths() {
   return Object.keys(languages).map((lang) => ({
@@ -16,6 +17,15 @@ const translations = ui[lang];
 const nationalBoardMembers = await getNationalBoardMembers(lang);
 ---
 
-<Layout title="រចនាសម្ព័ន្ធ ម.ប.ស. - Our Center ">
-  <StructureCtc lang={lang} translations={translations} nationalBoardMembers={nationalBoardMembers} client:load />
+<Layout
+  pageTitle={CTC_STRUCTURE_PAGE_TITLE.title}
+  description={CTC_STRUCTURE_PAGE_TITLE.description}
+  type="website"
+>
+  <StructureCtc
+    lang={lang}
+    translations={translations}
+    nationalBoardMembers={nationalBoardMembers}
+    client:load
+  />
 </Layout>

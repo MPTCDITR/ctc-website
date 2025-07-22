@@ -3,6 +3,9 @@ import Layout from "@/layouts/Layout.astro";
 import { languages, ui } from "@/i18n/ui";
 import { OperationPrinciple } from "@/components/principle-operation/our-operations";
 import { getLangFromUrl } from "@/lib/i18n";
+
+import { CTC_FUNCTIONALITY_PAGE_TITLE } from "@/consts";
+
 export async function getStaticPaths() {
   return Object.keys(languages).map((lang) => ({
     params: { lang },
@@ -13,6 +16,10 @@ const lang = getLangFromUrl(Astro.url);
 const translations = ui[lang];
 ---
 
-<Layout title="មុខងាររបស់យើង - Our provided services">
+<Layout
+  pageTitle={CTC_FUNCTIONALITY_PAGE_TITLE.title}
+  description={CTC_FUNCTIONALITY_PAGE_TITLE.description}
+  type="website"
+>
   <OperationPrinciple translations={translations} client:load />
 </Layout>

@@ -1,48 +1,181 @@
 ---
 import "../styles/global.css";
 import CTCLogo from "@/assets/logo/ctc-logo.webp";
-import { languages, type SupportedLanguage } from "@/i18n/ui";
+import LogoCTC from "@/assets/logo/ctc-logo-blue-subtitle.webp";
+
+import { languages, type SupportedLanguage, defaultLang } from "@/i18n/ui";
 import { removeLanguagePrefix } from "@/i18n/utils";
+
 interface Props {
-  title: string;
+  pageTitle: string;
   description: string;
-  ogImage: string;
+  ogImage?: string;
+  type?: "website" | "article";
+  customCanonicalUrl?: string;
 }
 
-const { title, description, ogImage = CTCLogo.src } = Astro.props;
+const {
+  pageTitle,
+  description,
+  ogImage,
+  type = "website",
+  customCanonicalUrl,
+} = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
-const socialImageURL = new URL(ogImage ? ogImage : CTCLogo.src, Astro.url).href;
+if (!Astro.site) {
+  throw new Error(
+    "Astro.site is not defined. Please set it in astro.config.mjs"
+  );
+}
 
+const socialImageURL = new URL(ogImage || CTCLogo.src, Astro.site).href;
 
-const currentLocale = Astro.currentLocale || "en";
+const canonicalURL =
+  customCanonicalUrl || new URL(Astro.url.pathname, Astro.site).href;
 
+const currentLocale = Astro.currentLocale || defaultLang;
 const pathWithoutLocale = removeLanguagePrefix(
   Astro.url.pathname,
   currentLocale as SupportedLanguage
 );
+
+const SITE_NAME = "C.T.C Cambodia Community Tech Center";
+const SITE_TAGLINE = "ម.ប.ស មជ្ឈមណ្ឌលបច្ចេកវិទ្យាសហគមន៍កម្ពុជា";
+const FULL_SITE_NAME = `${SITE_NAME} - ${SITE_TAGLINE}`;
+const SITE_URL = Astro.site.href;
+const SITE_LOGO_URL = new URL(LogoCTC.src, Astro.site).href;
+
+const webSiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: SITE_NAME,
+  url: SITE_URL,
+  logo: SITE_LOGO_URL,
+  description: description,
+  sameAs: [
+    "https://www.facebook.com/CTCCambodia",
+    "https://twitter.com/CTCCambodia",
+    "https://www.linkedin.com/company/ctc-cambodia",
+  ],
+
+  breadcrumb: {
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home Page - ទំព័រដើម",
+        item: `${new URL(currentLocale, Astro.site).href}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "About Us - អំពីយើង",
+        item: `${new URL(currentLocale, Astro.site).href}/about/about-us`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Mission and Vision - បេសកកម្ម និង ទស្សនៈ",
+        item: `${new URL(currentLocale, Astro.site).href}/about/mission-vision`,
+      },
+      {
+        "@type": "ListItem",
+        position: 4,
+        name: "CTC Structure - រចនាសម្ព័ន្ធ CTC",
+        item: `${new URL(currentLocale, Astro.site).href}/about/ctc-structure`,
+      },
+      {
+        "@type": "ListItem",
+        position: 5,
+        name: "Our CTC - មជ្ឈមណ្ឌលបច្ចេកវិទ្យាសហគមន៍",
+        item: `${new URL(currentLocale, Astro.site).href}/center/our-ctc`,
+      },
+      {
+        "@type": "ListItem",
+        position: 6,
+        name: "Our Locations - ទីតាំងរបស់យើង",
+        item: `${new URL(currentLocale, Astro.site).href}/center/our-locations/`,
+      },
+      {
+        "@type": "ListItem",
+        position: 7,
+        name: "Our Functionalities - មុខងាររបស់យើង",
+        item: `${new URL(currentLocale, Astro.site).href}center/our-functionalities/`,
+      },
+      {
+        "@type": "ListItem",
+        position: 8,
+        name: "Blog - ប្លុក",
+        item: `${new URL(currentLocale, Astro.site).href}/blog`,
+      },
+    ],
+  },
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Phnom Penh",
+    addressCountry: "Cambodia",
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+855-12345678",
+    contactType: "Community Tech Center Cambodia",
+    areaServed: "KH",
+    availableLanguage: ["en", "km"],
+  },
+};
+
+const webSiteSchemaJSON = JSON.stringify(webSiteSchema, null, 2);
 ---
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-<link rel="icon" type="image/svg+xml" href={`/favicons.svg`} />
+<link rel="icon" type="image/svg+xml" href="/favicons.svg" />
 <meta name="generator" content={Astro.generator} />
-<link rel="sitemap" href="/sitemap-index.xml" />
-<link rel="canonical" href={canonicalURL} />
-<title>{title} | CTC Cambodia Community Tech Center - មបស មជ្ឈមណ្ឌលបច្ចេកវិទ្យាសហគមន៍កម្ពុជា</title>
-<meta
-  name="title"
-  content={`${title} | CTC Cambodia Community Tech Center - មបស មជ្ឈមណ្ឌលបច្ចេកវិទ្យាសហគមន៍កម្ពុជា`}
+
+<link
+  rel="preload"
+  href="/fonts/kantumruypro.woff2"
+  as="font"
+  type="font/woff2"
+  crossorigin
 />
+<link
+  rel="preload"
+  href="/fonts/kantumruypro.woff"
+  as="font"
+  type="font/woff"
+  crossorigin
+/>
+
+<link rel="sitemap" href="/sitemap-index.xml" />
+<link
+  rel="alternate"
+  type="application/rss+xml"
+  title="Community Tech Center- News and Events"
+  href={new URL("rss.xml", Astro.site)}
+/>
+<link
+  rel="alternate"
+  type="application/rss+xml"
+  title="C.T.C Cambodia Community Tech Center, CTC"
+  href={new URL("rss-centers.xml", Astro.site)}
+/>
+
+<link rel="canonical" href={canonicalURL} />
+
+<title>{pageTitle} | {FULL_SITE_NAME}</title>
+
 <meta name="description" content={description} />
+
 <meta name="author" content="Community Tech Center" />
 <meta
   name="keywords"
-  content="CTC, Cambodia Community Tech Center, community technology, digital literacy, tech education, community tech Cambodia, tech education, community learning, khmer tech community, cambodia digital transformation, digital school, មជ្ឈមណ្ឌលបច្ចេកវិទ្យាសហគមន៍, សហគមន៍កម្ពុជា, មជ្ឈមណ្ឌលបច្ចេកវិទ្យាស, មបស"
+  content="CTC, C.T.C, Cambodia Community Tech Center,Tech Center, Tech Community, community technology, digital literacy, tech education, community tech Cambodia, tech education, community learning, khmer tech community, cambodia digital transformation, digital school, មជ្ឈមណ្ឌលបច្ចេកវិទ្យាសហគមន៍, សហគមន៍កម្ពុជា, មជ្ឈមណ្ឌលបច្ចេកវិទ្យាស, មបស"
 />
 
 {
-  Object.values(languages).map((lang) => (
+  Object.keys(languages).map((lang) => (
     <link
       rel="alternate"
       hreflang={lang}
@@ -50,8 +183,12 @@ const pathWithoutLocale = removeLanguagePrefix(
     />
   ))
 }
+<link
+  rel="alternate"
+  hreflang="x-default"
+  href={new URL(`/${defaultLang}${pathWithoutLocale}`, Astro.site).href}
+/>
 
-<!-- Font preloads -->
 <link
   rel="preload"
   href="/fonts/kantumruypro.woff"
@@ -67,52 +204,17 @@ const pathWithoutLocale = removeLanguagePrefix(
   crossorigin
 />
 
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
-<meta property="og:url" content={Astro.url} />
-<meta
-  property="og:title"
-  content={`${title} | CTC - Cambodia Community Tech Center`}
-/>
+<meta property="og:type" content={type} />
+<meta property="og:url" content={Astro.url.href} />
+<meta property="og:title" content={`${pageTitle} | ${SITE_NAME}`} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={socialImageURL} />
-<meta property="og:site_name" content="CTC - Cambodia Community Tech Center" />
-<meta property="og:locale" content={Astro.currentLocale || "en"} />
+<meta property="og:site_name" content={SITE_NAME} />
+<meta property="og:locale" content={Astro.currentLocale || defaultLang} />
 
-<!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content={Astro.url} />
-<meta
-  property="twitter:title"
-  content={`${title} | CTC - Cambodia Community Tech Center`}
-/>
+<meta property="twitter:url" content={Astro.url.href} />
+<meta property="twitter:title" content={`${pageTitle} | ${SITE_NAME}`} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={socialImageURL} />
-
-<script is:inline type="application/ld+json">
-{`{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "${title}",
-  "url": "${Astro.site}",
-  "logo": "https://ctc-dev.domnerka.com/_astro/ctc-logo-blue-subtitle.CbJiC6p6.webp",
-    "sameAs": [
-      "https://www.facebook.com/CTCCambodia",
-      "https://twitter.com/CTCCambodia",
-      "https://www.linkedin.com/company/ctc-cambodia"
-    ],
-  "description": "${description}",
-  "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Phnom Penh",
-      "addressCountry": "Cambodia"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+855-12345678",
-      "contactType": "Community Tech Center Cambodia",
-      "areaServed": "KH",
-      "availableLanguage": "English"
-    }
-}`}
-</script>
+<script is:inline type="application/ld+json" set:html={webSiteSchemaJSON} />

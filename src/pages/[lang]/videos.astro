@@ -4,6 +4,7 @@ import { fetchPlaylistVideos } from "@/lib/youtube";
 import { ui, languages } from "@/i18n/ui";
 import Layout from "@/layouts/Layout.astro";
 import { getLangFromUrl } from "@/lib/i18n";
+import { VIDEOS_PAGE_TITLE } from "@/consts";
 
 export async function getStaticPaths() {
   return Object.keys(languages).map((lang) => ({
@@ -20,7 +21,11 @@ const videos = await fetchPlaylistVideos(
 );
 ---
 
-<Layout title="វីដេអូ និង ការផ្សព្វផ្សាយ - Videos & Media">
+<Layout
+  pageTitle={VIDEOS_PAGE_TITLE.title}
+  description={VIDEOS_PAGE_TITLE.description}
+  type="website"
+>
   <VideoList
     videos={videos}
     lang={lang}
