@@ -175,7 +175,7 @@ const webSiteSchemaJSON = JSON.stringify(webSiteSchema, null, 2);
 />
 
 {
-  Object.values(languages).map((lang) => (
+  Object.keys(languages).map((lang) => (
     <link
       rel="alternate"
       hreflang={lang}
