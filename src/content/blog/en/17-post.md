@@ -1,6 +1,6 @@
 ---
 title: The Sisters of Code team conducted training at three Community Tech Center.  
-description: Takeo Province, On the afternoon of July 5, 2025, a team of three members from Sisters of Code conducted training on computer literacy at three Community Tech Centers, including Sok An Tram Khnar High School, Bun Rany Hun Sen Bati High School , and Hun Sen Muy Mithona High School, with a total of 34 participating students with 34 women.
+description: Takeo Province, On the afternoon of July 5, 2025, a team of three members from Sisters of Code conducted training on (Cybersecurity) at three Community Tech Centers, including Sok An Tram Khnar High School, Bun Rany Hun Sen Bati High School , and Hun Sen Muy Mithona High School, with a total of 34 participating students with 34 women.
 date: 2025-07-19
 author: Ministry of Posts and Telecommunications
 image: "src/assets/news-and-events/article-17/thumbnail.jpg"
