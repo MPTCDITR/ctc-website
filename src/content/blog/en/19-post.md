@@ -1,14 +1,14 @@
 ---
-title: H.E. Mao Sila chaired a meeting to monitor the progress of the working group responsible for constructing and operating the Community Tech Center at the Public University (Working Group of the Ministry of Posts and Telecommunications).
-description: Phnom Penh, On August 13, 2025, at the headquarters of the Ministry of Posts and Telecommunications (MPTC), His Excellency Mao Sila, the Under Secretary of State of MPTC, chaired a meeting to monitor the overall progress of the working group, with participation from a total of 13 members of the working group.
+title: H.E. Mao Sila led a meeting to monitor the progress of the working group in charge of building and launching Community Tech Centers in Public High Schools.
+description: Phnom Penh, On August 13, 2025, at the headquarters of the Ministry of Posts and Telecommunications (MPTC), H.E. Mao Sila, the Under Secretary of State of MPTC, led a meeting to monitor the overall progress of the working group, with participation from a total of 13 members of the working group.
 date: 2025-08-13
 author: Ministry of Posts and Telecommunications
 image: "src/assets/news-and-events/article-19/thumbnail.JPG"
 tags: []
 ---
-H.E. Mao Sila chaired a meeting to monitor the progress of the working group responsible for constructing and operating the Community Tech Center at the Public University (Working Group of the Ministry of Posts and Telecommunications).
+H.E. Mao Sila led a meeting to monitor the progress of the working group in charge of building and launching Community Tech Centers in Public High Schools (Working Group of the Ministry of Posts and Telecommunications).
 
-Phnom Penh: On August 13, 2025, at the headquarters of the Ministry of Posts and Telecommunications (MPTC), H.E. Mao Sila, the Under Secretary of State of MPTC, chaired a meeting to monitor the overall progress of the working group, with participation from a total of 13 members of the working group.
+Phnom Penh, On August 13, 2025, at the headquarters of the Ministry of Posts and Telecommunications (MPTC), H.E. Mao Sila, the Under Secretary of State of MPTC, led a meeting to monitor the overall progress of the working group, with participation from a total of 13 members of the working group.
 
 This meeting was organized with the aim of monitoring the operational progress, preparing study materials, training activities, site visits, future directions, and other issues. The assembly also discussed challenges, solutions, and various requests. Before concluding, His Excellency Mao Sila praised and expressed gratitude to the members of the working group for their high commitment to fulfilling their roles and responsibilities effectively, especially in implementing the high-level recommendations of the Minister.
 
