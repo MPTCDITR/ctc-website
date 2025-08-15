@@ -3,7 +3,7 @@ title: H.E. Mao Sila chaired a meeting to monitor the progress of the working gr
 description: Phnom Penh, On August 13, 2025, at the headquarters of the Ministry of Posts and Telecommunications (MPTC), His Excellency Mao Sila, the Under Secretary of State of MPTC, chaired a meeting to monitor the overall progress of the working group, with participation from a total of 13 members of the working group.
 date: 2025-08-13
 author: Ministry of Posts and Telecommunications
-image: "src/assets/news-and-events/article-19/thumbnail.jpg"
+image: "src/assets/news-and-events/article-19/thumbnail.JPG"
 tags: []
 ---
 H.E. Mao Sila chaired a meeting to monitor the progress of the working group responsible for constructing and operating the Community Tech Center at the Public University (Working Group of the Ministry of Posts and Telecommunications).
@@ -15,8 +15,8 @@ This meeting was organized with the aim of monitoring the operational progress, 
 It should also be noted that the Community Tech Center (CTC) has 18 locations throughout Takeo Province and provides training related to digital technology skills and postal services to citizens in the community, especially to students and the general public living in the area, with the aim of promoting digital human resource training, enhancing digital literacy, and reducing the digital divide in a supportive and innovative environment.
 
 
-![photo 3](src/assets/news-and-events/article-19/photo-1.jpg)
-![photo 4](src/assets/news-and-events/article-19/photo-2.jpg)
-![photo 3](src/assets/news-and-events/article-19/photo-3.jpg)
-![photo 3](src/assets/news-and-events/article-19/photo-4.jpg)
+![photo 1](src/assets/news-and-events/article-19/photo-1.JPG)
+![photo 2](src/assets/news-and-events/article-19/photo-2.JPG)
+![photo 3](src/assets/news-and-events/article-19/photo-3.JPG)
+![photo 4](src/assets/news-and-events/article-19/photo-4.JPG)
 
