@@ -12,7 +12,6 @@ Takeo Province, On the afternoon of August 16, 2025, from 2:00 PM to 4:30 PM, a 
 
 This training was organized with the goal of prioritizing female students and strengthening gender equality through building digital technology capacity and contributing to promoting digital literacy in Cambodia, aiming to accelerate the digital transformation of technology skills in a modern and sustainable manner.
 
-
 ![photo 1](src/assets/news-and-events/article-21/photo-1.JPG)
 ![photo 2](src/assets/news-and-events/article-21/photo-2.JPG)
 ![photo 3](src/assets/news-and-events/article-21/photo-3.JPG)
