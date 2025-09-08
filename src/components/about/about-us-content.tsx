@@ -1,8 +1,8 @@
 import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import aboutctc1 from "@/assets/image-assets/about-ctc-1.webp";
-import aboutctc2 from "@/assets/image-assets/about-ctc-2.webp";
-import CTCOpeningCeremony from "@/assets/image-assets/ctc-opening-ceremony.webp";
+import aboutctc2 from "@/assets/image-assets/about-ctc-3.webp";
+import aboutctc3 from "@/assets/image-assets/about-ctc-4.webp";
 import TextElement from "@/components/text-element/TextElement";
 import { cn } from "@/lib/utils";
 import { styles } from "@/components/text-element/ElementStyle";
@@ -65,7 +65,7 @@ export function AboutContent({ translations }: AboutUsContent) {
         >
           <Card className="bg-gray-200">
             <img
-              src={CTCOpeningCeremony.src}
+              src={aboutctc3.src}
               alt="c.t.c. opening ceremony"
               className="w-full"
               style={{ objectFit: "cover" }}

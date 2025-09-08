@@ -1,9 +1,9 @@
 import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import computerLab from "@/assets/service/computer-lab.svg";
-import trainingRoom from "@/assets/service/training-room.svg";
-import postOffice from "@/assets/service/post-office.svg";
-import publicHall from "@/assets/service/public-hall.svg";
+import computerLab from "@/assets/service/computer-lap.jpg";
+import trainingRoom from "@/assets/service/training-room.jpg";
+import postOffice from "@/assets/service/post-office.jpg";
+import publicHall from "@/assets/service/public-hall.jpg";
 import TextElement from "@/components/text-element/TextElement";
 
 interface FunctionalitiesItem {
@@ -52,7 +52,7 @@ export function FunctionalitiesHighlights({
   ];
 
   return (
-    <section className="py-24 bg-background">
+    <section className="py-16 bg-background">
       <div className="container">
         <motion.div
           className="text-center mb-16 space-y-4 flex flex-col items-center gap-8"
@@ -82,7 +82,7 @@ export function FunctionalitiesHighlights({
                       <img
                         src={service.src}
                         alt={service.title}
-                        className="size-44 object-cover"
+                        className="size-44 rounded-md object-cover"
                       />
                     </div>
                   </div>

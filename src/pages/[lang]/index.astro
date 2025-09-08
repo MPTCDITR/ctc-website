@@ -10,6 +10,8 @@ import { getLangFromUrl } from "@/lib/i18n";
 import { getBlogPosts } from "@/lib/blog";
 import { FunctionalitiesHighlights } from "@/components/home/functionalities-highlight-section";
 import { HOME_PAGE_TITLE } from "@/consts";
+import { VideoListHome } from "@/components/home/video-list-home";
+import { fetchPlaylistVideos } from "@/lib/youtube";
 
 export async function getStaticPaths() {
   return Object.keys(languages).map((lang) => ({
@@ -20,6 +22,10 @@ export async function getStaticPaths() {
 const lang = getLangFromUrl(Astro.url);
 const translations = ui[lang];
 const posts = await getBlogPosts(lang);
+const videos = await fetchPlaylistVideos(
+  import.meta.env.PUBLIC_YOUTUBE_API_KEY,
+  import.meta.env.PUBLIC_PLAYLIST_ID
+);
 ---
 
 <Layout
@@ -29,6 +35,11 @@ const posts = await getBlogPosts(lang);
 >
   <Hero lang={lang} translations={translations} client:load />
   <AboutSection lang={lang} translations={translations} />
+  <VideoListHome  
+    videos={videos}
+    lang={lang}
+    translations={translations}
+    client:load />
   <FunctionalitiesHighlights
     lang={lang}
     translations={translations}
