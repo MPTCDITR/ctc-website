@@ -1,9 +1,9 @@
 import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import computerLab from "@/assets/service/computer-lap.jpg";
-import trainingRoom from "@/assets/service/training-room.jpg";
-import postOffice from "@/assets/service/post-office.jpg";
-import publicHall from "@/assets/service/public-hall.jpg";
+import computerLab from "@/assets/service/computer-lap.webp";
+import trainingRoom from "@/assets/service/training-room.webp";
+import postOffice from "@/assets/service/post-office.webp";
+import publicHall from "@/assets/service/public-hall.webp";
 import TextElement from "@/components/text-element/TextElement";
 
 interface FunctionalitiesItem {
