@@ -1,0 +1,31 @@
+---
+import type { Video } from "@/lib/types"; // Ensure this type is accessible in Astro
+import VideoCardHome from "./VideoCardHome.astro";
+
+interface VideoListHomeProps {
+  videos?: Video[];
+  translations: Record<string, string>;
+  lang?: string;
+}
+
+const { videos, translations } = Astro.props as VideoListHomeProps;
+
+const t = (key: string) => translations[key] || key;
+---
+
+{!videos || videos.length === 0 ? (
+  <div class="text-center py-12">
+    <h2 class="text-2xl font-semibold">No videos found</h2>
+    <p class="text-muted-foreground mt-2">
+      Please check your playlist ID or try again later.
+    </p>
+  </div>
+) : (
+  <div class="container py-12 space-y-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {videos.slice(0, 3).map((video) => (
+        <VideoCardHome key={video.id} video={video} />
+      ))}
+    </div>
+  </div>
+)}
