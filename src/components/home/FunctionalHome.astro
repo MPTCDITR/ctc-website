@@ -1,0 +1,95 @@
+---
+import { Card } from "@/components/ui/card";
+import { Image } from "astro:assets";
+import computerLab from "@/assets/service/computer-lap.webp";
+import trainingRoom from "@/assets/service/training-room.webp";
+import postOffice from "@/assets/service/post-office.webp";
+import publicHall from "@/assets/service/public-hall.webp";
+import TextElement from "@/components/text-element/TextElement";
+
+interface FunctionalitiesItem {
+  href: string;
+  title: string;
+  description: string;
+  src: ImageMetadata;
+}
+
+interface Props {
+  translations: Record<string, string>;
+  lang?: string;
+}
+
+const { translations, lang} = Astro.props;
+
+const t = (key: string) => translations[key] || key;
+
+const services: FunctionalitiesItem[] = [
+  {
+    href: `/${lang}/center/our-functionalities/#computer-lab`,
+    title: "home.service.computerlab",
+    description: "home.service.computerlab.description",
+    src: computerLab,
+  },
+  {
+    href: `/${lang}/center/our-functionalities/#training-room`,
+    title: "home.service.trainingroom",
+    description: "home.service.trainingroom.description",
+    src: trainingRoom,
+  },
+  {
+    href: `/${lang}/center/our-functionalities/#post-office`,
+    title: "home.service.postoffice",
+    description: "home.service.postoffice.description",
+    src: postOffice,
+  },
+  {
+    href: `/${lang}/center/our-functionalities/#public-hall`,
+    title: "home.service.publichall",
+    description: "home.service.publichall.description",
+    src: publicHall,
+  },
+];
+---
+
+<section class="py-16 bg-background">
+  <div class="container">
+    <div class="text-center mb-16 space-y-4 flex flex-col items-center gap-8">
+      <TextElement variant="heading">{t("home.service")}</TextElement>
+      <TextElement variant="body" className="max-w-8xl">
+        {t("home.service.description")}
+      </TextElement>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {services.map((service) => (
+        <div
+          class="bg-background rounded-lg border border-lightblue shadow-sm shadow-lightblue transition-colors hover:bg-slate-100"
+        >
+          <a href={service.href}>
+            <Card className="p-6 text-center bg-transparent border-none shadow-none">
+              <div class="flex justify-center mb-6">
+                <div class="rounded-full flex items-center justify-center">
+                  <Image
+                    src={service.src}
+                    alt={t(service.title)}
+                    class="size-44 rounded-md object-cover"
+                  />
+                </div>
+              </div>
+              <TextElement
+                variant="titleblog"
+                className="text-xl font-bold mb-4 text-primary"
+              >
+                {t(service.title)}
+              </TextElement>
+
+              <TextElement variant="small">
+                {t(service.description)}
+              </TextElement>
+            </Card>
+          </a>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
