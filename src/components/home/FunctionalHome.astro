@@ -66,17 +66,17 @@ const services: FunctionalitiesItem[] = [
           class="bg-background rounded-lg border border-lightblue shadow-sm shadow-lightblue transition-colors hover:bg-slate-100"
         >
           <a href={service.href}>
-            <Card className="p-6 text-center bg-transparent border-none shadow-none">
-              <div class="flex justify-center mb-6">
-                <div class="rounded-full flex items-center justify-center">
+            <Card className="flex-col text-center bg-transparent border-none shadow-none">
+            
+                <div class="relative w-full pt-[56.25%] overflow-hidden rounded-t-lg">
                   <Image
-                    src={service.src}
-                    alt={t(service.title)}
-                    class="size-44 rounded-md object-cover"
-                  />
+                  src={service.src}
+                  alt={t(service.title)}
+                  class="absolute inset-0 w-full h-full object-cover"
+                />
                 </div>
-              </div>
-              <TextElement
+              <div class="p-6">
+                <TextElement
                 variant="titleblog"
                 className="text-xl font-bold mb-4 text-primary"
               >
@@ -86,6 +86,7 @@ const services: FunctionalitiesItem[] = [
               <TextElement variant="small">
                 {t(service.description)}
               </TextElement>
+              </div>
             </Card>
           </a>
         </div>
