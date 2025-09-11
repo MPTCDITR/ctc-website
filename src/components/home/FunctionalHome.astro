@@ -59,7 +59,6 @@ const services: FunctionalitiesItem[] = [
         {t("home.service.description")}
       </TextElement>
     </div>
-
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       {services.map((service) => (
         <div
@@ -67,7 +66,6 @@ const services: FunctionalitiesItem[] = [
         >
           <a href={service.href}>
             <Card className="flex-col text-center bg-transparent border-none shadow-none">
-            
                 <div class="relative w-full pt-[56.25%] overflow-hidden rounded-t-lg">
                   <Image
                   src={service.src}
@@ -82,7 +80,6 @@ const services: FunctionalitiesItem[] = [
               >
                 {t(service.title)}
               </TextElement>
-
               <TextElement variant="small">
                 {t(service.description)}
               </TextElement>
