@@ -25,7 +25,7 @@ export function AboutContent({ translations }: AboutUsContent) {
       </motion.h1>
 
       <motion.p
-        className={cn(styles.body, "text-justify  max-w-8xl mx-auto")}
+        className={cn(styles.body, "lg:text-justify  max-w-8xl mx-auto")}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
@@ -49,7 +49,7 @@ export function AboutContent({ translations }: AboutUsContent) {
       </motion.div>
 
       <motion.p
-        className={cn(styles.body, "max-w-8xl mx-auto text-justify ")}
+        className={cn(styles.body, "max-w-8xl mx-auto lg:text-justify ")}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.6 }}
@@ -78,11 +78,10 @@ export function AboutContent({ translations }: AboutUsContent) {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 1 }}
         >
-          <TextElement variant="body" className="text-justify ">
+          <TextElement variant="body" className="lg:text-justify ">
             {t("about.ctc.paragraph3")}
           </TextElement>
           <TextElement variant="body">{t("about.ctc.paragraph4")}</TextElement>
-          <p></p>
         </motion.div>
       </div>
 
@@ -91,7 +90,7 @@ export function AboutContent({ translations }: AboutUsContent) {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 1.2 }}
-      ></motion.p>
+      />
 
       <motion.div
         initial={{ opacity: 0, y: 50 }}
@@ -109,7 +108,7 @@ export function AboutContent({ translations }: AboutUsContent) {
       </motion.div>
 
       <motion.p
-        className={cn(styles.body, "max-w-8xl mx-auto text-justify ")}
+        className={cn(styles.body, "max-w-8xl mx-auto lg:text-justify ")}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 1.6 }}

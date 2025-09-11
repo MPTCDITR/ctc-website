@@ -44,12 +44,12 @@ export function LanguageSwitcher({ lang }: LanguageSwitcherProps) {
             >
               {lang == "en" ? (
                 <>
-                  <img src={ENIcon.src} width="23" height="15" />
+                  <img src={ENIcon.src} width="23" height="15" alt="english lang"/>
                   <span>English</span>
                 </>
               ) : (
                 <>
-                  <img src={KhmerIcon.src} width="23" height="15" />
+                  <img src={KhmerIcon.src} width="23" height="15" alt="khmer lang"/>
                   <span>ខ្មែរ</span>
                 </>
               )}

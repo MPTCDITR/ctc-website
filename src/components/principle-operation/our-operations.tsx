@@ -1,14 +1,14 @@
 import { cn } from "@/lib/utils";
 import { styles } from "@/components/text-element/ElementStyle";
 import { motion } from "framer-motion";
-import OurService1 from "@/assets/image-assets/computer-lab.webp";
-import OurService2 from "@/assets/our-centers/our-service/computer-labs.png";
+import OurService1 from "@/assets/image-assets/computer-lab-1.webp";
+import OurService2 from "@/assets/our-centers/our-service/computer-lab-2.webp";
 import trainingRoom1 from "@/assets/our-centers/our-service/training-room-1.webp";
-import OurService3 from "@/assets/our-centers/our-service/training-room-2.png";
-import OurService4 from "@/assets/image-assets/ctc-left-view.webp";
-import OurService5 from "@/assets/image-assets/post-office-view.webp";
-import OurService6 from "@/assets/our-centers/our-service/post-order.png";
-import OurService7 from "@/assets/image-assets/ctc-opening-ceremony.webp";
+import OurService3 from "@/assets/our-centers/our-service/training-room-2.webp";
+import OurService4 from "@/assets/image-assets/public-hall-1.webp";
+import OurService5 from "@/assets/image-assets/public-hall-2.webp";
+import OurService6 from "@/assets/image-assets/postal-counter-1.webp";
+import OurService7 from "@/assets/image-assets/postal-counter-2.webp";
 import TextElement from "../text-element/TextElement";
 
 interface FunctionalityProps {

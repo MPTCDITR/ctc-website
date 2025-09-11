@@ -3,7 +3,7 @@ title: ឯកឧត្តមរដ្ឋមន្ត្រី ជា វ៉ា�
 description: ឯកឧត្តមរដ្ឋមន្ត្រី ជា វ៉ាន់ដេត បានអនុញ្ញាតឱ្យ លោកបណ្ឌិត Cosmas Zavazava នាយកការិយាល័យអភិវឌ្ឍន៍ទូរគមនាគមន៍ នៃសហភាពទូរគមនាគមន៍អន្តរជាតិ (International Telecommunication Union - ITU) ចូលជួបសម្តែងការគួរសម និងពិភាក្សាការងារ នៅទីស្តីការក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍ ក្នុងគោលបំណងពង្រឹងកិច្ចសហប្រតិបត្តិការអន្តរជាតិរវាងប្រទេសកម្ពុជា ជាមួយ ITU ព្រមទាំងបណ្តាប្រទេសសមាជិកផ្សេងៗទៀត។
 date: 2024-07-22
 author: ក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍
-image: "src/assets/news-and-events/article-4/thumbnail.jpg"
+image: "src/assets/news-and-events/article-4/thumbnail.webp"
 tags: []
 ---
 
@@ -15,12 +15,12 @@ tags: []
 
 រាជធានីភ្នំពេញ | ព្រឹកថ្ងៃទី២២ កក្កដា ២០២៤
 
-![photo 1](src/assets/news-and-events/article-4/photo-1.jpg)
-![photo 2](src/assets/news-and-events/article-4/photo-2.jpg)
-![photo 3](src/assets/news-and-events/article-4/photo-3.jpg)
-![photo 4](src/assets/news-and-events/article-4/photo-4.jpg)
-![photo 5](src/assets/news-and-events/article-4/photo-5.jpg)
-![photo 6](src/assets/news-and-events/article-4/photo-6.jpg)
-![photo 7](src/assets/news-and-events/article-4/photo-7.jpg)
-![photo 8](src/assets/news-and-events/article-4/photo-8.jpg)
-![photo 9](src/assets/news-and-events/article-4/photo-9.jpg)
+![photo 1](src/assets/news-and-events/article-4/photo-1.webp)
+![photo 2](src/assets/news-and-events/article-4/photo-2.webp)
+![photo 3](src/assets/news-and-events/article-4/photo-3.webp)
+![photo 4](src/assets/news-and-events/article-4/photo-4.webp)
+![photo 5](src/assets/news-and-events/article-4/photo-5.webp)
+![photo 6](src/assets/news-and-events/article-4/photo-6.webp)
+![photo 7](src/assets/news-and-events/article-4/photo-7.webp)
+![photo 8](src/assets/news-and-events/article-4/photo-8.webp)
+![photo 9](src/assets/news-and-events/article-4/photo-9.webp)

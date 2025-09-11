@@ -1,6 +1,5 @@
 import React from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { Card} from "@/components/ui/card";
 import { formatDate } from "@/lib/utils";
 import { motion } from "framer-motion";
 import TextElement from "@/components/text-element/TextElement";
@@ -47,7 +46,7 @@ export function BlogCard({
           <div
             className={`grid md:grid-cols-2 gap-8 p-4 lg:p-6 ${index % 2 === 1 ? "md:flex-row-reverse" : ""}`}
           >
-            <div className=" aspect-auto relative rounded-lg overflow-hidden">
+            <div className="max-h-96 aspect-auto relative rounded-lg overflow-hidden">
               <img
                 src={image?.src}
                 alt={title}

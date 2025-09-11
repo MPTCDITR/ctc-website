@@ -3,13 +3,19 @@ import { Header } from "@/components/layout/Header";
 import { SiteFooter } from "@/components/layout/Footer";
 import BaseHead from "../components/BaseHead.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import CTCLogo from "@/assets/logo/ctc-logo.webp";
 
 interface Props {
-  title: string;
-  description?: string;
+  pageTitle: string;
+  description: string;
+  ogImage?: string;
+  type?: "website" | "article";
+  customCanonicalUrl?: string;
 }
+const { pageTitle, description, ogImage, type, customCanonicalUrl, ...props } =
+  Astro.props;
+const ImageURL = new URL(ogImage ? ogImage : CTCLogo.src, Astro.url).href;
 
-const { title, description } = Astro.props;
 import { getLangFromUrl } from "@/lib/i18n";
 import { ui, defaultLang } from "@/i18n/ui";
 import { getLocalizedRoutes, navigation } from "@/lib/route";
@@ -27,8 +33,11 @@ const currentPath = Astro.url.pathname;
 <html lang={Astro.currentLocale || "en"}>
   <head>
     <BaseHead
-      title={title || SITE_TITLE}
+      pageTitle={pageTitle || SITE_TITLE}
       description={description || SITE_DESCRIPTION}
+      ogImage={ImageURL}
+      type={type}
+      customCanonicalUrl={customCanonicalUrl}
     />
   </head>
   <body>
@@ -40,7 +49,7 @@ const currentPath = Astro.url.pathname;
         currentPath={currentPath}
         client:load
       />
-      <main class="flex-1">
+      <main class="flex-1" {...props}>
         <slot />
       </main>
       <SiteFooter lang={lang} client:load />

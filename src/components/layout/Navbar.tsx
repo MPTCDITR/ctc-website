@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
-// import { a, useLocation } from "react-router-dom";
-// import { useTranslation } from "react-i18next";
-import { Globe, Menu, X, Rabbit } from "lucide-react";
+import { Globe, Menu, X } from "lucide-react";
 import CTCLogo from "@/assets/logo/ctc-logo.webp";
 
 import { LanguageSwitcher } from "./LanguageSwitcher";
@@ -20,8 +18,6 @@ interface HeaderProps {
 const Navbar = ({ lang }: HeaderProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  // const location = useLocation();
-  // const { t, i18n } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,9 +28,6 @@ const Navbar = ({ lang }: HeaderProps) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // const changeLanguage = (lng: string) => {
-  //   i18n.changeLanguage(lng);
-  // };
 
   return (
     <nav

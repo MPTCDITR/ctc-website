@@ -3,6 +3,7 @@ import Layout from "@/layouts/Layout.astro";
 import { CenterLocations } from "@/components/ourCenters/centers-sections";
 import { languages, ui } from "@/i18n/ui";
 import { getLangFromUrl } from "@/lib/i18n";
+import { CENTER_LOCATION_PAGE_TITLE } from "@/consts";
 
 export async function getStaticPaths() {
   return Object.keys(languages).map((lang) => ({
@@ -14,6 +15,10 @@ const lang = getLangFromUrl(Astro.url);
 const translations = ui[lang];
 ---
 
-<Layout title="Community Tech Center - Centers Location">
+<Layout
+  pageTitle={CENTER_LOCATION_PAGE_TITLE.title}
+  description={CENTER_LOCATION_PAGE_TITLE.description}
+  type="website"
+>
   <CenterLocations translations={translations} client:load />
 </Layout>

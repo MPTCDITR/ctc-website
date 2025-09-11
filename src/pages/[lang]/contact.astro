@@ -3,6 +3,7 @@ import { ContactContent } from "@/components/contact/contact-content";
 import Layout from "@/layouts/Layout.astro";
 import { languages, ui } from "@/i18n/ui";
 import { getLangFromUrl } from "@/lib/i18n";
+import { CONTACT_PAGE_TITLE } from "@/consts";
 
 export async function getStaticPaths() {
   return Object.keys(languages).map((lang) => ({
@@ -14,6 +15,10 @@ const lang = getLangFromUrl(Astro.url);
 const translations = ui[lang];
 ---
 
-<Layout title="Contact Us - Community Tech Center">
+<Layout
+  pageTitle={CONTACT_PAGE_TITLE.title}
+  description={CONTACT_PAGE_TITLE.description}
+  type="website"
+>
   <ContactContent translations={translations} client:load />
 </Layout>

@@ -3,7 +3,7 @@ title: សេចក្តីប្រកាសព័ត៌មាន ស្តី
 description: នាព្រឹក ថ្ងៃទី២៤ ខែមិថុនា ឆ្នាំ២០២៤ នៅក្នុងឃុំពារាម ស្រុកបាទី ខេត្តតាកែវ ឯកឧត្ដម ជា វ៉ាន់ដេត រដ្ឋមន្ត្រីក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍ (ក.ប.ទ.) បានអញ្ជើញជាអធិបតីក្នុង “ពិធីសម្ពោធដាក់ដំណើរការមជ្ឈមណ្ឌលបច្ចេកវិទ្យាសហគមន៍ នៅវិទ្យាល័យ ហ៊ុន សែន ១ មិថុនា” ដោយមានការចូលរួមជាអធិបពី ឯកឧត្តម អ៊ូអិណុ អាត់ស៊ូស៊ី ឯកអគ្គរាជទូតវិសាមញ្ញ និងពេញសមត្ថភាពនៃប្រទេសជប៉ុនប្រចាំព្រះរាជាណាចក្រកម្ពុជា និង ឯកឧត្តម សាន វឌ្ឍនា រដ្ឋលេខាធិការក្រសួងអប់រំ យុវជន និងកីឡា (ក.អ.យ.ក.) ទទួលបន្ទុកការងារមជ្ឈមណ្ឌលបច្ចេកវិទ្យាសហគមន៍។
 date: 2024-06-24
 author: ក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍
-image: "src/assets/news-and-events/article-1/thumbnail.jpg"
+image: "src/assets/news-and-events/article-1/thumbnail.webp"
 tags: []
 ---
 
@@ -25,12 +25,12 @@ tags: []
 
 អាស្រ័យហេតុនេះ សូមសាធារណជនទាំងអស់ជ្រាបជាព័ត៌មាន៕
 
-![photo 1](src/assets/news-and-events/article-1/photo-1.jpg)
-![photo 2](src/assets/news-and-events/article-1/photo-2.jpg)
-![photo 3](src/assets/news-and-events/article-1/photo-3.jpg)
-![photo 4](src/assets/news-and-events/article-1/photo-4.jpg)
-![photo 5](src/assets/news-and-events/article-1/photo-5.jpg)
-![photo 6](src/assets/news-and-events/article-1/photo-6.jpg)
-![photo 7](src/assets/news-and-events/article-1/photo-7.jpg)
-![photo 8](src/assets/news-and-events/article-1/photo-8.jpg)
-![photo 9](src/assets/news-and-events/article-1/photo-9.jpg)
+![photo 1](src/assets/news-and-events/article-1/photo-1.webp)
+![photo 2](src/assets/news-and-events/article-1/photo-2.webp)
+![photo 3](src/assets/news-and-events/article-1/photo-3.webp)
+![photo 4](src/assets/news-and-events/article-1/photo-4.webp)
+![photo 5](src/assets/news-and-events/article-1/photo-5.webp)
+![photo 6](src/assets/news-and-events/article-1/photo-6.webp)
+![photo 7](src/assets/news-and-events/article-1/photo-7.webp)
+![photo 8](src/assets/news-and-events/article-1/photo-8.webp)
+![photo 9](src/assets/news-and-events/article-1/photo-9.webp)

@@ -4,6 +4,7 @@ import { CenterManagementInfo } from "src/components/centers-management/centers-
 import { getLangFromUrl } from "@/lib/i18n";
 import { ui, languages } from "@/i18n/ui";
 import { getCentersName } from "@/lib/centers";
+import { CENTER_PAGE_TITLE } from "@/consts";
 
 export async function getStaticPaths() {
   return Object.keys(languages).map((lang) => ({
@@ -17,7 +18,9 @@ const centers = await getCentersName(lang);
 ---
 
 <Layout
-  title="Community Tech Center - Our Center Management and operational member"
+  pageTitle={CENTER_PAGE_TITLE.title}
+  description={CENTER_PAGE_TITLE.description}
+  type="website"
 >
   <CenterManagementInfo
     translations={translations}
