@@ -1,0 +1,77 @@
+---
+import { Card } from "@/components/ui/card";
+import aboutctc1 from "@/assets/image-assets/about-ctc-1.webp";
+import aboutctc2 from "@/assets/image-assets/about-ctc-3.webp";
+import aboutctc3 from "@/assets/image-assets/about-us.webp";
+import TextElement from "@/components/text-element/TextElement";
+import { cn } from "@/lib/utils";
+import { styles } from "@/components/text-element/ElementStyle";
+import { Image } from "astro:assets";
+
+interface AboutUsContent {
+  translations: Record<string, string>;
+}
+
+const { translations } = Astro.props as AboutUsContent;
+
+const t = (key: string) => translations[key] || key;
+---
+
+<div class="container py-12 space-y-12">
+  <h1 class={cn(styles.heading, "text-center text-primary")}>
+    {t("about.ctc.title")}
+  </h1>
+
+  <p class={cn(styles.body, "lg:text-justify max-w-8xl mx-auto")}>
+    {t("about.ctc.paragraph1")}
+  </p>
+
+  <Card className="w-full aspect-video bg-gray-200">
+    <Image
+      src={aboutctc1}
+      alt="c.t.c. post office view"
+      class="w-full object-cover rounded-md"
+      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+      loading="lazy"
+    />
+  </Card>
+
+  <p class={cn(styles.body, "max-w-8xl mx-auto lg:text-justify")}>
+    {t("about.ctc.paragraph2")}
+  </p>
+
+  <div class="grid lg:grid-cols-2 gap-8">
+    <div class="space-y-4">
+      <Card className="bg-gray-200">
+        <Image
+          src={aboutctc3}
+          alt="c.t.c. opening ceremony"
+          class="w-full object-cover rounded-md"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          loading="lazy"
+        />
+      </Card>
+    </div>
+    <div class="space-y-4">
+      <TextElement variant="body" className="lg:text-justify">
+        {t("about.ctc.paragraph3")}
+      </TextElement>
+      <TextElement variant="body">
+        {t("about.ctc.paragraph4")}
+      </TextElement>
+    </div>
+  </div>
+  <Card className="w-full aspect-video bg-gray-200">
+     <Image
+      src={aboutctc2}
+      alt="c.t.c. post office left view"
+      class="w-full object-cover rounded-md"
+      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+      loading="lazy"
+    />
+  </Card>
+
+  <p class={cn(styles.body, "max-w-8xl mx-auto lg:text-justify")}>
+    {t("about.ctc.paragraph5")}
+  </p>
+</div>

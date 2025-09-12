@@ -8,9 +8,10 @@ import { CentersSection } from "@/components/home/centers-section";
 import { LatestBlogs } from "@/components/home/news-latest-section";
 import { getLangFromUrl } from "@/lib/i18n";
 import { getBlogPosts } from "@/lib/blog";
-import { FunctionalitiesHighlights } from "@/components/home/functionalities-highlight-section";
 import { HOME_PAGE_TITLE } from "@/consts";
-
+import { fetchPlaylistVideos } from "@/lib/youtube";
+import FunctionalHome from "@/components/home/FunctionalHome.astro";
+import VideoListHome from "@/components/home/VideoListHome.astro";
 export async function getStaticPaths() {
   return Object.keys(languages).map((lang) => ({
     params: { lang },
@@ -20,6 +21,10 @@ export async function getStaticPaths() {
 const lang = getLangFromUrl(Astro.url);
 const translations = ui[lang];
 const posts = await getBlogPosts(lang);
+const videos = await fetchPlaylistVideos(
+  import.meta.env.PUBLIC_YOUTUBE_API_KEY,
+  import.meta.env.PUBLIC_PLAYLIST_ID
+);
 ---
 
 <Layout
@@ -29,10 +34,14 @@ const posts = await getBlogPosts(lang);
 >
   <Hero lang={lang} translations={translations} client:load />
   <AboutSection lang={lang} translations={translations} />
-  <FunctionalitiesHighlights
+  <VideoListHome  
+    videos={videos}
     lang={lang}
     translations={translations}
-    client:load
+   />
+  <FunctionalHome
+    lang={lang}
+    translations={translations}
   />
   <CentersSection lang={lang} translations={translations} />
   <LatestBlogs
