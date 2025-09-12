@@ -6,6 +6,7 @@ import aboutctc3 from "@/assets/image-assets/about-us.webp";
 import TextElement from "@/components/text-element/TextElement";
 import { cn } from "@/lib/utils";
 import { styles } from "@/components/text-element/ElementStyle";
+import { Image } from "astro:assets";
 
 interface AboutUsContent {
   translations: Record<string, string>;
@@ -26,11 +27,12 @@ const t = (key: string) => translations[key] || key;
   </p>
 
   <Card className="w-full aspect-video bg-gray-200">
-    <img
-      src={aboutctc1.src}
+    <Image
+      src={aboutctc1}
       alt="c.t.c. post office view"
-      class="w-full"
-      style="object-fit: cover;"
+      class="w-full object-cover rounded-md"
+      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+      loading="lazy"
     />
   </Card>
 
@@ -41,11 +43,12 @@ const t = (key: string) => translations[key] || key;
   <div class="grid lg:grid-cols-2 gap-8">
     <div class="space-y-4">
       <Card className="bg-gray-200">
-        <img
-          src={aboutctc3.src}
+        <Image
+          src={aboutctc3}
           alt="c.t.c. opening ceremony"
-          class="w-full"
-          style="object-fit: cover;"
+          class="w-full object-cover rounded-md"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          loading="lazy"
         />
       </Card>
     </div>
@@ -58,15 +61,13 @@ const t = (key: string) => translations[key] || key;
       </TextElement>
     </div>
   </div>
-
-  <p class={cn(styles.body, "max-w-8xl mx-auto")}></p>
-
   <Card className="w-full aspect-video bg-gray-200">
-    <img
-      src={aboutctc2.src}
+     <Image
+      src={aboutctc2}
       alt="c.t.c. post office left view"
-      class="w-full"
-      style="object-fit: cover;"
+      class="w-full object-cover rounded-md"
+      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+      loading="lazy"
     />
   </Card>
 
