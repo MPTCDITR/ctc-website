@@ -3,7 +3,7 @@ title: មជ្ឈមណ្ឌលបច្ចេកវិទ្យាសហគ�
 description: ខេត្តតាកែវ៖ គម្រោងមជ្ឈមណ្ឌលបច្ចេកវិទ្យាសហគមន៍ (ម.ប.ស.) នៅតាមវិទ្យាល័យសាធារណៈចំនួន ១៨ទីតាំង គឺជាចក្ខុវិស័យវែងឆ្ងាយរបស់ក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍ លើការអភិវឌ្ឍមូលធនមនុស្សឌីជីថល តាមរយៈការរៀបចំហេដ្ឋារចនាសម្ព័ន្ធជំនួយដល់ការបណ្តុះបណ្តាលធនធានមនុស្សឌីជីថលនៅថ្នាក់មូលដ្ឋាន ដើម្បីរៀបចំប្រព័ន្ធអេកូឡូស៊ីឌីជីថលមួយប្រកបដោយប្រសិទ្ធភាព សាកសិទ្ធភាព និងការរីកចម្រើន។
 date: 2025-09-16 
 author: ក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍
-image: "src/assets/news-and-events/article-22/photo-7.jpg"
+image: "src/assets/news-and-events/article-22/thumbnail.jpg"
 tags: []
 ---
 
@@ -15,11 +15,11 @@ tags: []
 
 ក្នុងន័យនេះ ប្រជាពលរដ្ឋរស់នៅក្នុងសហគមន៍ នឹងអាចចូលរួមក្នុងការងារតាមជំនាញ និងរៀនអំពីបច្ចេកវិទ្យាឌីជីថលដូចជា បច្ចេកវិទ្យាគមនាគមន៍និងព័ត៌មាន ធុរកិច្ចថ្មីឌីជីថល បុស្ដិ៍ប្រៃសណីយ៍ និងពាណិជ្ជកម្មតាមប្រព័ន្ធអេឡិចត្រូនិក ជាដើម។
 
-![photo 7](src/assets/news-and-events/article-22/thumbnail.jpg)
 ![photo 1](src/assets/news-and-events/article-22/photo-1.jpg)
 ![photo 2](src/assets/news-and-events/article-22/photo-2.jpg)
 ![photo 3](src/assets/news-and-events/article-22/photo-3.jpg)
 ![photo 4](src/assets/news-and-events/article-22/photo-4.jpg)
 ![photo 5](src/assets/news-and-events/article-22/photo-5.jpg)
 ![photo 6](src/assets/news-and-events/article-22/photo-6.jpg)
+![photo 7](src/assets/news-and-events/article-22/photo-7.jpg)
 
