@@ -43,7 +43,8 @@ export const ui: Record<string, Record<string, string>> = {
     "home.about.aboutus": "About Us",
     "home.about.description":
       "The Ministry of Post and Telecommunications, in collaboration with the Ministry of Education, Youth, and Sports, aims to enhance digital literacy in Cambodia through the establishment of 558 Community Technology Centers (C.T.C.s). The C.T.C.s are envisioned as hubs for digital knowledge and training, equipped with computer labs, training rooms, internet cafes, and postal offices. These centers, to be built in high schools across the country, are part of a broader initiative to foster a digital citizenry and workforce. By providing digital services and education, the Ministry hopes all high school students will have a base in digital science and technology by 2030.",
-    "home.service": "Operations of Community Technology Center",
+    "home.viewallvideo": "View All Video",
+      "home.service": "Operations of Community Technology Center",
     "home.service.description":
       "C.T.C. offer four main functions for citizens and students in the community, like accesses to computers and the Internet, as well as training programming in digital skills and postal services.",
     "home.service.computerlab": "Computer Lab",
@@ -172,7 +173,8 @@ export const ui: Record<string, Record<string, string>> = {
     "home.about.aboutus": "អំពីពួកយើង",
     "home.about.description":
       "ក្រសួងប្រៃសណីយ៍ និងទូរគមនាគមន៍ សហការជាមួយក្រសួងអប់រំ យុវជន និងកីឡា មានគោលបំណងលើកកំពស់ចំណេះដឹងផ្នែកឌីជីថលនៅកម្ពុជា តាមរយៈការបង្កើតមជ្ឈមណ្ឌលបច្ចេកវិទ្យាសហគមន៍ (ម.ប.ស.) ចំនួន ៥៥៨   កន្លែង។ ម.ប.ស. ត្រូវបានគេមើលឃើញថាជាមជ្ឈមណ្ឌលសម្រាប់ចំណេះដឹង និងការបណ្តុះបណ្តាលឌីជីថល ដែលបំពាក់ដោយបន្ទប់កុំព្យូទ័រ បន្ទប់បណ្តុះបណ្តាល ហាងកាហ្វេអ៊ីនធឺណិត និងការិយាល័យប្រៃសណីយ៍។ មជ្ឈមណ្ឌលទាំងនេះ ដែលត្រូវបានសាងសង់ឡើងនៅក្នុងវិទ្យាល័យទូទាំងប្រទេស ដើម្បីលើកកម្ពស់ពលរដ្ឋឌីជីថល និងកម្លាំងការងារ។ តាមរយៈការផ្តល់សេវាឌីជីថល និងការអប់រំ ក្រសួងសង្ឃឹមថាសិស្សវិទ្យាល័យទាំងអស់នឹងមានមូលដ្ឋានលើវិទ្យាសាស្ត្រ និងបច្ចេកវិទ្យាឌីជីថលនៅឆ្នាំ ២០៣០។",
-    "home.service": "ប្រតិបត្តិនៃមជ្ឈមណ្ឌលបច្ចេកវិទ្យាសហគមន៍",
+    "home.viewallvideo": "មើលវីដេអូទាំងអស់",
+      "home.service": "ប្រតិបត្តិនៃមជ្ឈមណ្ឌលបច្ចេកវិទ្យាសហគមន៍",
     "home.service.description":
       "ម.ប.ស. មានមុខងារសំខាន់ៗចំនួនបួន សម្រាប់ប្រជាពលរដ្ឋ និងសិស្សនៅសហគមន៍ចូលប្រើប្រាស់ កុំព្យូទ័រនិង អ៊ីនធឺណិត និងសម្រាប់បណ្តុះបណ្តាលជំនាញបច្ចេកវិទ្យាឌីជីថល  និងផ្តល់សេវាប្រៃសណីយ៍ជាដើម។",
     "home.service.computerlab": "បន្ទប់កុំព្យូទ័រ",
