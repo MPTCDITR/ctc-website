@@ -66,11 +66,13 @@ const services: FunctionalitiesItem[] = [
         >
           <a href={service.href}>
             <Card className="flex-col text-center bg-transparent border-none shadow-none">
-                <div class="relative w-full pt-[56.25%] overflow-hidden rounded-t-lg">
+                <div class="relative w-full overflow-hidden rounded-t-lg aspect-[6/4]">
                   <Image
                   src={service.src}
                   alt={t(service.title)}
-                  class="absolute inset-0 w-full h-full object-cover"
+                  width={1200}
+                  height={698}
+                  class=" w-full h-full object-cover "
                 />
                 </div>
               <div class="p-6">

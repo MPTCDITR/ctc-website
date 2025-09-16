@@ -8,6 +8,7 @@ import {
   CardFooter,
   CardHeader,
 } from "@/components/ui/card";
+import { Image } from "astro:assets";
 
 interface VideoCardHomeProps {
   video: Video;
@@ -23,12 +24,14 @@ const { video } = Astro.props as VideoCardHomeProps;
       target="_blank"
       class="flex items-center justify-center"
     >
-      <img
-        src={video.thumbnail}
-        alt={video.title}
-        class="object-cover w-full"
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-      />
+    <Image
+      src={video.thumbnail}
+      alt={video.title}
+      width={1200}
+      height={789}
+      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+      loading="lazy"
+    />
       <Play
         className="absolute hidden group-hover:flex"
         stroke="red"
@@ -41,7 +44,7 @@ const { video } = Astro.props as VideoCardHomeProps;
     <a
       href={`https://www.youtube.com/watch?v=${video.id}`}
       target="_blank"
-      class=""
+      class="hover:underline"
     >
       <h3 class="text-lg font-semibold line-clamp-1">{video.title}</h3>
     </a>
