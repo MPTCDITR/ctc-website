@@ -3,7 +3,7 @@ title: The Community Tech Center Have 4 Core Functions
 description: Takeo Province, The Community Tech Center (CTC) project in 18 public high schools is the Ministry of Posts and Telecommunications’ long-term vision for developing digital human capital by providing infrastructure to support digital human resource training at the grassroots level to create an efficient, effective, and thriving digital ecosystem.
 date: 2025-09-16
 author: Ministry of Posts and Telecommunications
-image: "src/assets/news-and-events/article-22/thumbnail.jpg"
+image: "src/assets/news-and-events/article-22/photothumbnail.jpg"
 tags: []
 ---
 Community Tech Center Have 4 Core Functions
