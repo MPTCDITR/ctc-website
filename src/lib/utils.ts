@@ -1,5 +1,6 @@
 import { clsx, type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
+import { format } from "date-fns";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
@@ -45,12 +46,12 @@ export function formatDate(dateString: string, lang: string = 'en') {
     const khmerMonth = convertMonthToKhmer(monthName);
     
     // Convert day and year to Khmer digits
-    const khmerDay = convertNumberToKhmer(day.replace(',', '')); // Remove comma from day
+    const khmerDay = convertNumberToKhmer(day); // Remove comma from day
     const khmerYear = convertNumberToKhmer(year);
 
-    return `${khmerMonth} ${khmerDay}, ${khmerYear}`;
+    return ` ${khmerDay} ${khmerMonth}, ${khmerYear}`;
   } else {
-    return new Intl.DateTimeFormat(lang, options).format(date);
+    return format(date, "dd MMMM, yyyy");
   }
 }
 
