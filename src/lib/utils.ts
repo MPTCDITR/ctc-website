@@ -48,7 +48,7 @@ export function formatDate(dateString: string, lang: string = 'en') {
     const khmerDay = convertNumberToKhmer(day.replace(',', '')); // Remove comma from day
     const khmerYear = convertNumberToKhmer(year);
 
-    return `${khmerMonth} ${khmerDay}, ${khmerYear}`;
+    return ` ${khmerDay} ${khmerMonth}, ${khmerYear}`;
   } else {
     return new Intl.DateTimeFormat(lang, options).format(date);
   }
