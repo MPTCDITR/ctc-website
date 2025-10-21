@@ -50,7 +50,7 @@ export function formatDate(dateString: string, lang: string = 'en') {
 
     return ` ${khmerDay} ${khmerMonth}, ${khmerYear}`;
   } else {
-    return new Intl.DateTimeFormat(lang, options).format(date);
+    return new Intl.DateTimeFormat('en-GB', options).format(date);
   }
 }
 
