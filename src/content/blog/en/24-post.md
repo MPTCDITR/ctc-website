@@ -12,7 +12,7 @@ Takeo Province, On the afternoon of October 11, 2025, from 2:00 PM to 4:30 PM, A
 
 This training was organized with the goal of prioritizing female students and strengthening gender equality through building digital technology capacity and contributing to promoting digital literacy in Cambodia, aiming to accelerate the digital transformation of technology skills in a modern and sustainable manner.
 
-Please be informed that C.T.C. at public universities is the long-term vision of MPTC on the development of the digital sector to serve modern education and develop digital human resources within the community, both in the public and private sectors, to establish a resilient and thriving digital ecosystem within communities.
+Please be informed that C.T.C. at Public Hight School is the long-term vision of MPTC on the development of the digital sector to serve modern education and develop digital human resources within the community, both in the public and private sectors, to establish a resilient and thriving digital ecosystem within communities.
 
 For more information, please visit the official website of CTC at www.ctc.edu.kh to stay updated on the latest developments.
 
