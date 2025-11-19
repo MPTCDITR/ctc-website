@@ -6,7 +6,7 @@ author: Ministry of Posts and Telecommunications
 image: "src/assets/news-and-events/article-26/thumbnail.jpg"
 tags: []
 ---
-hree High Schools in Takeo province receive special digital training from Sisters of Code team
+Three High Schools in Takeo province receive special digital training from Sisters of Code team
 
 Takeo Province, On the afternoon of October 18, 2025, from 2:00 PM to 4:30 PM, A team of three members from the Sisters of Code members attended a training session on presenting their final project. at  three Community Tech Center (CTC), including Sok An Tram Khna High School, Bun Rany Hun Sen Bati High School, and Hun Sen Muy Misthona High School, with a total of 35 students participating.
 
