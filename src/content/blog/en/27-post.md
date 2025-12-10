@@ -3,7 +3,7 @@ title: H.E. Minister Chea Vannadet presided over the high-level closing ceremony
 description: Phnom Penh, On the afternoon of December 7, 2025, H.E. Chea Vannadet, Minister of the Ministry of Posts and Telecommunications, presided over the high-level closing ceremony of the Digital Government Forum, Digital Technology Exhibition, and related national and international events under the theme “Accelerating the Digital Future, Governance, Growth, and Global Partnerships.” The event was held for three days from December 5 to 7, 2025, at the Koh Pich Convention and Exhibition Center.
 date: 2025-12-07
 author: Ministry of Posts and Telecommunications
-image: "src/assets/news-and-events/article-27/thumbnail.JPG"
+image: "src/assets/news-and-events/article-27/thumbnail.jpg"
 tags: []
 ---
 Phnom Penh, On the afternoon of December 7, 2025, H.E. Chea Vannadet, Minister of the Ministry of Posts and Telecommunications, presided over the high-level closing ceremony of the Digital Government Forum, Digital Technology Exhibition, and related national and international events under the theme “Accelerating the Digital Future: Governance, Growth, and Global Partnerships.” The event was held for three days from December 5 to 7, 2025, at the Koh Pich Convention and Exhibition Center.
