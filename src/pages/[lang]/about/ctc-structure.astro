@@ -1,10 +1,11 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import StructureCtc from "@/components/about/StructureCtc.astro";
 import { languages, ui } from "@/i18n/ui";
-import { StructureCtc } from "@/components/about/ctc-structure.tsx";
 import { getLangFromUrl } from "@/lib/i18n";
-import { getNationalBoardMembers } from "@/lib/nationalBoardMembers";
 import { CTC_STRUCTURE_PAGE_TITLE } from "@/consts";
+
+import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
   return Object.keys(languages).map((lang) => ({
@@ -14,7 +15,10 @@ export async function getStaticPaths() {
 
 const lang = getLangFromUrl(Astro.url);
 const translations = ui[lang];
-const nationalBoardMembers = await getNationalBoardMembers(lang);
+
+const nationalBoardMembers = (
+  await getCollection("national-board-member")
+).sort((a, b) => parseInt(a.id) - parseInt(b.id));
 ---
 
 <Layout
@@ -26,7 +30,5 @@ const nationalBoardMembers = await getNationalBoardMembers(lang);
     lang={lang}
     translations={translations}
     nationalBoardMembers={nationalBoardMembers}
-    lang={lang}
-    client:visible
   />
 </Layout>

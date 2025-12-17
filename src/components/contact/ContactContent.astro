@@ -1,0 +1,90 @@
+---
+import { Card } from "@/components/ui/card";
+import { Link, MapPin, Send, Facebook, Instagram } from "lucide-react";
+import PostOfficeView from "@/assets//image-assets/post-office-view.webp";
+import TextElement from "@/components/text-element/TextElement";
+import { Image } from "astro:assets";
+
+interface Props {
+  translations: Record<string, string>;
+}
+
+const { translations } = Astro.props;
+const t = (key: string) => translations[key] || key;
+---
+
+<div class="container py-12 space-y-12">
+  <div class="grid md:grid-cols-2 gap-12">
+    <div class="space-y-8">
+      <div class="space-y-4">
+        <TextElement variant="heading" className="text-primary">
+          {t("contact")}
+        </TextElement>
+      </div>
+
+      <div class="space-y-6">
+        <div class="flex items-start gap-3">
+          <MapPin className="w-5 h-5 mt-1 text-primary" />
+          <TextElement variant="body">{t("footer.address")}</TextElement>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <Link className="w-5 h-5 text-primary" />
+          <a href="https://www.mptc.gov.kh" target="_blank">
+            <TextElement variant="body" className="hover:text-primary">
+              {t("footer.email")}
+            </TextElement>
+          </a>
+        </div>
+      </div>
+
+      <div class="flex gap-4">
+        <a
+          href="https://www.facebook.com/www.mptc.gov.kh"
+          target="_blank"
+          class="p-2 rounded-full bg-primary text-white hover:bg-secondary transition-colors"
+        >
+          <Facebook className="w-5 h-5" />
+        </a>
+        <a
+          href="https://t.me/mptcgovkh"
+          target="_blank"
+          class="p-2 rounded-full bg-primary text-white hover:bg-secondary transition-colors"
+        >
+          <Send className="w-5 h-5" />
+        </a>
+        <a
+          href="https://www.facebook.com/www.mptc.gov.kh"
+          target="_blank"
+          class="p-2 rounded-full bg-primary text-white hover:bg-secondary transition-colors"
+        >
+          <Instagram className="w-5 h-5" />
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <Card className="bg-gray-200">
+        <Image
+          src={PostOfficeView}
+          alt="c.t.c. post office view"
+          class="w-full object-cover"
+          quality={80}
+          format="webp"
+          sizes="(max-width: 768px) 100vw, 50vw"
+        />
+      </Card>
+    </div>
+  </div>
+
+  <div>
+    <Card className="w-full aspect-[21/9] bg-gray-200">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.6732883906925!2d104.91480367570388!3d11.57526268862627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31095142eadcf8db%3A0xbd4e32a5eccddfb7!2sMinistry%20of%20Post%20and%20Telecommunications!5e0!3m2!1sen!2skh!4v1734070475614!5m2!1sen!2skh"
+        class="w-full h-full"
+        title="Google Maps: Ministry of Post and Telecommunications"
+      >
+      </iframe>
+    </Card>
+  </div>
+</div>

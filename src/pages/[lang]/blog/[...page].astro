@@ -2,7 +2,6 @@
 import "@/styles/global.css";
 import Layout from "@/layouts/Layout.astro";
 import BlogCard from "@/components/blog/BlogCard.astro";
-import { getLangFromUrl } from "@/lib/i18n";
 import { ui, languages } from "@/i18n/ui";
 import { getBlogPosts } from "@/lib/blog";
 import { convertNumberToKhmer } from "@/lib/utils";
@@ -20,6 +19,8 @@ import { cn } from "@/lib/utils";
 
 import type { GetStaticPaths, Page } from "astro";
 import type { CollectionEntry } from "astro:content";
+
+export const prerender = true;
 
 export const getStaticPaths = (async ({ paginate }) => {
   const allParams: any[] = [];

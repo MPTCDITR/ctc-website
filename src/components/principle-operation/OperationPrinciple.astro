@@ -1,0 +1,117 @@
+---
+import { cn } from "@/lib/utils";
+import { styles } from "@/components/text-element/ElementStyle";
+import { Image } from "astro:assets";
+import TextElement from "../text-element/TextElement";
+
+import OurService1 from "@/assets/image-assets/computer-lab-1.webp";
+import OurService2 from "@/assets/our-centers/our-service/computer-lab-2.webp";
+import trainingRoom1 from "@/assets/our-centers/our-service/training-room-1.webp";
+import OurService3 from "@/assets/our-centers/our-service/training-room-2.webp";
+import OurService4 from "@/assets/image-assets/public-hall-1.webp";
+import OurService5 from "@/assets/image-assets/public-hall-2.webp";
+import OurService6 from "@/assets/image-assets/postal-counter-1.webp";
+import OurService7 from "@/assets/image-assets/postal-counter-2.webp";
+
+interface Props {
+  translations: Record<string, string>;
+}
+
+const { translations } = Astro.props;
+const t = (key: string) => translations[key] || key;
+
+const facilitySections = [
+  {
+    id: "computer-lab",
+    title: "home.service.computerlab",
+    description1: "center.computerlab.description1",
+    description2: "center.computerlab.description2",
+    image1: OurService1,
+    image2: OurService2,
+  },
+  {
+    id: "training-room",
+    title: "home.service.trainingroom",
+    description1: "center.trainingroom.description1",
+    description2: "center.trainingroom.description2",
+    image1: trainingRoom1,
+    image2: OurService3,
+  },
+  {
+    id: "public-hall",
+    title: "home.service.publichall",
+    description1: "center.publichall.description1",
+    description2: "center.publichall.description2",
+    image1: OurService4,
+    image2: OurService5,
+  },
+  {
+    id: "post-office",
+    title: "home.service.postoffice",
+    description1: "center.postoffice.description1",
+    image1: OurService6,
+    image2: OurService7,
+  },
+];
+---
+
+<div class="container py-12 space-y-12">
+  <section class="space-y-6">
+    <h1 class={cn(styles.heading, "text-center text-primary")}>
+      {t("nav.center.ourfunctionalities")}
+    </h1>
+    <p class={cn(styles.body, "text-center max-w-8xl mx-auto ")}>
+      {t("center.functionality.description")}
+    </p>
+  </section>
+</div>
+{
+  facilitySections.map((section, index) => (
+    <div
+      id={section.id}
+      class={`${
+        index % 2 === 1 ? "bg-background text-primary" : "bg-primary text-white"
+      } py-12 space-y-24 scroll-mt-20`}
+    >
+      <section class=" container rounded-lg overflow-hidden">
+        <div class="p-8 md:p-12 space-y-8">
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class=" space-y-4 ">
+              <h2 class="text-3xl font-bold">{t(section.title)}</h2>
+              <TextElement variant="paragraph">
+                {t(section.description1)}
+              </TextElement>
+              <div class="aspect-video relative rounded-lg overflow-hidden">
+                <Image
+                  src={section.image1}
+                  alt={section.title}
+                  class="object-cover w-full"
+                  quality={80}
+                  format="webp"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
+            </div>
+            <div class=" flex flex-col space-y-4 ">
+              <div class="aspect-video relative rounded-lg overflow-hidden">
+                <Image
+                  src={section.image2}
+                  alt={section.title}
+                  class="object-cover w-full"
+                  quality={80}
+                  format="webp"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
+              {section.description2 && (
+                <TextElement variant="paragraph">
+                  {t(section.description2)}
+                </TextElement>
+              )}
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  ))
+}

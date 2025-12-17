@@ -1,6 +1,6 @@
 ---
 import { Header } from "@/components/layout/Header";
-import { SiteFooter } from "@/components/layout/Footer";
+import SiteFooter from "@/components/layout/SiteFooter.astro";
 import BaseHead from "../components/BaseHead.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import CTCLogo from "@/assets/logo/ctc-logo.webp";
@@ -9,7 +9,7 @@ interface Props {
   pageTitle: string;
   description: string;
   ogImage?: string;
-  type?: "website" | "article";
+  type?: "website" | "article" | "video.other";
   customCanonicalUrl?: string;
 }
 const { pageTitle, description, ogImage, type, customCanonicalUrl, ...props } =
@@ -52,7 +52,7 @@ const currentPath = Astro.url.pathname;
       <main class="flex-1" {...props}>
         <slot />
       </main>
-      <SiteFooter lang={lang} client:visible />
+      <SiteFooter lang={lang} translations={translations} />
     </div>
   </body>
 </html>

@@ -1,0 +1,180 @@
+---
+import { Facebook, Link, MapPin, Youtube } from "lucide-react";
+import CTCLogo from "@/assets/logo/ctc-logo.svg";
+import Cambodia from "@/assets/footer/cambodia-cities.svg";
+import tiktok from "@/assets/footer/tiktok.svg";
+import { Image } from "astro:assets";
+
+interface Props {
+  lang: string;
+  translations: Record<string, string>;
+}
+
+const { lang, translations } = Astro.props;
+const t = (key: string) => translations[key] || key;
+
+const links = [
+  { href: `/${lang}`, label: "nav.home" },
+  { href: `/${lang}/about/about-us`, label: "nav.about.aboutus" },
+  { href: `/${lang}/about/mission-vision`, label: "nav.about.mission" },
+  { href: `/${lang}/center/our-ctc`, label: "nav.center.ourctc" },
+  { href: `/${lang}/center/our-locations`, label: "nav.center.ourlocations" },
+  { href: `/${lang}/blog`, label: "nav.news" },
+];
+
+const contacts = [
+  { icon: Link, text: "footer.email", href: "https://www.mptc.gov.kh" },
+  {
+    icon: MapPin,
+    text: "footer.address",
+  },
+];
+
+const otherLinks = [
+  {
+    href: "https://mptc.gov.kh/",
+    label: "footer.mptc",
+  },
+  {
+    href: "https://moeys.gov.kh/",
+    label: "footer.moeys",
+  },
+];
+---
+
+<footer class="bg-primary bg-center relative overflow-hidden">
+  <div
+    class="absolute inset-0 pointer-events-none opacity-25"
+    aria-hidden="true"
+  >
+    <Image
+      src={Cambodia}
+      alt=""
+      class="w-full h-full object-cover"
+      quality={80}
+      format="webp"
+    />
+  </div>
+  <div
+    class="container py-12 grid grid-cols-1 md:grid-cols-4 md:gap-2 lg:gap-8 gap-12"
+  >
+    <div>
+      <div class="rounded-full mb-4 flex justify-center lg:justify-start">
+        <Image
+          src={CTCLogo}
+          alt="C.T.C. logo"
+          class="h-40 lg:h-36 object-contain"
+          quality={80}
+          format="webp"
+        />
+      </div>
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-lg text-secondary mb-4 font-kantumruy">
+        {t("footer.quicklink")}
+      </h3>
+      <div class="flex flex-col gap-3 text-lg">
+        {
+          links.map(({ href, label }) => (
+            <a
+              href={href}
+              class="text-white hover:text-secondary font-kantumruy"
+              aria-label={t(label)}
+              style={{ WebkitTextStroke: " black" }}
+            >
+              {t(label)}
+            </a>
+          ))
+        }
+      </div>
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-lg text-secondary mb-4 font-kantumruy">
+        {t("footer.otherlink")}
+      </h3>
+      <div class="flex flex-col gap-3 text-lg">
+        {
+          otherLinks.map(({ href, label }) => (
+            <a
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-white hover:text-secondary outline-black font-kantumruy"
+              aria-label={t(label)}
+            >
+              {t(label)}
+            </a>
+          ))
+        }
+      </div>
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-lg text-secondary mb-4 font-kantumruy">
+        {t("nav.contact")}
+      </h3>
+      <div class="grid gap-2">
+        <div class="flex flex-col gap-3 text-lg">
+          {
+            contacts.map(({ icon: Icon, text, href }) => (
+              <div class="flex items-start gap-2 text-white font-kantumruy">
+                <Icon className="h-4 min-w-4 mt-1" />
+                {href ? (
+                  <a
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="hover:text-secondary outline-black"
+                  >
+                    <span> {t(text)}</span>
+                  </a>
+                ) : (
+                  <span> {t(text)}</span>
+                )}
+              </div>
+            ))
+          }
+        </div>
+
+        <div class="flex gap-2 mt-4">
+          <a
+            href="https://www.facebook.com/profile.php?id=61574204880819 "
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit our Facebook page"
+            class="p-2 rounded-full text-white bg-secondary hover:bg-secondary/80 transition-colors"
+          >
+            <Facebook className="w-5 h-5" />
+          </a>
+          <a
+            href="https://www.youtube.com/@MPTCCommunityTechCenter "
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit our YouTube channel"
+            class="p-2 rounded-full text-white bg-secondary hover:bg-secondary/80 transition-colors"
+          >
+            <Youtube className="w-5 h-5" />
+          </a>
+          <a
+            href="https://www.tiktok.com/@community.tech.center"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit our TikTok profile"
+            class="p-2 rounded-full bg-secondary hover:bg-secondary/80 transition-colors"
+          >
+            <Image
+              src={tiktok}
+              alt="TikTok"
+              class="size-5"
+              style={{ objectFit: "cover" }}
+              quality={80}
+              format="webp"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,33 @@
+---
+import { Card } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
+import { styles } from "@/components/text-element/ElementStyle";
+
+interface Props {
+  translations: Record<string, string>;
+}
+
+const { translations } = Astro.props;
+const t = (key: string) => translations[key] || key;
+---
+
+<div class="container py-12 space-y-12">
+  <section class="space-y-6">
+    <h1 class={cn(styles.heading, "text-center text-primary")}>
+      {t("our.ctc.title")}
+    </h1>
+    <p class={cn(styles.body, "text-center max-w-8xl mx-auto ")}>
+      {t("our.ctc.description")}
+    </p>
+    <div>
+      <Card className="w-full aspect-square lg:aspect-[16/9] bg-gray-200">
+        <iframe
+          src="https://www.google.com/maps/d/u/0/embed?mid=1oXXkivO9_Cx8KyA2kAjlhWqoEK_DbuM&ehbc=2E312F&noprof=1"
+          class="w-full h-full"
+          title="Google Map: Community Tech Center"
+        >
+        </iframe>
+      </Card>
+    </div>
+  </section>
+</div>

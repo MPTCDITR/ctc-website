@@ -3,7 +3,9 @@ import "@/styles/global.css";
 import Layout from "@/layouts/Layout.astro";
 import { BlogContent } from "@/components/blog/blog-content";
 import { getLangFromUrl } from "@/lib/i18n";
-import { type CollectionEntry, getCollection } from "astro:content";
+import { getCollection } from "astro:content";
+
+export const prerender = true;
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection("blog");

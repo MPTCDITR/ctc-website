@@ -15,6 +15,7 @@ interface Props {
 }
 
 const { video } = Astro.props;
+const { lang } = Astro.params;
 ---
 
 <Card
@@ -22,9 +23,7 @@ const { video } = Astro.props;
 >
   <div class="relative aspect-video">
     <a
-      href={`https://www.youtube.com/watch?v=${video.id}`}
-      target="_blank"
-      rel="noopener noreferrer"
+      href={`/${lang}/videos/${video.id}`}
       class="flex items-center justify-center w-full h-full"
     >
       <div class="w-full h-full overflow-hidden">
@@ -33,28 +32,38 @@ const { video } = Astro.props;
           alt={video.title}
           width={480}
           height={360}
-          class="object-cover w-full h-full"
+          class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
           loading="lazy"
           quality={80}
           format="webp"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>
+      <div
+        class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-300"
+      >
+      </div>
       <Play
-        className="absolute hidden group-hover:flex text-red-600"
-        fill="currentColor"
-        size={58}
+        className="absolute text-white opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300 drop-shadow-md"
+        fill="white"
+        size={48}
       />
+      {
+        video.duration && (
+          <div class="absolute bottom-2 right-2 bg-black/80 text-white text-xs font-medium px-1.5 py-0.5 rounded">
+            {video.duration}
+          </div>
+        )
+      }
     </a>
   </div>
   <CardHeader className="pb-2">
-    <a
-      href={`https://www.youtube.com/watch?v=${video.id}`}
-      target="_blank"
-      rel="noopener noreferrer"
-      class="hover:underline"
-    >
-      <h3 class="text-xl font-semibold line-clamp-2">{video.title}</h3>
+    <a href={`/${lang}/videos/${video.id}`} class="hover:underline">
+      <h3
+        class="text-xl font-semibold line-clamp-2 leading-tight group-hover:text-primary transition-colors"
+      >
+        {video.title}
+      </h3>
     </a>
   </CardHeader>
   <CardContent className="flex-grow">

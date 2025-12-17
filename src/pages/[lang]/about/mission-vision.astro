@@ -1,7 +1,7 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import MissionVisionContent from "@/components/about/MissionVisionContent.astro";
 import { languages, ui } from "@/i18n/ui";
-import { MissionVisionContent } from "@/components/about/mission-vision-content";
 import { getLangFromUrl } from "@/lib/i18n";
 import { MISSION_VISION_PAGE_TITLE } from "@/consts";
 
@@ -20,5 +20,5 @@ const translations = ui[lang];
   description={MISSION_VISION_PAGE_TITLE.description}
   type="website"
 >
-  <MissionVisionContent translations={translations} client:visible />
+  <MissionVisionContent translations={translations} />
 </Layout>

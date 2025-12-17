@@ -1,0 +1,78 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import VideoPlayer from "@/components/video-youtube/VideoPlayer.astro";
+import { getVideoById } from "@/lib/youtube";
+import { languages } from "@/i18n/ui";
+import { formatDistanceToNow } from "@/lib/utils";
+import { Calendar, Clock, ArrowLeft } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+export const prerender = false;
+
+const { id, lang } = Astro.params;
+
+if (!id) {
+  return Astro.redirect(`/${lang}/videos`);
+}
+
+const video = await getVideoById(id);
+
+if (!video) {
+  return Astro.redirect(`/${lang}/videos`);
+}
+---
+
+<Layout
+  pageTitle={`${video.title} - Community Tech Centers`}
+  description={video.description}
+  ogImage={video.thumbnail}
+  type="video.other"
+>
+  <div class="container py-8 max-w-4xl mx-auto space-y-8">
+    <div data-aos="fade-right">
+      <a
+        href={`/${lang}/videos`}
+        class="inline-flex items-center text-muted-foreground hover:text-primary transition-colors"
+      >
+        <ArrowLeft className="mr-2 h-4 w-4" />
+        Back to Videos
+      </a>
+    </div>
+
+    <div class="space-y-4" data-aos="fade-up">
+      <VideoPlayer videoId={video.id} title={video.title} />
+
+      <div class="space-y-4">
+        <h1 class="text-2xl md:text-3xl font-bold text-primary">
+          {video.title}
+        </h1>
+
+        <div
+          class="flex flex-wrap items-center gap-4 text-sm text-muted-foreground border-b pb-4"
+        >
+          <div class="flex items-center">
+            <Calendar className="h-4 w-4 mr-1" />
+            <span>{formatDistanceToNow(new Date(video.publishedAt))}</span>
+          </div>
+          {
+            video.duration && (
+              <div class="flex items-center">
+                <Clock className="h-4 w-4 mr-1" />
+                <span>{video.duration}</span>
+              </div>
+            )
+          }
+          <div class="font-medium text-foreground">
+            {video.channelTitle}
+          </div>
+        </div>
+
+        <div
+          class="prose prose-sm md:prose-base max-w-none dark:prose-invert whitespace-pre-wrap text-muted-foreground"
+        >
+          {video.description}
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

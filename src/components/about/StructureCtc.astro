@@ -1,0 +1,127 @@
+---
+import { Card } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
+import { styles } from "@/components/text-element/ElementStyle";
+import TextElement from "@/components/text-element/TextElement";
+import { Image } from "astro:assets";
+
+import enNationalGovernmentCouncil from "@/assets/structure/en-national-government-council.svg";
+import khNationalGovernmentCouncil from "@/assets/structure/kh-national-government-council.svg";
+import enListCenters from "@/assets/structure/en-list-centers.svg";
+import khListCenters from "@/assets/structure/kh-list-centers.svg";
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  translations: Record<string, string>;
+  lang: string;
+  nationalBoardMembers: CollectionEntry<"national-board-member">[];
+}
+
+const { translations, lang, nationalBoardMembers } = Astro.props;
+const t = (key: string) => translations[key] || key;
+---
+
+<div class="container py-12 space-y-24">
+  <section class="space-y-8">
+    <div class="text-center space-y-4">
+      <TextElement variant="heading">{t("about.structure")}</TextElement>
+      <TextElement variant="paragraph">
+        {t("about.structure.description")}
+      </TextElement>
+    </div>
+
+    <div class="max-w-5xl mx-auto">
+      <div class="space-y-4">
+        {
+          lang === "en" ? (
+            <img
+              src={enNationalGovernmentCouncil.src}
+              alt="ctc national government council orgchart"
+              class="object-cover"
+            />
+          ) : (
+            <img
+              src={khNationalGovernmentCouncil.src}
+              alt="ctc national government council orgchart"
+              class="object-cover"
+            />
+          )
+        }
+      </div>
+    </div>
+
+    <div class={cn(styles.paragraph, "text-center space-y-4")}>
+      {t("about.structure.description2")}
+    </div>
+
+    <div class="max-w-5xl mx-auto">
+      <div class="space-y-4">
+        {
+          lang === "en" ? (
+            <img
+              src={enListCenters.src}
+              alt="ctc national government council orgchart"
+              class="object-cover"
+            />
+          ) : (
+            <img
+              src={khListCenters.src}
+              alt="ctc national government council orgchart"
+              class="object-cover"
+            />
+          )
+        }
+      </div>
+    </div>
+
+    <div class="space-y-4">
+      <h2 class="text-3xl font-bold text-primary">
+        {t("about.structure.ctcnational.board")}
+      </h2>
+      <TextElement variant="paragraph">
+        {t("about.structure.ctcnational.board.description")}
+      </TextElement>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-1 gap-6">
+      {
+        nationalBoardMembers.map((member) => (
+          <div>
+            <Card className="p-4">
+              <div class="flex gap-6">
+                <div class="relative overflow-hidden ">
+                  {member.data.image && (
+                    <Image
+                      src={member.data.image}
+                      alt={member.data.name || "Board Member"}
+                      class="object-cover size-32"
+                      quality={80}
+                      format="webp"
+                    />
+                  )}
+                </div>
+                <div class="w-full">
+                  <div class="flex-1 lg:flex sm:block justify-between items-start">
+                    <div>
+                      {member.data?.name && (
+                        <div class="flex gap-2">
+                          <div class="text-lg">{member.data.title}</div>
+                          <div class="font-semibold text-lg text-primary">
+                            {member.data.name}
+                          </div>
+                        </div>
+                      )}
+                      <div class="text-text">{member.data.organization}</div>
+                    </div>
+
+                    <div class="text-text">{member.data.role}</div>
+                  </div>
+                </div>
+              </div>
+            </Card>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+</div>
