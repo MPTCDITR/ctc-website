@@ -4,17 +4,35 @@ import SiteFooter from "@/components/layout/SiteFooter.astro";
 import BaseHead from "../components/BaseHead.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import CTCLogo from "@/assets/logo/ctc-logo.webp";
+import Schema from "@/components/seo/Schema.astro";
+import { languages } from "@/i18n/ui";
 
 interface Props {
   pageTitle: string;
   description: string;
   ogImage?: string;
-  type?: "website" | "article" | "video.other";
+  type?:
+    | "website"
+    | "article"
+    | "video.other"
+    | "VideoObject"
+    | "Place"
+    | "Organization"
+    | "WebSite";
   customCanonicalUrl?: string;
+  seoData?: any;
 }
 const { pageTitle, description, ogImage, type, customCanonicalUrl, ...props } =
   Astro.props;
 const ImageURL = new URL(ogImage ? ogImage : CTCLogo.src, Astro.url).href;
+
+// Map specific schema types to standard OG types
+const ogType =
+  type === "VideoObject"
+    ? "video.other"
+    : type === "article"
+      ? "article"
+      : "website";
 
 import { getLangFromUrl } from "@/lib/i18n";
 import { ui, defaultLang } from "@/i18n/ui";
@@ -36,9 +54,10 @@ const currentPath = Astro.url.pathname;
       pageTitle={pageTitle || SITE_TITLE}
       description={description || SITE_DESCRIPTION}
       ogImage={ImageURL}
-      type={type}
+      type={ogType}
       customCanonicalUrl={customCanonicalUrl}
     />
+    <Schema type={type as any} data={props.seoData} />
   </head>
   <body>
     <div class="min-h-screen flex flex-col">

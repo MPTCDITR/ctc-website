@@ -1,0 +1,44 @@
+---
+import {
+  generateArticleSchema,
+  generateVideoSchema,
+  generateOrganizationSchema,
+  generatePlaceSchema,
+  generateWebSiteSchema,
+} from "@/lib/seo";
+
+interface Props {
+  type?: "Article" | "VideoObject" | "Organization" | "WebSite" | "Place";
+  data?: any;
+}
+
+const { type = "WebSite", data } = Astro.props;
+const currentUrl = Astro.url.href;
+
+let schema: any = null;
+
+switch (type) {
+  case "Article":
+    if (data) schema = generateArticleSchema(data, currentUrl);
+    break;
+  case "VideoObject":
+    if (data) schema = generateVideoSchema(data, currentUrl);
+    break;
+  case "Organization":
+    schema = generateOrganizationSchema();
+    break;
+  case "Place":
+    if (data) schema = generatePlaceSchema(data, currentUrl);
+    break;
+  case "WebSite":
+  default:
+    schema = generateWebSiteSchema(currentUrl);
+    break;
+}
+---
+
+{
+  schema && (
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  )
+}

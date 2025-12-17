@@ -30,6 +30,13 @@ const lang = getLangFromUrl(Astro.url);
   description={entry.data.description}
   ogImage={entry.data.image?.src}
   type="article"
+  seoData={{
+    title: entry.data.title,
+    description: entry.data.description,
+    image: entry.data.image?.src,
+    date: entry.data.date.toISOString(),
+    author: entry.data.author,
+  }}
 >
   <BlogContent
     title={entry.data.title}

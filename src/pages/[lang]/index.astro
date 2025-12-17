@@ -31,7 +31,7 @@ const translations = ui[lang];
 const posts = await getBlogPosts(lang);
 
 // Fetch all videos and flatten to get latest across all playlists
-const videosByPlaylist = await getAllVideos();
+const videosByPlaylist = await getAllVideos(lang);
 const videos = Object.values(videosByPlaylist)
   .flat()
   .sort(
@@ -79,7 +79,8 @@ const slides = await Promise.all(
 <Layout
   pageTitle={HOME_PAGE_TITLE.title}
   description={HOME_PAGE_TITLE.description}
-  type="website"
+  type="WebSite"
+  seoData={{}}
 >
   <Hero lang={lang} translations={translations} slides={slides} client:load />
   <AboutSection lang={lang} translations={translations} />

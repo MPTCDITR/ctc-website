@@ -15,7 +15,7 @@ if (!id) {
   return Astro.redirect(`/${lang}/videos`);
 }
 
-const video = await getVideoById(id);
+const video = await getVideoById(id, lang);
 
 if (!video) {
   return Astro.redirect(`/${lang}/videos`);
@@ -26,7 +26,15 @@ if (!video) {
   pageTitle={`${video.title} - Community Tech Centers`}
   description={video.description}
   ogImage={video.thumbnail}
-  type="video.other"
+  type="VideoObject"
+  seoData={{
+    title: video.title,
+    description: video.description,
+    thumbnail: video.thumbnail,
+    publishedAt: video.publishedAt,
+    duration: video.duration,
+    id: video.id,
+  }}
 >
   <div class="container py-8 max-w-4xl mx-auto space-y-8">
     <div data-aos="fade-right">

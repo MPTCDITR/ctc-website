@@ -28,7 +28,12 @@ const translations = ui[lang];
 <Layout
   pageTitle={`${entry.data.name} - Community Tech Centers`}
   description={entry.data.description}
-  type="article"
+  type="Place"
+  seoData={{
+    name: entry.data.name,
+    description: entry.data.description,
+    location: "Cambodia", // Simplified, as address detail is complex in this structure
+  }}
 >
   <CenterTeamInfo
     centerName={entry.data.name}

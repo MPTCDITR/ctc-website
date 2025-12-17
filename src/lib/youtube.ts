@@ -10,16 +10,33 @@ const API_KEY = import.meta.env.YOUTUBE_API_KEY;
 const CHANNEL_ID = import.meta.env.YOUTUBE_CHANNEL_ID;
 const BASE_URL = "https://www.googleapis.com/youtube/v3";
 
-export async function getPlaylists(): Promise<YouTubePlaylist[]> {
+// Helper to construct API URL with optional params
+const getApiUrl = (endpoint: string, params: Record<string, string>) => {
+  const url = new URL(`${BASE_URL}/${endpoint}`);
+  url.searchParams.append("key", API_KEY || "");
+  Object.entries(params).forEach(([key, value]) =>
+    url.searchParams.append(key, value)
+  );
+  return url.toString();
+};
+
+export async function getPlaylists(
+  lang: string = "en"
+): Promise<YouTubePlaylist[]> {
   if (!API_KEY || !CHANNEL_ID) {
     console.error("YouTube API Key or Channel ID missing");
     return [];
   }
 
   try {
-    const response = await fetch(
-      `${BASE_URL}/playlists?part=snippet&channelId=${CHANNEL_ID}&maxResults=50&key=${API_KEY}`
-    );
+    const url = getApiUrl("playlists", {
+      part: "snippet",
+      channelId: CHANNEL_ID,
+      maxResults: "50",
+      hl: lang,
+    });
+
+    const response = await fetch(url);
     const data = await response.json();
 
     if (!data.items) return [];
@@ -53,15 +70,20 @@ function parseDuration(duration: string): string {
 }
 
 export async function getVideosForPlaylist(
-  playlistId: string
+  playlistId: string,
+  lang: string = "en"
 ): Promise<Video[]> {
   if (!API_KEY) return [];
 
   try {
     // 1. Fetch Playlist Items
-    const playlistResponse = await fetch(
-      `${BASE_URL}/playlistItems?part=snippet&playlistId=${playlistId}&maxResults=50&key=${API_KEY}`
-    );
+    const playlistUrl = getApiUrl("playlistItems", {
+      part: "snippet",
+      playlistId: playlistId,
+      maxResults: "50",
+      hl: lang, // localized playlist items
+    });
+    const playlistResponse = await fetch(playlistUrl);
     const playlistData = await playlistResponse.json();
 
     if (!playlistData.items || playlistData.items.length === 0) return [];
@@ -71,12 +93,13 @@ export async function getVideosForPlaylist(
       (item: any) => item.snippet.resourceId.videoId
     );
 
-    // 3. Fetch Video Details (ContentDetails for duration)
-    const videosResponse = await fetch(
-      `${BASE_URL}/videos?part=snippet,contentDetails&id=${videoIds.join(
-        ","
-      )}&key=${API_KEY}`
-    );
+    // 3. Fetch Video Details (ContentDetails for duration) with Localization
+    const videosUrl = getApiUrl("videos", {
+      part: "snippet,contentDetails",
+      id: videoIds.join(","),
+      hl: lang, // localized video details
+    });
+    const videosResponse = await fetch(videosUrl);
     const videosData = await videosResponse.json();
 
     if (!videosData.items) return [];
@@ -84,8 +107,9 @@ export async function getVideosForPlaylist(
     // 4. Map back to Video interface
     return videosData.items.map((item: any) => ({
       id: item.id,
-      title: item.snippet.title,
-      description: item.snippet.description,
+      title: item.snippet.localized?.title || item.snippet.title,
+      description:
+        item.snippet.localized?.description || item.snippet.description,
       thumbnail:
         item.snippet.thumbnails.high?.url ||
         item.snippet.thumbnails.medium?.url ||
@@ -101,13 +125,19 @@ export async function getVideosForPlaylist(
   }
 }
 
-export async function getVideoById(id: string): Promise<Video | null> {
+export async function getVideoById(
+  id: string,
+  lang: string = "en"
+): Promise<Video | null> {
   if (!API_KEY) return null;
 
   try {
-    const response = await fetch(
-      `${BASE_URL}/videos?part=snippet,contentDetails&id=${id}&key=${API_KEY}`
-    );
+    const url = getApiUrl("videos", {
+      part: "snippet,contentDetails",
+      id: id,
+      hl: lang,
+    });
+    const response = await fetch(url);
     const data = await response.json();
 
     if (!data.items || data.items.length === 0) return null;
@@ -115,8 +145,9 @@ export async function getVideoById(id: string): Promise<Video | null> {
     const item = data.items[0];
     return {
       id: item.id,
-      title: item.snippet.title,
-      description: item.snippet.description,
+      title: item.snippet.localized?.title || item.snippet.title,
+      description:
+        item.snippet.localized?.description || item.snippet.description,
       thumbnail:
         item.snippet.thumbnails.high?.url ||
         item.snippet.thumbnails.medium?.url ||
@@ -131,14 +162,16 @@ export async function getVideoById(id: string): Promise<Video | null> {
   }
 }
 
-export async function getAllVideos(): Promise<Record<string, Video[]>> {
-  const playlists = await getPlaylists();
+export async function getAllVideos(
+  lang: string = "en"
+): Promise<Record<string, Video[]>> {
+  const playlists = await getPlaylists(lang);
   const videosByPlaylist: Record<string, Video[]> = {};
 
   // Fetch videos for all playlists in parallel
   await Promise.all(
     playlists.map(async (playlist) => {
-      const videos = await getVideosForPlaylist(playlist.id);
+      const videos = await getVideosForPlaylist(playlist.id, lang);
       if (videos.length > 0) {
         videosByPlaylist[playlist.title] = videos;
       }
