@@ -102,6 +102,7 @@ export function SiteFooter({ lang }: FooterProps) {
                 key={href}
                 href={href}
                 className="text-white hover:text-secondary"
+                aria-label={t(label)}
                 style={{ WebkitTextStroke: " black" }}
               >
                 {t(label)}
@@ -120,9 +121,12 @@ export function SiteFooter({ lang }: FooterProps) {
           <div className="flex flex-col gap-3 text-lg">
             {otherLinks.map(({ href, label }) => (
               <a
+                key={href}
                 href={href}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="text-white hover:text-secondary outline-black"
+                aria-label={t(label)}
               >
                 {t(label)}
               </a>
@@ -146,7 +150,7 @@ export function SiteFooter({ lang }: FooterProps) {
                     <a
                       href={href}
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
                       className="hover:text-secondary outline-black"
                     >
                       <span> {t(text)}</span>
@@ -167,6 +171,8 @@ export function SiteFooter({ lang }: FooterProps) {
               <a
                 href="https://www.facebook.com/profile.php?id=61574204880819 "
                 target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit our Facebook page"
                 className="p-2 rounded-full text-white bg-secondary hover:bg-secondary/80 transition-colors"
               >
                 <Facebook className="w-5 h-5" />
@@ -174,6 +180,8 @@ export function SiteFooter({ lang }: FooterProps) {
               <a
                 href="https://www.youtube.com/@MPTCCommunityTechCenter "
                 target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit our YouTube channel"
                 className="p-2 rounded-full text-white bg-secondary hover:bg-secondary/80 transition-colors"
               >
                 <Youtube className="w-5 h-5" />
@@ -181,11 +189,13 @@ export function SiteFooter({ lang }: FooterProps) {
               <a
                 href="https://www.tiktok.com/@community.tech.center"
                 target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit our TikTok profile"
                 className="p-2 rounded-full bg-secondary hover:bg-secondary/80 transition-colors"
               >
                 <img
                   src={tiktok.src}
-                  alt="Social"
+                  alt="TikTok"
                   className="size-5"
                   style={{ objectFit: "cover" }}
                 />

@@ -1,0 +1,205 @@
+---
+import "@/styles/global.css";
+import Layout from "@/layouts/Layout.astro";
+import BlogCard from "@/components/blog/BlogCard.astro";
+import { getLangFromUrl } from "@/lib/i18n";
+import { ui, languages } from "@/i18n/ui";
+import { getBlogPosts } from "@/lib/blog";
+import { convertNumberToKhmer } from "@/lib/utils";
+import {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+} from "@/components/ui/pagination";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import TextElement from "@/components/text-element/TextElement";
+import { styles } from "@/components/text-element/ElementStyle";
+import { cn } from "@/lib/utils";
+
+import type { GetStaticPaths, Page } from "astro";
+import type { CollectionEntry } from "astro:content";
+
+export const getStaticPaths = (async ({ paginate }) => {
+  const allParams: any[] = [];
+
+  // Get all languages
+  const langs = Object.keys(languages);
+
+  // For each language, get posts and generate paginated paths
+  for (const lang of langs) {
+    const posts = await getBlogPosts(lang);
+
+    // Generate pages for this language
+    // map the result to include lang param in every page
+    const pages = paginate(posts, {
+      pageSize: 4,
+      params: { lang }, // This sets the lang param for all generated pages
+    });
+
+    allParams.push(...pages);
+  }
+
+  return allParams;
+}) satisfies GetStaticPaths;
+
+interface Props {
+  page: Page<CollectionEntry<"blog">>;
+}
+
+const { page } = Astro.props;
+const { lang } = Astro.params;
+const translations = ui[lang as string] || ui.en;
+const t = (key: string) => translations[key] || key;
+
+const posts = page.data;
+const currentPage = page.currentPage;
+const totalPages = page.lastPage;
+
+// Helper for pagination logic (same as before but adapted for Astro links)
+const getPaginationItems = (current: number, total: number) => {
+  if (total <= 5) return Array.from({ length: total }, (_, i) => i + 1);
+  if (current <= 3) return [1, 2, 3, 4, "...", total];
+  if (current >= total - 3)
+    return [1, "...", total - 4, total - 3, total - 2, total - 1, total];
+  return [1, "...", current - 1, current, current + 1, "...", total];
+};
+
+const getPageURL = (p: number | string) => {
+  if (p === 1) return `/${lang}/blog`;
+  return `/${lang}/blog/${p}`;
+};
+---
+
+<Layout
+  pageTitle={t("blog.title")}
+  description={t("blog.list.description")}
+  type="website"
+>
+  <div class="container py-12 space-y-12">
+    <h1
+      class={cn(styles.heading, "text-center text-primary")}
+      data-aos="fade-up"
+    >
+      {t("nav.news-event")}
+    </h1>
+
+    <p
+      class={cn(styles.body, "text-center max-w-8xl mx-auto")}
+      data-aos="fade-up"
+      data-aos-delay="200"
+    >
+      {t("blog.list.description")}
+    </p>
+
+    {
+      posts.length === 0 ? (
+        <div class="space-y-8">
+          <TextElement variant="heading">{t("blog.title")}</TextElement>
+          <TextElement variant="body" className="text-muted-foreground">
+            {t("blog.no_posts")}
+          </TextElement>
+        </div>
+      ) : (
+        <div class="space-y-8">
+          {posts.map((post, index) => (
+            <BlogCard
+              index={index}
+              title={post.data.title}
+              description={post.data.description}
+              date={post.data.date.toISOString()}
+              author={post.data.author}
+              image={post.data.image}
+              slug={post.slug}
+              lang={lang as string}
+              translations={translations}
+            />
+          ))}
+        </div>
+      )
+    }
+
+    <div class="mt-12">
+      <Pagination>
+        <PaginationContent>
+          <PaginationItem>
+            <div
+              class={`flex text-sm font-semibold space-x-2 me-5 items-center ${!page.url.prev ? "pointer-events-none opacity-50" : ""}`}
+            >
+              <a
+                href={page.url.prev || "#"}
+                class="flex items-center space-x-2"
+              >
+                <ChevronLeft className="h-4 w-4" />
+                <span class="hidden sm:block">{t("btn.previous")}</span>
+              </a>
+            </div>
+          </PaginationItem>
+
+          {
+            getPaginationItems(currentPage, totalPages).map((p, i) =>
+              p === "..." ? (
+                <PaginationItem key={`ellipsis-${i}`}>
+                  <PaginationEllipsis />
+                </PaginationItem>
+              ) : (
+                <PaginationItem key={p}>
+                  <PaginationLink
+                    href={getPageURL(p)}
+                    isActive={currentPage === p}
+                  >
+                    {lang === "en" ? p : convertNumberToKhmer(p as number)}
+                  </PaginationLink>
+                </PaginationItem>
+              )
+            )
+          }
+
+          <PaginationItem>
+            <div
+              class={`flex text-sm font-semibold space-x-2 ms-5 items-center ${!page.url.next ? "pointer-events-none opacity-50" : ""}`}
+            >
+              <a
+                href={page.url.next || "#"}
+                class="flex items-center space-x-2"
+              >
+                <span class="hidden sm:block">{t("btn.next")}</span>
+                <ChevronRight className="h-4 w-4" />
+              </a>
+            </div>
+          </PaginationItem>
+        </PaginationContent>
+      </Pagination>
+    </div>
+  </div>
+</Layout>
+
+<script>
+  // Simple intersection observer for fade-up animation
+  const observerOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.1,
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add(
+          "animate-in",
+          "fade-in",
+          "slide-in-from-bottom-4",
+          "duration-700"
+        );
+        entry.target.classList.remove("opacity-0", "translate-y-4");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('[data-aos="fade-up"]').forEach((el) => {
+    el.classList.add("opacity-0", "translate-y-4", "transition-all");
+    observer.observe(el);
+  });
+</script>

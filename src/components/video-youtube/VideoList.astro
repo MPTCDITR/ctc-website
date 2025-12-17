@@ -1,0 +1,79 @@
+---
+import VideoCard from "./VideoCard.astro";
+import type { Video } from "@/lib/types";
+import { styles } from "@/components/text-element/ElementStyle";
+import { cn } from "@/lib/utils";
+
+interface Props {
+  videos: Video[];
+  translations: Record<string, string>;
+  lang: string;
+}
+
+const { videos, translations, lang } = Astro.props;
+const t = (key: string) => translations[key] || key;
+---
+
+{
+  !videos || videos.length === 0 ? (
+    <div class="text-center py-12">
+      <h2 class="text-2xl font-semibold">No videos found</h2>
+      <p class="text-muted-foreground mt-2">
+        Please check your playlist ID or try again later.
+      </p>
+    </div>
+  ) : (
+    <div class="container py-12 space-y-12">
+      <h1
+        class={cn(styles.heading, "text-center text-primary")}
+        data-aos="fade-up"
+      >
+        {t("nav.news-media")}
+      </h1>
+
+      <p
+        class={cn(styles.body, "text-center max-w-8xl mx-auto")}
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        {t("videos.list.description")}
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {videos.map((video, index) => (
+          <div data-aos="fade-up" data-aos-delay={index * 100}>
+            <VideoCard video={video} />
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+<script>
+  // Simple intersection observer for fade-up animation
+  const observerOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.1,
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add(
+          "animate-in",
+          "fade-in",
+          "slide-in-from-bottom-4",
+          "duration-700"
+        );
+        entry.target.classList.remove("opacity-0", "translate-y-4");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('[data-aos="fade-up"]').forEach((el) => {
+    el.classList.add("opacity-0", "translate-y-4", "transition-all");
+    observer.observe(el);
+  });
+</script>

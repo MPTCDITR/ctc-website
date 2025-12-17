@@ -1,0 +1,86 @@
+---
+import { Card } from "@/components/ui/card";
+import { formatDate } from "@/lib/utils";
+import TextElement from "@/components/text-element/TextElement";
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+
+interface Props {
+  index: number;
+  title: string;
+  description: string;
+  date: string;
+  author: string;
+  image?: ImageMetadata;
+  slug: string;
+  lang: string;
+  translations: Record<string, string>;
+}
+
+const {
+  index,
+  title,
+  description,
+  date,
+  author,
+  image,
+  slug,
+  lang,
+  translations,
+} = Astro.props;
+
+const urlSlug = slug.split("/").slice(1).join("/");
+const t = (key: string) => translations[key] || key;
+---
+
+<div data-aos="fade-up" data-aos-delay={index * 100}>
+  <a
+    href={`/${lang}/blog/${urlSlug}`}
+    class="block hover:opacity-90 transition-opacity"
+  >
+    <Card className="overflow-hidden">
+      <div
+        class={`grid md:grid-cols-2 gap-8 p-4 lg:p-6 ${index % 2 === 1 ? "md:flex-row-reverse" : ""}`}
+      >
+        <div class="max-h-96 aspect-auto relative rounded-lg overflow-hidden">
+          {
+            image && (
+              <Image
+                src={image}
+                width={image.width}
+                height={image.height}
+                alt={title}
+                class="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
+                quality={80}
+                format="webp"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              />
+            )
+          }
+        </div>
+        <div class="space-y-4">
+          <TextElement
+            variant="body"
+            className="text-secondary hover:underline"
+          >
+            <time datetime={date}>{formatDate(date, lang)}</time>
+          </TextElement>
+          <TextElement variant="titleblog" className="text-primary">
+            {title}
+          </TextElement>
+          <TextElement variant="body" className="text-gray-600 line-clamp-4">
+            {description}
+          </TextElement>
+          <TextElement
+            variant="body"
+            className="text-primary font-bold hover:underline"
+          >
+            {t("blog.readmore")} →
+          </TextElement>
+        </div>
+      </div>
+    </Card>
+  </a>
+</div>

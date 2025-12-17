@@ -1,0 +1,91 @@
+---
+import { Button } from "@/components/ui/button";
+import BlogLatestCard from "./BlogLatestCard.astro";
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  posts: CollectionEntry<"blog">[];
+  translations: Record<string, string>;
+  lang: string;
+}
+
+const { posts, translations, lang } = Astro.props;
+const latestPosts = posts.slice(0, 3);
+const t = (key: string) => translations[key] || key;
+---
+
+<div class="bg-accent/10 py-24">
+  <div class="container flex flex-col items-center gap-12">
+    <h1
+      class="text-4xl lg:text-5xl font-bold text-primary text-center"
+      data-aos="fade-up"
+    >
+      {t("home.latest.newsandevents")}
+    </h1>
+    <p
+      class="max-w-8xl text-center text-lg text-text"
+      data-aos="fade-up"
+      data-aos-delay="200"
+    >
+      {t("home.latest.newsandevents.description")}
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
+      {
+        latestPosts.map((post, i) => (
+          <div data-aos="fade-up" data-aos-delay={i * 100}>
+            <BlogLatestCard
+              title={post.data.title}
+              description={post.data.description}
+              date={post.data.date.toISOString()}
+              author={post.data.author}
+              image={post.data.image}
+              slug={post.slug}
+              lang={lang}
+              translations={translations}
+            />
+          </div>
+        ))
+      }
+    </div>
+
+    <div data-aos="fade-up" data-aos-delay="500">
+      <a href={`/${lang}/blog`}>
+        <Button className="bg-primary hover:hover:bg-secondary text-white">
+          {t("home.viewallnews")}
+        </Button>
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Simple intersection observer for fade-up animation replacement since we removed framer-motion
+  // or we could just rely on simple CSS classes if AOS library isn't available.
+  // For now, let's keep it simple standard HTML/CSS or add a small script for fade-in.
+
+  const observerOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.1,
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add(
+          "animate-in",
+          "fade-in",
+          "slide-in-from-bottom-4",
+          "duration-700"
+        );
+        entry.target.classList.remove("opacity-0", "translate-y-4");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('[data-aos="fade-up"]').forEach((el) => {
+    el.classList.add("opacity-0", "translate-y-4", "transition-all");
+    observer.observe(el);
+  });
+</script>

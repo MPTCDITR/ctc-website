@@ -1,5 +1,5 @@
 ---
-import { VideoList } from "@/components/video-youtube/video-list";
+import VideoList from "@/components/video-youtube/VideoList.astro";
 import { fetchPlaylistVideos } from "@/lib/youtube";
 import { ui, languages } from "@/i18n/ui";
 import Layout from "@/layouts/Layout.astro";
@@ -26,10 +26,5 @@ const videos = await fetchPlaylistVideos(
   description={VIDEOS_PAGE_TITLE.description}
   type="website"
 >
-  <VideoList
-    videos={videos}
-    lang={lang}
-    translations={translations}
-    client:load
-  />
+  <VideoList videos={videos} lang={lang} translations={translations} />
 </Layout>

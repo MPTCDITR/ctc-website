@@ -2,16 +2,24 @@
 import "@/styles/global.css";
 import Layout from "@/layouts/Layout.astro";
 import Hero from "@/components/home/hero-section";
-import { AboutSection } from "@/components/home/about-section";
+import AboutSection from "@/components/home/AboutSection.astro";
 import { ui, languages } from "@/i18n/ui";
-import { CentersSection } from "@/components/home/centers-section";
-import { LatestBlogs } from "@/components/home/news-latest-section";
+import CentersSection from "@/components/home/CentersSection.astro";
+import LatestNews from "@/components/home/LatestNews.astro";
 import { getLangFromUrl } from "@/lib/i18n";
 import { getBlogPosts } from "@/lib/blog";
 import { HOME_PAGE_TITLE } from "@/consts";
 import { fetchPlaylistVideos } from "@/lib/youtube";
 import FunctionalHome from "@/components/home/FunctionalHome.astro";
 import VideoListHome from "@/components/home/VideoListHome.astro";
+import { getImage } from "astro:assets";
+
+import computerLab from "@/assets/our-centers/our-service/computer-lab-2.webp";
+import trainingRoom from "@/assets/home/training-room.webp";
+import publicHall from "@/assets/home/public-hall.webp";
+import postOffice from "@/assets/home/post-office.webp";
+import ctcImage from "@/assets/image-assets/about-ctc-1.webp";
+
 export async function getStaticPaths() {
   return Object.keys(languages).map((lang) => ({
     params: { lang },
@@ -25,6 +33,41 @@ const videos = await fetchPlaylistVideos(
   import.meta.env.PUBLIC_YOUTUBE_API_KEY,
   import.meta.env.PUBLIC_PLAYLIST_ID
 );
+
+const slides = await Promise.all(
+  [
+    {
+      image: ctcImage,
+      title: "communitytechcenter",
+      description: "home.hero.ctc.description",
+      href: `/${lang}/about/about-us/`,
+    },
+    {
+      image: computerLab,
+      title: "home.service.computerlab",
+      description: "home.service.computerlab.description",
+    },
+    {
+      image: trainingRoom,
+      title: "home.service.trainingroom",
+      description: "home.service.trainingroom.description",
+    },
+    {
+      image: postOffice,
+      title: "home.service.postoffice",
+      description: "home.service.postoffice.description",
+    },
+    {
+      image: publicHall,
+      title: "home.service.publichall",
+      description: "home.service.publichall.description",
+    },
+  ].map(async (slide) => ({
+    ...slide,
+    image: (await getImage({ src: slide.image, format: "webp", quality: 80 }))
+      .src,
+  }))
+);
 ---
 
 <Layout
@@ -32,22 +75,10 @@ const videos = await fetchPlaylistVideos(
   description={HOME_PAGE_TITLE.description}
   type="website"
 >
-  <Hero lang={lang} translations={translations} client:load />
+  <Hero lang={lang} translations={translations} slides={slides} client:load />
   <AboutSection lang={lang} translations={translations} />
-  <VideoListHome  
-    videos={videos}
-    lang={lang}
-    translations={translations}
-   />
-  <FunctionalHome
-    lang={lang}
-    translations={translations}
-  />
+  <VideoListHome videos={videos} lang={lang} translations={translations} />
+  <FunctionalHome lang={lang} translations={translations} />
   <CentersSection lang={lang} translations={translations} />
-  <LatestBlogs
-    posts={posts}
-    translations={translations}
-    lang={lang}
-    client:load
-  />
+  <LatestNews posts={posts} translations={translations} lang={lang} />
 </Layout>
