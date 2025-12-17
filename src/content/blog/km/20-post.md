@@ -3,7 +3,7 @@ title: ឯកឧត្តមរដ្ឋមន្រ្តី ជា វ៉ា�
 description: រាជធានីភ្នំពេញ និងខេត្តតាកែវ៖ នៅព្រឹកថ្ងៃទី២១ ខែសីហា ឆ្នាំ២០២៥ ឯកឧត្ដម ជា វ៉ាន់ដេត រដ្ឋមន្ត្រីក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍ (ក.ប.ទ.) បានអញ្ជើញជាអធិបតីក្នុងពិធីសំណេះសំណាលជាមួយមេឃុំ នាយកវិទ្យាល័យ ប្រធាននិងគ្រូប្រចាំ មជ្ឈមណ្ឌលបច្ចេកវិទ្យាសហគមន៍ (ម.ប.ស.) ទាំង១៨ វិទ្យាល័យ នៅខេត្តតាកែវ ព្រមទាំងមានការអញ្ជើញចូលរួមពី ឯកឧត្តម សាន វឌ្ឍនា រដ្ឋលេខាធិការក្រសួងអប់រំ យុវជន និងកីឡា ឯកឧត្តម លោកជំទាវ លោក លោកស្រី ជាក្រុមការងារអនុវត្តគម្រោង ម.ប.ស. របស់ ក.ប.ទ. និងលោកអគ្គនាយកប្រៃសណីយ៍កម្ពុជា សរុបប្រមាណ ១៥០ នាក់ ចូលរួមដោយផ្ទាល់នៅទីស្តីការ ក.ប.ទ. និងតាមប្រព័ន្ធអនឡាញ។
 date: 2025-08-21 
 author: ក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍
-image: "src/assets/news-and-events/article-20/thumbnail.JPG"
+image: "@/assets/news-and-events/article-20/thumbnail.JPG"
 tags: []
 ---
 
@@ -25,11 +25,11 @@ tags: []
 
 
 
-![photo 1](src/assets/news-and-events/article-20/photo-1.JPG)
-![photo 2](src/assets/news-and-events/article-20/photo-2.JPG)
-![photo 3](src/assets/news-and-events/article-20/photo-3.JPG)
-![photo 4](src/assets/news-and-events/article-20/photo-4.JPG)
-![photo 5](src/assets/news-and-events/article-20/photo-5.JPG)
-![photo 6](src/assets/news-and-events/article-20/photo-6.JPG)
-![photo 7](src/assets/news-and-events/article-20/photo-7.JPG)
+![photo 1](@/assets/news-and-events/article-20/photo-1.JPG)
+![photo 2](@/assets/news-and-events/article-20/photo-2.JPG)
+![photo 3](@/assets/news-and-events/article-20/photo-3.JPG)
+![photo 4](@/assets/news-and-events/article-20/photo-4.JPG)
+![photo 5](@/assets/news-and-events/article-20/photo-5.JPG)
+![photo 6](@/assets/news-and-events/article-20/photo-6.JPG)
+![photo 7](@/assets/news-and-events/article-20/photo-7.JPG)
 

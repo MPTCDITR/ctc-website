@@ -3,7 +3,7 @@ title: ក្រុមការងារ Sisters of Code បានបន្ត�
 description: ខេត្តតាកែវ៖ នារសៀលថ្ងៃទី១៨ ខែតុលា ឆ្នាំ២០២៥ ចាប់​ពីម៉ោង ២៖០០ ដល់ ៤៖៣០នាទីរសៀល ក្រុមការងារ Sisters of Code ចំនួន ៣​រូប បានចុះធ្វើការបណ្ដុះបណ្ដាលលើមេរៀនទី១០ ស្ដីពី Wix Website និងការចាប់ផ្ដើមជាមួយបញ្ញាសិប្បនិម្មិតបង្កើតមាតិកា (Gen AI) នៅមជ្ឈមណ្ឌលបច្ចេកវិទ្យាសហគមន៍ (ម.ប.ស.) ចំនួន ៣ទីតាំង រួមមាន វិទ្យាល័យ សុខអាន ត្រាំខ្នារ វិទ្យាល័យ ប៊ុនរ៉ានី ហ៊ុន សែន បាទី​ និង វិទ្យាល័យ ហ៊ុន សែន ១​ មិថុនា ដែលមានសិស្សានុសិស្សចូលរួមសរុបចំនួន ៣១រូប។
 date: 2025-10-18 
 author: ក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍
-image: "src/assets/news-and-events/article-25/thumbnail.jpg"
+image: "@/assets/news-and-events/article-25/thumbnail.jpg"
 tags: []
 ---
 ក្រុមការងារ Sisters of Code បានបន្តការបណ្ដុះបណ្ដាលលើកកម្ពស់អក្ខរកម្មឌីជីថលនៅក្នុងប្រទេសកម្ពុជា
@@ -16,14 +16,14 @@ tags: []
 
 សម្រាប់ព័ត៌មានបន្ថែម សូមចូលទៅកាន់គេហទំព័រផ្លូវការរបស់ ម.ប.ស. គឺ www.ctc.edu.kh ដើម្បីតាមដានការវិវឌ្ឍន៍ថ្មីៗ។
 
-![photo 1](src/assets/news-and-events/article-25/photo-1.jpg)
-![photo 2](src/assets/news-and-events/article-25/photo-2.jpg)
-![photo 3](src/assets/news-and-events/article-25/photo-3.jpg)
-![photo 4](src/assets/news-and-events/article-25/photo-4.jpg)
-![photo 5](src/assets/news-and-events/article-25/photo-5.jpg)
-![photo 6](src/assets/news-and-events/article-25/photo-6.jpg)
-![photo 7](src/assets/news-and-events/article-25/photo-7.jpg)
-![photo 8](src/assets/news-and-events/article-25/photo-8.jpg)
-![photo 9](src/assets/news-and-events/article-25/photo-9.jpg)
-![photo 10](src/assets/news-and-events/article-25/photo-10.jpg)
-![photo 11](src/assets/news-and-events/article-25/photo-11.jpg)
+![photo 1](@/assets/news-and-events/article-25/photo-1.jpg)
+![photo 2](@/assets/news-and-events/article-25/photo-2.jpg)
+![photo 3](@/assets/news-and-events/article-25/photo-3.jpg)
+![photo 4](@/assets/news-and-events/article-25/photo-4.jpg)
+![photo 5](@/assets/news-and-events/article-25/photo-5.jpg)
+![photo 6](@/assets/news-and-events/article-25/photo-6.jpg)
+![photo 7](@/assets/news-and-events/article-25/photo-7.jpg)
+![photo 8](@/assets/news-and-events/article-25/photo-8.jpg)
+![photo 9](@/assets/news-and-events/article-25/photo-9.jpg)
+![photo 10](@/assets/news-and-events/article-25/photo-10.jpg)
+![photo 11](@/assets/news-and-events/article-25/photo-11.jpg)

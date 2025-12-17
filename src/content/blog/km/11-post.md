@@ -3,16 +3,16 @@ title: សកម្មភាពនៃការដាក់បង្ហាញអ�
 description: ខេត្តតាកែវ ថ្ងៃទី២១ ខែមីនា ឆ្នាំ២០២៥៖ សកម្មភាពនៃការដាក់បង្ហាញអំពីសមិទ្ធិផលនៃក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍ រួមមាន មជ្ឈមណ្ឌលបច្ចេកវិទ្យាសហគមន៍ នៅក្នុងព្រឹត្តិការណ៍បុណ្យទន្លេលើកទី៩ នៅខេត្តតាកែវ ដោយមានវត្តមានដ៏ខ្ពង់ខ្ពស់បំផុតរបស់ សម្តេចធិបតី នាយករដ្ឋមន្រ្តីនៃព្រះរាជាណាចក្រកម្ពុជា ថ្នាក់ដឹកនាំក្រសួង ស្ថានប័ន និងភ្ញៀវជាតិនិងអន្តរជាតិជាច្រើននាក់។
 date: 2025-03-21 
 author: ក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍
-image: "src/assets/news-and-events/article-11/thumbnail.webp"
+image: "@/assets/news-and-events/article-11/thumbnail.webp"
 tags: []
 ---
 
 ខេត្តតាកែវ ថ្ងៃទី២១ ខែមីនា ឆ្នាំ២០២៥៖ សកម្មភាពនៃការដាក់បង្ហាញអំពីសមិទ្ធិផលនៃក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍ រួមមាន មជ្ឈមណ្ឌលបច្ចេកវិទ្យាសហគមន៍ នៅក្នុងព្រឹត្តិការណ៍បុណ្យទន្លេលើកទី៩ នៅខេត្តតាកែវ ដោយមានវត្តមានដ៏ខ្ពង់ខ្ពស់បំផុតរបស់ សម្តេចធិបតី នាយករដ្ឋមន្រ្តីនៃព្រះរាជាណាចក្រកម្ពុជា ថ្នាក់ដឹកនាំក្រសួង ស្ថានប័ន និងភ្ញៀវជាតិនិងអន្តរជាតិជាច្រើននាក់។ 
 
 
-![photo 3](src/assets/news-and-events/article-11/photo-1.jpg)
-![photo 4](src/assets/news-and-events/article-11/photo-2.webp)
-![photo 3](src/assets/news-and-events/article-11/photo-3.webp)
-![photo 4](src/assets/news-and-events/article-11/photo-4.webp)
-![photo 3](src/assets/news-and-events/article-11/photo-5.webp)
-![photo 3](src/assets/news-and-events/article-11/photo-6.webp)
+![photo 3](@/assets/news-and-events/article-11/photo-1.jpg)
+![photo 4](@/assets/news-and-events/article-11/photo-2.webp)
+![photo 3](@/assets/news-and-events/article-11/photo-3.webp)
+![photo 4](@/assets/news-and-events/article-11/photo-4.webp)
+![photo 3](@/assets/news-and-events/article-11/photo-5.webp)
+![photo 3](@/assets/news-and-events/article-11/photo-6.webp)

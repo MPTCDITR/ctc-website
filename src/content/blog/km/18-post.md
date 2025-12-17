@@ -3,7 +3,7 @@ title: ឯកឧត្តមរដ្ឋមន្រ្តី ជា វ៉ា�
 description: រាជធានីភ្នំពេញ៖ នារសៀលថ្ងៃទី២២ ខែកក្កដា ឆ្នាំ២០២៥ ឯកឧត្ដម ជា វ៉ាន់ដេត រដ្ឋមន្ត្រីក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍ (ក.ប.ទ.) បានអញ្ជើញចូលរួមពិធីសំណេះសំណាលជាមួយសិស្សថ្នាក់ទី១២ នៅវិទ្យាល័យដែលមានមជ្ឈមណ្ឌលបច្ចេកវិទ្យាសហគមន៍  (ម.ប.ស.) ចំនួន ១៨ ទីតាំង ក្នុងខេត្តតាកែវ ប្រមាណ ៤ ០០០ នាក់ តាមប្រព័ន្ធវីដេអូ ZOOM។ នៅក្នុងពិធីនេះ ក៏មានការអញ្ជើញចូលរួមពី ឯកឧត្តម លោកជំទាវ អនុរដ្ឋលេខាធិការ និងមន្ត្រីជំនាញនៃ ក.ប.ទ. មន្ទីរ ប.ទ. ខេត្ត មន្ទីរអប់រំ យុវជន និងកីឡាខេត្ត នាយកវិទ្យាល័យ ប្រធាន ម.ប.ស. និងគ្រូប្រចាំ ម.ប.ស. ផងដែរ។
 date: 2025-07-22 
 author: ក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍
-image: "src/assets/news-and-events/article-18/thumbnail.jpg"
+image: "@/assets/news-and-events/article-18/thumbnail.jpg"
 tags: []
 ---
 ឯកឧត្តមរដ្ឋមន្រ្តី ជា វ៉ាន់ដេត បានអញ្ជើញចូលរួមពិធីសំណេះសំណាលជាមួយសិស្សថ្នាក់ទី១២ នៅវិទ្យាល័យដែលមានមជ្ឈមណ្ឌលបច្ចេកវិទ្យាសហគមន៍ ចំនួន ១៨ ទីតាំង ក្នុងខេត្តតាកែវ ប្រមាណ ៤ ០០០ នាក់ តាមប្រព័ន្ធវីដេអូ ZOOM
@@ -19,20 +19,20 @@ tags: []
 សូមជម្រាបជូនថា គម្រោង ម.ប.ស. នៅតាមវិទ្យាល័យសាធារណៈ គឺចក្ខុវិស័យវែងឆ្ងាយរបស់ ក.ប.ទ. លើការអភិវឌ្ឍមូលធនមនុស្សឌីជីថល តាមរយៈការរៀបចំហេដ្ឋារចនាសម្ព័ន្ធបម្រើដល់ការបណ្តុះបណ្តាលធនធានមនុស្សឌីជីថលនៅថ្នាក់មូលដ្ឋាន ទាំងក្នុងសាលារៀន និងសហគមន៍ទូទៅ ដើម្បីរៀបចំប្រព័ន្ធអេកូឡូស៊ីឌីជីថលមួយដែលរឹងមាំ និងមានភាពរីកចម្រើន។ ដោយមានការគាំទ្រនិងការសហការពីក្រសួងអប់រំ យុវជន និងកីឡា គម្រោង ម.ប.ស. ត្រូវបានដាក់ឱ្យអនុវត្តសាកល្បងនៅខេត្តតាកែវ ដោយមានមុខងារស្នូលចំនួន ៤ គឺ ១) បន្ទប់កុំព្យូទ័រ សម្រាប់បណ្តុះបណ្តាលជំនាញបច្ចេកវិទ្យាឌីជីថល ផ្តល់ការអប់រំតាមប្រព័ន្ធបង្រៀនពីចម្ងាយ និងធ្វើជាសាលប្រជុំពីចម្ងាយ ២) បន្ទប់បណ្តុះបណ្តាល សម្រាប់ការបណ្តុះបណ្តាលជំនាញបច្ចេកវិទ្យាឌីជីថលដល់អាជ្ញាធរមូលដ្ឋាន និងប្រជាពលរដ្ឋក្នុងសហគមន៍ ៣) ប៉ុស្តិ៍ប្រៃសណីយ៍ សម្រាប់ផ្តល់សេវាទទួលនិងផ្ញើកញ្ចប់ឥវ៉ាន់ ព្រមទាំងផ្តល់សេវាផ្សេងៗដល់ពាណិជ្ជករ អាជីវករ និងប្រជាជននៅសហគមន៍ និង ៤) សាលសាធារណៈ សម្រាប់ប្រជាជននៅសហគមន៍អាចចូលប្រើប្រាស់ដើម្បីស្វែងរកព័ត៌មានពាក់ព័ន្ធនឹងកសិកម្ម អាជីវកម្ម និងព័ត៌មានផ្សេងទៀត។
 
 
-![photo 3](src/assets/news-and-events/article-18/photo-1.jpg)
-![photo 4](src/assets/news-and-events/article-18/photo-2.jpg)
-![photo 3](src/assets/news-and-events/article-18/photo-3.jpg)
-![photo 3](src/assets/news-and-events/article-18/photo-4.jpg)
-![photo 4](src/assets/news-and-events/article-18/photo-5.jpg)
-![photo 4](src/assets/news-and-events/article-18/photo-6.jpg)
-![photo 4](src/assets/news-and-events/article-18/photo-7.jpg)
-![photo 4](src/assets/news-and-events/article-18/photo-8.jpg)
-![photo 4](src/assets/news-and-events/article-18/photo-9.jpg)
-![photo 4](src/assets/news-and-events/article-18/photo-10.jpg)
-![photo 4](src/assets/news-and-events/article-18/photo-11.jpg)
-![photo 4](src/assets/news-and-events/article-18/photo-12.jpg)
-![photo 4](src/assets/news-and-events/article-18/photo-13.jpg)
-![photo 4](src/assets/news-and-events/article-18/photo-14.jpg)
-![photo 4](src/assets/news-and-events/article-18/photo-15.jpg)
-![photo 4](src/assets/news-and-events/article-18/photo-16.jpg)
+![photo 3](@/assets/news-and-events/article-18/photo-1.jpg)
+![photo 4](@/assets/news-and-events/article-18/photo-2.jpg)
+![photo 3](@/assets/news-and-events/article-18/photo-3.jpg)
+![photo 3](@/assets/news-and-events/article-18/photo-4.jpg)
+![photo 4](@/assets/news-and-events/article-18/photo-5.jpg)
+![photo 4](@/assets/news-and-events/article-18/photo-6.jpg)
+![photo 4](@/assets/news-and-events/article-18/photo-7.jpg)
+![photo 4](@/assets/news-and-events/article-18/photo-8.jpg)
+![photo 4](@/assets/news-and-events/article-18/photo-9.jpg)
+![photo 4](@/assets/news-and-events/article-18/photo-10.jpg)
+![photo 4](@/assets/news-and-events/article-18/photo-11.jpg)
+![photo 4](@/assets/news-and-events/article-18/photo-12.jpg)
+![photo 4](@/assets/news-and-events/article-18/photo-13.jpg)
+![photo 4](@/assets/news-and-events/article-18/photo-14.jpg)
+![photo 4](@/assets/news-and-events/article-18/photo-15.jpg)
+![photo 4](@/assets/news-and-events/article-18/photo-16.jpg)
 

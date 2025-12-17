@@ -11,6 +11,7 @@ import { convertNumberToKhmer } from "@/lib/utils";
 import {
   Pagination,
   PaginationContent,
+  PaginationEllipsis,
   PaginationItem,
   PaginationLink,
 } from "@/components/ui/pagination";
@@ -41,6 +42,14 @@ export function BlogList({ translations, posts, lang }: BlogListProps) {
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
   const endIndex = startIndex + ITEMS_PER_PAGE;
   const currentArticles = posts.slice(startIndex, endIndex);
+
+  const getPaginationItems = (current: number, total: number) => {
+    if (total <= 5) return Array.from({ length: total }, (_, i) => i + 1);
+    if (current <= 3) return [1, 2, 3, 4, "...", total];
+    if (current >= total - 3)
+      return [1, "...", total - 4, total - 3, total - 2, total - 1, total];
+    return [1, "...", current - 1, current, current + 1, "...", total];
+  };
 
   return (
     <div className="container py-12 space-y-12">
@@ -88,19 +97,27 @@ export function BlogList({ translations, posts, lang }: BlogListProps) {
                 className={`flex text-sm font-semibold space-x-2 me-5 items-center ${currentPage === 1 ? "pointer-events-none opacity-50" : ""}`}
               >
                 <ChevronLeft className="h-4 w-4" />
-                <span>{t("btn.previous")}</span>
+                <span className="hidden sm:block">{t("btn.previous")}</span>
               </div>
             </PaginationItem>
-            {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-              <PaginationItem key={page}>
-                <PaginationLink
-                  onClick={() => setCurrentPage(page)}
-                  isActive={currentPage === page}
-                >
-                  {lang === "en" ? page : convertNumberToKhmer(page)}
-                </PaginationLink>
-              </PaginationItem>
-            ))}
+            {getPaginationItems(currentPage, totalPages).map((page, i) =>
+              page === "..." ? (
+                <PaginationItem key={`ellipsis-${i}`}>
+                  <PaginationEllipsis />
+                </PaginationItem>
+              ) : (
+                <PaginationItem key={page}>
+                  <PaginationLink
+                    onClick={() => setCurrentPage(page as number)}
+                    isActive={currentPage === page}
+                  >
+                    {lang === "en"
+                      ? page
+                      : convertNumberToKhmer(page as number)}
+                  </PaginationLink>
+                </PaginationItem>
+              )
+            )}
 
             <PaginationItem>
               <div
@@ -109,7 +126,7 @@ export function BlogList({ translations, posts, lang }: BlogListProps) {
                 }
                 className={`flex text-sm font-semibold space-x-2 ms-5 items-center ${currentPage === totalPages ? "pointer-events-none opacity-50" : ""}`}
               >
-                <span>{t("btn.next")}</span>
+                <span className="hidden sm:block">{t("btn.next")}</span>
                 <ChevronRight className="h-4 w-4" />
               </div>
             </PaginationItem>

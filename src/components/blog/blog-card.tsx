@@ -1,5 +1,5 @@
 import React from "react";
-import { Card} from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { formatDate } from "@/lib/utils";
 import { motion } from "framer-motion";
 import TextElement from "@/components/text-element/TextElement";
@@ -49,8 +49,12 @@ export function BlogCard({
             <div className="max-h-96 aspect-auto relative rounded-lg overflow-hidden">
               <img
                 src={image?.src}
+                width={image?.width}
+                height={image?.height}
                 alt={title}
                 className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <div className="space-y-4">

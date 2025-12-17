@@ -3,7 +3,7 @@ title: Notice the provision of 500 Techo Digital Talent Scholarships for Bachelo
 description: Under the constant attention and care for the future of Cambodian youth in the digital era by Samdech Moha Borvor Thipadei Hun Manet, Prime Minister of the Kingdom of Cambodia, the Techo Digital Talent Scholarship Program has been established with the goal of strengthening Cambodia’s pool of skilled digital human resources. This will form the foundation of the nation’s digital workforce, supporting the transformation of Cambodia’s economy into a digital economy.
 date: 2025-09-26
 author: Ministry of Posts and Telecommunications
-image: "src/assets/news-and-events/article-23/thumbnail.jpeg"
+image: "@/assets/news-and-events/article-23/thumbnail.jpeg"
 tags: []
 ---
 Notice the provision of 500 Techo Digital Talent Scholarships for Bachelor’s Degree Programs for the Academy Year 2025–2026
@@ -50,8 +50,8 @@ For the academic year 2025–2026, the Ministry of Posts and Telecommunications 
 
 For more information, please contact via phone/Telegram at 070 366 623 / 093 366 623 or email admissions@aupp.edu.kh
 
-![photo 1](src/assets/news-and-events/article-23/photo-1.jpeg)
-![photo 2](src/assets/news-and-events/article-23/photo-2.jpeg)
-![photo 3](src/assets/news-and-events/article-23/photo-3.jpeg)
+![photo 1](@/assets/news-and-events/article-23/photo-1.jpeg)
+![photo 2](@/assets/news-and-events/article-23/photo-2.jpeg)
+![photo 3](@/assets/news-and-events/article-23/photo-3.jpeg)
 
 
