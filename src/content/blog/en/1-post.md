@@ -3,7 +3,7 @@ title: Press Release on the Inauguration Ceremony of Community Technology Center
 description: In the morning of June 24th, 2024, in Pearam commune, Bati district, Takeo province, His Excellency Chea Vandeth, Minister of Posts and Telecommunications (MPTC), presided over the “Inauguration Ceremony of the Community Technology Center at Hun Sen Muy Mithona High School” with the participation of His Excellency Ueno Atsushi, Ambassador Extraordinary and Plenipotentiary of Japan to the Kingdom of Cambodia, and His Excellency San Vathana, Secretary of State of the Ministry of Education, Youth and Sports (MOEYS), in charge of the Community Technology Center.
 date: 2024-06-24
 author: Ministry of Posts and Telecommunications
-image: "src/assets/news-and-events/article-1/thumbnail.webp"
+image: "@/assets/news-and-events/article-1/thumbnail.webp"
 tags: []
 ---
 
@@ -23,12 +23,12 @@ The Minister is optimistic that when fully operational, the C.T.C. will be a new
 
 Please be aware that the C.T.C. at Hun Sen Muy Mithona High School is the first achievement among the projects to establish C.T.C. in public high schools in the Kingdom of Cambodia, which started in Takeo province as a project in the first phase, and the task force in charge plans to study and identify priority locations in order to build C.T.C. in public high schools in other provinces in the future.
 
-![photo 1](src/assets/news-and-events/article-1/photo-1.webp)
-![photo 2](src/assets/news-and-events/article-1/photo-2.webp)
-![photo 3](src/assets/news-and-events/article-1/photo-3.webp)
-![photo 4](src/assets/news-and-events/article-1/photo-4.webp)
-![photo 5](src/assets/news-and-events/article-1/photo-5.webp)
-![photo 6](src/assets/news-and-events/article-1/photo-6.webp)
-![photo 7](src/assets/news-and-events/article-1/photo-7.webp)
-![photo 8](src/assets/news-and-events/article-1/photo-8.webp)
-![photo 9](src/assets/news-and-events/article-1/photo-9.webp)
+![photo 1](@/assets/news-and-events/article-1/photo-1.webp)
+![photo 2](@/assets/news-and-events/article-1/photo-2.webp)
+![photo 3](@/assets/news-and-events/article-1/photo-3.webp)
+![photo 4](@/assets/news-and-events/article-1/photo-4.webp)
+![photo 5](@/assets/news-and-events/article-1/photo-5.webp)
+![photo 6](@/assets/news-and-events/article-1/photo-6.webp)
+![photo 7](@/assets/news-and-events/article-1/photo-7.webp)
+![photo 8](@/assets/news-and-events/article-1/photo-8.webp)
+![photo 9](@/assets/news-and-events/article-1/photo-9.webp)

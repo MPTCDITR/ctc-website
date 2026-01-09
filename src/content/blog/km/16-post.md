@@ -3,7 +3,7 @@ title: ក្រុមការងារ Sisters of Code បានធ្វើ�
 description: ខេត្តតាកែវ៖ នារសៀលថ្ងៃទី៥ ខែកក្កដា ឆ្នាំ២០២៥ ក្រុមការងារ Sisters of Code ចំនួន ៣​រូប បានចុះធ្វើការបណ្ដុះបណ្ដាលលើមេរៀនស្ដីពីអក្ខរកម្មកុំព្យូទ័រ (Computer Literacy) នៅមជ្ឈមណ្ឌលបច្ចេកវិទ្យាសហគមន៍ចំនួន ៣ទីតាំង រួមមាន វិទ្យាល័យ សុខអាន ត្រាំខ្នារ វិទ្យាល័យ ប៊ុនរ៉ានី ហ៊ុន សែន បាទី​ និង វិទ្យាល័យ ហ៊ុន សែន ១​ មិថុនា ដែលមានសិស្សចូលរួមសរុបចំនួន ៤១ រូប។ 
 date: 2025-07-05 
 author: ក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍
-image: "src/assets/news-and-events/article-16/thumbnail.jpg"
+image: "@/assets/news-and-events/article-16/thumbnail.jpg"
 tags: []
 ---
 
@@ -12,11 +12,11 @@ tags: []
 ការបណ្តុះបណ្តាលនេះ​ ធ្វេីឡេីងក្រោមកិច្ចសហប្រតិបត្តិការរវាងក្រុមការងារ​ ម.ប.ស.​ នៃក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍ ក្នុងគោលដៅពង្រឹងសមភាពយេនឌ័រ និងជំរុញអក្ខរកម្មឌីជីថលនៅក្នុងប្រទេសកម្ពុជា សំដៅពន្លឿនការធ្វើបរិវត្តកម្មឌីជីថល និងការបណ្ដុះបណ្ដាលយុវជន និងយុវនារីកម្ពុជាលើជំនាញបច្ចេកវិទ្យា ប្រកបដោយចីរភាព និងបរិយាបន្ន។
 
 
-![photo 3](src/assets/news-and-events/article-16/photo-1.jpg)
-![photo 4](src/assets/news-and-events/article-16/photo-2.jpg)
-![photo 3](src/assets/news-and-events/article-16/photo-3.jpg)
-![photo 3](src/assets/news-and-events/article-16/photo-7.jpg)
-![photo 4](src/assets/news-and-events/article-16/photo-4.jpg)
-![photo 3](src/assets/news-and-events/article-16/photo-5.jpg)
-![photo 3](src/assets/news-and-events/article-16/photo-6.jpg)
+![photo 3](@/assets/news-and-events/article-16/photo-1.jpg)
+![photo 4](@/assets/news-and-events/article-16/photo-2.jpg)
+![photo 3](@/assets/news-and-events/article-16/photo-3.jpg)
+![photo 3](@/assets/news-and-events/article-16/photo-7.jpg)
+![photo 4](@/assets/news-and-events/article-16/photo-4.jpg)
+![photo 3](@/assets/news-and-events/article-16/photo-5.jpg)
+![photo 3](@/assets/news-and-events/article-16/photo-6.jpg)
 

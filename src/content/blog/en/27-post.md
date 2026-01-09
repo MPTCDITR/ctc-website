@@ -3,7 +3,7 @@ title: H.E. Minister Chea Vannadet presided over the high-level closing ceremony
 description: Phnom Penh, On the afternoon of December 7, 2025, H.E. Chea Vannadet, Minister of the Ministry of Posts and Telecommunications, presided over the high-level closing ceremony of the Digital Government Forum, Digital Technology Exhibition, and related national and international events under the theme “Accelerating the Digital Future, Governance, Growth, and Global Partnerships.” The event was held for three days from December 5 to 7, 2025, at the Koh Pich Convention and Exhibition Center.
 date: 2025-12-07
 author: Ministry of Posts and Telecommunications
-image: "src/assets/news-and-events/article-27/thumbnail.jpg"
+image: "@/assets/news-and-events/article-27/thumbnail.jpg"
 tags: []
 ---
 Phnom Penh, On the afternoon of December 7, 2025, H.E. Chea Vannadet, Minister of the Ministry of Posts and Telecommunications, presided over the high-level closing ceremony of the Digital Government Forum, Digital Technology Exhibition, and related national and international events under the theme “Accelerating the Digital Future: Governance, Growth, and Global Partnerships.” The event was held for three days from December 5 to 7, 2025, at the Koh Pich Convention and Exhibition Center.
@@ -33,9 +33,9 @@ He further highlighted that what was special about the 2025 forum included:
 For more information, please visit the official website of CTC at www.ctc.edu.kh to stay updated on the latest developments.
 
 
-![photo 1](src/assets/news-and-events/article-27/photo-1.JPG)
-![photo 2](src/assets/news-and-events/article-27/photo-2.JPG)
-![photo 3](src/assets/news-and-events/article-27/photo-3.JPG)
-![photo 4](src/assets/news-and-events/article-27/photo-4.JPG)
-![photo 5](src/assets/news-and-events/article-27/photo-5.JPG)
-![photo 6](src/assets/news-and-events/article-27/photo-6.JPG)
+![photo 1](@/assets/news-and-events/article-27/photo-1.JPG)
+![photo 2](@/assets/news-and-events/article-27/photo-2.JPG)
+![photo 3](@/assets/news-and-events/article-27/photo-3.JPG)
+![photo 4](@/assets/news-and-events/article-27/photo-4.JPG)
+![photo 5](@/assets/news-and-events/article-27/photo-5.JPG)
+![photo 6](@/assets/news-and-events/article-27/photo-6.JPG)

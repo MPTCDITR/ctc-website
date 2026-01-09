@@ -3,7 +3,7 @@ title: សេចក្តីប្រកាសព័ត៌មាន ស្តី
 description: នាព្រឹក ថ្ងៃទី១០ ខែវិច្ឆិកា ឆ្នាំ២០២៣ នៅវិទ្យាល័យ ប៊ុនរ៉ានី ហ៊ុនសែន បាទី ឯកឧត្ដម ជា វ៉ាន់ដេត រដ្ឋមន្ត្រីក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍ (ក.ប.ទ.) បានអញ្ជើញជាអធិបតីក្នុងពិធីបើកការដ្ឋានសាងសង់មជ្ឈមណ្ឌលបច្ចេកវិទ្យាសហគមន៍ (ម.ប.ស.) នៅតាមវិទ្យាល័យសាធារណៈក្នុងខេត្តតាកែវ ដោយមានការអញ្ជើញចូលរួមពី ឯកឧត្តម សាន វឌ្ឍនា អនុរដ្ឋលេខាធិការក្រសួងអប់រំ យុវជន និងកីឡា ឯកឧត្ដម អ៊ូច ភា អភិបាលនៃគណៈអភិបាលខេត្តតាកែវ ថ្នាក់ដឹកនាំនិងមន្រ្តីរាជការ ក.ប.ទ. គណៈអភិបាលក្រុង-ស្រុកទូទាំងខេត្តតាកែវ តំណាងមន្ទីរ និងការិយាល័យអប់រំ យុវជន និងកីឡា លោកគ្រូ អ្នកគ្រូ សិស្សានុសិស្ស និងប្រជាពលរដ្ឋ សរុបប្រមាណ ២០៦៨នាក់។
 date: 2023-10-11
 author: ក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍
-image: "src/assets/news-and-events/article-3/thumbnail.webp"
+image: "@/assets/news-and-events/article-3/thumbnail.webp"
 tags: []
 ---
 
@@ -17,12 +17,12 @@ tags: []
 
 អាស្រ័យហេតុនេះ សូមសាធារណជនទាំងអស់ជ្រាបជាព័ត៌មាន៕
 
-![photo 1](src/assets/news-and-events/article-3/photo-1.webp)
-![photo 2](src/assets/news-and-events/article-3/photo-2.webp)
-![photo 3](src/assets/news-and-events/article-3/photo-3.webp)
-![photo 4](src/assets/news-and-events/article-3/photo-4.webp)
-![photo 5](src/assets/news-and-events/article-3/photo-5.webp)
-![photo 6](src/assets/news-and-events/article-3/photo-6.webp)
-![photo 7](src/assets/news-and-events/article-3/photo-7.webp)
-![photo 8](src/assets/news-and-events/article-3/photo-8.webp)
-![photo 9](src/assets/news-and-events/article-3/photo-9.webp)
+![photo 1](@/assets/news-and-events/article-3/photo-1.webp)
+![photo 2](@/assets/news-and-events/article-3/photo-2.webp)
+![photo 3](@/assets/news-and-events/article-3/photo-3.webp)
+![photo 4](@/assets/news-and-events/article-3/photo-4.webp)
+![photo 5](@/assets/news-and-events/article-3/photo-5.webp)
+![photo 6](@/assets/news-and-events/article-3/photo-6.webp)
+![photo 7](@/assets/news-and-events/article-3/photo-7.webp)
+![photo 8](@/assets/news-and-events/article-3/photo-8.webp)
+![photo 9](@/assets/news-and-events/article-3/photo-9.webp)

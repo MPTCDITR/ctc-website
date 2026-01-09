@@ -3,7 +3,7 @@ title: ក្រុមការងារអង្គការ Sisters of Code �
 description: ខេត្តតាកែវ៖ នារសៀលថ្ងៃទី១១ ខែតុលា ឆ្នាំ២០២៥ ចាប់​ពីម៉ោង ២៖០០ ដល់ ៤៖៣០នាទីរសៀល ក្រុមការងារ Sisters of Code ចំនួន ៣​រូប បានចុះធ្វើការបណ្ដុះបណ្ដាលលើមេរៀនទី៩ ស្ដីពី Wix Website នៅមជ្ឈមណ្ឌលបច្ចេកវិទ្យាសហគមន៍ចំនួន ៣ទីតាំង រួមមាន វិទ្យាល័យ សុខអាន ត្រាំខ្នារ វិទ្យាល័យ ប៊ុនរ៉ានី ហ៊ុន សែន បាទី​ និង វិទ្យាល័យ ហ៊ុន សែន ១​ មិថុនា ដែលមានសិស្សានុសិស្សចូលរួមសរុបចំនួន ៣៥រូប។
 date: 2025-10-11 
 author: ក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍
-image: "src/assets/news-and-events/article-24/thumbnail.jpeg"
+image: "@/assets/news-and-events/article-24/thumbnail.jpeg"
 tags: []
 ---
 ក្រុមការងារអង្គការ Sisters of Code បន្តការបណ្ដុះបណ្ដាលដើម្បីលើកកម្ពស់សមភាពយេនឌ័រនៅក្នុងប្រទេសកម្ពុជា
@@ -16,10 +16,10 @@ tags: []
 
 សម្រាប់ព័ត៌មានបន្ថែម សូមចូលទៅកាន់គេហទំព័រផ្លូវការរបស់ ម.ប.ស. គឺ www.ctc.edu.kh ដើម្បីតាមដានការវិវឌ្ឍន៍ថ្មីៗ។
 
-![photo 1](src/assets/news-and-events/article-24/photo-1.jpeg)
-![photo 2](src/assets/news-and-events/article-24/photo-2.jpeg)
-![photo 3](src/assets/news-and-events/article-24/photo-3.jpeg)
-![photo 4](src/assets/news-and-events/article-24/photo-4.jpg)
-![photo 5](src/assets/news-and-events/article-24/photo-5.jpg)
-![photo 6](src/assets/news-and-events/article-24/photo-6.jpg)
+![photo 1](@/assets/news-and-events/article-24/photo-1.jpeg)
+![photo 2](@/assets/news-and-events/article-24/photo-2.jpeg)
+![photo 3](@/assets/news-and-events/article-24/photo-3.jpeg)
+![photo 4](@/assets/news-and-events/article-24/photo-4.jpg)
+![photo 5](@/assets/news-and-events/article-24/photo-5.jpg)
+![photo 6](@/assets/news-and-events/article-24/photo-6.jpg)
 
