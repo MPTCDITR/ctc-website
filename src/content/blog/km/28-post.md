@@ -3,7 +3,7 @@ title: ឯកឧត្តម ម៉ៅ សិលា បានអញ្ជើញ�
 description: រាជធានីភ្នំពេញ៖ នៅថ្ងៃទី៨ ខែមករា ឆ្នាំ២០២៦ នៅទីស្តីការក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍ (ក.ប.ទ.) ឯកឧត្តម ម៉ៅ សិលា អនុរដ្ឋលេខាធិការ ក.ប.ទ. បានអញ្ជើញដឹកនាំកិច្ចប្រជុំតាមដានវឌ្ឍនភាពការងារទូទៅនៃក្រុមការងារ ម.ប.ស. ដោយមានការអញ្ជើញចូលរួមពីសមាជិកនៃក្រុមការងារ ម.ប.ស. សរុប ១១រូប
 date: 2026-01-08
 author: ក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍
-image: "src/assets/news-and-events/article-28/thumbnail.jpg"
+image: "@/assets/news-and-events/article-28/thumbnail.jpg"
 tags: []
 ---
 
@@ -13,8 +13,8 @@ tags: []
 
 សូមបញ្ជាក់ផងដែរថា ម.ប.ស. ដែលសរសេរជាភាសាអង់គ្លេស Community Tech Center (CTC) មានទីតាំងចំនួន ១៨ នៅទូទាំងខេត្តតាកែវ គឺជាមជ្ឈមណ្ឌលផ្តល់ការបណ្តុះបណ្តាលពាក់ព័ន្ធនឹងជំនាញបច្ចេកវិទ្យាឌីជីថល និងផ្តល់សេវាប្រៃសណីយ៍ដល់ប្រជាពលរដ្ឋក្នុងសហគមន៍ ជាពិសេសដល់សិស្សានុសិស្ស និងសាធារណជនរស់នៅក្នុងមូលដ្ឋាន ក្នុងគោលបំណងជំរុញការបណ្តុះបណ្តាលធនធានមនុស្សឌីជីថល លើកកម្ពស់អក្ខរកម្មឌីជីថល និងកាត់បន្ថយគម្លាតឌីជីថលនៅក្នុងសហគមន៍ប្រកបដោយបរិយាបន្ន និងនវានុវត្តន៍។
 
-![photo 1](src/assets/news-and-events/article-28/photo-1.jpg)
-![photo 2](src/assets/news-and-events/article-28/photo-2.jpg)
-![photo 3](src/assets/news-and-events/article-28/photo-3.jpg)
-![photo 4](src/assets/news-and-events/article-28/photo-4.jpg)
-![photo 5](src/assets/news-and-events/article-28/photo-5.jpg)
+![photo 1](@/assets/news-and-events/article-28/photo-1.jpg)
+![photo 2](@/assets/news-and-events/article-28/photo-2.jpg)
+![photo 3](@/assets/news-and-events/article-28/photo-3.jpg)
+![photo 4](@/assets/news-and-events/article-28/photo-4.jpg)
+![photo 5](@/assets/news-and-events/article-28/photo-5.jpg)
