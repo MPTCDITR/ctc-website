@@ -1,17 +1,17 @@
 ---
-title: H.E Mao Sila led a meeting to monitor the progress of the Community Tech Center (CTC) Project Working Group.
-description: Phnom Penh, On January 8, 2026, at the headquarters of the Ministry of Posts and Telecommunications (MPTC), H.E Mao Sila, Undersecretary of State of MPTC, chaired a meeting to monitor the overall progress of the Community Tech Center Project Working Group, with the participation of 11 members from the group.
+title: H.E. Mao Sela Invited and Presided Over the Progress Review Meeting of the Community Tech Center Project Implementation Working Group
+description: Phnom Penh, On 8 January 2026, at the Ministry of Post and Telecommunications (MPTC), H.E. Mao Sela, Under Secretary of State of MPTC, invited and presided over a meeting to review the overall progress of the Community Tech Center (CTC) Project Implementation Working Group, with the participation of a total of 11 working group members.
 date: 2026-01-08
 author: Ministry of Posts and Telecommunications
 image: "@/assets/news-and-events/article-28/thumbnail.jpg"
 tags: []
 ---
 
-Phnom Penh, On January 8, 2026, at the headquarters of the Ministry of Posts and Telecommunications (MPTC), H.E Mao Sila, Undersecretary of State of MPTC, chaired a meeting to monitor the overall progress of the Community Tech Center Project Working Group, with the participation of 11 members from the group.
+Phnom Penh, On 8 January 2026, at the Ministry of Post and Telecommunications (MPTC), H.E. Mao Sela, Under Secretary of State of MPTC, invited and presided over a meeting to review the overall progress of the Community Tech Center (CTC) Project Implementation Working Group, with the participation of a total of 11 working group members.
 
-This meeting was organized to track the overall progress of each sub-group, address challenges, provide solutions, respond to various requests, and discuss further implementation directions and other issues. Before concluding, H.E Mao Sila expressed gratitude to all group members for their high dedication in fulfilling their roles and duties, especially in implementing the high recommendations from the esteemed Minister.
+The meeting was organized with the objective of reviewing the overall progress of each sub-team, discussing challenges, solutions, requests, directions for continued implementation, and other related matters. Prior to the conclusion of the meeting, H.E. Mao Sela expressed his sincere appreciation to all working group members for their strong commitment and effective performance of their duties and responsibilities, particularly in effectively implementing the esteemed guidance and directives of H.E. the Minister.
 
-It should also be noted that the Community Tech Center, located in 18 locations across Takeo Province, serves as a training center focused on digital technology skills, providing postal services to community residents, especially students and the general public living locally. The goal is to promote digital human resource training, enhance digital literacy, and reduce the digital divide in a supportive and innovative community.
+It should also be noted that the Community Tech Center (CTC), with a total of 18 centers across Takeo Province, serves as a center for digital skills training and postal services for community members, especially students and local residents. The centers aim to promote digital human resource development, enhance digital literacy, and reduce the digital divide within communities in an inclusive and innovative manner.
 
 
 ![photo 1](@/assets/news-and-events/article-28/photo-1.jpg)
