@@ -3,7 +3,7 @@ title: ឯកឧត្តមរដ្ឋមន្ត្រី ជា វ៉ា�
 description: រាជធានីភ្នំពេញ៖ នៅរសៀលថ្ងៃទី៧ ខែធ្នូ ឆ្នាំ២០២៥ ឯកឧត្តម ជា វ៉ាន់ដេត រដ្ឋមន្ត្រីក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍ បានអញ្ជើញជាអធិបតីភាពដ៏ខ្ពង់ខ្ពស់ក្នុងពិធីបិទ វេទិការដ្ឋាភិបាលឌីជីថល ពិព័រណ៍បច្ចេកវិទ្យាឌីជីថល និងព្រឹត្តិការជាតិ-អន្តរជាតិពាក់ព័ន្ធ ក្រោមប្រធានបទ «ការពន្លឿនអនាគតឌីជីថល៖ អភិបាលកិច្ច កំណើន និងភាពជាដៃគូសកល ដែលបានប្រព្រឹត្តទៅអស់រយៈពេល៣ថ្ងៃ ចាប់ពីថ្ងៃទី៥ ដល់ថ្ងៃទី៧ ខែធ្នូ ឆ្នាំ២០២៥ នៅមជ្ឈមណ្ឌលសន្និបាត និងពិព័រណ៍កោះពេជ្រ។
 date: 2025-12-07 
 author: ក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍
-image: "src/assets/news-and-events/article-27/thumbnail.jpg"
+image: "@/assets/news-and-events/article-27/thumbnail.jpg"
 tags: []
 ---
 រាជធានីភ្នំពេញ៖ នៅរសៀលថ្ងៃទី៧ ខែធ្នូ ឆ្នាំ២០២៥ ឯកឧត្តម ជា វ៉ាន់ដេត រដ្ឋមន្ត្រីក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍ បានអញ្ជើញជាអធិបតីភាពដ៏ខ្ពង់ខ្ពស់ក្នុងពិធីបិទ វេទិការដ្ឋាភិបាលឌីជីថល ពិព័រណ៍បច្ចេកវិទ្យាឌីជីថល និងព្រឹត្តិការជាតិ-អន្តរជាតិពាក់ព័ន្ធ ក្រោមប្រធានបទ «ការពន្លឿនអនាគតឌីជីថល៖ អភិបាលកិច្ច កំណើន និងភាពជាដៃគូសកល» ដែលបានប្រព្រឹត្តទៅអស់រយៈពេល៣ថ្ងៃ ចាប់ពីថ្ងៃទី៥ ដល់ថ្ងៃទី៧ ខែធ្នូ ឆ្នាំ២០២៥ នៅមជ្ឈមណ្ឌលសន្និបាត និងពិព័រណ៍កោះពេជ្រ។
@@ -30,9 +30,9 @@ tags: []
 
 សម្រាប់ព័ត៌មានបន្ថែម សូមចូលទៅកាន់គេហទំព័រផ្លូវការរបស់ ម.ប.ស. គឺ www.ctc.edu.kh ដើម្បីតាមដានការវិវឌ្ឍន៍ថ្មីៗ។
 
-![photo 1](src/assets/news-and-events/article-27/photo-1.JPG)
-![photo 2](src/assets/news-and-events/article-27/photo-2.JPG)
-![photo 3](src/assets/news-and-events/article-27/photo-3.JPG)
-![photo 4](src/assets/news-and-events/article-27/photo-4.JPG)
-![photo 5](src/assets/news-and-events/article-27/photo-5.JPG)
-![photo 6](src/assets/news-and-events/article-27/photo-6.JPG)
+![photo 1](@/assets/news-and-events/article-27/photo-1.JPG)
+![photo 2](@/assets/news-and-events/article-27/photo-2.JPG)
+![photo 3](@/assets/news-and-events/article-27/photo-3.JPG)
+![photo 4](@/assets/news-and-events/article-27/photo-4.JPG)
+![photo 5](@/assets/news-and-events/article-27/photo-5.JPG)
+![photo 6](@/assets/news-and-events/article-27/photo-6.JPG)

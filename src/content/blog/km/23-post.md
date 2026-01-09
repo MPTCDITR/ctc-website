@@ -3,7 +3,7 @@ title: សេចក្តីជូនដំណឹង ស្តីពី កា�
 description: ក្រោមការយកចិត្តទុកដាក់ជាប្រចាំលើអនាគតយុវជន យុវនារី ក្នុងយុគសម័យឌីជីថលរបស់ សម្តេចមហាបវរធិបតី ហ៊ុន ម៉ាណែត នាយករដ្ឋមន្ត្រីនៃព្រះរាជាណាចក្រកម្ពុជា កម្មវិធី អាហារូបករណ៍ទេពកោសល្យឌីជីថលតេជោ ត្រូវបានបង្កើតឡើង ក្នុងគោលដៅរួមចំណែកបង្កើនធនធានមនុស្សជំនាញឌីជីថល ដែលនឹងក្លាយទៅជាមូលធនមនុស្សឌីជីថល ក្នុងការជំរុញការប្រែក្លាយសេដ្ឋកិច្ចកម្ពុជា ទៅជាសេដ្ឋកិច្ចឌីជីថល។ 
 date: 2025-09-26 
 author: ក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍
-image: "src/assets/news-and-events/article-23/thumbnail.jpeg"
+image: "@/assets/news-and-events/article-23/thumbnail.jpeg"
 tags: []
 ---
 
@@ -46,7 +46,7 @@ tags: []
 សម្រាប់ព័ត៌មានបន្ថែមសូមទាក់ទងតាមទូរសព្ទ ឬ Telegram លេខ ០៧០ ៣៦៦ ៦២៣ / ០៩៣ ៣៦៦ ៦២៣  ឬអ៊ីមែល admissions@aupp.edu.kh។
 
 
-![photo 1](src/assets/news-and-events/article-23/photo-1.jpeg)
-![photo 2](src/assets/news-and-events/article-23/photo-2.jpeg)
-![photo 3](src/assets/news-and-events/article-23/photo-3.jpeg)
+![photo 1](@/assets/news-and-events/article-23/photo-1.jpeg)
+![photo 2](@/assets/news-and-events/article-23/photo-2.jpeg)
+![photo 3](@/assets/news-and-events/article-23/photo-3.jpeg)
 

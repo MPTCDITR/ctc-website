@@ -3,7 +3,7 @@ title: Press release on the groundbreaking ceremony for the construction of comm
 description: In the morning of November 10th, 2023, at Bunrany Hun Sen Bati High School, His Excellency Chea Vandeth, Minister of Posts and Telecommunications (MPTC), presided over the groundbreaking ceremony for the construction of Community Technology Centers (CTCCs) in public high schools in Takeo province. The ceremony was attended by His Excellency San Vathana, Undersecretary of State for the Ministry of Education, Youth and Sports; His Excellency Ouch Phe, Governor of Takeo Provincial Government; leaders and civil servants of the CPTC; city and district governments throughout Takeo province; representatives of departments and offices of Education, Youth and Sports; teachers, students, and citizens, totaling approximately 2,068 people.
 date: 2023-10-11
 author: Ministry of Posts and Telecommunications
-image: "src/assets/news-and-events/article-3/thumbnail.webp"
+image: "@/assets/news-and-events/article-3/thumbnail.webp"
 tags: []
 ---
 
@@ -15,12 +15,12 @@ Speaking on the occasion, HE Minister Chea Vandeth said that after receiving a h
 
 The Minister is optimistic that the launch of the C.T.C. will be a new, important, timely and targeted achievement that supports the development of digital education with a proactive spirit and an open mind towards the mission of implementing digital government, aiming to contribute to the effective implementation in accordance with the Cambodian Digital Economy and Society Policy Framework and the Cambodian Digital Government Policy, towards achieving Cambodia's Vision 2050 under the wise leadership of His Excellency Samdech Moha Borvor Thipadei Hun Manet, Prime Minister of the Kingdom of Cambodia.
 
-![photo 1](src/assets/news-and-events/article-3/photo-1.webp)
-![photo 2](src/assets/news-and-events/article-3/photo-2.webp)
-![photo 3](src/assets/news-and-events/article-3/photo-3.webp)
-![photo 4](src/assets/news-and-events/article-3/photo-4.webp)
-![photo 5](src/assets/news-and-events/article-3/photo-5.webp)
-![photo 6](src/assets/news-and-events/article-3/photo-6.webp)
-![photo 7](src/assets/news-and-events/article-3/photo-7.webp)
-![photo 8](src/assets/news-and-events/article-3/photo-8.webp)
-![photo 9](src/assets/news-and-events/article-3/photo-9.webp)
+![photo 1](@/assets/news-and-events/article-3/photo-1.webp)
+![photo 2](@/assets/news-and-events/article-3/photo-2.webp)
+![photo 3](@/assets/news-and-events/article-3/photo-3.webp)
+![photo 4](@/assets/news-and-events/article-3/photo-4.webp)
+![photo 5](@/assets/news-and-events/article-3/photo-5.webp)
+![photo 6](@/assets/news-and-events/article-3/photo-6.webp)
+![photo 7](@/assets/news-and-events/article-3/photo-7.webp)
+![photo 8](@/assets/news-and-events/article-3/photo-8.webp)
+![photo 9](@/assets/news-and-events/article-3/photo-9.webp)
