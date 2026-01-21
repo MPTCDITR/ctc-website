@@ -1,5 +1,5 @@
 ---
-title: CCommunity Tech Center (CTC) Project Team Supports the Preparation of Training Rooms for Vocational Pathway Classes
+title: Community Tech Center (CTC) Project Team Supports the Preparation of Training Rooms for Vocational Pathway Classes
 description: Phnom Penh, On 20 January 2026, at Sok An Khvav High School, Ms. Tan Sodany, Director of the Department of Information and Communication Technology Policy of the Ministry of Post and Telecommunications, led the Community Tech Center (CTC) Project Implementation Team to the school to provide technical assistance following a two-week disruption of internet connectivity.
 date: 2026-01-20
 author: Ministry of Posts and Telecommunications
