@@ -18,7 +18,6 @@ tags: []
 
 ![photo 1](@/assets/news-and-events/article-30/photo-1.JPG)
 ![photo 2](@/assets/news-and-events/article-30/photo-2.JPG)
-![photo 3](@/assets/news-and-events/article-30/photo-3.JPG)
 ![photo 4](@/assets/news-and-events/article-30/photo-4.JPG)
 ![photo 5](@/assets/news-and-events/article-30/photo-5.JPG)
 ![photo 6](@/assets/news-and-events/article-30/photo-6.JPG)
