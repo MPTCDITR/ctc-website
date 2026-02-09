@@ -26,7 +26,7 @@ export const ui: Record<string, Record<string, string>> = {
     "nav.news": "Media Hub",
     "nav.news-event": "News & Events",
     "nav.news-media": "Videos & Media",
-    "nav.login": "C.T.C.",
+    "nav.ctc": "C.T.C.",
 
     "footer.email": "www.mptc.gov.kh",
     "footer.phoneNumber": "1234",
@@ -154,7 +154,7 @@ export const ui: Record<string, Record<string, string>> = {
     "nav.news": "ព័ត៌មាន",
     "nav.news-event": "អត្ថបទព័ត៌មាន និង ព្រឹត្តិការណ៍",
     "nav.news-media": "វីដេអូ និង ការផ្សព្វផ្សាយ",
-    "nav.login": "ម.ប.ស.",
+    "nav.ctc": "ម.ប.ស.",
 
     "hero.title": "សូមស្វាគមន៍មកកាន់ប្លុករបស់យើង",
     "hero.subtitle": "ស្វែងរករឿងរ៉ាវ និងគំនិតអស្ចារ្យ",
