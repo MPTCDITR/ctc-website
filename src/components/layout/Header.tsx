@@ -11,6 +11,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import BtnDashboard from "./BtnDashboard";
 
 interface NavMenuProps {
   href?: string;
@@ -25,18 +26,13 @@ interface HeaderProps {
   currentPath: string;
 }
 
-export function Header({
-  translations,
-  lang,
-  navigationItems,
-  currentPath,
-}: HeaderProps) {
+export function Header({ translations, lang, navigationItems, currentPath }: HeaderProps) {
   const isActive = (item: NavMenuProps) => {
     if (currentPath === item.href) {
       return true;
     }
     if (item.children) {
-      return item.children.some((child) => currentPath === child.href);
+      return item.children.some(child => currentPath === child.href);
     }
     return false;
   };
@@ -53,15 +49,15 @@ export function Header({
           />
         </a>
 
-        <nav className="hidden lg:flex lg:gap-0 xl:gap-4 items-center">
-          {navigationItems.map((item) =>
+        <nav className="hidden lg:flex lg:gap-0 xl:gap-2 items-center">
+          {navigationItems.map(item =>
             item.children ? (
               <DropdownMenu key={item.label}>
                 <DropdownMenuTrigger
                   asChild
                   className="font-medium transition-colors hover:text-primary nav-link"
                 >
-                  <Button
+                  <Button 
                     variant="ghost"
                     className={`${isActive(item) ? "active flex items-center gap-1 text-base lg:px-3 xl:px-4" : "flex items-center gap-1 text-base lg:px-3 xl:px-4"}`}
                   >
@@ -69,12 +65,8 @@ export function Header({
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
-                  {item.children.map((child) => (
-                    <a
-                      key={child.label}
-                      href={child.href}
-                      className="text-base"
-                    >
+                  {item.children.map(child => (
+                    <a key={child.label} href={child.href} className="text-base">
                       <DropdownMenuItem
                         className={`${isActive(child) ? "nav-link text-secondary cursor-pointer focus:text-primary" : "nav-link cursor-pointer focus:text-primary"}`}
                       >
@@ -85,11 +77,7 @@ export function Header({
                 </DropdownMenuContent>
               </DropdownMenu>
             ) : (
-              <motion.div
-                key={item.label}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
+              <motion.div key={item.label} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <a
                   href={item.href}
                   className={`${isActive(item) ? "active hover:text-primary lg:px-3 xl:px-4 font-medium transition-colors nav-link text-base" : "hover:text-primary lg:px-3 xl:px-4 font-medium transition-colors nav-link text-base"}`}
@@ -97,12 +85,15 @@ export function Header({
                   {item.label}
                 </a>
               </motion.div>
-            )
+            ),
           )}
         </nav>
 
         <div className="flex items-center">
           <LanguageSwitcher lang={lang} />
+          <div className="hidden lg:flex">
+            <BtnDashboard translations={translations} />
+          </div>
           <MobileNav
             translations={translations}
             lang={lang}
