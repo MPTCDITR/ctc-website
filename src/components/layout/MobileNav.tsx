@@ -1,13 +1,6 @@
-import React from "react";
 import { MenuIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import {
   Accordion,
   AccordionContent,
@@ -15,6 +8,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { motion } from "framer-motion";
+import BtnDashboard from "./BtnDashboard";
 
 interface NavMenuProps {
   href?: string;
@@ -29,19 +23,14 @@ interface MobileNavProps {
   currentPath: string;
 }
 
-export function MobileNav({
-  translations,
-  lang,
-  navigationItems,
-  currentPath,
-}: MobileNavProps) {
+export function MobileNav({ translations, lang, navigationItems, currentPath }: MobileNavProps) {
   const t = (key: string) => translations[key] || key;
   const isActive = (item: NavMenuProps) => {
     if (currentPath === item.href) {
       return true;
     }
     if (item.children) {
-      return item.children.some((child) => currentPath === child.href);
+      return item.children.some(child => currentPath === child.href);
     }
     return false;
   };
@@ -60,12 +49,7 @@ export function MobileNav({
         <nav className="flex flex-col gap-4 mt-4">
           {navigationItems.map((item, index) =>
             item.children ? (
-              <Accordion
-                type="single"
-                collapsible
-                className="border-0"
-                key={item.label}
-              >
+              <Accordion type="single" collapsible className="border-0" key={item.label}>
                 <AccordionItem
                   value={`item_${index}`}
                   className="rounded border-0 data-[state=open]:bg-accent/50"
@@ -77,7 +61,7 @@ export function MobileNav({
                   </AccordionTrigger>
                   <AccordionContent className="border-t bg-transparent">
                     <ul>
-                      {item.children?.map((child) => (
+                      {item.children?.map(child => (
                         <li
                           key={child.label}
                           className={`${isActive(child) ? "text-secondary" : ""} "rounded-md bg-transparent font-medium hover:text-primary nav-link hover:bg-accent text-base text-gray-700"`}
@@ -92,11 +76,7 @@ export function MobileNav({
                 </AccordionItem>
               </Accordion>
             ) : (
-              <motion.div
-                key={item.label}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
+              <motion.div key={item.label} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <a
                   href={item.href}
                   className={`${isActive(item) ? "active" : ""} "hover:text-primary block lg:px-3 xl:px-4 font-medium transition-colors nav-link text-base"`}
@@ -104,9 +84,10 @@ export function MobileNav({
                   {item.label}
                 </a>
               </motion.div>
-            )
+            ),
           )}
         </nav>
+        <BtnDashboard translations={translations} />
       </SheetContent>
     </Sheet>
   );
