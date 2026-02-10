@@ -7,7 +7,7 @@ image: "@/assets/news-and-events/article-31/thumbnail.jpg"
 tags: []
 ---
 
-Phnom Penh: On 9 February 2026, at the Ministry of Post and Telecommunications (MPTC), H.E. Mao Sela, Under Secretary of State of MPTC, chaired a meeting to review the evaluation reports of 14 high schools in Takeo Province that had submitted applications for the construction of Community Tech Centers (CTC). The meeting was attended by 11 members of the CTC Project Implementation Team.
+Phnom Penh, On 9 February 2026, at the Ministry of Post and Telecommunications (MPTC), H.E. Mao Sela, Under Secretary of State of MPTC, chaired a meeting to review the evaluation reports of 14 high schools in Takeo Province that had submitted applications for the construction of Community Tech Centers (CTC). The meeting was attended by 11 members of the CTC Project Implementation Team.
 
 During the meeting, participants reviewed assessment findings and exchanged views on the suitability and readiness of the applicant schools in accordance with established criteria. The discussion focused on ensuring alignment with the objectives and implementation framework of the Community Tech Center project.
 

@@ -19,8 +19,8 @@ tags: []
 
 ![photo 1](@/assets/news-and-events/article-31/photo-1.jpg)
 ![photo 2](@/assets/news-and-events/article-31/photo-2.jpg)
-![photo 4](@/assets/news-and-events/article-31/photo-3.jpg)
-![photo 5](@/assets/news-and-events/article-31/photo-4.jpg)
-![photo 6](@/assets/news-and-events/article-31/photo-5.jpg)
-![photo 7](@/assets/news-and-events/article-31/photo-11.jpg)
-![photo 8](@/assets/news-and-events/article-31/photo-7.jpg)
+![photo 3](@/assets/news-and-events/article-31/photo-3.jpg)
+![photo 4](@/assets/news-and-events/article-31/photo-4.jpg)
+![photo 5](@/assets/news-and-events/article-31/photo-5.jpg)
+![photo 6](@/assets/news-and-events/article-31/photo-11.jpg)
+![photo 7](@/assets/news-and-events/article-31/photo-7.jpg)
