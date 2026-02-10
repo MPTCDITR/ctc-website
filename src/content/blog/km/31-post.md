@@ -23,4 +23,4 @@ tags: []
 ![photo 5](@/assets/news-and-events/article-31/photo-4.jpg)
 ![photo 6](@/assets/news-and-events/article-31/photo-5.jpg)
 ![photo 7](@/assets/news-and-events/article-31/photo-11.jpg)
-![photo 7](@/assets/news-and-events/article-31/photo-7.jpg)
+![photo 8](@/assets/news-and-events/article-31/photo-7.jpg)
