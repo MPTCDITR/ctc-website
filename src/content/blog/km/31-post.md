@@ -15,8 +15,6 @@ tags: []
 
 សម្រាប់ព័ត៌មានបន្ថែម សូមចូលទៅកាន់គេហទំព័រផ្លូវការរបស់ ម.ប.ស. គឺ www.ctc.edu.kh ដើម្បីតាមដានការវិវឌ្ឍន៍ថ្មីៗ។
 
-#CTC #technology #posts #telecommunications #digital #MPTC #CommunityTechCenter #MPTCPress #PhnomPenh #Cambodia
-
 ![photo 1](@/assets/news-and-events/article-31/photo-1.jpg)
 ![photo 2](@/assets/news-and-events/article-31/photo-2.jpg)
 ![photo 3](@/assets/news-and-events/article-31/photo-3.jpg)
