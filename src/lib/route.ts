@@ -1,5 +1,10 @@
 import { getTranslatedkey } from "@/i18n/utils";
-import { getRelativeLocaleUrl } from "astro:i18n";
+
+function getRelativeLocaleUrl(locale: string, path: string) {
+  const cleanPath = path.startsWith("/") ? path : `/${path}`;
+  if (cleanPath === "/" || cleanPath === "") return `/${locale}/`;
+  return `/${locale}${cleanPath}`;
+}
 
 export const navigation = [
   { label: "nav.home", href: "" },
