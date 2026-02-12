@@ -5,8 +5,8 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-function convertMonthToKhmer(monthName) {
-  const monthMap = {
+function convertMonthToKhmer(monthName: string) {
+  const monthMap: Record<string, string> = {
     January: "មករា",
     February: "កុម្ភៈ",
     March: "មីនា",
@@ -21,15 +21,18 @@ function convertMonthToKhmer(monthName) {
     December: "ធ្នូ",
   };
 
-  return monthMap[monthName] || monthName; // Return the Khmer name or the original if not found
+  return monthMap[monthName] || monthName;
 }
 
-export function convertNumberToKhmer(number) {
+export function convertNumberToKhmer(number: string | number) {
   const khmerDigits = ["០", "១", "២", "៣", "៤", "៥", "៦", "៧", "៨", "៩"];
   return number
     .toString()
     .split("")
-    .map((digit) => khmerDigits[parseInt(digit)])
+    .map((digit) => {
+      const parsed = parseInt(digit);
+      return isNaN(parsed) ? digit : khmerDigits[parsed];
+    })
     .join("");
 }
 

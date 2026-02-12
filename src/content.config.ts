@@ -19,6 +19,11 @@ const centers = defineCollection({
     z.object({
       name: z.string(),
       description: z.string(),
+      contact: z.object({
+        address: z.string(),
+        mapUrl: z.string().url().optional(),
+      }),
+      facilities: z.array(z.string()),
       managementTeam: z.object({
         title: z.string(),
         description: z.string(),
@@ -27,8 +32,8 @@ const centers = defineCollection({
             title: z.string(),
             name: z.string(),
             role: z.string(),
-            phoneNumber: z.string(),
-            email: z.string().email(),
+            phoneNumber: z.string().optional(),
+            email: z.string().email().optional(),
           }),
         ),
       }),
@@ -40,8 +45,8 @@ const centers = defineCollection({
             title: z.string(),
             name: z.string(),
             role: z.string(),
-            phoneNumber: z.string(),
-            email: z.string().email(),
+            phoneNumber: z.string().optional(),
+            email: z.string().email().optional(),
           }),
         ),
       }),
