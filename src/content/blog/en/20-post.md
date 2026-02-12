@@ -6,6 +6,7 @@ author: Ministry of Posts and Telecommunications
 image: "@/assets/news-and-events/article-20/thumbnail.JPG"
 tags: []
 ---
+
 H.E. Minister Chea Vandet presided over a meeting with the village head, high school principals, presidents and teachers of the Community Tech Centers (CTC) of 18 high schools in Takeo Province online
 
 Phnom Penh and Takeo Province: On the morning of August 21, 2025, H.E. Chea Vandet, Minister of Posts and Telecommunications (MPTC), presided over a meeting with the village head, high school principals, presidents and teachers of the Community Tech Centers (CTC) of 18 high schools in Takeo Province. The meeting was also attended by His Excellency San Vathana, Secretary of State of the Ministry of Education, Youth and Sports, His Excellency, the CTC project implementation team of the CTC, and the Director General of Cambodia Post, a total of approximately 150 people, who participated in person at the CTC office and online.
@@ -20,7 +21,6 @@ Before concluding, HE the Minister also highlighted the achievements and key tas
 
 It is also worth noting that the establishment of the CET in public high schools is a testament to the long-term vision of the CET on developing the digital sector to serve modern education and develop digital human capital at the grassroots level, both in the public and private sectors, to create a strong and thriving digital ecosystem in the community. In this sense, residents living in the community will be able to participate in skilled work and learn about digital technologies such as information and communication technology, new digital businesses, postal services, and e-commerce.
 
-
 ![photo 1](@/assets/news-and-events/article-20/photo-1.JPG)
 ![photo 2](@/assets/news-and-events/article-20/photo-2.JPG)
 ![photo 3](@/assets/news-and-events/article-20/photo-3.JPG)
@@ -28,4 +28,3 @@ It is also worth noting that the establishment of the CET in public high schools
 ![photo 5](@/assets/news-and-events/article-20/photo-5.JPG)
 ![photo 6](@/assets/news-and-events/article-20/photo-6.JPG)
 ![photo 7](@/assets/news-and-events/article-20/photo-7.JPG)
-

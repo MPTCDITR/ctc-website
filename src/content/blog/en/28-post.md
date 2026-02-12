@@ -13,7 +13,6 @@ The meeting was organized with the objective of reviewing the overall progress o
 
 It should also be noted that the Community Tech Center (CTC), with a total of 18 centers across Takeo Province, serves as a center for digital skills training and postal services for community members, especially students and local residents. The centers aim to promote digital human resource development, enhance digital literacy, and reduce the digital divide within communities in an inclusive and innovative manner.
 
-
 ![photo 1](@/assets/news-and-events/article-28/photo-1.jpg)
 ![photo 2](@/assets/news-and-events/article-28/photo-2.jpg)
 ![photo 3](@/assets/news-and-events/article-28/photo-3.jpg)

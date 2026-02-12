@@ -19,7 +19,7 @@ interface Props {
   lang?: string;
 }
 
-const { translations, lang} = Astro.props;
+const { translations, lang } = Astro.props;
 
 const t = (key: string) => translations[key] || key;
 
@@ -60,36 +60,36 @@ const services: FunctionalitiesItem[] = [
       </TextElement>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      {services.map((service) => (
-        <div
-          class="bg-background rounded-lg border border-lightblue shadow-sm shadow-lightblue transition-colors hover:bg-slate-100"
-        >
-          <a href={service.href}>
-            <Card className="flex-col text-center bg-transparent border-none shadow-none">
+      {
+        services.map((service) => (
+          <div class="bg-background rounded-lg border border-lightblue shadow-sm shadow-lightblue transition-colors hover:bg-slate-100">
+            <a href={service.href}>
+              <Card className="flex-col text-center bg-transparent border-none shadow-none">
                 <div class="relative w-full overflow-hidden rounded-t-lg aspect-[6/4]">
                   <Image
-                  src={service.src}
-                  alt={t(service.title)}
-                  width={1200}
-                  height={698}
-                  class=" w-full h-full object-cover "
-                />
+                    src={service.src}
+                    alt={t(service.title)}
+                    width={1200}
+                    height={698}
+                    class=" w-full h-full object-cover "
+                  />
                 </div>
-              <div class="p-6">
-                <TextElement
-                variant="titleblog"
-                className="text-xl font-bold mb-4 text-primary"
-              >
-                {t(service.title)}
-              </TextElement>
-              <TextElement variant="small">
-                {t(service.description)}
-              </TextElement>
-              </div>
-            </Card>
-          </a>
-        </div>
-      ))}
+                <div class="p-6">
+                  <TextElement
+                    variant="titleblog"
+                    className="text-xl font-bold mb-4 text-primary"
+                  >
+                    {t(service.title)}
+                  </TextElement>
+                  <TextElement variant="small">
+                    {t(service.description)}
+                  </TextElement>
+                </div>
+              </Card>
+            </a>
+          </div>
+        ))
+      }
     </div>
   </div>
 </section>

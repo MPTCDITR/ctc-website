@@ -24,7 +24,7 @@ const {
 
 if (!Astro.site) {
   throw new Error(
-    "Astro.site is not defined. Please set it in astro.config.mjs"
+    "Astro.site is not defined. Please set it in astro.config.mjs",
   );
 }
 
@@ -36,7 +36,7 @@ const canonicalURL =
 const currentLocale = Astro.currentLocale || defaultLang;
 const pathWithoutLocale = removeLanguagePrefix(
   Astro.url.pathname,
-  currentLocale as SupportedLanguage
+  currentLocale as SupportedLanguage,
 );
 
 const SITE_NAME = "C.T.C Cambodia Community Tech Center";
@@ -132,7 +132,6 @@ const webSiteSchemaJSON = JSON.stringify(webSiteSchema, null, 2);
 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 <link rel="icon" type="image/svg+xml" href="/favicons.svg" />
 <meta name="generator" content={Astro.generator} />
-
 
 <link rel="sitemap" href="/sitemap-index.xml" />
 <link

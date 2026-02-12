@@ -8,8 +8,6 @@ import enNationalGovernmentCouncil from "@/assets/structure/en-national-governme
 import khNationalGovernmentCouncil from "@/assets/structure/kh-national-government-council.svg";
 import enListCenters from "@/assets/structure/en-list-centers.svg";
 import khListCenters from "@/assets/structure/kh-list-centers.svg";
-import AVARTA from "@/assets/image-assets/avarta.png";
-import type { ImageMetadata } from "astro";
 import type { CollectionEntry } from "astro:content";
 
 interface StructureProps {
@@ -101,8 +99,7 @@ export function StructureCtc({
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl font-bold text-primary">
-          {t("about.structure.ctcnational.board")}
-            
+            {t("about.structure.ctcnational.board")}
           </h2>
           <TextElement variant="paragraph">
             {t("about.structure.ctcnational.board.description")}

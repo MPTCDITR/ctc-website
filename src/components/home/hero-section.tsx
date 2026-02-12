@@ -61,7 +61,7 @@ const Hero = ({ translations, lang }: HeroSectionProps) => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000);
     return () => clearInterval(timer);
-  }, []);
+  }, [slides.length]);
 
   return (
     <div className="relative h-[600px] w-full overflow-hidden">

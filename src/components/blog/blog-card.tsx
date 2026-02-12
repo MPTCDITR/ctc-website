@@ -22,7 +22,7 @@ export function BlogCard({
   title,
   description,
   date,
-  author,
+  author: _author,
   image,
   slug,
   lang,

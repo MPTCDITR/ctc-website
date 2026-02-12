@@ -6,16 +6,16 @@ author: Ministry of Posts and Telecommunications
 image: "@/assets/news-and-events/article-25/thumbnail.jpg"
 tags: []
 ---
+
 Sisters of Code continue training on the advancement of digital literacy in Cambodia.
 
-Takeo Province, On the afternoon of October 18, 2025, from 2:00 PM to 4:30 PM, A team of three members from the Sisters of Code conducted training on Lesson 10 regarding (Wix Website) and getting started with (Gen AI)  at three Community Tech Center (CTC), including Sok An Tram Khna High School, Bun Rany Hun Sen Bati High School, and Hun Sen Muy Misthona High School, with a total of 31 students participating.
+Takeo Province, On the afternoon of October 18, 2025, from 2:00 PM to 4:30 PM, A team of three members from the Sisters of Code conducted training on Lesson 10 regarding (Wix Website) and getting started with (Gen AI) at three Community Tech Center (CTC), including Sok An Tram Khna High School, Bun Rany Hun Sen Bati High School, and Hun Sen Muy Misthona High School, with a total of 31 students participating.
 
 This training was organized with the goal of prioritizing female students and strengthening gender equality through building digital technology capacity and contributing to promoting digital literacy in Cambodia, aiming to accelerate the digital transformation of technology skills in a modern and sustainable manner.
 
 Please be informed that Community Tech Center at Public Hight School is the long-term vision of MPTC on the development of the digital sector to serve modern education and develop digital human resources within the community, both in the public and private sectors, to establish a resilient and thriving digital ecosystem across the entire community.
 
 For more information, please visit the official website of CTC at www.ctc.edu.kh to stay updated on the latest developments.
-
 
 ![photo 1](@/assets/news-and-events/article-25/photo-1.jpg)
 ![photo 2](@/assets/news-and-events/article-25/photo-2.jpg)
