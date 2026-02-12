@@ -15,4 +15,3 @@ Takeo Province, March 21st, 2025: Activities to showcase the achievements of the
 ![photo 4](@/assets/news-and-events/article-11/photo-4.webp)
 ![photo 3](@/assets/news-and-events/article-11/photo-5.webp)
 ![photo 3](@/assets/news-and-events/article-11/photo-6.webp)
-

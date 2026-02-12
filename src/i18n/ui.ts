@@ -38,7 +38,8 @@ export const ui: Record<string, Record<string, string>> = {
     "footer.moeys": "Ministry of Education, Youth and Sports",
     "hero.title": "Welcome to Our Blog",
     "hero.subtitle": "Discover amazing stories and insights",
-    "home.hero.ctc.description": "Empowering communities through technology and innovation",
+    "home.hero.ctc.description":
+      "Empowering communities through technology and innovation",
     "home.about": "About Community Tech Center",
     "home.about.aboutus": "About Us",
     "home.about.description":
@@ -166,7 +167,8 @@ export const ui: Record<string, Record<string, string>> = {
     "footer.phoneNumber": "១២៣៤",
     "footer.address":
       "អគារលេខ ១៣ មហាវិថីព្រះនរោត្តម រាជធានីភ្នំពេញ ព្រះរាជាណាចក្រកម្ពុជា ប្រអប់សំបុត្រលេខ ១២០១០",
-    "home.hero.ctc.description": "ពង្រឹងសហគមន៍តាមរយៈបច្ចេកវិទ្យា និងការច្នៃប្រឌិត",
+    "home.hero.ctc.description":
+      "ពង្រឹងសហគមន៍តាមរយៈបច្ចេកវិទ្យា និងការច្នៃប្រឌិត",
     "home.about": "អំពីមជ្ឈមណ្ឌលបច្ចេកវិទ្យាសហគមន៍",
     "home.about.aboutus": "អំពីពួកយើង",
     "home.about.description":
@@ -247,7 +249,8 @@ export const ui: Record<string, Record<string, string>> = {
     "our.ctc.allinfo.title": "ស្វែងរកព័ត៌មានអំពីមជ្ឈមណ្ឌល",
     "our.ctc.allinfo.description":
       "កិច្ចសង្ខេបអំពីមជ្ឈមណ្ឌលបច្ចេកវិទ្យារបស់យើងនៅទូទាំងប្រទេសកម្ពុជា រួមទាំងកម្មវិធីសិក្សា ព័ត៌មានលម្អិតអំពីប្រតិបត្តិការ និងព័ត៌មានជាក់លាក់នៃមជ្ឈមណ្ឌល។",
-    "ctc.management.title": "ការគ្រប់គ្រង និងប្រតិបត្តិការមជ្ឈមណ្ឌលបច្ចេកវិទ្យាសហគមន៍",
+    "ctc.management.title":
+      "ការគ្រប់គ្រង និងប្រតិបត្តិការមជ្ឈមណ្ឌលបច្ចេកវិទ្យាសហគមន៍",
     "ctc.management.description":
       "ស្វែងយល់អំពីព័ត៌មានទូទៅនៃមជ្ឈមណ្ឌលបច្ចេកវិទ្យារបស់យើង ជាមួយនឹងការផ្តល់នូវការយល់ដឹងលម្អិតអំពីរចនាសម្ព័ន្ធគ្រប់គ្រង តួនាទី និងការទទួលខុសត្រូវរបស់បុគ្គលិកប្រតិបត្តិការ ក៏ដូចជាព័ត៌មានទំនាក់ទំនងជាក់លាក់របស់សមាជិកប្រតិបត្តិ និងព័ត៌មានសហគមន៍។",
     "ctc.teaminfo.title": "តួនាទី និងភារកិច្ច",

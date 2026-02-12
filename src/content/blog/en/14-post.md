@@ -17,5 +17,3 @@ From May to June 2025, the working group in charge of implementing the Community
 ![photo 3](@/assets/news-and-events/article-14/photo-6.jpg)
 ![photo 3](@/assets/news-and-events/article-14/photo-7.jpg)
 ![photo 3](@/assets/news-and-events/article-14/photo-8.jpg)
-
-

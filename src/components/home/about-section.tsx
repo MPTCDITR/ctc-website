@@ -22,13 +22,10 @@ export function AboutSection({ translations, lang }: AboutSectionProps) {
             {t("home.about.description")}
           </TextElement>
           <Button
-            variant="link"   
+            variant="link"
             className="w-fit text-secondary hover:text-secondary md:text-lg"
           >
-            <a href={`/${lang}/about/about-us`}>
-
-            {t("home.about.aboutus")} →
-            </a>
+            <a href={`/${lang}/about/about-us`}>{t("home.about.aboutus")} →</a>
           </Button>
         </div>
       </div>

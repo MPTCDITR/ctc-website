@@ -19,7 +19,7 @@ export function VideoCard({ video }: VideoCardProps) {
         <a
           href={`https://www.youtube.com/watch?v=${video.id}`}
           target="_blank"
-          className="flex items-center justify-center "
+          className="flex items-center justify-center " rel="noreferrer"
         >
           <img
             src={video.thumbnail}
@@ -39,7 +39,7 @@ export function VideoCard({ video }: VideoCardProps) {
         <a
           href={`https://www.youtube.com/watch?v=${video.id}`}
           target="_blank"
-          className="hover:underline"
+          className="hover:underline" rel="noreferrer"
         >
           <h3 className="text-xl font-semibold line-clamp-2">{video.title}</h3>
         </a>

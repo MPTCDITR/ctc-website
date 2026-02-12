@@ -17,4 +17,3 @@ Community Techn Center clean-up activity by students of Sok An Tonloab High Scho
 ![photo 3](@/assets/news-and-events/article-12/photo-6.jpg)
 ![photo 3](@/assets/news-and-events/article-12/photo-7.jpg)
 ![photo 3](@/assets/news-and-events/article-12/photo-8.jpg)
-

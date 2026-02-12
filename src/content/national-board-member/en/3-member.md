@@ -1,6 +1,6 @@
 ---
 title: H.E.
-name: 
+name:
 organization: Representative of the Ministry of Post and Telecommunications
 role: Vice-chair
 image: "@/assets/image-assets/avarta.png"

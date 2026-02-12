@@ -18,7 +18,7 @@ export function BlogContent({
   title,
   date,
   author,
-  description,
+  description: _description,
   image,
   lang,
   children,

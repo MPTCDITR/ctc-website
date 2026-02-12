@@ -6,6 +6,7 @@ author: Ministry of Posts and Telecommunications
 image: "@/assets/news-and-events/article-24/thumbnail.jpeg"
 tags: []
 ---
+
 Sisters of Code continue training to promote gender equality in Cambodia.
 
 Takeo Province, On the afternoon of October 11, 2025, from 2:00 PM to 4:30 PM, A team of three members from the Sisters of Code conducted training on Lesson 9 about (Wix Website) at three Community Tech Center, including Sok An Tram Khna High School, Bun Rany Hun Sen Bati High School, and Hun Sen Muy Misthona High School, with a total of 35 students participating.
@@ -22,6 +23,3 @@ For more information, please visit the official website of CTC at www.ctc.edu.kh
 ![photo 4](@/assets/news-and-events/article-24/photo-4.jpg)
 ![photo 5](@/assets/news-and-events/article-24/photo-5.jpg)
 ![photo 6](@/assets/news-and-events/article-24/photo-6.jpg)
-
-
-

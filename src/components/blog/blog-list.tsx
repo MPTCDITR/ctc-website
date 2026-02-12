@@ -23,6 +23,7 @@ interface BlogListProps {
 
 export function BlogList({ translations, posts, lang }: BlogListProps) {
   const t = (key: string) => translations[key] || key;
+  const [currentPage, setCurrentPage] = useState(1);
 
   if (!posts?.length) {
     return (
@@ -34,8 +35,6 @@ export function BlogList({ translations, posts, lang }: BlogListProps) {
       </div>
     );
   }
-
-  const [currentPage, setCurrentPage] = useState(1);
 
   const ITEMS_PER_PAGE = 4;
   const totalPages = Math.ceil(posts.length / ITEMS_PER_PAGE);
@@ -92,13 +91,15 @@ export function BlogList({ translations, posts, lang }: BlogListProps) {
         <Pagination>
           <PaginationContent>
             <PaginationItem>
-              <div
+              <button
+                type="button"
                 onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
-                className={`flex text-sm font-semibold space-x-2 me-5 items-center ${currentPage === 1 ? "pointer-events-none opacity-50" : ""}`}
+                className={`flex text-sm font-semibold space-x-2 me-5 items-center hover:text-primary transition-colors ${currentPage === 1 ? "pointer-events-none opacity-50" : ""}`}
+                aria-label={t("btn.previous")}
               >
                 <ChevronLeft className="h-4 w-4" />
                 <span className="hidden sm:block">{t("btn.previous")}</span>
-              </div>
+              </button>
             </PaginationItem>
             {getPaginationItems(currentPage, totalPages).map((page, i) =>
               page === "..." ? (
@@ -116,19 +117,21 @@ export function BlogList({ translations, posts, lang }: BlogListProps) {
                       : convertNumberToKhmer(page as number)}
                   </PaginationLink>
                 </PaginationItem>
-              )
+              ),
             )}
 
             <PaginationItem>
-              <div
+              <button
+                type="button"
                 onClick={() =>
                   setCurrentPage((prev) => Math.min(prev + 1, totalPages))
                 }
-                className={`flex text-sm font-semibold space-x-2 ms-5 items-center ${currentPage === totalPages ? "pointer-events-none opacity-50" : ""}`}
+                className={`flex text-sm font-semibold space-x-2 ms-5 items-center hover:text-primary transition-colors ${currentPage === totalPages ? "pointer-events-none opacity-50" : ""}`}
+                aria-label={t("btn.next")}
               >
                 <span className="hidden sm:block">{t("btn.next")}</span>
                 <ChevronRight className="h-4 w-4" />
-              </div>
+              </button>
             </PaginationItem>
           </PaginationContent>
         </Pagination>

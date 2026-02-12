@@ -7,7 +7,6 @@ image: "@/assets/news-and-events/article-30/thumbnail.JPG"
 tags: []
 ---
 
-
 Phnom Penh, From 19 to 27 January 2026, at 18 high schools hosting Community Tech Centers (CTC), Ms. Thorn Makara, Deputy Head of the Digital Equipment and Network Maintenance Team, led the CTC Project Implementation Team to all 18 locations in Takeo Province to repair network cables and install Wireless USB devices.
 
 Based on guidance and feedback from school management and teachers at the 18 CTC sites, the team inspected and tested non-functioning network cables. A total of 21 damaged network lines were repaired, and Wireless USB devices were installed on 60 computers that were not connected to wired internet networks to ensure stable internet access for teaching and learning purposes.

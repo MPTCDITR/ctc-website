@@ -22,7 +22,7 @@ export function LanguageSwitcher({ lang }: LanguageSwitcherProps) {
     const currentPath = window.location.pathname;
     const segments = currentPath.split("/").filter(Boolean);
     const newPath = segments.length > 1 ? segments.slice(1).join("/") : "";
-    window.location.pathname = `/${lang}/${newPath}`;
+    window.location.assign(`/${lang}/${newPath}`);
   };
 
   const langImages = {
@@ -44,12 +44,22 @@ export function LanguageSwitcher({ lang }: LanguageSwitcherProps) {
             >
               {lang == "en" ? (
                 <>
-                  <img src={ENIcon.src} width="23" height="15" alt="english lang"/>
+                  <img
+                    src={ENIcon.src}
+                    width="23"
+                    height="15"
+                    alt="english lang"
+                  />
                   <span>English</span>
                 </>
               ) : (
                 <>
-                  <img src={KhmerIcon.src} width="23" height="15" alt="khmer lang"/>
+                  <img
+                    src={KhmerIcon.src}
+                    width="23"
+                    height="15"
+                    alt="khmer lang"
+                  />
                   <span>ខ្មែរ</span>
                 </>
               )}
@@ -76,7 +86,7 @@ export function LanguageSwitcher({ lang }: LanguageSwitcherProps) {
               key={language}
               onClick={() => switchLanguage(language as SupportedLanguage)}
               type="button"
-              aria-label={`Current language: ${switchLanguage[language]}. Click to toggle language.`}
+              aria-label={`Current language: ${languages[language as Language]}. Click to toggle language.`}
               className="flex min-w-max rounded-full border-2 border-solid border-secondary sm:flex md:hidden 2xl:ml-10"
             >
               <img
@@ -87,7 +97,7 @@ export function LanguageSwitcher({ lang }: LanguageSwitcherProps) {
                 className="rounded-full"
               />
             </button>
-          )
+          ),
       )}
     </>
   );
