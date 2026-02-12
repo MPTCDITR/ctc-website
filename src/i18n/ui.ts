@@ -131,6 +131,10 @@ export const ui: Record<string, Record<string, string>> = {
     "btn.learnmore": "Learn More →",
     "btn.next": "Next",
     "btn.previous": "Previous",
+    "ctc.centerinfo.title": "Center Information",
+    "ctc.centerinfo.contact": "Contact Information",
+    "ctc.centerinfo.viewmap": "View on Google Maps",
+    "ctc.centerinfo.facilities": "Facilities",
     contact: "Contact Information",
     "blog.readmore": "Read More",
     "blog.list.description":
@@ -261,6 +265,10 @@ export const ui: Record<string, Record<string, string>> = {
     "btn.learnmore": "ស្វែងយល់បន្ថែម →",
     "btn.next": "ទំព័របន្ទាប់",
     "btn.previous": "ទំព័រមុន",
+    "ctc.centerinfo.title": "ព័ត៌មានមជ្ឈមណ្ឌល",
+    "ctc.centerinfo.contact": "ព័ត៌មានទំនាក់ទំនង",
+    "ctc.centerinfo.viewmap": "មើលលើផែនទី",
+    "ctc.centerinfo.facilities": "គ្រឿងបរិក្ខារ",
     contact: "ព័ត៌មានទំនាក់ទំនង",
     "blog.readmore": "អានបន្ថែម",
     "blog.list.description":
