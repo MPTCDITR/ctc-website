@@ -1,4 +1,3 @@
-import React from "react";
 import { Card } from "@/components/ui/card";
 import { formatDate } from "@/lib/utils";
 import { motion } from "framer-motion";
