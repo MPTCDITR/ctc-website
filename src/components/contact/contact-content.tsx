@@ -46,7 +46,11 @@ export function ContactContent({ translations }: ContactProps) {
               transition={{ duration: 0.5, delay: 0.4 }}
             >
               <Link className="w-5 h-5 text-primary" />
-              <a href="https://www.mptc.gov.kh" target="_blank" rel="noreferrer">
+              <a
+                href="https://www.mptc.gov.kh"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <TextElement variant="body" className="hover:text-primary">
                   {t("footer.email")}
                 </TextElement>
@@ -63,21 +67,27 @@ export function ContactContent({ translations }: ContactProps) {
             <a
               href="https://www.facebook.com/www.mptc.gov.kh"
               target="_blank"
-              className="p-2 rounded-full bg-primary text-white hover:bg-primary transition-colors" rel="noreferrer"
+              className="p-2 rounded-full bg-primary text-white hover:bg-primary transition-colors"
+              rel="noreferrer"
+              aria-label="Facebook"
             >
               <Facebook className="w-5 h-5" />
             </a>
             <a
               href="https://t.me/mptcgovkh"
               target="_blank"
-              className="p-2 rounded-full bg-primary text-white hover:bg-primary transition-colors" rel="noreferrer"
+              className="p-2 rounded-full bg-primary text-white hover:bg-primary transition-colors"
+              rel="noreferrer"
+              aria-label="Telegram"
             >
               <Send className="w-5 h-5" />
             </a>
             <a
               href="https://www.facebook.com/www.mptc.gov.kh"
               target="_blank"
-              className="p-2 rounded-full bg-primary text-white hover:bg-primary transition-colors" rel="noreferrer"
+              className="p-2 rounded-full bg-primary text-white hover:bg-primary transition-colors"
+              rel="noreferrer"
+              aria-label="Instagram"
             >
               <Instagram className="w-5 h-5" />
             </a>
@@ -95,6 +105,10 @@ export function ContactContent({ translations }: ContactProps) {
               alt="c.t.c. post office view"
               className="w-full"
               style={{ objectFit: "cover" }}
+              loading="lazy"
+              decoding="async"
+              width="600"
+              height="400"
             />
           </Card>
         </motion.div>

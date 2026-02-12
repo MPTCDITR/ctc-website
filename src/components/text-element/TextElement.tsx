@@ -40,15 +40,18 @@ type Props = {
   children?: React.ReactNode;
   className?: string;
   itemProp?: string;
+  as?: Tag;
 } & React.ComponentProps<Tag>;
 
 export function TextElement({
   children,
   variant = "body",
   className,
+  as,
   ...rest
 }: Props) {
-  const { tag: DynamicText, tw } = CONFIG[variant];
+  const { tag: DefaultTag, tw } = CONFIG[variant];
+  const DynamicText = as || DefaultTag;
 
   return (
     <DynamicText {...rest} className={cn(tw, className)}>
