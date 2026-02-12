@@ -27,6 +27,7 @@ interface TeamTableProps {
   translations: Record<string, string>;
 }
 
+//TODO: cleanup this function, when we valid real data from ctc, we will remove this function
 const isPlaceholder = (value: string | undefined) => {
   if (!value) return true;
   const placeholders = [
