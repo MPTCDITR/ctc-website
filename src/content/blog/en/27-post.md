@@ -6,6 +6,7 @@ author: Ministry of Posts and Telecommunications
 image: "@/assets/news-and-events/article-27/thumbnail.jpg"
 tags: []
 ---
+
 Phnom Penh, On the afternoon of December 7, 2025, H.E. Chea Vannadet, Minister of the Ministry of Posts and Telecommunications, presided over the high-level closing ceremony of the Digital Government Forum, Digital Technology Exhibition, and related national and international events under the theme “Accelerating the Digital Future: Governance, Growth, and Global Partnerships.” The event was held for three days from December 5 to 7, 2025, at the Koh Pich Convention and Exhibition Center.
 
 In his remarks, H.E. Minister Chea Vannadet stated that the 2025 Digital Government Forum and related national and international events, held over three days, provided opportunities for participants from ministries, institutions, the private sector, higher education institutions, development partners, and the general public, both national and international, to explore the latest developments in digital technologies, digital research, and innovation. This was achieved through in-depth, open-minded panel discussions and exchanges of views among sector leaders from various countries and development partners, senior officials, technical experts, and policymakers from many national and international institutions, as well as through presentations by numerous national and international speakers.
@@ -31,7 +32,6 @@ He further highlighted that what was special about the 2025 forum included:
 8. The Digital Park initiative will promote job growth and transform Cambodia into a regional Digital Hub. The Ministry is committed to continuing the development of the Digital Park to ensure its success.
 
 For more information, please visit the official website of CTC at www.ctc.edu.kh to stay updated on the latest developments.
-
 
 ![photo 1](@/assets/news-and-events/article-27/photo-1.JPG)
 ![photo 2](@/assets/news-and-events/article-27/photo-2.JPG)

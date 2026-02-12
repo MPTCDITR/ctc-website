@@ -17,7 +17,7 @@ function formatDuration(isoDuration: string): string {
 
 export async function fetchPlaylistVideos(
   key_youtube?: string,
-  playlistId?: string
+  playlistId?: string,
 ): Promise<Video[]> {
   if (!key_youtube || !playlistId) {
     console.error("Missing YouTube API key or Playlist ID");
@@ -88,4 +88,3 @@ export async function fetchPlaylistVideos(
     return [];
   }
 }
-

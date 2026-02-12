@@ -15,7 +15,7 @@ function CenterNameCard({
   name,
   slug,
   lang,
-  translations,
+  translations: _translations,
 }: CenterCardProps) {
   const urlSlug = slug.split("/").slice(1).join("/");
 

@@ -16,4 +16,3 @@ The Grade 10 Digital Technology Teacher Training Course was held in three rounds
 ![photo 3](@/assets/news-and-events/article-13/photo-3.jpg)
 ![photo 4](@/assets/news-and-events/article-13/photo-4.jpg)
 ![photo 3](@/assets/news-and-events/article-13/photo-5.jpg)
-

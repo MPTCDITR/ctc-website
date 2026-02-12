@@ -6,6 +6,7 @@ author: Ministry of Posts and Telecommunications
 image: "@/assets/news-and-events/article-18/thumbnail.jpg"
 tags: []
 ---
+
 H.E. Chea Vandeth participated in a dialogue with 12th-grade students at 18 Community Tech Centers located in Takeo province, with approximately 4,000 participants, via the ZOOM video platform.
 
 Phnom Penh: On the afternoon of July 22, 2025, H.E. Chea Vandeth, Minister of the Ministry of Posts and Telecommunications (MPTC), attended a dialogue with 12th-grade students at 18 Community Tech Centers (CTC) located in Takeo province, with approximately 4,000 participants, via the ZOOM video platform. The event also included the participation of H.E. the Secretary of State, as well as technical officials from the MPTC, provincial departments, the Ministry of Education, Youth, and Sports, school directors, heads of CTC, and regular teachers from the CTC.
@@ -34,4 +35,3 @@ It should be noted that the CTC project at public schools is a long-term vision 
 ![photo 4](@/assets/news-and-events/article-18/photo-14.jpg)
 ![photo 4](@/assets/news-and-events/article-18/photo-15.jpg)
 ![photo 4](@/assets/news-and-events/article-18/photo-16.jpg)
-

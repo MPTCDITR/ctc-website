@@ -40,7 +40,7 @@ interface RouteType {
 
 export function getLocalizedRoutes(
   paths: RouteType[],
-  locale: string
+  locale: string,
 ): RouteType[] {
   return paths.map((path) => {
     if (path.href || path.href === "") {

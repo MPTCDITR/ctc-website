@@ -120,9 +120,11 @@ export function SiteFooter({ lang }: FooterProps) {
           <div className="flex flex-col gap-3 text-lg">
             {otherLinks.map(({ href, label }) => (
               <a
+                key={href}
                 href={href}
                 target="_blank"
                 className="text-white hover:text-secondary outline-black"
+                rel="noreferrer"
               >
                 {t(label)}
               </a>
@@ -168,6 +170,7 @@ export function SiteFooter({ lang }: FooterProps) {
                 href="https://www.facebook.com/profile.php?id=61574204880819 "
                 target="_blank"
                 className="p-2 rounded-full text-white bg-secondary hover:bg-secondary/80 transition-colors"
+                rel="noreferrer"
               >
                 <Facebook className="w-5 h-5" />
               </a>
@@ -175,6 +178,7 @@ export function SiteFooter({ lang }: FooterProps) {
                 href="https://www.youtube.com/@MPTCCommunityTechCenter "
                 target="_blank"
                 className="p-2 rounded-full text-white bg-secondary hover:bg-secondary/80 transition-colors"
+                rel="noreferrer"
               >
                 <Youtube className="w-5 h-5" />
               </a>
@@ -182,6 +186,7 @@ export function SiteFooter({ lang }: FooterProps) {
                 href="https://www.tiktok.com/@community.tech.center"
                 target="_blank"
                 className="p-2 rounded-full bg-secondary hover:bg-secondary/80 transition-colors"
+                rel="noreferrer"
               >
                 <img
                   src={tiktok.src}

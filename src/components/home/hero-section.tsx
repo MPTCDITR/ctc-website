@@ -61,7 +61,7 @@ const Hero = ({ translations, lang }: HeroSectionProps) => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000);
     return () => clearInterval(timer);
-  }, []);
+  }, [slides.length]);
 
   return (
     <div className="relative h-[600px] w-full overflow-hidden">
@@ -80,7 +80,10 @@ const Hero = ({ translations, lang }: HeroSectionProps) => {
             alt={slide.title}
             className="w-full h-[600px] object-cover"
             loading={index === 0 ? "eager" : "lazy"}
-            fetchPriority={index === 0 ? "high" : "auto"}
+            {...({ fetchpriority: index === 0 ? "high" : "auto" } as Record<
+              string,
+              unknown
+            >)}
             decoding={index === 0 ? "sync" : "async"}
           />
           <div className="absolute inset-0 bg-black/60" />

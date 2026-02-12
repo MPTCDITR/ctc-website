@@ -8,7 +8,7 @@ const currentLocale = (Astro.url.pathname.split("/").filter(Boolean)[0] ||
   defaultLang) as SupportedLanguage;
 
 const safeLocale: SupportedLanguage = Object.keys(languages).includes(
-  currentLocale
+  currentLocale,
 )
   ? currentLocale
   : defaultLang;

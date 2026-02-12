@@ -1,6 +1,6 @@
 ---
 title: ឯកឧត្ដម
-name: 
+name:
 organization: តំណាងក្រសួងអប់រំ យុវជន និងកីឡា
 role: អនុប្រធាន
 image: "@/assets/image-assets/avarta.png"

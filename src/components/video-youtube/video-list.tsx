@@ -10,7 +10,11 @@ interface VideoListProps {
   lang: string;
 }
 
-export function VideoList({ videos, translations, lang }: VideoListProps) {
+export function VideoList({
+  videos,
+  translations,
+  lang: _lang,
+}: VideoListProps) {
   const t = (key: string) => translations[key] || key;
 
   if (!videos || videos.length === 0) {

@@ -94,7 +94,7 @@ export function CenterTeamInfo({
               </TableHeader>
               <TableBody>
                 {Array.isArray(managementTeam) && managementTeam.length > 0 ? (
-                  managementTeam.map((member, index) => (
+                  managementTeam.map((member, _index) => (
                     <TableRow key={member.name}>
                       <TableCell>{member.title}</TableCell>
                       <TableCell>{member.role}</TableCell>
@@ -127,17 +127,21 @@ export function CenterTeamInfo({
                   <TableHead>{t("ctc.teaminfo.title")}</TableHead>
                   <TableHead>{t("ctc.teaminfo.name")}</TableHead>
                   <TableHead>{t("ctc.teaminfo.role")}</TableHead>
-                  <TableHead className="hidden">{t("ctc.teaminfo.phoneNumber")}</TableHead>
+                  <TableHead className="hidden">
+                    {t("ctc.teaminfo.phoneNumber")}
+                  </TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
                 {Array.isArray(operationTeam) && operationTeam.length > 0 ? (
-                  operationTeam.map((member, index) => (
+                  operationTeam.map((member, _index) => (
                     <TableRow key={member.name}>
                       <TableCell>{member.title}</TableCell>
                       <TableCell>{member.name}</TableCell>
                       <TableCell>{member.role}</TableCell>
-                      <TableCell className="hidden">{member.phoneNumber}</TableCell>
+                      <TableCell className="hidden">
+                        {member.phoneNumber}
+                      </TableCell>
                     </TableRow>
                   ))
                 ) : (

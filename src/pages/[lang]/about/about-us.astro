@@ -1,6 +1,6 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import  AboutUsContent  from "@/components/about/AboutUsContent.astro";
+import AboutUsContent from "@/components/about/AboutUsContent.astro";
 import { languages, ui } from "@/i18n/ui";
 import { getLangFromUrl } from "@/lib/i18n";
 import { ABOUT_PAGE_TITLE } from "@/consts";
@@ -20,5 +20,5 @@ const translations = ui[lang];
   description={ABOUT_PAGE_TITLE.description}
   type="website"
 >
-  <AboutUsContent translations={translations}/>
+  <AboutUsContent translations={translations} />
 </Layout>

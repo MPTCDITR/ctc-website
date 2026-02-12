@@ -1,4 +1,3 @@
-import React from "react";
 import { Card } from "@/components/ui/card";
 import { formatDate } from "@/lib/utils";
 import { motion } from "framer-motion";
@@ -22,7 +21,7 @@ export function BlogCard({
   title,
   description,
   date,
-  author,
+  author: _author,
   image,
   slug,
   lang,
