@@ -23,7 +23,7 @@ export default defineConfig({
           en: "en-US",
           km: "km-KH",
         },
-        defaultLocale: "en",
+        defaultLocale: "km",
       },
     }),
     react(),
@@ -31,18 +31,6 @@ export default defineConfig({
       applyBaseStyles: false,
     }),
   ],
-
-  i18n: {
-    defaultLocale: "en",
-    locales: ["en", "km"],
-    routing: {
-      prefixDefaultLocale: true,
-      redirectToDefaultLocale: false,
-    },
-    fallback: {
-      km: "en",
-    },
-  },
 
   prefetch: {
     prefetchAll: true,
