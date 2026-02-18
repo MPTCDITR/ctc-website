@@ -53,7 +53,7 @@ operationTeam:
   title: "Operational Staff of C.T.C."
   description: "The operational staff are responsible for daily operations and running of the C.T.C."
   member:
-    - title: "Deputy Director"
+    - title: "Acting Director"
       name: "អ៊ំ សំអុល"
       role: "Chair"
       phoneNumber: "017 619 649"
@@ -63,7 +63,7 @@ operationTeam:
       role: "IT Teacher"
       phoneNumber: "074 441 4741"
       email: "example@gmail.com"
-    - title: "Chemistry-Biology teacher"
+    - title: "Chemistry Biology teacher"
       name: "លុយ ម៉ៅ"
       role: "Assistant Teacher"
       phoneNumber: "088 549 5965"

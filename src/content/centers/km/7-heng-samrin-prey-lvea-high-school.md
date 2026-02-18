@@ -59,7 +59,7 @@ operationTeam:
       role: "ប្រធាន"
       phoneNumber: "០១៧ ៨៥៣ ៧៦៦"
       email: "example@gmail.com"
-    - title: "គ្រប់គ្រងប្រព័ន្ធពិន្ទុ"
+    - title: "គ្រប់គ្រងប្រព័ន្ធពិន្ទុ និងជាគ្រូបង្រៀនព័ត៌មានវិទ្យា"
       name: "សួង ចន្នី"
       role: "គ្រូ IT"
       phoneNumber: "០៧០ ៨៩១៦៥៨"

@@ -58,7 +58,6 @@ operationTeam:
       role: "Chair"
       phoneNumber: "011 389 787"
       email: "example@gmail.com"
-
     - title: "Information technology teacher"
       name: "សួន ចាន់ថន"
       role: "IT Teacher "

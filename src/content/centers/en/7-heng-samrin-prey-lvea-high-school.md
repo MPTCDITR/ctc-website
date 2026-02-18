@@ -59,7 +59,7 @@ operationTeam:
       role: "Chair"
       phoneNumber: "០17 853 766"
       email: "example@gmail.com"
-    - title: "Manage the scoring system"
+    - title: "Managing the grading system and being an IT teacher"
       name: "សួង ចន្នី"
       role: "IT Teacher"
       phoneNumber: "០70 891658"
