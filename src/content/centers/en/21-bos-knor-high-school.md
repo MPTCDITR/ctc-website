@@ -1,9 +1,10 @@
 ---
-name: "Sok An Khvav High School"
-description: "Sok An Khvav High School is a dynamic educational institution that provides opportunities for students to gain knowledge, skills, and virtues. The high school has a good learning environment, experienced teachers, and modern learning equipment. The curriculum is designed in accordance with national and international educational standards to provide students with a broad knowledge base. In addition, the high school also provides opportunities for students to participate in social and sports activities."
+name: "Bosknor High School  "
+description: "Bosknor High School is a dynamic educational institution that provides opportunities for students to gain knowledge, skills, and virtues. The high school has a good learning environment, experienced teachers, and modern learning equipment. The curriculum is designed in accordance with national and international educational standards to provide students with a broad knowledge base. In addition, the high school also provides opportunities for students to participate in social and sports activities."
 
 contact:
-  address: "Address not provided"
+  address: "C.T.C. Sok An So Ben High School at Chamkar Leu District, Kompong Cham Province."
+  mapUrl: "https://maps.app.goo.gl/yvphY6zfR8SHPBKk9"
 facilities:
   - "Computer Lab"
   - "Traning Room"
@@ -53,19 +54,19 @@ operationTeam:
   title: "Operational Staff of C.T.C."
   description: "The operational staff are responsible for daily operations and running of the C.T.C."
   member:
-    - title: "Deputy Director"
-      name: "អ៊ំ សំអុល"
+    - title: "Mathematics teacher"
+      name: " សេន វីសាល"
       role: "Chair"
-      phoneNumber: "017 619 649"
+      phoneNumber: "077 840 650"
       email: "example@gmail.com"
-    - title: "Computer operator"
-      name: "ខេន រតនា"
+    - title: "Secretary"
+      name: "ឌីម គា"
       role: "IT Teacher"
-      phoneNumber: "074 441 4741"
+      phoneNumber: "096 614 1466"
       email: "example@gmail.com"
-    - title: "Chemistry-Biology teacher"
-      name: "លុយ ម៉ៅ"
+    - title: "Khmer literature teacher"
+      name: "ផាន់ សារ័ត្ន"
       role: "Assistant Teacher"
-      phoneNumber: "088 549 5965"
+      phoneNumber: "088 609 0590"
       email: "example@gmail.com"
 ---

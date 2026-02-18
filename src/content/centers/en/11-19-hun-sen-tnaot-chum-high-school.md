@@ -65,7 +65,7 @@ operationTeam:
       phoneNumber: "077 84 94 16"
       email: "example@gmail.com"
     - title: "Secretary"
-      name: "ហម មាលា"
+      name: "កៅ ធារិទ្ធ"
       role: "Assistant Teacher"
       phoneNumber: "088 879 0790"
       email: "example@gmail.com"

@@ -63,9 +63,9 @@ operationTeam:
       role: "IT Teacher"
       phoneNumber: "016 227 051"
       email: "example@gmail.com"
-    - title: "Secretary"
-      name: "ចាប ដាវ៉ាន់"
+    - title: "Account"
+      name: "ម៉ក់ ស៊ុនណា"
       role: "Assistant Teacher"
-      phoneNumber: "០៩៣ ២៧១ ៥០៦"
+      phoneNumber: "017 883 209"
       email: "example@gmail.com"
 ---

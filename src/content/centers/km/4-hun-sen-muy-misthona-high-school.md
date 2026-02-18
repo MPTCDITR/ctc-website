@@ -81,10 +81,10 @@ operationTeam:
           email: example@gmail.com,
         },
         {
-          title: គ្រូបង្រៀនរូបវិទ្យា,
-          name: ឃុត ខេនគ្រឹស្នា,
+          title: សីលធម៌ពលរដ្ឋ/កុំព្យទ័រ,
+          name: គង់ ចាន់សល់,
           role: គ្រូ IT,
-          phoneNumber: "០១២/០៩៣ ៣៧៨ ៦៨២",
+          phoneNumber: "០១៦ ៧៧០ ០៧២",
           email: example@gmail.com,
         },
         {

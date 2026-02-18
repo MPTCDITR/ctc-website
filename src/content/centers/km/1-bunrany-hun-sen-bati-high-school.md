@@ -75,9 +75,9 @@ operationTeam:
       [
         {
           title: នាយករង,
-          name: ហោ  ប្រុស,
+          name: ហេ  ប្រុស,
           role: ប្រធាន,
-          phoneNumber: "០៧៨ ៤៤៧ ៤៧៤",
+          phoneNumber: "០៧៨ ៤៤៧ ៤៧៤​​​",
           email: example@gmail.com,
         },
         {

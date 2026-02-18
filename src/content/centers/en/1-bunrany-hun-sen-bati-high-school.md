@@ -54,9 +54,9 @@ operationTeam:
   description: "The operational staff are responsible for daily operations and running of the C.T.C."
   member:
     - title: "Deputy Director"
-      name: "ហោ  ប្រុស"
+      name: "ហេ ប្រុស"
       role: "Chair"
-      phoneNumber: "078 447 474"
+      phoneNumber: "​078 447 474"
       email: "example@gmail.com"
     - title: "Information technology teacher"
       name: "ម៉េង ស្រេង"

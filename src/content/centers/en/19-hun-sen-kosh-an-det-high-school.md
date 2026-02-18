@@ -1,9 +1,10 @@
 ---
-name: "Sok An Khvav High School"
-description: "Sok An Khvav High School is a dynamic educational institution that provides opportunities for students to gain knowledge, skills, and virtues. The high school has a good learning environment, experienced teachers, and modern learning equipment. The curriculum is designed in accordance with national and international educational standards to provide students with a broad knowledge base. In addition, the high school also provides opportunities for students to participate in social and sports activities."
+name: "Hun Sen Kaoh Andaet High School  "
+description: "Hun Sen Kaoh Andaet High School is a dynamic educational institution that provides opportunities for students to gain knowledge, skills, and virtues. The high school has a good learning environment, experienced teachers, and modern learning equipment. The curriculum is designed in accordance with national and international educational standards to provide students with a broad knowledge base. In addition, the high school also provides opportunities for students to participate in social and sports activities."
 
 contact:
-  address: "Address not provided"
+  address: "C.T.C. Hun Sen Kaoh Andaet High School at Romenh Commune, Kaoh Andaet District, Takeo Province."
+  mapUrl: "https://maps.app.goo.gl/6Sigf4BUiViQJH8dA"
 facilities:
   - "Computer Lab"
   - "Traning Room"
@@ -53,19 +54,19 @@ operationTeam:
   title: "Operational Staff of C.T.C."
   description: "The operational staff are responsible for daily operations and running of the C.T.C."
   member:
-    - title: "Deputy Director"
-      name: "អ៊ំ សំអុល"
+    - title: "Secretary"
+      name: " សោម ម៉ុន"
       role: "Chair"
-      phoneNumber: "017 619 649"
+      phoneNumber: "069 787 106"
       email: "example@gmail.com"
-    - title: "Computer operator"
-      name: "ខេន រតនា"
+    - title: "English Teacher"
+      name: "ជួន សុខឿន"
       role: "IT Teacher"
-      phoneNumber: "074 441 4741"
+      phoneNumber: "088 760 7339"
       email: "example@gmail.com"
-    - title: "Chemistry-Biology teacher"
-      name: "លុយ ម៉ៅ"
+    - title: "Biology"
+      name: "សាយ ចន្រ្ទា"
       role: "Assistant Teacher"
-      phoneNumber: "088 549 5965"
+      phoneNumber: "096 779 1119"
       email: "example@gmail.com"
 ---

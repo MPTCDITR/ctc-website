@@ -63,9 +63,9 @@ operationTeam:
       role: "គ្រូ IT"
       phoneNumber: "០១៦ ២២៧ ០៥១"
       email: "sreyneang.phan@example.com"
-    - title: "លេខាធិការ"
-      name: "ចាប ដាវ៉ាន់"
+    - title: "គណនេយ្យ"
+      name: "ម៉ក់ ស៊ុនណា"
       role: "គ្រូ ជំនួយ"
-      phoneNumber: "០៩៣ ២៧១ ៥០៦"
+      phoneNumber: "០១៧ ៨៨៣ ២០៩"
       email: "sreyneang.phan@example.com"
 ---

@@ -1,9 +1,10 @@
 ---
-name: "Sok An Khvav High School"
-description: "Sok An Khvav High School is a dynamic educational institution that provides opportunities for students to gain knowledge, skills, and virtues. The high school has a good learning environment, experienced teachers, and modern learning equipment. The curriculum is designed in accordance with national and international educational standards to provide students with a broad knowledge base. In addition, the high school also provides opportunities for students to participate in social and sports activities."
+name: "Hun Sen Ta Khmav High School  "
+description: "Hun Sen Ta Khmav High School is a dynamic educational institution that provides opportunities for students to gain knowledge, skills, and virtues. The high school has a good learning environment, experienced teachers, and modern learning equipment. The curriculum is designed in accordance with national and international educational standards to provide students with a broad knowledge base. In addition, the high school also provides opportunities for students to participate in social and sports activities."
 
 contact:
-  address: "Address not provided"
+  address: "C.T.C. Hun Sen Ta Khmav High School at Sangkat Ta Khmav, Kandal Province."
+  mapUrl: "https://maps.app.goo.gl/Sx8xxHAZ9MLvb2U79"
 facilities:
   - "Computer Lab"
   - "Traning Room"
@@ -54,18 +55,18 @@ operationTeam:
   description: "The operational staff are responsible for daily operations and running of the C.T.C."
   member:
     - title: "Deputy Director"
-      name: "អ៊ំ សំអុល"
+      name: " ងន ណាត"
       role: "Chair"
-      phoneNumber: "017 619 649"
+      phoneNumber: "016 666 103"
       email: "example@gmail.com"
-    - title: "Computer operator"
-      name: "ខេន រតនា"
+    - title: "Computer Teacher"
+      name: "សេង ស៊ន"
       role: "IT Teacher"
-      phoneNumber: "074 441 4741"
+      phoneNumber: "096 609 5089"
       email: "example@gmail.com"
-    - title: "Chemistry-Biology teacher"
-      name: "លុយ ម៉ៅ"
+    - title: "Mathematics teacher"
+      name: "ថន ចំរើន"
       role: "Assistant Teacher"
-      phoneNumber: "088 549 5965"
+      phoneNumber: "093 432 745"
       email: "example@gmail.com"
 ---

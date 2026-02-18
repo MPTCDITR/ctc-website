@@ -88,10 +88,10 @@ operationTeam:
           email: example@gmail.com,
         },
         {
-          title: គណនេយ្យ,
-          name: ឡាច ខុម,
+          title: គ្រូបង្រៀនភាសាអង់គ្លេស,
+          name: ចាន់ សុខសៀង,
           role: គ្រូ ជំនួយ,
-          phoneNumber: "០៩៧ ២០១ ៤៣៤៣",
+          phoneNumber: "០៨៨ ៥៦៨៨ ៨៤៨",
           email: example@gmail.com,
         },
       ],

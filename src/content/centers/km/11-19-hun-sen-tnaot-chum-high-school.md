@@ -65,8 +65,8 @@ operationTeam:
       phoneNumber: "០៧៧ ៨៤ ៩៤ ១៦"
       email: "example@gmail.com"
     - title: "លេខាធិការ"
-      name: "កៅ ធារិទ្ធ"
+      name: "ហេ ទិត្យ"
       role: "គ្រូ ជំនួយ"
-      phoneNumber: "០៨៨ ៨៧៩ ០៧៩០"
+      phoneNumber: "០៧០ ៦៨៦ ០៧៧"
       email: "example@gmail.com"
 ---
