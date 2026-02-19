@@ -32,10 +32,10 @@ const isPlaceholder = (value: string | undefined) => {
   if (!value) return true;
   const placeholders = [
     "Name",
-    "ហោ  ប្រុស",
-    "ម៉ូនី ស្រែ",
-    "078 447 474",
-    "០៧៨ ៤៤៧ ៤៧៤",
+    "User Example",
+    "User Example",
+    "078 466 477",
+    "០៧៨ ៤៦៦ ៤៧៧",
     "example@gmail.com",
   ];
   return placeholders.includes(value.trim());

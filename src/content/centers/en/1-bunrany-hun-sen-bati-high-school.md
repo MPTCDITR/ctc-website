@@ -19,7 +19,7 @@ managementTeam:
       phoneNumber: "078 447 474"
       email: "example@gmail.com"
     - title: "Principal of the High School   "
-      name: "Name"
+      name: "ហេ ប្រុស"
       role: " Chair"
       phoneNumber: "078 447 474"
       email: "example@gmail.com"
