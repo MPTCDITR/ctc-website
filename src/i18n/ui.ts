@@ -43,9 +43,9 @@ export const ui: Record<string, Record<string, string>> = {
     "home.about": "About Community Tech Center",
     "home.about.aboutus": "About Us",
     "home.about.description":
-      "The Ministry of Post and Telecommunications, in collaboration with the Ministry of Education, Youth, and Sports, aims to enhance digital literacy in Cambodia through the establishment of 558 Community Technology Centers (C.T.C.s). The C.T.C.s are envisioned as hubs for digital knowledge and training, equipped with computer labs, training rooms, internet cafes, and postal offices. These centers, to be built in high schools across the country, are part of a broader initiative to foster a digital citizenry and workforce. By providing digital services and education, the Ministry hopes all high school students will have a base in digital science and technology by 2030.",
+      "The Ministry of Post and Telecommunications, in collaboration with the Ministry of Education, Youth, and Sports, aims to enhance digital literacy in Cambodia through the establishment of 558 Community Tech Centers (C.T.C.s). The C.T.C.s are envisioned as hubs for digital knowledge and training, equipped with computer labs, training rooms, internet cafes, and postal offices. These centers, to be built in high schools across the country, are part of a broader initiative to foster a digital citizenry and workforce. By providing digital services and education, the Ministry hopes all high school students will have a base in digital science and technology by 2030.",
     "home.viewallvideo": "View All Video",
-    "home.service": "Operations of Community Technology Center",
+    "home.service": "Operations of Community Tech Center",
     "home.service.description":
       "C.T.C. offer four main functions for citizens and students in the community, like accesses to computers and the Internet, as well as training programming in digital skills and postal services.",
     "home.service.computerlab": "Computer Lab",
@@ -61,7 +61,7 @@ export const ui: Record<string, Record<string, string>> = {
     "home.service.publichall.description":
       "Provides access to computers and the Internet, allowing community members to find information on agriculture, business, and public services.",
     "home.center.description":
-      "The Ministry of Posts and Telecommunications, in collaboration with the Ministry of Education, Youth and Sports, plans to build and establish Community Technology Centers (C.T.C.) in 558 public high school campuses nationwide, of which 18 have now been established.",
+      "The Ministry of Posts and Telecommunications, in collaboration with the Ministry of Education, Youth and Sports, plans to build and establish Community Tech Centers (C.T.C.) in 558 public high school campuses nationwide, of which 21 have now been established.",
     "home.center.viewalllocations": "View All Locations",
     "home.latest.newsandevents": "Latest News and Events",
     "home.latest.newsandevents.description":
@@ -87,13 +87,13 @@ export const ui: Record<string, Record<string, string>> = {
     "about.structure.ctcnational.board": "C.T.C. National Board",
     "about.structure.ctcnational.board.description":
       "The C.T.C. National Broad is led by the Minister of Post and Telecommunications, and composed of representatives from the Ministry of Education, Sport and Youth, the Ministry of Post and telecommunications, and Chief of the Secretariat.",
-    "about.ctc.title": "About the Community Technology Center",
+    "about.ctc.title": "About the Community Tech Center",
     "about.ctc.paragraph1":
       "The seventh mandate of the National Assembly has been and is highly attentive to the digital economic and social transformation as a whole through the issuance of the “Phase 1 Rectangular Strategy.” Specifically, the government has prioritized five key areas: “People, Roads, Water, Electricity, and Technology” as the foundation and important means to achieve Cambodia’s vision for 2050. The addition of “Technology,” especially “Digital Technology,” as a new key priority confirms that the government considers digital technology as a new catalyst of significant importance, potential, and innovation in driving economic and social productivity growth, as well as administrative efficiency. It also serves as a guiding policy framework for directing and promoting the implementation of the “Digital Economy and Society Policy Framework for Cambodia 2021-2035,” which is a guiding roadmap for the development and operation of digital transformation in Cambodia, and the “Digital Government Policy of Cambodia 2022-2035,” aimed at fully implementing digital government transformation.",
     "about.ctc.paragraph2":
-      "In the effort to promote the building of digital human resources to implement the Digital Economy and Society Policy Framework for Cambodia 2021-2035 and the Digital Government Policy of Cambodia 2022-2035, particularly the participation in implementing the Phase 1 Rectangular Strategy, which has identified technology, especially digital technology, as the fifth key priority, the Ministry of Posts and Telecommunications (MPTC) has established a project to build Community Technology Centers at public schools to fulfill the mission of initiating digital transformation for education, which will contribute to the development of digital human resources and the digital future of Cambodia. This project reflects the long-term vision of MPTC, focusing on the development of human resources in digital technology skills at the secondary education level. The Community Technology Center (CTC) will become a center for training related to digital technology skills and providing postal services to citizens in the community, especially to students and the general public living in the area, with the aim of promoting digital human resource training, enhancing digital literacy, and reducing the digital divide in a supportive and innovative community.",
+      "In the effort to promote the building of digital human resources to implement the Digital Economy and Society Policy Framework for Cambodia 2021-2035 and the Digital Government Policy of Cambodia 2022-2035, particularly the participation in implementing the Phase 1 Rectangular Strategy, which has identified technology, especially digital technology, as the fifth key priority, the Ministry of Posts and Telecommunications (MPTC) has established a project to build Community Tech Centers at public schools to fulfill the mission of initiating digital transformation for education, which will contribute to the development of digital human resources and the digital future of Cambodia. This project reflects the long-term vision of MPTC, focusing on the development of human resources in digital technology skills at the secondary education level. The Community Tech Center (CTC) will become a center for training related to digital technology skills and providing postal services to citizens in the community, especially to students and the general public living in the area, with the aim of promoting digital human resource training, enhancing digital literacy, and reducing the digital divide in a supportive and innovative community.",
     "about.ctc.paragraph3":
-      "The Community Technology Center, abbreviated as “CTC,” has been initiated by the Ministry of Posts and Telecommunications (MPTC) in collaboration with the Ministry of Education, Youth, and Sports (MoEYS) to provide training in digital skills, enhance digital literacy, and reduce the digital divide in the community in a supportive and innovative environment. The CTC has four main functions: (1) a Computer Lab for teaching digital technology skills both in-person and remotely, and serving as a meeting room; (2) a Training Room for training in technology equipment repair skills and short courses on digital technology skills for local authorities and citizens in the community; (3) a Post Office for providing services to receive and send packages domestically and internationally, as well as offering various services to traders, entrepreneurs, and citizens in the community; and (4) a Public Hall for community citizens to access computers and the internet to seek information related to agriculture, business, and online public services, among others.",
+      "The Community Tech Center, abbreviated as “CTC,” has been initiated by the Ministry of Posts and Telecommunications (MPTC) in collaboration with the Ministry of Education, Youth, and Sports (MoEYS) to provide training in digital skills, enhance digital literacy, and reduce the digital divide in the community in a supportive and innovative environment. The CTC has four main functions: (1) a Computer Lab for teaching digital technology skills both in-person and remotely, and serving as a meeting room; (2) a Training Room for training in technology equipment repair skills and short courses on digital technology skills for local authorities and citizens in the community; (3) a Post Office for providing services to receive and send packages domestically and internationally, as well as offering various services to traders, entrepreneurs, and citizens in the community; and (4) a Public Hall for community citizens to access computers and the internet to seek information related to agriculture, business, and online public services, among others.",
     "about.ctc.paragraph4":
       "With the official launch of the CTC, starting from the public school in Takeo province, MPTC plans to expand the operational scope of CTCs to public schools in other provinces of the Kingdom of Cambodia.",
     "about.ctc.paragraph5":
@@ -125,7 +125,7 @@ export const ui: Record<string, Record<string, string>> = {
       " Overview information of our technology centers, with providing detailed insights into the management structures, the roles and responsibilities of operational staff, as well as specific contact information of operational member, and community information.",
     "ctc.teaminfo.title": "Title and Position ",
     "ctc.teaminfo.name": "Name",
-    "ctc.teaminfo.role": "C.T.C. Role",
+    "ctc.teaminfo.role": " Role",
     "ctc.teaminfo.phoneNumber": "Phone Number",
     "ctc.teaminfo.email": "Email",
     "btn.learnmore": "Learn More →",
@@ -139,7 +139,9 @@ export const ui: Record<string, Record<string, string>> = {
     "blog.readmore": "Read More",
     "blog.list.description":
       "Find updates on the latest happenings, initiatives, and activities within the center and the highlights upcoming workshops, training sessions, community gatherings, and technology-related events aimed at fostering engagement and learning among community members.",
-  },
+  "videos.list.description":
+      "Enjoy our Community Tech Centers (C.T.C) videos! Through engaging tutorials and media content, we highlight the innovative programs available at our C.T.C.s in high schools nationwide. Join us in fostering digital literacy and skills among students, preparing them for the digital age.",
+    },
   km: {
     communitytechcenter: "មជ្ឈមណ្ឌលបច្ចេកវិទ្យាសហគមន៍",
     "nav.home": "ទំព័រដើម",
@@ -194,7 +196,7 @@ export const ui: Record<string, Record<string, string>> = {
     "home.service.publichall.description":
       "សម្រាប់ប្រជាពលរដ្ឋនៅសហគមន៍អាចចូលប្រើប្រាស់កុំព្យូទ័រ និងអ៊ីនធឺណិត ដើម្បីស្វែងរកព័ត៌មានពាក់ព័ន្ធនឹងកសិកម្ម អាជីវកម្ម និងសេវាសាធារណៈអនឡាញ។",
     "home.center.description":
-      "ក្រសួងប្រៃសណីយ៍ និងទូរគមនាគមន៍ សហការជាមួយក្រសួងអប់រំ យុវជន និងកីឡា មានគម្រោងសាងសង់ និងបង្កើតមជ្ឈមណ្ឌលបច្ចេកវិទ្យាសហគមន៍ (ម.ប.ស.) ក្នុងបរិវេណវិទ្យាល័យសាធារណៈនៅទូទាំងប្រទេស ចំនួន ៥៥៨កន្លែង ដែលបច្ចុប្បន្នបានបង្កើតបាន ចំនួន ១៨កន្លែង។",
+      "ក្រសួងប្រៃសណីយ៍ និងទូរគមនាគមន៍ សហការជាមួយក្រសួងអប់រំ យុវជន និងកីឡា មានគម្រោងសាងសង់ និងបង្កើតមជ្ឈមណ្ឌលបច្ចេកវិទ្យាសហគមន៍ (ម.ប.ស.) ក្នុងបរិវេណវិទ្យាល័យសាធារណៈនៅទូទាំងប្រទេស ចំនួន ៥៥៨កន្លែង ដែលបច្ចុប្បន្នបានបង្កើតបាន ចំនួន ២១កន្លែង។",
     "home.center.viewalllocations": "មើលទីតាំងទាំងអស់",
     "home.latest.newsandevents": "ព័ត៌មាន និង ព្រឹត្តិការណ៍ថ្មីៗ",
     "home.latest.newsandevents.description":
@@ -259,7 +261,7 @@ export const ui: Record<string, Record<string, string>> = {
       "ស្វែងយល់អំពីព័ត៌មានទូទៅនៃមជ្ឈមណ្ឌលបច្ចេកវិទ្យារបស់យើង ជាមួយនឹងការផ្តល់នូវការយល់ដឹងលម្អិតអំពីរចនាសម្ព័ន្ធគ្រប់គ្រង តួនាទី និងការទទួលខុសត្រូវរបស់បុគ្គលិកប្រតិបត្តិការ ក៏ដូចជាព័ត៌មានទំនាក់ទំនងជាក់លាក់របស់សមាជិកប្រតិបត្តិ និងព័ត៌មានសហគមន៍។",
     "ctc.teaminfo.title": "តួនាទី និងភារកិច្ច",
     "ctc.teaminfo.name": "គោត្តនាម នាម",
-    "ctc.teaminfo.role": "តួនាទីក្នុង ម.ប.ស.",
+    "ctc.teaminfo.role": "តួនាទី",
     "ctc.teaminfo.phoneNumber": "លេខទូរស័ព្ទ",
     "ctc.teaminfo.email": "អ៊ីម៉ែល",
     "btn.learnmore": "ស្វែងយល់បន្ថែម →",

@@ -19,7 +19,7 @@ managementTeam:
       phoneNumber: "078 447 474"
       email: "example@gmail.com"
     - title: "Principal of the High School   "
-      name: "Name"
+      name: "ចក់ ពេជ្រសង្ហា"
       role: " Chair"
       phoneNumber: "078 447 474"
       email: "example@gmail.com"
@@ -58,7 +58,6 @@ operationTeam:
       role: "Chair"
       phoneNumber: "011 389 787"
       email: "example@gmail.com"
-
     - title: "Information technology teacher"
       name: "សួន ចាន់ថន"
       role: "IT Teacher "

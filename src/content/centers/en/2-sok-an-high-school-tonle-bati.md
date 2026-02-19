@@ -19,7 +19,7 @@ managementTeam:
       phoneNumber: "078 447 474"
       email: "example@gmail.com"
     - title: "Principal of the High School   "
-      name: "Name"
+      name: "អៀង សៅប្រាថ្នា"
       role: " Chair"
       phoneNumber: "078 447 474"
       email: "example@gmail.com"
@@ -65,9 +65,9 @@ operationTeam:
       phoneNumber: "096 575 3335"
       email: "example@gmail.com"
 
-    - title: "Accounting"
-      name: "ឡាច ខុម"
+    - title: "English teacher"
+      name: "ចាន់ សុខសៀង"
       role: "Assistant Teacher"
-      phoneNumber: "097 201 4343"
+      phoneNumber: "088 5688 848"
       email: "example@gmail.com"
 ---
