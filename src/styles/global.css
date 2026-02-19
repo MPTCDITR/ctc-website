@@ -1,4 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap");
+@font-face {
+  font-family: "Kantumruy Pro";
+  font-style: normal;
+  font-weight: 100 700;
+  font-display: swap;
+  src:
+    url("/fonts/kantumruypro.woff2") format("woff2"),
+    url("/fonts/kantumruypro.woff") format("woff");
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

@@ -15,7 +15,7 @@ export function CentersSection({ translations, lang }: CenterSectionProps) {
       <div className="container flex flex-col items-center gap-8">
         <div className="flex flex-col md:flex-row gap-5 lg:gap-8">
           <div>
-            <TextElement variant="heading" className="text-primary">
+            <TextElement variant="heading" as="h2" className="text-primary">
               {t("nav.center.ourlocations")}
             </TextElement>
             <TextElement variant="body" className="max-w-8xl mt-8">
@@ -35,6 +35,10 @@ export function CentersSection({ translations, lang }: CenterSectionProps) {
               src={Locations.src}
               alt="18 location of CTC"
               className="w-full object-cover"
+              loading="lazy"
+              decoding="async"
+              width="800"
+              height="450"
             />
           </div>
         </div>

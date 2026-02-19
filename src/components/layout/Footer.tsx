@@ -171,6 +171,7 @@ export function SiteFooter({ lang }: FooterProps) {
                 target="_blank"
                 className="p-2 rounded-full text-white bg-secondary hover:bg-secondary/80 transition-colors"
                 rel="noreferrer"
+                aria-label="Facebook"
               >
                 <Facebook className="w-5 h-5" />
               </a>
@@ -179,6 +180,7 @@ export function SiteFooter({ lang }: FooterProps) {
                 target="_blank"
                 className="p-2 rounded-full text-white bg-secondary hover:bg-secondary/80 transition-colors"
                 rel="noreferrer"
+                aria-label="YouTube"
               >
                 <Youtube className="w-5 h-5" />
               </a>
@@ -187,10 +189,11 @@ export function SiteFooter({ lang }: FooterProps) {
                 target="_blank"
                 className="p-2 rounded-full bg-secondary hover:bg-secondary/80 transition-colors"
                 rel="noreferrer"
+                aria-label="TikTok"
               >
                 <img
                   src={tiktok.src}
-                  alt="Social"
+                  alt="TikTok"
                   className="size-5"
                   style={{ objectFit: "cover" }}
                 />

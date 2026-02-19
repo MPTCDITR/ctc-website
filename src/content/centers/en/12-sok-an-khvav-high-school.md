@@ -1,6 +1,6 @@
 ---
 name: "Sok An Khvav High School"
-description: "Hun Sen Tnaot Chum High School is a dynamic educational institution that provides opportunities for students to gain knowledge, skills, and virtues. The high school has a good learning environment, experienced teachers, and modern learning equipment. The curriculum is designed in accordance with national and international educational standards to provide students with a broad knowledge base. In addition, the high school also provides opportunities for students to participate in social and sports activities."
+description: "Sok An Khvav High School is a dynamic educational institution that provides opportunities for students to gain knowledge, skills, and virtues. The high school has a good learning environment, experienced teachers, and modern learning equipment. The curriculum is designed in accordance with national and international educational standards to provide students with a broad knowledge base. In addition, the high school also provides opportunities for students to participate in social and sports activities."
 
 contact:
   address: "Address not provided"
@@ -19,7 +19,7 @@ managementTeam:
       phoneNumber: "078 447 474"
       email: "example@gmail.com"
     - title: "Principal of the High School   "
-      name: "Name"
+      name: "អ៊ំ សំអុល"
       role: " Chair"
       phoneNumber: "078 447 474"
       email: "example@gmail.com"
@@ -53,7 +53,7 @@ operationTeam:
   title: "Operational Staff of C.T.C."
   description: "The operational staff are responsible for daily operations and running of the C.T.C."
   member:
-    - title: "Deputy Director"
+    - title: "Acting Director"
       name: "អ៊ំ សំអុល"
       role: "Chair"
       phoneNumber: "017 619 649"
@@ -63,9 +63,9 @@ operationTeam:
       role: "IT Teacher"
       phoneNumber: "074 441 4741"
       email: "example@gmail.com"
-    - title: "Chemistry-Biology teacher"
+    - title: "Chemistry Biology teacher"
       name: "លុយ ម៉ៅ"
       role: "Assistant Teacher"
-      phoneNumber: "០៨៨ ៥៤៩ ៥៩៦៥"
+      phoneNumber: "088 549 5965"
       email: "example@gmail.com"
 ---

@@ -24,13 +24,13 @@ const lang = getLangFromUrl(Astro.url);
 
 const translations = ui[lang];
 
-const locale = Astro.currentLocale ?? defaultLang;
+const locale = lang || defaultLang;
 const navigationItems = getLocalizedRoutes(navigation, locale);
 const currentPath = Astro.url.pathname;
 ---
 
 <!doctype html>
-<html lang={Astro.currentLocale || "en"}>
+<html lang={lang || "en"}>
   <head>
     <BaseHead
       pageTitle={pageTitle || SITE_TITLE}

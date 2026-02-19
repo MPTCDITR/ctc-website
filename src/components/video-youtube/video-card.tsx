@@ -19,13 +19,17 @@ export function VideoCard({ video }: VideoCardProps) {
         <a
           href={`https://www.youtube.com/watch?v=${video.id}`}
           target="_blank"
-          className="flex items-center justify-center " rel="noreferrer"
+          className="flex items-center justify-center "
+          rel="noreferrer"
         >
           <img
             src={video.thumbnail}
             alt={video.title}
             className="object-cover w-full"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            width="480"
+            height="270"
+            loading="lazy"
+            decoding="async"
           />
           <Play
             className="absolute hidden group-hover:flex"
@@ -39,7 +43,8 @@ export function VideoCard({ video }: VideoCardProps) {
         <a
           href={`https://www.youtube.com/watch?v=${video.id}`}
           target="_blank"
-          className="hover:underline" rel="noreferrer"
+          className="hover:underline"
+          rel="noreferrer"
         >
           <h3 className="text-xl font-semibold line-clamp-2">{video.title}</h3>
         </a>

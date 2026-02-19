@@ -77,13 +77,12 @@ const Hero = ({ translations, lang }: HeroSectionProps) => {
             src={slide.image.src}
             width={slide.image.width}
             height={slide.image.height}
-            alt={slide.title}
+            alt={t(slide.title)}
             className="w-full h-[600px] object-cover"
             loading={index === 0 ? "eager" : "lazy"}
-            {...({ fetchpriority: index === 0 ? "high" : "auto" } as Record<
-              string,
-              unknown
-            >)}
+            {...({
+              fetchpriority: index === 0 ? "high" : "low",
+            } as Record<string, unknown>)}
             decoding={index === 0 ? "sync" : "async"}
           />
           <div className="absolute inset-0 bg-black/60" />

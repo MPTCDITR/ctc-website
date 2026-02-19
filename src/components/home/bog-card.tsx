@@ -31,9 +31,13 @@ export function BlogLatestCard({
       {image && (
         <div className="relative w-full pt-[56.25%] overflow-hidden rounded-t-lg">
           <img
-            src={image?.src}
+            src={image.src}
+            width={image.width}
+            height={image.height}
             alt={title}
             className="absolute inset-0 w-full h-full object-cover"
+            loading="lazy"
+            decoding="async"
           />
         </div>
       )}
