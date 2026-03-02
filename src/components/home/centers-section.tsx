@@ -1,6 +1,6 @@
 import TextElement from "@/components/text-element/TextElement";
 import { Button } from "@/components/ui/button";
-import Locations from "@/assets/home/locations.svg";
+import Locations from "@/assets/home/locationshome.svg";
 
 interface CenterSectionProps {
   translations: Record<string, string>;
@@ -30,16 +30,21 @@ export function CentersSection({ translations, lang }: CenterSectionProps) {
               </a>
             </Button>
           </div>
-          <div className="w-full max-w-8xl aspect-[16/9] rounded-lg">
-            <img
-              src={Locations.src}
-              alt="18 location of CTC"
-              className="w-full object-cover"
-              loading="lazy"
-              decoding="async"
-              width="800"
-              height="450"
-            />
+          <div className="w-full max-w-2xl aspect-[16/9] rounded-lg">
+              <a
+                href={`/${lang}/center/our-locations`}
+                className="block rounded-lg overflow-hidden"
+              >
+                <img
+                  src={Locations.src}
+                  alt="18 locations of CTC"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                  decoding="async"
+                  width="800"
+                  height="450"
+                />
+              </a>
           </div>
         </div>
       </div>
