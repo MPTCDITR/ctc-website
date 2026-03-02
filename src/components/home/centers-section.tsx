@@ -33,7 +33,7 @@ export function CentersSection({ translations, lang }: CenterSectionProps) {
           <div className="w-full max-w-2xl aspect-[16/9] rounded-lg">
               <a
                 href={`/${lang}/center/our-locations`}
-                className="block rounded-lg overflow-hidden"
+                className="block rounded-lg"
               >
                 <img
                   src={Locations.src}
