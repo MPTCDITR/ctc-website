@@ -1,5 +1,5 @@
 ---
-title: Community Technology Centers Promote Nationwide Digital Transformation
+title: Community Tech Centers Promote Nationwide Digital Transformation
 description: The Community Tech Center (CTC) serves as a facility that provides digital skills training to high school students, civil servants, entrepreneurs, farmers, and local community members. The center aims to enhance digital awareness and promote the effective use of digital tools to support daily livelihoods, as well as to facilitate access to public services through online platforms.
 date: 2026-03-03
 author: Ministry of Posts and Telecommunications
