@@ -13,8 +13,6 @@ In addition, the CTC actively promotes digital human resource development, stren
 
 At present, the Ministry of Post and Telecommunications (MPTC) has established and operationalized 21 Community Tech Centers nationwide. The Ministry continues to develop strategic plans for further expansion to enhance access to digital services and training across the country.
 
-For more information, please visit the official CTC website at www.ctc.edu.kh
-to follow the latest updates and developments.
 
 ![photo 1](@/assets/news-and-events/article-33/photo-1.jpg)
 ![photo 2](@/assets/news-and-events/article-33/photo-2.jpg)
