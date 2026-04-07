@@ -26,7 +26,7 @@ export const ui: Record<string, Record<string, string>> = {
     "nav.news": "Media Hub",
     "nav.news-event": "News & Events",
     "nav.news-media": "Videos & Media",
-    "nav.ctc": "C.T.C.",
+    "nav.ctc": "Member",
 
     "footer.email": "www.mptc.gov.kh",
     "footer.phoneNumber": "1234",
@@ -139,9 +139,9 @@ export const ui: Record<string, Record<string, string>> = {
     "blog.readmore": "Read More",
     "blog.list.description":
       "Find updates on the latest happenings, initiatives, and activities within the center and the highlights upcoming workshops, training sessions, community gatherings, and technology-related events aimed at fostering engagement and learning among community members.",
-  "videos.list.description":
+    "videos.list.description":
       "Enjoy our Community Tech Centers (C.T.C) videos! Through engaging tutorials and media content, we highlight the innovative programs available at our C.T.C.s in high schools nationwide. Join us in fostering digital literacy and skills among students, preparing them for the digital age.",
-    },
+  },
   km: {
     communitytechcenter: "មជ្ឈមណ្ឌលបច្ចេកវិទ្យាសហគមន៍",
     "nav.home": "ទំព័រដើម",
@@ -161,7 +161,7 @@ export const ui: Record<string, Record<string, string>> = {
     "nav.news": "ព័ត៌មាន",
     "nav.news-event": "អត្ថបទព័ត៌មាន និង ព្រឹត្តិការណ៍",
     "nav.news-media": "វីដេអូ និង ការផ្សព្វផ្សាយ",
-    "nav.ctc": "ម.ប.ស.",
+    "nav.ctc": "សមាជិក",
 
     "hero.title": "សូមស្វាគមន៍មកកាន់ប្លុករបស់យើង",
     "hero.subtitle": "ស្វែងរករឿងរ៉ាវ និងគំនិតអស្ចារ្យ",
