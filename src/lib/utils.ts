@@ -5,25 +5,6 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-function convertMonthToKhmer(monthName: string) {
-  const monthMap: Record<string, string> = {
-    January: "មករា",
-    February: "កុម្ភៈ",
-    March: "មីនា",
-    April: "មេសា",
-    May: "មិថុនា",
-    June: "មិថុនា",
-    July: "កក្កដា",
-    August: "សីហា",
-    September: "កញ្ញា",
-    October: "តុលា",
-    November: "វិច្ឆិកា",
-    December: "ធ្នូ",
-  };
-
-  return monthMap[monthName] || monthName;
-}
-
 export function convertNumberToKhmer(number: string | number) {
   const khmerDigits = ["០", "១", "២", "៣", "៤", "៥", "៦", "៧", "៨", "៩"];
   return number
@@ -38,27 +19,35 @@ export function convertNumberToKhmer(number: string | number) {
 
 export function formatDate(dateString: string, lang: string = "en") {
   const date = new Date(dateString);
-  const options: Intl.DateTimeFormatOptions = {
+
+  if (lang === "km") {
+    const day = date.getDate();
+    const month = date.getMonth(); // 0-11
+    const year = date.getFullYear();
+
+    const khmerMonths = [
+      "មករា",
+      "កុម្ភៈ",
+      "មីនា",
+      "មេសា",
+      "ឧសភា",
+      "មិថុនា",
+      "កក្កដា",
+      "សីហា",
+      "កញ្ញា",
+      "តុលា",
+      "វិច្ឆិកា",
+      "ធ្នូ",
+    ];
+
+    return `${convertNumberToKhmer(day)} ${khmerMonths[month]} ${convertNumberToKhmer(year)}`;
+  }
+
+  return new Intl.DateTimeFormat("en-GB", {
     year: "numeric",
     month: "long",
     day: "numeric",
-  };
-
-  if (lang === "km") {
-    const formattedDate = new Intl.DateTimeFormat("en", options).format(date);
-    const [monthName, day, year] = formattedDate.split(" ");
-
-    // Convert month to Khmer
-    const khmerMonth = convertMonthToKhmer(monthName);
-
-    // Convert day and year to Khmer digits
-    const khmerDay = convertNumberToKhmer(day.replace(",", "")); // Remove comma from day
-    const khmerYear = convertNumberToKhmer(year);
-
-    return ` ${khmerDay} ${khmerMonth}, ${khmerYear}`;
-  } else {
-    return new Intl.DateTimeFormat("en-GB", options).format(date);
-  }
+  }).format(date);
 }
 
 export const formatDistanceToNow = (date: Date | number): string => {
