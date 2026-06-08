@@ -65,7 +65,7 @@ export function ContactContent({ translations }: ContactProps) {
             transition={{ duration: 0.5, delay: 0.5 }}
           >
             <a
-              href="https://www.facebook.com/www.mptc.gov.kh"
+              href="https://www.facebook.com/profile.php?id=61574204880819"
               target="_blank"
               className="p-2 rounded-full bg-primary text-white hover:bg-primary transition-colors"
               rel="noreferrer"
@@ -83,7 +83,7 @@ export function ContactContent({ translations }: ContactProps) {
               <Send className="w-5 h-5" />
             </a>
             <a
-              href="https://www.facebook.com/www.mptc.gov.kh"
+              href="https://www.instagram.com/communitytechcenter.mptc"
               target="_blank"
               className="p-2 rounded-full bg-primary text-white hover:bg-primary transition-colors"
               rel="noreferrer"
