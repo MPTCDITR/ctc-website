@@ -1,6 +1,5 @@
 "use client";
 
-import { Card } from "@/components/ui/card";
 import { Facebook, Instagram, Link, MapPin, Send } from "lucide-react";
 import { motion } from "framer-motion";
 import PostOfficeView from "@/assets//image-assets/post-office-view.webp";
@@ -99,18 +98,16 @@ export function ContactContent({ translations }: ContactProps) {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <Card className="bg-gray-200">
-            <img
-              src={PostOfficeView.src}
-              alt="c.t.c. post office view"
-              className="w-full"
-              style={{ objectFit: "cover" }}
-              loading="lazy"
-              decoding="async"
-              width="600"
-              height="400"
-            />
-          </Card>
+          <img
+            src={PostOfficeView.src}
+            alt="c.t.c. post office view"
+            className="w-full rounded-md"
+            style={{ objectFit: "cover" }}
+            loading="lazy"
+            decoding="async"
+            width="600"
+            height="400"
+          />
         </motion.div>
       </div>
 
@@ -119,13 +116,13 @@ export function ContactContent({ translations }: ContactProps) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.4 }}
       >
-        <Card className="w-full aspect-[21/9] bg-gray-200">
+        <div className="w-full aspect-[21/9]">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.6732883906925!2d104.91480367570388!3d11.57526268862627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31095142eadcf8db%3A0xbd4e32a5eccddfb7!2sMinistry%20of%20Post%20and%20Telecommunications!5e0!3m2!1sen!2skh!4v1734070475614!5m2!1sen!2skh"
-            className="size-full"
+            className="size-full rounded-md"
             title="Google Maps: Ministry of Post and Telecommunications"
           ></iframe>
-        </Card>
+        </div>
       </motion.div>
     </div>
   );
