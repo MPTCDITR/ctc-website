@@ -10,7 +10,7 @@ export function BtnDashboard({ translations }: BtnDashboardProps) {
   const t = (key: string) => translations[key] || key;
   return (
     <div className="lg:container px-3 lg:px-2 flex py-4">
-      <a href="https://dashboard-test.domnerka.site/" target="_blank" rel="noreferrer">
+      <a href="https://mis.ctc.edu.kh" target="_blank" rel="noreferrer">
         <Button className="bg-primary hover:hover:bg-secondary text-white">
           {t("nav.ctc")}
         </Button>
