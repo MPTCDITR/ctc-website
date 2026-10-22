@@ -17,7 +17,7 @@ const { translations } = Astro.props as AboutUsContent;
 const t = (key: string) => translations[key] || key;
 ---
 
-<div class="container py-12 space-y-12">
+<div class="container py-12 space-y-8">
   <h1 class={cn(styles.heading, "text-center text-primary")}>
     {t("about.ctc.title")}
   </h1>

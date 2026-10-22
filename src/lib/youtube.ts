@@ -75,7 +75,8 @@ export async function fetchPlaylistVideos(
         thumbnail:
           item.snippet.thumbnails.high?.url ||
           item.snippet.thumbnails.medium?.url ||
-          item.snippet.thumbnails.default?.url,
+          item.snippet.thumbnails.default?.url ||
+          `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`,
         publishedAt: item.snippet.publishedAt,
         duration: videoDetails
           ? formatDuration(videoDetails.contentDetails.duration)
