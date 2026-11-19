@@ -1,7 +1,7 @@
 ---
 title: Community Tech Centers (CTC) serve as a bridge connecting communities to the opportunities of the digital age, bringing technology, knowledge, and digital learning resources closer to people across Cambodia.
 description: Through its network of 21 centers, students, youth, and local residents can access opportunities to learn, strengthen their digital skills, explore new knowledge, and develop innovative ideas for the future. More than just technology access points, CTCs serve as a foundation for
-date: 2026-11-19
+date: 2026-11-18
 author: Ministry of Post and Telecommunications
 image: "@/assets/news-and-events/article-49/thumbnail.png"
 tags: []
